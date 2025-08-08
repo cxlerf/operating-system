@@ -1,0 +1,53 @@
+{
+    "Highlight Blue Block": {
+        "prefix": "blue",
+        "body": [
+            "<div class=\"blue-highlight\">",
+            "$1",
+            "</div>"
+        ],
+        "description": "Insert a blue highlight block"
+    },
+    "Highlight Green Block": {
+        "prefix": "green",
+        "body": [
+            "<div class=\"green-highlight\">",
+            "$1",
+            "</div>"
+        ],
+        "description": "Insert a green highlight Block"
+    },
+    "CPP Code Block": {
+        "prefix": "code",
+        "body": [
+            "```cpp",
+            "$1",
+            "```"
+        ],
+        "description": "Insert a C++ code block"
+    },
+    "New Line BR": {
+        "prefix": "newline",
+        "body": [
+            "<br>",
+            "",
+            "$1"
+        ],
+        "description": "Insert a line break"
+    },
+    "Font color": {
+        "prefix": "font color",
+        "body": [
+            "<span style=\"color: ${1|blue,red,green,black|};\">",
+            "${2:文字}",
+            "</span>"
+        ],
+        "description": "Insert text with color"
+    },
+    "BlueText": {
+        "scope": "markdown",
+        "prefix": "co",
+        "body": "<span style=\"color: blue;\">$1</span>",
+        "description": "Insert blue colored text"
+    }
+}
