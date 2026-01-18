@@ -1,0 +1,63 @@
+/* =======================================================
+   Obsidian 沉浸式翻译 (V6.0 隐形墨水版)
+   平时完全隐形（像空白一样），鼠标移入显形
+   ======================================================= */
+
+/* 1. 基础设置：针对阅读视图 */
+.markdown-preview-view mark {
+  /* --- 关键：全透明 --- */
+  background-color: transparent !important; /* 没有背景色 */
+  color: transparent !important;            /* 文字也透明 */
+  
+  /* --- 辅助功能 --- */
+  cursor: help;                             /* 鼠标放上去变成“问号”，提示这里有东西 */
+  transition: color 0.2s ease;              /* 显形时的平滑过渡 */
+  
+  /* 确保占据空间（即使看不见，位置还在，不会导致排版塌陷） */
+  padding: 0;
+}
+
+/* 2. 强力隐藏内部所有元素（链接、加粗、图标等） */
+.markdown-preview-view mark * {
+  color: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* 3. 专门隐藏外部链接图标 */
+.markdown-preview-view mark a.external-link {
+  background-image: none !important;
+}
+
+/* --- 交互：鼠标悬停 (Hover) 时的效果 --- */
+
+/* 4. 鼠标移入空白处：文字显形 */
+.markdown-preview-view mark:hover {
+  color: var(--text-normal) !important;     /* 恢复文字颜色 */
+}
+
+/* 5. 鼠标移入：子元素恢复 */
+.markdown-preview-view mark:hover * {
+  color: inherit !important;
+}
+
+/* 6. 鼠标移入：链接恢复蓝色和下划线，可点击 */
+.markdown-preview-view mark:hover a {
+  color: var(--text-a) !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+/* --- 编辑模式 (Live Preview) 同步 --- */
+/* 让编辑模式也保持这种“看不见”的效果，避免干扰 */
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+.cm-s-obsidian span.cm-highlight:hover {
+    color: var(--text-normal) !important;
+}

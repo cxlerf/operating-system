@@ -4,22 +4,44 @@
     "type": "split",
     "children": [
       {
-        "id": "5bc802144a7ec9d9",
+        "id": "7b67346443a122f2",
         "type": "tabs",
         "children": [
           {
-            "id": "45e5fe5a29f62763",
+            "id": "803e7bccf36fc361",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ostep_notebook.md",
+                "file": "ostep_翻译版.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "ostep_notebook"
-            }
+              "title": "ostep_翻译版"
+            },
+            "group": "fc9be1b51f59e91b"
+          }
+        ]
+      },
+      {
+        "id": "70769a02f3ff8b08",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eb17fbe35c176828",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ostep_翻译版.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "ostep_翻译版"
+            },
+            "group": "fc9be1b51f59e91b"
           }
         ]
       }
@@ -78,7 +100,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "19f518a3a9dcec49",
@@ -94,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ostep_notebook.md",
+                "file": "ostep_翻译版.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +127,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ostep_notebook 的反向链接列表"
+              "title": "ostep_翻译版 的反向链接列表"
             }
           },
           {
@@ -183,13 +206,25 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "45e5fe5a29f62763",
+  "active": "eb17fbe35c176828",
   "lastOpenFiles": [
-    "操作系统.md",
-    "test.md",
+    "Operating Systems Three Easy Pieces (Remzi H. Arpaci-Dusseau etc.) (Z-Library) - 副本.pdf",
+    "ostep_翻译版.md",
+    "完整翻译.md",
+    "ostep_翻译版.md.backup",
+    "ostep_翻译版 - 副本.md",
     "ostep_notebook.md",
-    "math.md",
+    "test.md",
+    "Operating Systems Three Easy Pieces (Remzi H. Arpaci-Dusseau etc.) (Z-Library).pdf",
+    "test 1.md",
+    "操作系统.md",
+    "test3.md",
     "image.png",
+    "bin/test3.exe",
+    "test3.c",
+    "bin/test2.exe",
+    "test2.c",
+    "math.md",
     "3.md"
   ]
 }
