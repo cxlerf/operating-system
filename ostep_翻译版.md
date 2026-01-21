@@ -2486,1093 +2486,821 @@ Led by Apple's early machines (e.g., the Apple II) and the IBM PC, this new bree
 ==在苹果早期机器（例如 Apple II）和 IBM PC 的带领下，这种新型机器很快将成为计算领域的主导力量。==
 
 Aside: The Importance of UNIX
-
 ==旁白：UNIX 的重要性==
 
 It is difficult to overstate the importance of UNIX in the history of operating systems.
-
 ==很难夸大 UNIX 在操作系统历史上的重要性 1。==
 
 Influenced by earlier systems (in particular, the famous Multics system from MIT), UNIX brought together many great ideas and made a system that was both simple and powerful.
-
 ==受早期系统（特别是麻省理工学院著名的 Multics 系统）的影响，UNIX 汇集了许多伟大的思想，制造了一个既简单又强大的系统 2。==
 
 Underlying the original "Bell Labs" UNIX was the unifying principle of building small powerful programs that could be connected together to form larger workflows.
-
 ==最初的“贝尔实验室”UNIX 的基础是构建小型强大程序的统一原则，这些程序可以连接在一起形成更大的工作流 3。==
 
 The shell, where you type commands, provided primitives such as pipes to enable such meta-level programming, and thus it became easy to string together programs to accomplish a bigger task.
-
 ==你输入命令的 Shell 提供了诸如管道之类的原语来实现这种元级编程，因此很容易将程序串联起来完成更大的任务 45。6==
 
 For example, to find lines of a text file that have the word "foo" in them, and then to count how many such lines exist, you would type: grep foo file.txt | wc -l, thus using the grep a7nd wc (word count) programs to achieve your task.
-
 ==例如，要查找文本文件中包含单词 "foo" 的行，然后计算有多少这样的行，你可以输入：grep foo file.txt | wc -l，从而使用 grep 和 wc（字数统计）程序来完成你的任务 8。==
 
 The UNIX environment was friendly for programmers and developers alike, also providing a compiler for the new C programming language.
-
 ==UNIX 环境对程序员和开发人员都很友好，还为新的 C 编程语言提供了编译器 9。==
 
 Making it easy for programmers to write their own programs, as well as share them, made UNIX enormously popular.
-
 ==使程序员能够轻松编写自己的程序以及分享它们，这使得 UNIX 非常流行 10。==
 
 And it probably helped a lot that the authors gave out copies for free to anyone who asked, an early form of open-source software.
-
 ==作者向任何索要副本的人免费提供副本（一种早期的开源软件形式），这可能也有很大的帮助 11。==
 
 Also of critical importance was the accessibility and readability of the code.
-
 ==代码的可访问性和可读性也至关重要 12。==
 
 Having a beautiful, small kernel written in C invited others to play with the kernel, adding new and cool features.
-
 ==拥有一个用 C 语言编写的漂亮、小巧的内核，邀请其他人来玩转内核，添加新的酷炫功能 13。==
 
 For example, an enterprising group at Berkeley, led by Bill Joy, made a wonderful distribution (the Berkeley Systems Distribution, or BSD) which had some advanced virtual memory, file system, and networking subsystems.
-
 ==例如，由 Bill Joy 领导的伯克利一个进取的小组制作了一个精彩的发行版（伯克利系统发行版，或 BSD），其中包含一些先进的虚拟内存、文件系统和网络子系统 14。==
 
 Joy later co-founded Sun Microsystems.
-
 ==Joy 后来联合创立了 Sun Microsystems 15。==
 
 Unfortunately, the spread of UNIX was slowed a bit as companies tried to assert ownership and profit from it, an unfortunate (but common) result of lawyers getting involved.
-
 ==不幸的是，由于公司试图宣示所有权并从中获利，UNIX 的传播速度有所放缓，这是律师介入的一个不幸（但常见）的结果 16。==
 
 Many companies had their own variants: SunOS from Sun Microsystems, AIX from IBM, HPUX (a.k.a. "H-Pucks") from HP, and IRIX from SGI.17
-
 ==许多公司都有自己的变体：Sun Microsystems 的 SunOS，IBM 的 AIX，HP 的 HPUX（又名 "H-Pucks"），以及 SGI 的 IRIX 181920。2122==
 
 The legal wrangling among AT&T/Bell L23abs and these other players cast a dark cloud over UNIX, and many wondered if it would survive, e24specially as Windows was introduced and took over much of the PC market... as their low-cost enabled one machine per desktop instead of a shared minicomputer per workgroup.
-
 ==AT&T/贝尔实验室与其他参与者之间的法律纠纷给 UNIX 蒙上了一层阴影，许多人怀疑它能否生存下去，尤其是在 Windows 推出并占据了大部分 PC 市场的时候……因为它们的低成本使得每张桌子上都有一台机器，而不是每个工作组共享一台小型机 25。==
 
 Unfortunately, for operating systems, the PC at first represented a great leap backwards, as early systems forgot (or never knew of) the lessons learned in the era of minicomputers.
-
 ==不幸的是，对于操作系统来说，PC 最初代表了一个巨大的倒退，因为早期的系统忘记了（或从未知道）在小型机时代学到的教训 26。==
 
 For example, early operating systems such as DOS (the Disk Operating System, from Microsoft) didn't think memory protection was important; thus, a malicious (or perhaps just a poorly-programmed) application could scribble all over memory.
-
 ==例如，早期的操作系统如 DOS（微软的磁盘操作系统）认为内存保护并不重要；因此，恶意（或者是编写糟糕）的应用程序可以在内存上乱写乱画 27。==
 
 Aside: And Then Came Linux
-
 ==旁白：然后 Linux 来了==
 
 Fortunately for UNIX, a young Finnish hacker named Linus Torvalds decided to write his own version of UNIX which borrowed heavily on the principles and ideas behind the original system, but not from the code base, thus avoiding issues of legality.
-
 ==对 UNIX 来说幸运的是，一位名叫 Linus Torvalds 的年轻芬兰黑客决定编写他自己的 UNIX 版本，该版本大量借鉴了原始系统背后的原则和思想，但没有借鉴代码库，从而避免了法律问题 28。==
 
 He enlisted help from many others around the world, took advantage of the sophisticated GNU tools that already existed, and soon Linux was born (as well as the modern open-source software movement).29
-
 ==他寻求了世界各地许多其他人的帮助，利用了已经存在的复杂 GNU 工具，很快 Linux 就诞生了（以及现代开源软件运30动） 31。==
 
 As the internet era came into place, most companies (such as Google, Amazon, Facebook, and others) chose to run Linux, as it was free and could be readily modified to suit their needs; indeed, it is hard to imagine the success of these new companies had such a system not existed.
-
 ==随着互联网时代的到来，大多数公司（如 Google、Amazon、Facebook 等）选择运行 Linux，因为它是免费的，并且可以随时修改以满足他们的需求；事实上，如果不存在这样的系统，很难想象这些新公司的成功 32。==
 
 As smart phones became a dominant user-facing platform, Linux found a stronghold there too (via Android), for many of the same reasons.
-
 ==随着智能手机成为面向用户的主导平台，Linux 出于许多相同的原因也在那里找到了据点（通过 Android） 33。==
 
 And Steve Jobs took his UNIX-based NeXTStep operating environment with him to Apple, thus making UNIX popular on desktops (though many users of Apple technology are probably not even aware of this fact).
-
 ==史蒂夫·乔布斯带着他基于 UNIX 的 NeXTStep 操作环境回到了 Apple，从而使 UNIX 在桌面上流行起来（尽管许多 Apple 技术用户可能甚至没有意识到这一事实） 34。==
 
 Thus UNIX lives on, more important today than ever before.
-
 ==因此，UNIX 继续存在，今天比以往任何时候都更重要 35。==
 
 The computing gods, if you believe in them, should be thanked for this wonderful outcome.
-
 ==如果你相信计算之神，应该感谢他们带来了这个美妙的结果 36。==
 
 The first generations of the Mac OS (v9 and earlier) took a cooperative approach to job scheduling; thus, a thread that accidentally got stuck in an infinite loop could take over the entire system, forcing a reboot.
-
 ==第一代 Mac OS（v9 及更早版本）采用了协作式作业调度方法；因此，意外陷入无限循环的线程可能会接管整个系统，迫使重启 37。==
 
 The painful list of OS features missing in this generation of systems is long, too long for a full discussion here.
-
 ==这一代系统中缺失的操作系统特性列表很长，长到无法在这里全面讨论 38。==
 
 Fortunately, after some years of suffering, the old features of minicomputer operating systems started to find their way onto the desktop.
-
 ==幸运的是，经过几年的痛苦，小型机操作系统的旧特性开始进入桌面 39。==
 
 For example, Mac OS X/macOS has UNIX at its core, including all of the features one would expect from such a mature system.
-
 ==例如，Mac OS X/macOS 以 UNIX 为核心，包括人们对此类成熟系统所期望的所有功能 40。==
 
 Windows has similarly adopted many of the great ideas in computing history, starting in particular with Windows NT, a great leap forward in Microsoft OS technology.
-
 ==Windows 同样采用了计算历史上的许多伟大思想，特别是从 Windows NT 开始，这是微软操作系统技术的巨大飞跃 41。==
 
 Even today's cell phones run operating systems (such as Linux) that are much more like what a minicomputer ran in the 1970s than what a PC ran in the 1980s (thank goodness); it is good to see that the good ideas developed in the heyday of OS development have found their way into the modern world.
-
 ==即使是今天的手机运行的操作系统（如 Linux）也更像 20 世纪 70 年代小型机运行的系统，而不是 80 年代 PC 运行的系统（谢天谢地）；很高兴看到在操作系统开发鼎盛时期产生的好点子已经进入现代世界 42。==
 
 Even better is that these ideas continue to develop, providing more features and making modern systems even better for users and applications.
-
 ==更好的是，这些想法还在继续发展，提供更多功能，使现代系统对用户和应用程序来说更加完善 43。==
 
 2.7 Summary
-
 ==2.7 总结==
 
 Thus, we have an introduction to the OS.
-
 ==至此，我们要已经介绍了操作系统 44。==
 
 Today's operating systems make systems relatively easy to use, and virtually all operating systems you use today have been influenced by the developments we will discuss throughout the book.
-
 ==今天的操作系统使系统相对易于使用，实际上你今天使用的所有操作系统都受到了我们将在本书中讨论的发展的影响 45。==
 
 Unfortunately, due to time constraints, there are a number of parts of the OS we won't cover in the book.
-
 ==遗憾的是，由于时间限制，我们在本书中不会涵盖操作系统的许多部分 46。==
 
 For example, there is a lot of networking code in the operating system; we leave it to you to take the networking class to learn more about that.4748
-
 ==例如，操作系统中有大量的网络代码；我们留给你去上网络课程来了解更多相关信息 495051。5253==
 
 Similarly, graphics devices ar54e particularly 55important; take the graphics course to expand your knowledge in that direction.
-
 ==同样，图形设备特别重要；参加图形学课程以扩展你在该方向的知识 56。==
 
 Finally, some operating system books talk a great deal about security; we will do so in the sense that the OS must provide protection between running programs and give users the ability to protect their files, but we won't delve into deeper security issues that one might find in a security course.
-
 ==最后，一些操作系统书籍大量谈论安全性；我们会在这方面进行讨论，即操作系统必须在运行的程序之间提供保护，并赋予用户保护其文件的能力，但我们不会深入探讨在安全课程中可能会发现的更深层次的安全问题 57。==
 
 However, there are many important topics that we will cover, including the basics of virtualization of the CPU and memory, concurrency, and persistence via devices and file systems.
-
 ==然而，我们要将涵盖许多重要主题，包括 CPU 和内存虚拟化的基础知识、并发性以及通过设备和文件系统实现的持久性 58。==
 
 Don't worry!
-
 ==别担心！ 59==
 
 While there is a lot of ground to cover, most of it is quite cool, and at the end of the road, you'll have a new appreciation for how computer systems really work.
-
 ==虽然有很多内容要涵盖，但其中大部分都很酷，在最后，你将对计算机系统是如何真正工作的有一个新的认识 60。==
 
 Now get to work!
-
 ==现在开始工作吧！ 61==
 
 References
-
 ==参考文献==
 
 [BS+09] "Tolerating File-System Mistakes with EnvyFS" by L. Bairavasundaram, S. Sundararaman, A. Arpaci-Dusseau, R. Arpaci-Dusseau.
-
 ==[BS+09] 《使用 EnvyFS 容忍文件系统错误》，作者：L. Bairavasundaram, S. Sundararaman, A. Arpaci-Dusseau, R. Arpaci-Dusseau 62。==
 
 USENIX '09, San Diego, CA, June 2009. A fun paper about using multiple file systems at once to tolerate a mistake in any one of them.
-
 ==USENIX '09，加利福尼亚州圣地亚哥，2009 年 6 月。一篇关于同时使用多个文件系统以容忍其中任何一个错误的有趣论文 63。==
 
 [BH00] "The Evolution of Operating Systems" by P. Brinch Hansen. In 'Classic Operating Systems: From Batch Processing to Distributed Systems.'
-
 ==[BH00] 《操作系统的演变》，作者：P. Brinch Hansen。收录于《经典操作系统：从批处理到分布式系统》 64。==
 
 Springer-Verlag, New York, 2000. This essay provides an intro to a wonderful collection of papers about historically significant systems.
-
 ==Springer-Verlag，纽约，2000 年。这篇文章介绍了一系列关于具有历史意义系统的精彩论文 65。==
 
 [B+72] "TENEX, A Paged Time Sharing System for the PDP-10" by D. Bobrow, J. Burchfiel, D. Murphy, R. Tomlinson.
-
 ==[B+72] 《TENEX，用于 PDP-10 的分页分时系统》，作者：D. Bobrow, J. Burchfiel, D. Murphy, R. Tomlinson 66。==
 
 CACM, Volume 15, Number 3, March 1972. TENEX has much of the machinery found in modern operating systems; read more about it to see how much innovation was already in place in the early 1970's.
-
 ==CACM，第 15 卷，第 3 期，1972 年 3 月。TENEX 拥有现代操作系统中的许多机制；阅读更多关于它的内容，看看在 20 世纪 70 年代初已经实施了多少创新 67。==
 
 [B75] "The Mythical Man-Month" by F. Brooks. Addison-Wesley, 1975. A classic text on software engineering; well worth the read.
-
 ==[B75] 《人月神话》，作者：F. Brooks。Addison-Wesley，1975 年。关于软件工程的经典著作；非常值得一读 68。==
 
 [BOH10] "Computer Systems: A Programmer's Perspective" by R. Bryant and D. O'Hallaron.
-
 ==[BOH10] 《深入理解计算机系统》，作者：R. Bryant 和 D. O'Hallaron 69。==
 
 Addison-Wesley, 2010. Another great intro to how computer systems work.
-
 ==Addison-Wesley，2010 年。关于计算机系统如何工作的另一本很棒的入门书 70。==
 
 Has a little bit of overlap with this book so if you'd like, you can skip the last few chapters of that book, or simply read them to get a different perspective on some of the same material.
-
 ==与本书有一点重叠，所以如果你愿意，你可以跳过那本书的最后几章，或者干脆阅读它们以从不同的角度了解一些相同的材料 71。==
 
 After all, one good way to build up your own knowledge is to hear as many other perspectives as possible, and then develop your own opinion and thoughts on the matter.
-
 ==毕竟，建立自己知识的一个好方法是尽可能多地听取其他观点，然后就此事形成自己的观点和想法 72。==
 
 You know, by thinking!
-
 ==你知道的，通过思考！ 73==
 
 [G85] "The GNU Manifesto" by R. Stallman. 1985.
-
 ==[G85] 《GNU 宣言》，作者：R. Stallman。1985 年 74。==
 
 A huge part of Linux's success was no doubt the presence of an excellent compiler, gcc, and other relevant pieces of open software, thanks to the GNU effort headed by Stallman.
-
 ==Linux 成功的很大一部分毫无疑问是优秀编译器 gcc 以及其他相关开源软件的存在，这要归功于 Stallman 领导的 GNU 工作 75。==
 
 Stallman is a visionary when it comes to open source, and this manifesto lays out his thoughts as to why.
-
 ==Stallman 在开源方面富有远见，这份宣言阐述了他关于为什么要开源的想法 76。==
 
 [K+61] "One-Level Storage System" by T. Kilburn, D.B.G. Edwards, M.J. Lanigan, F.H. Sumner.
-
 ==[K+61] 《一级存储系统》，作者：T. Kilburn, D.B.G. Edwards, M.J. Lanigan, F.H. Sumner 77。==
 
 IRE Transactions on Electronic Computers, April 1962. The Atlas pioneered much of what you see in modern systems.
-
 ==IRE 电子计算机学报，1962 年 4 月。Atlas 开创了你在现代系统中看到的许多东西 78。==
 
 However, this paper is not the best read.
-
 ==不过，这篇论文并不是最好的读物 79。==
 
 If you were to only read one, you might try the historical perspective below.
-
 ==如果你只读一篇，你可以尝试下面的历史视角文章 80。==
 
 [L78] "The Manchester Mark I and Atlas: A Historical Perspective" by S. H. Lavington.
-
 ==[L78] 《曼彻斯特马克一号和 Atlas：历史视角》，作者：S. H. Lavington 81。==
 
 Communications of the ACM, Volume 21:1, January 1978. A nice piece of history on the early development of computer systems and the pioneering efforts of the Atlas.
-
 ==ACM 通讯，第 21 卷第 1 期，1978 年 1 月。关于计算机系统早期发展和 Atlas 开创性努力的一篇很好的历史文章 82。==
 
 Of course, one could go back and read the Atlas papers themselves, but this paper provides a great overview and adds some historical perspective.
-
 ==当然，人们可以回去阅读 Atlas 论文本身，但这篇论文提供了一个很好的概述并增加了一些历史视角 83。==
 
 [O72] "The Multics System: An Examination of its Structure" by Elliott Organick. MIT Press, 1972. A great overview of Multics.
-
 ==[O72] 《Multics 系统：对其结构的考察》，作者：Elliott Organick。麻省理工学院出版社，1972 年。Multics 的精彩概述 84。==
 
 So many good ideas, and yet it was an over-designed system, shooting for too much, and thus never really worked.
-
 ==这么多好点子，但它是一个过度设计的系统，目标太高，因此从未真正工作过 85。==
 
 A classic example of what Fred Brooks would call the "second-system effect".
-
 ==Fred Brooks 所谓的“第二系统效应”的经典例子 86。==
 
 [PP03] "Introduction to Computing Systems: From Bits and Gates to C and Beyond" by Yale N. Patt, Sanjay J. Patel.
-
 ==[PP03] 《计算机系统概论：从位和门到 C 及其他》，作者：Yale N. Patt, Sanjay J. Patel 87。==
 
 McGraw-Hill, 2003. One of our favorite intro to computing systems books.
-
 ==McGraw-Hill，2003 年。我们最喜欢的计算机系统入门书籍之一 88。==
 
 Starts at transistors and gets you all the way up to C; the early material is particularly great.
-
 ==从晶体管开始，一直讲到 C 语言；早期的材料特别棒 89。==
 
 [RT74] "The UNIX Time-Sharing System" by Dennis M. Ritchie, Ken Thompson.
-
 ==[RT74] 《UNIX 分时系统》，作者：Dennis M. Ritchie, Ken Thompson 90。==
 
 CACM, Volume 17: 7, July 1974. A great summary of UNIX written as it was taking over the world of computing, by the people who wrote it.
-
 ==CACM，第 17 卷：7，1974 年 7 月。由编写它的人撰写的关于 UNIX 的精彩总结，当时它正在接管计算世界 91。==
 
 [S68] "SDS 940 Time-Sharing System" by Scientific Data Systems. TECHNICAL MANUAL, SDS 90 11 168, August 1968.
-
 ==[S68] 《SDS 940 分时系统》，作者：Scientific Data Systems。技术手册，SDS 90 11 168，1968 年 8 月 92。==
 
 Yes, a technical manual was the best we could find.
-
 ==是的，我们要能找到的最好的就是一本技术手册 93。==
 
 But it is fascinating to read these old system documents, and see how much was already in place in the late 1960's.
-
 ==但是阅读这些旧的系统文档并看看在 20 世纪 60 年代末已经有多少东西到位是很有趣的 94。==
 
 One of the minds behind the Berkeley Time-Sharing System (which eventually became the SDS system) was Butler Lampson, who later won a Turing award for his contributions in systems.
-
 ==伯克利分时系统（最终成为 SDS 系统）背后的思想家之一是 Butler Lampson，他后来因在系统方面的贡献而获得图灵奖 95。==
 
 [SS+10] "Membrane: Operating System Support for Restartable File Systems" by S. Sundararaman, S. Subramanian, A. Rajimwale, A. Arpaci-Dusseau, R. Arpaci-Dusseau, M. Swift.
-
 ==[SS+10] 《Membrane：操作系统对可重启文件系统的支持》，作者：S. Sundararaman, S. Subramanian, A. Rajimwale, A. Arpaci-Dusseau, R. Arpaci-Dusseau, M. Swift 96。==
 
 FAST '10, San Jose, CA, February 2010. The great thing about writing your own class notes: you can advertise your own research.
-
 ==FAST '10，加利福尼亚州圣何塞，2010 年 2 月。编写自己的课堂讲义的好处：你可以宣传自己的研究 97。==
 
 But this paper is actually pretty neat when a file system hits a bug and crashes, Membrane auto-magically restarts it, all without applications or the rest of the system being affected.98
-
 ==但这篇论文实际上相当不错，当文件系统遇到错误并崩溃时，Membrane 会自动神奇地重启它，而不会影响应用程序或系统的其余部分 99100。101==
 
 Homework102
-
 ==家庭作业103==
 
 Mos104t (and eventually, all) chapters of this book have homework sections at the end.
-
 ==本书的大多数（最终是所有）章节末尾都有家庭作业部分 105。==
 
 Doing these homeworks is important, as each lets you, the reader, gain more experience with the concepts presented within the chapter.
-
 ==做这些作业很重要，因为每一个作业都能让你，也就是读者，获得更多关于本章所介绍概念的经验 106。==
 
 There are two types of homeworks.
-
 ==有两种类型的家庭作业 107。==
 
 The first is based on simulation.
-
 ==第一种是基于模拟的 108。==
 
 A simulation of a computer system is just a simple program that pretends to do some of the interesting parts of what a real system does, and then report some output metrics to show how the system behaves.
-
 ==计算机系统的模拟只是一个简单的程序，假装做真实系统所做的一些有趣部分，然后报告一些输出指标来展示系统的行为 109。==
 
 For example, a hard drive simulator might take a series of requests, simulate how long they would take to get serviced by a hard drive with certain performance characteristics, and then report the average latency of the requests.
-
 ==例如，硬盘驱动器模拟器可能会接受一系列请求，模拟具有特定性能特征的硬盘驱动器为它们提供服务需要多长时间，然后报告请求的平均延迟 110。==
 
 The cool thing about simulations is they let you easily explore how systems behave without the difficulty of running a real system.
-
 ==模拟的酷炫之处在于，它们让你能够轻松探索系统的行为，而无需运行真实系统的困难 111。==
 
 Indeed, they even let you create systems that cannot exist in the real world (for example, a hard drive with unimaginably fast performance), and thus see the potential impact of future technologies.
-
 ==事实上，它们甚至允许你创建现实世界中不存在的系统（例如，具有难以想象的快速性能的硬盘驱动器），从而看到未来技术的潜在影响 112。==
 
 Of course, simulations are not without their downsides.113
-
 ==当然，模拟并非没有缺点 114115。116==
 
 By their very nature, simulations are just approximations of how a real system behaves.117
-
 ==就其本质而言，模拟只是真实系统行为的近似 118119。120==
 
 I121f an important aspect of real-world behavior is omitted, the simulation will report bad results.
-
 ==如果忽略了现实世界行为的一个重要方面，模拟将报告错误的结果 122。==
 
 Thus, results from a simulation should always be treated with some suspicion.
-
 ==因此，模拟结果应始终受到一定的怀疑 123。==
 
 In the end, how a system behaves in the real world is what matters.
-
 ==最终，系统在现实世界中的表现才是最重要的 124。==
 
 The second type of homework requires interaction with real-world code.
-
 ==第二种类型的家庭作业需要与现实世界的代码进行交互 125。==
 
 Some of these homeworks are measurement focused, whereas others just require some small-scale development and experimentation.
-
 ==其中一些作业侧重于测量，而另一些则只需要一些小规模的开发和实验 126。==
 
 Both are just small forays into the larger world you should be getting into, which is how to write systems code in C on UNIX-based systems.
-
 ==两者都只是对你应该进入的更大世界的小小尝试，即如何在基于 UNIX 的系统上用 C 编写系统代码 127。==
 
 Indeed, larger-scale projects, which go beyond these homeworks, are needed to push you in this direction; thus, beyond just doing homeworks, we strongly recommend you do projects to solidify your systems skills.
-
 ==事实上，需要超越这些家庭作业的更大规模的项目来推动你朝这个方向发展；因此，除了做家庭作业之外，我们要强烈建议你做项目来巩固你的系统技能 128。==
 
 See this page (https://github.com/remzi-arpacidusseau/ostep-projects) for some projects.
-
 ==请参阅此页面 (https://github.com/remzi-arpacidusseau/ostep-projects) 获取一些项目 129。==
 
 To do these homeworks, you likely have to be on a UNIX-based machine, running either Linux, macOS, or some similar system.
-
 ==要做这些家庭作业，你可能需要在基于 UNIX 的机器上，运行 Linux、macOS 或类似的系统 130。==
 
 It should also have a C compiler installed (e.g., gcc) as well as Python.
-
 ==它还应该安装了 C 编译器（例如 gcc）以及 Python 131。==
 
 You should also know how to edit code in a real code editor of some kind.
-
 ==你也应该知道如何在某种真正的代码编辑器中编辑代码 132。==
 
 Part I: Virtualization
-
 ==第一部分：虚拟化==
 
 3 A Dialogue on Virtualization
-
 ==3 关于虚拟化的对话==
 
 Professor: And thus we reach the first of our three pieces on operating systems: virtualization.
-
 ==教授：这样我们就到了关于操作系统的三个部分中的第一个：虚拟化 133。==
 
 Student: But what is virtualization, oh noble professor?
-
 ==学生：但是什么是虚拟化呢，哦，高尚的教授？ 134==
 
 Professor: Imagine we have a peach.
-
 ==教授：想象我们有一个桃子 135。==
 
 Student: A peach? (incredulous)
-
 ==学生：一个桃子？（怀疑地） 136==
 
 Professor: Yes, a peach. Let us call that the physical peach.
-
 ==教授：是的，一个桃子。让我们称之为物理桃子 137。==
 
 But we have many eaters who would like to eat this peach.
-
 ==但是我们有许多食客想要吃这个桃子 138。==
 
 What we would like to present to each eater is their own peach, so that they can be happy.
-
 ==我们要希望呈现给每个食客的是他们自己的桃子，这样他们就会很高兴 139。==
 
 We call the peach we give eaters virtual peaches; we somehow create many of these virtual peaches out of the one physical peach.
-
 ==我们要称给食客的桃子为虚拟桃子；我们不知何故用一个物理桃子创造了许多这样的虚拟桃子 140。==
 
 And the important thing: in this illusion, it looks to each eater like they have a physical peach, but in reality they don't.
-
 ==重要的事情是：在这个幻觉中，每个食客看起来都拥有一个物理桃子，但实际上他们没有 141。==
 
 Student: So you are sharing the peach, but you don't even know it?
-
 ==学生：所以你们在分享桃子，但你们甚至不知道？ 142==
 
 Professor: Right! Exactly.
-
 ==教授：对！没错 143。==
 
 Student: But there's only one peach.
-
 ==学生：但是只有一个桃子 144。==
 
 Professor: Yes. And...?
-
 ==教授：是的。然后呢……？ 145==
 
 Student: Well, if I was sharing a peach with somebody else, I think I would notice.
-
 ==学生：嗯，如果我和别人分享一个桃子，我想我会注意到的 146。==
 
 Professor: Ah yes! Good point.
-
 ==教授：啊是的！说得好 147。==
 
 But that is the thing with many eaters; most of the time they are napping or doing something else, and thus, you can snatch that peach away and give it to someone else for a while.
-
 ==但这就是许多食客的情况；大多数时候他们在打盹或做其他事情，因此，你可以把那个桃子抢走，给别人一会儿 148。==
 
 And thus we create the illusion of many virtual peaches, one peach for each person!
-
 ==这样我们就创造了许多虚拟桃子的幻觉，每个人一个桃子！ 149==
 
 Student: Sounds like a bad campaign slogan.
-
 ==学生：听起来像是一个糟糕的竞选口号 150。==
 
 You are talking about computers, right Professor?
-
 ==你在谈论计算机，对吧教授？ 151==
 
 Professor: Ah, young grasshopper, you wish to have a more concrete example.
-
 ==教授：啊，年轻的蚱蜢，你希望有一个更具体的例子 152。==
 
 Good idea!
-
 ==好主意！ 153==
 
 Let us take the most basic of resources, the CPU.
-
 ==让我们以最基本的资源 CPU 为例 154。==
 
 Assume there is one physical CPU in a system (though now there are often two or four or more).
-
 ==假设系统中有一个物理 CPU（尽管现在通常有两个或四个或更多） 155。==
 
 What virtualization does is take that single CPU and make it look like many virtual CPUs to the applications running on the system.
-
 ==虚拟化所做的是获取那个单一的 CPU，并使其在系统上运行的应用程序看来像是有许多虚拟 CPU 156。==
 
 Thus, while each application thinks it has its own CPU to use, there is really only one.157
-
 ==因此，虽然每个应用程序都认为它有自己的 CPU 可以使用，但实际上只有一个 158159。160==
 
 And thus the OS has created a beautiful illusion: it has virtua161lized the CPU.
-
 ==这样操作系统就创造了一个美丽的幻觉：它已经虚拟化了 CPU 162。==
 
 Student: Wow! That sounds like magic.
-
 ==学生：哇！那听起来像魔法 163。==
 
 Tell me more!
-
 ==告诉我更多！ 164==
 
 How does that work?
-
 ==那是如何工作的？ 165==
 
 Professor: In time, young student, in good time.
-
 ==教授：到时候，年轻的学生，到时候 166。==
 
 Sounds like you are ready to begin.
-
 ==听起来你已经准备好开始了 167。==
 
 Student: I am! Well, sort of.
-
 ==学生：我是！嗯，算是吧 168。==
 
 I must admit, I'm a little worried you are going to start talking about peaches again.
-
 ==我必须承认，我有点担心你会再次开始谈论桃子 169。==
 
 Professor: Don't worry too much; I don't even like peaches.
-
 ==教授：别太担心；我甚至不喜欢桃子 170。==
 
 And thus we begin...
-
 ==我们就这样开始…… 171==
 
 4 The Abstraction: The Process
-
 ==4 抽象：进程==
 
 In this chapter, we discuss one of the most fundamental abstractions that the OS provides to users: the process.
-
 ==在本章中，我们要讨论操作系统提供给用户的最基本的抽象之一：进程 172。==
 
 The definition of a process, informally, is quite simple: it is a running program.
-
 ==非正式地讲，进程的定义非常简单：它是一个正在运行的程序 173。==
 
 The program itself is a lifeless thing: it just sits there on the disk, a bunch of instructions (and maybe some static data), waiting to spring into action.
-
 ==程序本身是一个无生命的东西：它只是静静地待在磁盘上，一堆指令（也许还有一些静态数据），等待着付诸行动 174。==
 
 It is the operating system that takes these bytes and gets them running, transforming the program into something useful.
-
 ==正是操作系统获取这些字节并让它们运行起来，将程序转化为有用的东西 175。==
 
 It turns out that one often wants to run more than one program at once; for example, consider your desktop or laptop where you might like to run a web browser, mail program, a game, a music player, and so forth.
-
 ==事实证明，人们经常希望同时运行多个程序；例如，考虑你的台式机或笔记本电脑，你可能想要运行网络浏览器、邮件程序、游戏、音乐播放器等等 176。177==
 
 In fact, a typical system may be seemingly running tens or even hundreds of processes at the same time.178
-
 ==事实上，一个典型的系统可能看似同时运行着数十甚至数百个进程 179180。181==
 
 Doing so makes the system easy to use, as182 one never need be concerned with whether a CPU is available; one simply runs programs.
-
 ==这样做使系统易于使用，因为人们永远不需要关心 CPU 是否可用；只需运行程序即可 183。==
 
 Hence our challenge:
-
 ==因此我们的挑战是： 184==
 
 The Crux of the Problem: How to Provide the Illusion of Many CPUs?
-
 ==问题的关键：如何提供许多 CPU 的幻觉？==
 
 Although there are only a few physical CPUs available, how can the OS provide the illusion of a nearly-endless supply of said CPUs?
-
 ==虽然只有少数物理 CPU 可用，但操作系统如何提供看似无限供应的 CPU 的幻觉？ 185==
 
 The OS creates this illusion by virtualizing the CPU.
-
 ==操作系统通过虚拟化 CPU 来创造这种幻觉 186。==
 
 By running one process, then stopping it and running another, and so forth, the OS can promote the illusion that many virtual CPUs exist when in fact there is only one physical CPU (or a few).
-
 ==通过运行一个进程，然后停止它并运行另一个进程，依此类推，操作系统可以制造出存在许多虚拟 CPU 的假象，而实际上只有一个物理 CPU（或几个） 187。==
 
 This basic technique, known as time sharing of the CPU, allows users to run as many concurrent processes as they would like; the potential cost is performance, as each will run more slowly if the CPU(s) must be shared.
-
 ==这种基本技术称为 CPU 分时，允许用户运行任意数量的并发进程；潜在的代价是性能，如果必须共享 CPU，每个进程的运行速度都会变慢 188。==
 
 To implement virtualization of the CPU, and to implement it well, the OS will need both some low-level machinery and some high-level intelligence.
-
 ==为了实现 CPU 虚拟化，并且实现得好，操作系统既需要一些低级机制，也需要一些高级智能 189。==
 
 We call the low-level machinery mechanisms; mechanisms are low-level methods or protocols that implement a needed piece of functionality.190191
-
 ==我们要称低级机器为机制；机制是实现所需功能的低级方法或协议 192193194。195196==
 
 For example, we'll learn later how to implement a context switc197h, which gives the OS t198he ability to stop running one program and start running another on a given CPU; this time-sharing mechanism is employed by all modern OSes.
-
 ==例如，我们要稍后将学习如何实现上下文切换，这使操作系统能够停止运行一个程序并在给定的 CPU 上开始运行另一个程序；所有现代操作系统都采用了这种分时机制 199199199199。==
 
 Tip: Use Time Sharing (and Space Sharing)
-
 ==提示：使用分时（和空间共享）200==
 
 Time sharing is a basic technique used by an OS to share a resource.201
-
 ==分时是操作系统用来共享资源的一种基本技术 202203。204==
 
 By allowing the resource to be used for a little while by one entity, and then a little whi205le by another, and so forth, the resource in question (e.g., the CPU, or a network link) can be shared by many.
-
 ==通过允许资源被一个实体使用一会儿，然后被另一个实体使用一会儿，依此类推，所讨论的资源（例如，CPU 或网络链接）可以被许多人共享 206。==
 
 The counterpart of time sharing is space sharing, where a resource is divided (in space) among those who wish to use it.
-
 ==分时的对应物是空间共享，其中资源在希望使用它的人之间（在空间上）进行划分 207。==
 
 For example, disk space is naturally a space-shared resource; once a block is assigned to a file, it is normally not assigned to another file until the user deletes the original file.
-
 ==例如，磁盘空间自然是一种空间共享资源；一旦一个块被分配给一个文件，它通常不会被分配给另一个文件，直到用户删除原始文件 208。==
 
 On top of these mechanisms resides some of the intelligence in the OS, in the form of policies.
-
 ==在这些机制之上，存在着操作系统中的一些智能，以策略的形式出现 209。==
 
 Policies are algorithms for making some kind of decision within the OS.
-
 ==策略是在操作系统内做出某种决定的算法 210。==
 
 For example, given a number of possible programs to run on a CPU, which program should the OS run?
-
 ==例如，给定要在 CPU 上运行的多个可能的程序，操作系统应该运行哪个程序？ 211==
 
 A scheduling policy in the OS will make this decision, likely using historical information (e.g., which program has run more over the last minute?), workload knowledge (e.g., what types of programs are run), and performance metrics (e.g., is the system optimizing for interactive performance, or throughput?) to make its decision.
-
 ==操作系统中的调度策略将做出此决定，可能会使用历史信息（例如，哪个程序在最后一分钟运行得更多？）、工作负载知识（例如，运行什么类型的程序）和性能指标（例如，系统是否针对交互性能或吞吐量进行优化？）来做出决定 212。==
 
 4.1 The Abstraction: A Process
-
 ==4.1 抽象：一个进程==
 
 The abstraction provided by the OS of a running program is something we will call a process.
-
 ==操作系统提供的运行程序的抽象就是我们要所说的进程 213。==
 
 As we said above, a process is simply a running program; at any instant in time, we can summarize a process by taking an inventory of the different pieces of the system it accesses or affects during the course of its execution.
-
 ==正如我们上面所说，进程只是一个正在运行的程序；在任何时刻，我们可以通过盘点它在执行过程中访问或影响的系统的不同部分来总结一个进程 214。==
 
 To understand what constitutes a process, we thus have to understand its machine state: what a program can read or update when it is running.
-
 ==为了理解什么构成了进程，我们要必须理解它的机器状态：程序在运行时可以读取或更新什么 215。==
 
 At any given time, what parts of the machine are important to the execution of this program?
-
 ==在任何给定时间，机器的哪些部分对该程序的执行很重要？ 216==
 
 One obvious component of machine state that comprises a process is its memory.
-
 ==构成进程的机器状态的一个明显组成部分是其内存 217。==
 
 Instructions lie in memory; the data that the running program reads and writes sits in memory as well.
-
 ==指令位于内存中；正在运行的程序读取和写入的数据也位于内存中 218。==
 
 Thus the memory that the process can address (called its address space) is part of the process.
-
 ==因此，进程可以寻址的内存（称为其地址空间）是进程的一部分 219。==
 
 Also part of the process's machine state are registers; many instructions explicitly read or update registers and thus clearly they are important to the execution of the process.
-
 ==进程机器状态的一部分还有寄存器；许多指令显式读取或更新寄存器，因此显然它们对进程的执行很重要 220221。222==
 
 Note that there are some particularly special registers that form part of this machine state.223
-
 ==请注意，有一些特别特殊的寄存器构成了此机器状态的一部分 224225。226==
 
 For example, the program counter (PC) (sometimes 227called the instruction pointer or IP) tells us which instruction of the program will execute next; similarly a stack pointer and associated frame pointer are used to manage the stack for function parameters, local variables, and return addresses.228229
-
 ==例如，程序计数器 (PC)（有时称为指令指针或 IP）告诉我们将执行程序的哪一条指令；类似地，栈指针和相关的帧指针230用于管理函数参数、局部变量和返回地址的栈 231232232232232。233==
 
 Finally, programs often access persisten234t storage devices too.
-
 ==最后，程序通常也会访问持久存储设备 235。==
 
 Such I/O information might include a list of the files the process currently has open.
-
 ==此类 I/O 信息可能包括进程当前已打开的文件列表 236。==
 
 Tip: Separate Policy and Mechanism
-
 ==提示：分离策略和机制==
 
 In many operating systems, a common design paradigm is to separate high-level policies from their low-level mechanisms.237238
-
 ==在许多操作系统中，一种常见的设计范式是将高级策略与其低级机制分离开来 239240241。242243==
 
 You can think of the mechanism as providing the answer to a how question about a system; for example, how does an operating system perform244 a context switch?245
-
 ==你可以将机制视为提供关于系统的如何做问题的答案；例如，操作系统如何执行上下文切换？ 246==
 
 The policy provides the answer to a which question; for example, which process should the operating system run right now?
-
 ==策略提供哪一个问题的答案；例如，操作系统现在应该运行哪个进程？ 247==
 
 Separating the two allows one easily to change policies without having to rethink the mechanism and is thus a form of modularity, a general software design principle.
-
 ==分离这两者允许人们轻松更改策略，而无需重新考虑机制，因此这是一种模块化形式，一种通用的软件设计原则 248。==
 
 4.2 Process API
-
 ==4.2 进程 API==
 
 Though we defer discussion of a real process API until a subsequent chapter, here we first give some idea of what must be included in any interface of an operating system.
-
 ==虽然我们要将对真实进程 API 的讨论推迟到后续章节，但在这里我们首先给出一些关于操作系统任何接口中必须包含内容的想法 249。==
 
 These APIs, in some form, are available on any modern operating system.
-
 ==这些 API 以某种形式存在于任何现代操作系统中 250。==
 
 - Create: An operating system must include some method to create new processes. When you type a command into the shell, or double-click on an application icon, the OS is invoked to create a new process to run the program you have indicated.
-    
 ==**创建**：操作系统必须包含某种创建新进程的方法。当你在 Shell 中输入命令或双击应用程序图标时，操作系统会被调用来创建一个新进程以运行你指定的程序 251。==
     
 - Destroy: As there is an interface for process creation, systems also provide an interface to destroy processes forcefully. Of course, many processes will run and just exit by themselves when complete; when they don't, however, the user may wish to kill them, and thus an interface to halt a runaway process is quite useful.
-    
 ==**销毁**：既然有进程创建的接口，系统也提供强制销毁进程的接口。当然，许多进程会运行并在完成后自行退出；然而，当它们不退出时，用户可能希望杀死它们，因此停止失控进程的接口非常有用 252253。254==
     
 - Wait: Sometimes it is useful to wait for a process to stop running; thus some kind of waiting interface is often provided.255
-    
 ==**等待**：有时等待进程停止运行是有用的；因此通常提供某种等待接口 256257。==
     
 - Miscellaneous Control: Other than killing or waiting for a process, there are sometimes other controls that are possible. For example, most operating systems provide some kind of method to suspend a process (stop it from running for a while) and then resume it (continue it running).
-    
 ==**其他控制**：除了杀死或等待进程之外，有时还可以进行其他控制。例如，大多数操作系统提供某种暂停进程（使其停止运行一段时间）然后恢复它（使其继续运行）的方法 258。==
     
 - Status: There are usually interfaces to get some status information about a process as well, such as how long it has run for, or what state it is in.
-    
 ==**状态**：通常还有获取有关进程状态信息的接口，例如它运行了多长时间，或者它处于什么状态 259。==
     
 
 4.3 Process Creation: A Little More Detail
-
 ==4.3 进程创建：更多细节==
 
 One mystery that we should unmask a bit is how programs are transformed into processes.
-
 ==我们要应该揭开的一个谜团是程序如何转化为进程 260。==
 
 Specifically, how does the OS get a program up and running?
-
 ==具体来说，操作系统如何让程序启动并运行？ 261==
 
 How does process creation actually work?
-
 ==进程创建实际上是如何工作的？ 262==
 
 The first thing that the OS must do to run a program is to load its code and any static data (e.g., initialized variables) into memory, into the address space of the process.
-
 ==操作系统运行程序必须做的第一件事是将其代码和任何静态数据（例如，初始化的变量）加载到内存中，加载到进程的地址空间中 263。==
 
 Programs initially reside on disk (or, in some modern systems, flash-based SSDs) in some kind of executable format; thus, the process of loading a program and static data into memory requires the OS to read those bytes from disk and place them in memory somewhere (as shown in Figure 4.1).
-
 ==程序最初以某种可执行格式驻留在磁盘（或在一些现代系统中，基于闪存的 SSD）上；因此，将程序和静态数据加载到内存的过程需要操作系统从磁盘读取这些字节并将它们放置在内存中的某个位置（如图 4.1 所示） 264。==
 
 In early (or simple) operating systems, the loading process is done eagerly, i.e., all at once before running the program; modern OSes perform the process lazily, i.e., by loading pieces of code or data only as they are needed during program execution.
-
 ==在早期（或简单）的操作系统中，加载过程是急切地完成的，即在运行程序之前一次性完成；现代操作系统懒惰地执行该过程，即仅在程序执行期间需要时才加载代码或数据片段 265。==
 
 To truly understand how lazy loading of pieces of code and data works, you'll have to understand more about the machinery of paging and swapping, topics we'll cover in the future when we discuss the virtualization of memory.
-
 ==要真正理解代码和数据片段的延迟加载是如何工作的，你要必须了解更多关于分页和交换机制的知识，我们要将在讨论内存虚拟化时涵盖这些主题 266266266266。==
 
 For now, just remember that before running anything, the OS clearly must do some work to get the important program bits from disk into memory.
-
 ==现在，只需记住，在运行任何东西之前，操作系统显然必须做一些工作，将重要的程序位从磁盘获取到内存中 267。==
 
 Once the code and static data are loaded into memory, there are a few other things the OS needs to do before running the process.
-
 ==一旦代码和静态数据被加载到内存中，操作系统在运行进程之前还需要做其他几件事 268。==
 
 Some memory must be allocated for the program's run-time stack (or just stack).
-
 ==必须为程序的运行时栈（或简称栈）分配一些内存 269。==
 
 As you should likely already know, C programs use the stack for local variables, function parameters, and return addresses; the OS allocates this memory and gives it to the process.
-
 ==正如你应该已经知道的那样，C 程序使用栈来存储局部变量、函数参数和返回地址；操作系统分配这块内存并将其交给进程 270。==
 
 The OS will also likely initialize the stack with arguments; specifically, it will fill in the parameters to the main() function, i.e., argc and the argv array.
-
 ==操作系统也可能会用参数初始化栈；具体来说，它将填充 main() 函数的参数，即 argc 和 argv 数组 271。==
 
 The OS may also allocate some memory for the program's heap.
-
 ==操作系统也可能为程序的堆分配一些内存 272。==
 
 In C programs, the heap is used for explicitly requested dynamically-allocated data; programs request such space by calling malloc() and free it explicitly by calling free().
-
 ==在 C 程序中，堆用于显式请求的动态分配数据；程序通过调用 malloc() 请求此类空间，并通过调用 free() 显式释放它 273。==
 
 The heap is needed for data structures such as linked lists, hash tables, trees, and other interesting data structures.
-
 ==堆用于链表、哈希表、树和其他有趣的数据结构等数据结构 274。==
 
 The heap will be small at first; as the program runs, and requests more memory via the malloc() library API, the OS may get involved and allocate more memory to the process to help satisfy such calls.275276
-
 ==堆起初会很小；随着程序的运行，并通过 malloc() 库 API 请求更多内存，操作系统可能会介入并为进程分配更多内存以帮助满足此类调用 277278279。280281==
 
 The OS will also do some other initialization tasks, particularly as related to input/output (I/O282).283
-
 ==操作系统还会做一些其他的初始化任务，284特别是与输入/输出 (I/O) 相关的任务 285。==
 
 For example, in UNIX systems, each process by default has three open file descriptors, for standard input, output, and error; these descriptors let programs easily read input from the terminal and print output to the screen.
-
 ==例如，在 UNIX 系统中，每个进程默认有三个打开的文件描述符，用于标准输入、输出和错误；这些描述符让程序可以轻松地从终端读取输入并将输出打印到屏幕上 286。==
 
 We'll learn more about I/O, file descriptors, and the like in the third part of the book on persistence.
-
 ==我们要将在关于持久性的本书第三部分中了解更多关于 I/O、文件描述符等内容 287。==
 
 By loading the code and static data into memory, by creating and initializing a stack, and by doing other work as related to I/O setup, the OS has now (finally) set the stage for program execution.288
-
 ==通过将代码和静态数据加载到内存中，通过创建和初始化栈，以及通过做与 I/O 设置相关的其他工作，操作系统现在（终于）为程序执行做好了准备 289290。291==
 
 It thus has one last task: to start the program running at the entry point, namely main().
-
 ==292因此，它还有最后一个任务：在入口点（即 main()）开始运行程序 293。==
 
 By jumping to the main() routine (through a specialized mechanism that we will discuss next chapter), the OS transfers control of the CPU to the newly-created process, and thus the program begins its execution.
-
 ==通过跳转到 main() 例程（通过我们将在下一章讨论的专门机制），操作系统将 CPU 的控制权转移给新创建的进程，从而程序开始执行 294。==
 
 4.4 Process States
-
 ==4.4 进程状态==
 
 Now that we have some idea of what a process is (though we will continue to refine this notion), and (roughly) how it is created, let us talk about the different states a process can be in at a given time.
-
 ==既然我们已经对什么是进程（尽管我们将继续完善这个概念）以及（大致）它是如何创建的有了一些概念，让我们来谈谈进程在给定时间可能处于的不同状态 295。==
 
 The notion that a process can be in one of these states arose in early computer systems.
-
 ==进程可能处于这些状态之一的概念出现在早期的计算机系统中 296。==
 
 In a simplified view, a process can be in one of three states:
-
 ==在一个简化的视图中，进程可以处于以下三种状态之一 297：==
 
 - Running: In the running state, a process is running on a processor. This means it is executing instructions.
-    
 ==**运行**：在运行状态下，进程正在处理器上运行。这意味着它正在执行指令 298。==
     
 - Ready: In the ready state, a process is ready to run but for some reason the OS has chosen not to run it at this given moment.
-    
 ==**就绪**：在就绪状态下，进程已准备好运行，但由于某种原因，操作系统选择在此时刻不运行它 299。==
     
 - Blocked: In the blocked state, a process has performed some kind of operation that makes it not ready to run until some other event takes place. A common example: when a process initiates an I/O request to a disk, it becomes blocked and thus some other process can use the processor.
-    
 ==**阻塞**：在阻塞状态下，进程执行了某种操作，使其在发生其他事件之前尚未准备好运行。一个常见的例子：当进程向磁盘发起 I/O 请求时，它会变为阻塞状态，因此其他进程可以使用处理器 300。==
     
 
 If we were to map these states to a graph, we would arrive at the diagram in Figure 4.2.
-
 ==如果我们把这些状态映射到一个图表中，我们就会得到图 4.2 中的图表 301。==
 
 As you can see in the diagram, a process can be moved between the ready and running states at the discretion of the OS.
-
 ==正如你在图表中看到的，操作系统可以自行决定将进程在就绪和运行状态之间移动 302。==
 
 Being moved from ready to running means the process has been scheduled; being moved from running to ready means the process has been descheduled.
-
 ==从就绪移动到运行意味着进程已被调度；从运行移动到就绪意味着进程已被取消调度 303。==
 
 Once a process has become blocked (e.g., by initiating an I/O operation), the OS will keep it as such until some event occurs (e.g., I/O completion); at that point, the process moves to the ready state again (and potentially immediately to running again, if the OS so decides).
-
 ==一旦进程变为阻塞状态（例如，通过发起 I/O 操作），操作系统将保持这种状态，直到发生某些事件（例如，I/O 完成）；在那一点上，进程再次移动到就绪状态（如果操作系统这样决定，也可能立即再次移动到运行状态） 304。==
 
 Let's look at an example of how two processes might transition through some of these states.
-
 ==让我们看一个例子，看看两个进程如何通过其中一些状态进行转换 305。==
 
 First, imagine two processes running, each of which only use the CPU (they do no I/O).
-
 ==首先，想象两个进程正在运行，每个进程只使用 CPU（它们不进行 I/O） 306。==
 
 In this case, a trace of the state of each process might look like this (Figure 4.3).
-
 ==在这种情况下，每个进程的状态跟踪可能如图 4.3 所示 307。==
 
 In this next example, the first process issues an I/O after running for some time.
-
 ==在下一个示例中，第一个进程在运行一段时间后发出 I/O 308。==
 
 At that point, the process is blocked, giving the other process a chance to run.
-
 ==在那一点上，进程被阻塞，给另一个进程运行的机会 309。==
 
 Figure 4.4 shows a trace of this scenario.
-
 ==图 4.4 显示了此场景的跟踪 310。==
 
 More specifically, Process 0 initiates an I/O and becomes blocked waiting for it to complete; processes become blocked, for example, when reading from a disk or waiting for a packet from a network.311
-
 ==更具体地说，进程 0 发起 I/O 并变为阻塞状态等待其完成；例如，当从磁盘读取或等待来自网络的数据包时，进程会变为阻塞状态 312313。314==
 
 The OS recognizes Process 0 is not using the CPU and starts running Process 1.
-
 ==操作系统识别出进程 0 未使用 CPU 并开始运行进程 1 315。==
 
 While Process 1 is running, the I/O completes, moving Process 0 back to ready.
-
 ==当进程 1 运行时，I/O 完成，将进程 0 移回就绪状态 316。==
 
 Finally, Process 1 finishes, and Process 0 runs and then is done.
-
 ==最后，进程 1 完成，进程 0 运行，然后完成 317。==
 
 Note that there are many decisions the OS must make, even in this simple example.
-
 ==请注意，即使在这个简单的例子中，操作系统也必须做出许多决定 318。==
 
 First, the system had to decide to run Process 1 while Process 0 issued an I/O; doing so improves resource utilization by keeping the CPU busy.
-
 ==首先，系统必须决定在进程 0 发出 I/O 时运行进程 1；这样做通过保持 CPU 忙碌来提高资源利用率 319。==
 
 Second, the system decided not to switch back to Process 0 when its I/O completed; it is not clear if this is a good decision or not.320
-
 ==其次，系统决定在进程 0 的 I/O 完成时不切回进程 0；目前尚不清楚这是否是一个好的决定 321322。323==
 
 What do you think?324
-
 ==你怎么看？ 325326==
 
 These types of decisions are made by the OS scheduler, a topic we will discuss a few chapters in the futu327re.
-
 ==这类决定由操作系统调度程序做出，我们要将在未来几章讨论这个主题 328。==
 
 4.5 Data Structures
-
 ==4.5 数据结构==
 
 The OS is a program, and like any program, it has some key data structures that track various relevant pieces of information.329
-
 ==操作系统是一个程序，像任何程序一样，它有一些关键的数据结构来跟踪各种相关信息 330331。332==
 
 To track the state of each process, for example, the O333S likely will keep some kind of process list for all processes that are ready and some additional information to track which process is currently running.
-
 ==为了跟踪每个进程的状态，例如，操作系统可能会为所有就绪的进程保留某种进程列表，并保留一些额外信息来跟踪当前正在运行哪个进程 334。==
 
 The OS must also track, in some way, blocked processes; when an I/O event completes, the OS should make sure to wake the correct process and ready it to run again.
-
 ==操作系统还必须以某种方式跟踪阻塞的进程；当 I/O 事件完成时，操作系统应确保唤醒正确的进程并使其准备好再次运行 335。==
 
 Figure 4.5 shows what type of information an OS needs to track about each process in the xv6 kernel.
-
 ==图 4.5 显示了操作系统需要在 xv6 内核中跟踪关于每个进程的哪种类型的信息 336。==
 
 Similar process structures exist in "real" operating systems such as Linux, Mac OS X, or Windows; look them up and see how much more complex they are.337
-
 ==类似的进程结构存在于“真实”操作系统中，如 Linux、Mac OS X 或 Windows；查阅它们，看看它们要复杂多少 338339。340==
 
 From the figure, you can see a couple of important pieces o341f information the OS tracks about a process.
-
 ==从图中，你可以看到操作系统跟踪的关于进程的几个重要信息 342。==
 
 The register context will hold, for a stopped process, the contents of its registers.
-
 ==**寄存器上下文**将保存已停止进程的寄存器内容 343343343343。==
 
 When a process is stopped, its registers will be saved to this memory location; by restoring these registers (i.e., placing their values back into the actual physical registers), the OS can resume running the process.
-
 ==当进程停止时，其寄存器将保存到此内存位置；通过恢复这些寄存器（即将其值放回实际物理寄存器中），操作系统可以恢复运行进程 344。==
 
 We'll learn more about this technique known as a context switch in future chapters.
-
 ==我们要将在以后的章节中了解更多关于这种称为上下文切换的技术 345。==
 
 You can also see from the figure that there are some other states a process can be in, beyond running, ready, and blocked.
-
 ==你还可以从图中看到，除了运行、就绪和阻塞之外，进程还可以处于其他一些状态 346347348。349350==
 
 Sometimes a system will have an initial state that the process is in when it is being created.351352
-
 ==有时系统会有一个初始状态，即进程在创建时所处的状态 353354355。356357==
 
 Also, a process could be placed in a final state where it has exite358d but has not yet been cleaned up (in UN359IX-based systems, this is called the zombie state).
-
 ==此外，进程可能会处于最终状态，即它已退出但尚未被清理（在基于 UNIX 的系统中，这称为僵尸状态） 360360360360。==
 
 This final state can be useful as it allows other processes (usually the parent that created the process) to examine the return code of the process and see if the just-finished process executed successfully (usually, programs return zero in UNIX-based systems when they have accomplished a task successfully, and non-zero otherwise).
-
 ==这个最终状态很有用，因为它允许其他进程（通常是创建该进程的父进程）检查该进程的返回代码，并查看刚完成的进程是否成功执行（通常，在基于 UNIX 的系统中，程序成功完成任务时返回零，否则返回非零值） 361。==
 
 When finished, the parent will make one final call (e.g., wait()) to wait for the completion of the child, and to also indicate to the OS that it can clean up any relevant data structures that referred to the now-extinct process.362
-
 ==完成后，父进程将进行最后一次调用（例如，wait()）以等待子进程完成，并向操作系统指示它可以清理引用该现已灭绝进程的任何相关数据结构 363364。365==
 
 Aside: Data Structure - The Process List366
-
 ==旁367白：数据结构——进程列表==
 
 Operating systems are replete with various important data structures that we will discuss in these notes.
-
 ==操作系统充满了我们将在这些笔记中讨论的各种重要数据结构 368。==
 
 The process list (also called the task list) is the first such structure.
-
 ==**进程列表**（也称为**任务列表**）是第一个这样的结构 369。==
 
 It is one of the simpler ones, but certainly any OS that has the ability to run multiple programs at once will have something akin to this structure in order to keep track of all the running programs in the system.
-
 ==它是较简单的结构之一，但任何有能力同时运行多个程序的操作系统肯定会有类似于此结构的东西，以便跟踪系统中所有正在运行的程序 370。==
 
 Sometimes people refer to the individual structure that stores information about a process as a Process Control Block (PCB), a fancy way of talking about a C structure that contains information about each process (also sometimes called a process descriptor).
-
 ==有时人们将存储有关进程信息的单个结构称为进程控制块 (PCB)，这是一种谈论包含有关每个进程信息的 C 结构的花哨方式（有时也称为进程描述符） 371。==
 
 4.6 Summary
-
 ==4.6 总结==
 
 We have introduced the most basic abstraction of the OS: the process.
-
 ==我们要已经介绍了操作系统最基本的抽象：进程 372。==
 
 It is quite simply viewed as a running program.
-
 ==它被简单地视为一个正在运行的程序 373。==
 
 With this conceptual view in mind, we will now move on to the nitty-gritty: the low-level mechanisms needed to implement processes, and the higher-level policies required to schedule them in an intelligent way.
-
 ==有了这个概念性的观点，我们要现在将通过具体细节：实现进程所需的低级机制，以及以智能方式调度它们所需的高级策略 374。==
 
 By combining mechanisms and policies, we will build up our understanding of how an operating system virtualizes the CPU.
-
 ==通过结合机制和策略，我们要将建立对操作系统如何虚拟化 CPU 的理解 375。==
 
 Aside: Key Process Terms
-
 ==旁白：关键进程术语==
 
 - The process is the major OS abstraction of a running program. At any point in time, the process can be described by its state: the contents of memory in its address space, the contents of CPU registers (including the program counter and stack pointer, among others), and information about I/O (such as open files which can be read or written).
-    
 ==**进程**是正在运行的程序的主要操作系统抽象。在任何时间点，进程都可以通过其状态来描述：其地址空间中的内存内容、CPU 寄存器的内容（包括程序计数器和栈指针等）以及有关 I/O 的信息（例如可以读取或写入的打开文件） 376。==
     
 - The process API consists of calls programs can make related to processes. Typically, this includes creation, destruction, and other useful calls.
-    
 ==**进程 API** 由程序可以进行的与进程相关的调用组成。通常，这包括创建、销毁和其他有用的调用 377。==
     
 - Processes exist in one of many different process states, including running, ready to run, and blocked. Different events (e.g., getting scheduled or descheduled, or waiting for an I/O to complete) transition a process from one of these states to the other.
-    
 ==**进程**存在于许多不同的**进程状态**之一中，包括运行、准备运行和阻塞。不同的事件（例如，被调度或取消调度，或等待 I/O 完成）将进程从这些状态之一转换为另一种状态 378。==
     
 - A process list contains information about all processes in the system. Each entry is found in what is sometimes called a process control block (PCB), which is really just a structure that contains information about a specific process.
-    
 ==**进程列表**包含有关系统中所有进程的信息。每个条目都在有时称为**进程控制块** (PCB) 的结构中找到，这实际上只是一个包含有关特定进程信息的结构 379。==
 
 Homework (Simulation)
@@ -4507,32 +4235,24 @@ To enable this, virtually all modern hardware provides the ability for user prog
 
 Pioneered on ancient machines such as the Atlas, system calls allow the kernel to carefully expose certain key pieces of functionality to user programs, such as accessing the file system, creating and destroying processes, communicating with other processes, and allocating more memory.
 ==系统调用在 Atlas 等古老机器上首创，允许内核谨慎地向用户程序公开某些关键功能，例如访问文件系统、创建和销毁进程、与其他进程通信以及分配更多内存。==
-
-
 ==根据您提供的 PDF 内容，我整理并翻译了关于“受限直接执行（Limited Direct Execution）”机制和“进程调度（Scheduling）”的核心章节。以下是严格按照您的要求格式化的翻译：==
 
 MECHANISM: LIMITED DIRECT EXECUTION
-
 ==机制：受限直接执行==
 
 TIP: USE PROTECTED CONTROL TRANSFER
-
 ==提示：使用受保护的控制转移==
 
 The hardware assists the OS by providing different modes of execution.
-
 ==硬件通过提供不同的执行模式来协助操作系统。==
 
 In user mode, applications do not have full access to hardware resources.
-
 ==在用户模式下，应用程序无法完全访问硬件资源。==
 
 In kernel mode, the OS has access to the full resources of the machine.
-
 ==在内核模式下，操作系统可以访问机器的全部资源。==
 
 Special instructions to trap into the kernel and return-from-trap back to user-mode programs are also provided.
-
 ==此外，还提供了陷入（trap）内核和从陷阱返回（return-from-trap）到用户模式程序的特殊指令。==
 
 Instructions that allow the OS to tell the hardware where the trap table resides in memory are also provided.
@@ -4659,2754 +4379,2166 @@ A Non-Cooperative Approach: The OS Takes Control
 ==非协作方式：操作系统获取控制权==
 
 What happens, for example, if a process ends up in an infinite loop, and never makes a system call?
-
 ==例如，如果一个进程陷入无限循环，并且从不进行系统调用，会发生什么？==
 
 THE CRUX: HOW TO GAIN CONTROL WITHOUT COOPERATION
-
 ==关键问题：如何在不协作的情况下获得控制权==
 
 How can the OS gain control of the CPU even if processes are not being cooperative?
-
 ==即使进程不配合，操作系统如何获得 CPU 的控制权？==
 
 The answer turns out to be simple and was discovered by a number of people building computer systems many years ago: a timer interrupt.
-
 ==答案很简单，多年前由许多构建计算机系统的人发现：时钟中断（timer interrupt）。==
 
 A timer device can be programmed to raise an interrupt every so many milliseconds.
-
 ==时钟设备可以被编程为每隔多少毫秒产生一次中断。==
 
 When the interrupt is raised, the currently running process is halted, and a pre-configured interrupt handler in the OS runs.
-
 ==当中断发生时，当前运行的进程被暂停，操作系统中预先配置的中断处理程序开始运行。==
 
 At this point, the OS has regained control of the CPU, and thus can do what it pleases: stop the current process, and start a different one.
-
 ==此时，操作系统重新获得了 CPU 的控制权，因此可以做它想做的事：停止当前进程，并启动另一个进程。==
 
 At boot time, the OS must inform the hardware of which code to run when the timer interrupt occurs.
-
 ==在引导时，操作系统必须通知硬件当时钟中断发生时运行哪段代码。==
 
 Also during the boot sequence, the OS must start the timer, which is of course a privileged operation.
-
 ==同样在引导序列期间，操作系统必须启动计时器，这当然是一个特权操作。==
 
 Saving and Restoring Context
-
 ==保存和恢复上下文==
 
 Now that the OS has regained control, a decision has to be made: whether to continue running the currently-running process, or switch to a different one.
-
 ==既然操作系统已经重新获得了控制权，就必须做出决定：是继续运行当前运行的进程，还是切换到另一个进程。==
 
 This decision is made by a part of the operating system known as the scheduler.
-
 ==这个决定是由操作系统中称为调度程序（scheduler）的部分做出的。==
 
 If the decision is made to switch, the OS then executes a low-level piece of code which we refer to as a context switch.
-
 ==如果决定进行切换，操作系统就会执行一段底层代码，我们称之为上下文切换（context switch）。==
 
 A context switch is conceptually simple: all the OS has to do is save a few register values for the currently-executing process and restore a few for the soon-to-be-executing process.
-
 ==上下文切换在概念上很简单：操作系统所要做的就是为当前正在执行的进程保存一些寄存器值，并为即将执行的进程恢复一些寄存器值。==
 
 By doing so, the OS thus ensures that when the return-from-trap instruction is finally executed, the system resumes execution of another process.
-
 ==通过这样做，操作系统确保了当最终执行从陷阱返回指令时，系统恢复另一个进程的执行。==
 
 Scheduling: Introduction
-
 ==调度：简介==
 
 THE CRUX: HOW TO DEVELOP SCHEDULING POLICY
-
 ==关键问题：如何制定调度策略==
 
 How should we develop a basic framework for thinking about scheduling policies?
-
 ==我们应该如何开发一个基本的框架来思考调度策略？==
 
 What are the key assumptions?
-
 ==关键假设是什么？==
 
 What metrics are important?
-
 ==哪些指标是重要的？==
 
 7.1 Workload Assumptions
-
 ==7.1 工作负载假设==
 
 We will make the following assumptions about the processes, sometimes called jobs, that are running in the system:
-
 ==我们将对系统中运行的进程（有时称为作业）做出以下假设：==
 
 1. Each job runs for the same amount of time.
-    
 ==2. 每个作业运行相同的时间。==
     
 3. All jobs arrive at the same time.
-    
 ==4. 所有作业同时到达。==
     
 5. Once started, each job runs to completion.
-    
 ==6. 一旦开始，每个作业都会运行直到完成。==
     
 7. All jobs only use the CPU (i.e., they perform no I/O).
-    
 ==8. 所有作业只使用 CPU（即它们不执行 I/O）。==
     
 9. The run-time of each job is known.
-    
 ==10. 每个作业的运行时间是已知的。==
     
 
 7.2 Scheduling Metrics
-
 ==7.2 调度指标==
 
 Beyond making workload assumptions, we also need one more thing to enable us to compare different scheduling policies: a scheduling metric.
-
 ==除了做出工作负载假设外，我们还需要一样东西来比较不同的调度策略：调度指标。==
 
 For now, however, let us also simplify our life by simply having a single metric: turnaround time.
-
 ==然而，为了简化现在的讨论，我们只使用一个指标：周转时间（turnaround time）。==
 
 The turnaround time of a job is defined as the time at which the job completes minus the time at which the job arrived in the system.
-
 ==作业的周转时间定义为作业完成的时间减去作业到达系统的时间。==
 
 More formally, the turnaround time $T_{turnaround}$ is: $T_{turnaround} = T_{completion} - T_{arrival}$.
-
 ==更正式地说，周转时间 $T_{turnaround}$ 是：$T_{turnaround} = T_{completion} - T_{arrival}$。==
 
 7.3 First In, First Out (FIFO)
-
 ==7.3 先进先出 (FIFO)==
 
 The most basic algorithm we can implement is known as First In, First Out (FIFO) scheduling or sometimes First Come, First Served (FCFS).
-
 ==我们能实现的最基本的算法被称为先进先出（FIFO）调度，有时也称为先到先服务（FCFS）。==
 
 FIFO has a number of positive properties: it is clearly simple and thus easy to implement.
-
 ==FIFO 有许多积极的特性：它显然很简单，因此很容易实现。==
 
 Let's do a quick example together.
-
 ==让我们一起做一个简单的例子。==
 
 Imagine three jobs arrive in the system, A, B, and C, at roughly the same time ($T_{arrival}=0$).
-
 ==想象一下，三个作业 A、B 和 C 几乎同时到达系统（$T_{arrival}=0$）。==
 
 Assume also that each job runs for 10 seconds.
-
 ==还要假设每个作业运行 10 秒。==
 
 The average turnaround time for the three jobs is simply $\frac{10+20+30}{3} = 20$.
-
 ==这就三个作业的平均周转时间仅仅是 $\frac{10+20+30}{3} = 20$。==
 
 Now let's relax one of our assumptions.
-
 ==现在让我们放宽其中一个假设。==
 
 In particular, let's relax assumption 1, and thus no longer assume that each job runs for the same amount of time.
-
 ==具体来说，让我们放宽假设 1，因此不再假设每个作业运行相同的时间。==
 
 In particular, let's again assume three jobs (A, B, and C), but this time A runs for 100 seconds while B and C run for 10 each.
-
 ==具体来说，让我们再次假设有三个作业（A、B 和 C），但这次 A 运行 100 秒，而 B 和 C 各运行 10 秒。==
 
 Job A runs first for the full 100 seconds before B or C even get a chance to run.
-
 ==作业 A 首先运行整整 100 秒，然后 B 或 C 才有机会运行。==
 
 Thus, the average turnaround time for the system is high: a painful 110 seconds $(\frac{100+110+120}{3}=110)$.
-
 ==因此，系统的平均周转时间很高：令人痛苦的 110 秒 $(\frac{100+110+120}{3}=110)$。==
 
 This problem is generally referred to as the convoy effect.
-
 ==这个问题通常被称为护航效应（convoy effect）。==
 
 7.4 Shortest Job First (SJF)
-
 ==7.4 最短作业优先 (SJF)==
 
 It turns out that a very simple approach solves this problem.
-
 ==事实证明，一个非常简单的方法可以解决这个问题。==
 
 This new scheduling discipline is known as Shortest Job First (SJF).
-
 ==这种新的调度规则被称为最短作业优先（SJF）。==
 
 It runs the shortest job first, then the next shortest, and so on.
-
 ==它首先运行最短的作业，然后运行下一个最短的作业，依此类推。==
 
 Simply by running B and C before A, SJF reduces average turnaround from 110 seconds to 50 $(\frac{10+20+120}{3}=50)$, more than a factor of two improvement.
-
 ==仅仅通过在 A 之前运行 B 和 C，SJF 就将平均周转时间从 110 秒减少到 50 秒 $(\frac{10+20+120}{3}=50)$，性能提高了一倍以上。==
 
 Let's relax another.
-
 ==让我们再放宽一个假设。==
 
 In particular, we can target assumption 2, and now assume that jobs can arrive at any time instead of all at once.
-
 ==具体来说，我们可以针对假设 2，现在假设作业可以在任何时间到达，而不是全部同时到达。==
 
 This time, assume A arrives at $t=0$ and needs to run for 100 seconds, whereas B and C arrive at $t=10$ and each need to run for 10 seconds.
-
 ==这一次，假设 A 在 $t=0$ 到达并需要运行 100 秒，而 B 和 C 在 $t=10$ 到达并且各需要运行 10 秒。==
 
 Even though B and C arrived shortly after A, they still are forced to wait until A has completed, and thus suffer the same convoy problem.
-
 ==即使 B 和 C 在 A 之后不久到达，它们仍然被迫等待直到 A 完成，因此遭受同样的护航问题。==
 
 7.5 Shortest Time-to-Completion First (STCF)
-
 ==7.5 最短完成时间优先 (STCF)==
 
 To address this concern, we need to relax assumption 3 (that jobs must run to completion), so let's do that.
-
 ==为了解决这个问题，我们需要放宽假设 3（作业必须运行直到完成），所以让我们这样做。==
 
 The scheduler can certainly do something else when B and C arrive: it can preempt job A and decide to run another job, perhaps continuing A later.
-
 ==当 B 和 C 到达时，调度程序当然可以做其他事情：它可以抢占（preempt）作业 A 并决定运行另一个作业，稍后或许再继续运行 A。==
 
 SJF by our definition is a non-preemptive scheduler.
-
 ==根据我们的定义，SJF 是一个非抢占式调度程序。==
 
 Fortunately, there is a scheduler which does exactly that: add preemption to SJF, known as the Shortest Time-to-Completion First (STCF) or Preemptive Shortest Job First (PSJF) scheduler.
-
 ==幸运的是，有一个调度程序正是这样做的：将抢占添加到 SJF，称为最短完成时间优先（STCF）或抢占式最短作业优先（PSJF）调度程序。==
 
 Any time a new job enters the system, the STCF scheduler determines which of the remaining jobs (including the new job) has the least time left, and schedules that one.
-
 ==每当新作业进入系统时，STCF 调度程序就会确定剩余作业（包括新作业）中哪个剩余时间最少，并调度该作业。==
 
 The result is a much-improved average turnaround time.
-
 ==结果是平均周转时间大大改善。==
 
 7.6 A New Metric: Response Time
-
 ==7.6 一个新指标：响应时间==
 
 Thus, if we knew job lengths, and that jobs only used the CPU, and our only metric was turnaround time, STCF would be a great policy.
-
 ==因此，私如果我们知道作业长度，且作业只使用 CPU，而我们唯一的指标是周转时间，那么 STCF 将是一个很好的策略。==
 
 However, the introduction of time-shared machines changed all that.
-
 ==然而，分时机器的引入改变了一切。==
 
 Now users would sit at a terminal and demand interactive performance from the system as well.
-
 ==现在，用户坐在终端前，也要求系统提供交互式性能。==
 
 And thus, a new metric was born: response time.
-
 ==因此，一个新的指标诞生了：响应时间。==
 
 We define response time as the time from when the job arrives in a system to the first time it is scheduled.
-
 ==我们将响应时间定义为从作业到达系统到它第一次被调度的时间。==
 
 STCF and related disciplines are not particularly good for response time.
-
 ==STCF 和相关的规则在响应时间方面并不是特别好。==
 
 If three jobs arrive at the same time, for example, the third job has to wait for the previous two jobs to run in their entirety before being scheduled just once.
-
 ==例如，如果三个作业同时到达，第三个作业必须等待前两个作业完全运行完毕，才能被调度一次。==
 
 While great for turnaround time, this approach is quite bad for response time and interactivity.
-
 ==虽然这种方法对周转时间很有利，但对响应时间和交互性却很糟糕。==
 
 7.7 Round Robin
-
 ==7.7 轮转调度==
 
 To solve this problem, we will introduce a new scheduling algorithm, classically referred to as Round-Robin (RR) scheduling.
-
 ==为了解决这个问题，我们将引入一种新的调度算法，经典地称为轮转（Round-Robin, RR）调度。==
 
 The basic idea is simple: instead of running jobs to completion, RR runs a job for a time slice (sometimes called a scheduling quantum) and then switches to the next job in the run queue.
-
 ==基本思想很简单：RR 不是运行作业直到完成，而是运行作业一个时间片（time slice，有时称为调度量子），然后切换到运行队列中的下一个作业。==
 
 It repeatedly does so until the jobs are finished.
-
 ==它重复这样做，直到作业完成。==
 
 For this reason, RR is sometimes called time-slicing.
-
 ==因此，RR 有时也被称为时间切片（time-slicing）。==
 
 SCHEDULING: INTRODUCTION
-
 ==调度：导论==
 
 TIP: AMORTIZATION CAN REDUCE COSTS
-
 ==提示：摊销可以降低成本==
 
 The general technique of amortization is commonly used in systems when there is a fixed cost to some operation.
-
 ==摊销这一通用技术通常用于当某些操作存在固定成本时的系统中。==
 
 By incurring that cost less often (i.e., by performing the operation fewer times), the total cost to the system is reduced.
-
 ==通过减少该成本发生的频率（即减少操作执行的次数），系统的总成本得以降低。==
 
 For example, if the time slice is set to 10 ms, and the context-switch cost is 1 ms, roughly 10% of time is spent context switching and is thus wasted.
-
 ==例如，如果时间片设置为 10 ms，而上下文切换成本为 1 ms，那么大约 10% 的时间花费在上下文切换上，因此被浪费了。==
 
 If we want to amortize this cost, we can increase the time slice, e.g., to 100 ms.
-
 ==如果我们想要摊销这个成本，我们可以增加时间片，例如增加到 100 ms。==
 
 In this case, less than 1% of time is spent context switching, and thus the cost of time-slicing has been amortized.
-
 ==在这种情况下，花费在上下文切换上的时间不到 1%，因此时间片的成本就被摊销了。==
 
 they each wish to run for 5 seconds.
-
 ==它们每个都希望运行 5 秒钟。==
 
 An SJF scheduler runs each job to completion before running another.
-
 ==SJF（最短任务优先）调度程序会在运行另一个任务之前将每个任务运行至完成。==
 
 In contrast, RR with a time-slice of 1 second would cycle through the jobs quickly.
-
 ==相比之下，时间片为 1 秒的 RR（轮转）调度程序会快速地在任务之间循环。==
 
 The average response time of RR is: $\frac{0+1+2}{3}=1;$ for SJF, average response time is: $\frac{0+5+10}{3}=5$.
-
 ==RR 的平均响应时间是：$\frac{0+1+2}{3}=1$；而对于 SJF，平均响应时间是：$\frac{0+5+10}{3}=5$。==
 
 As you can see, the length of the time slice is critical for RR.
-
 ==如你所见，时间片的长度对 RR 至关重要。==
 
 The shorter it is, the better the performance of RR under the response-time metric.
-
 ==它越短，RR 在响应时间指标下的表现就越好。==
 
 However, making the time slice too short is problematic: suddenly the cost of context switching will dominate overall performance.
-
 ==然而，将时间片设置得太短是有问题的：上下文切换的成本会突然主导整体性能。==
 
 Thus, deciding on the length of the time slice presents a trade-off to a system designer, making it long enough to amortize the cost of switching without making it so long that the system is no longer responsive.
-
 ==因此，确定时间片的长度给系统设计者带来了一个权衡问题，既要使其足够长以摊销切换成本，又不能长到使系统不再响应。==
 
 Note that the cost of context switching does not arise solely from the OS actions of saving and restoring a few registers.
-
 ==请注意，上下文切换的成本不仅仅来自操作系统保存和恢复少量寄存器的操作。==
 
 When programs run, they build up a great deal of state in CPU caches, TLBs, branch predictors, and other on-chip hardware.
-
 ==当程序运行时，它们会在 CPU 缓存、TLB、分支预测器和其他片上硬件中建立大量的状态。==
 
 Switching to another job causes this state to be flushed and new state relevant to the currently-running job to be brought in, which may exact a noticeable performance cost.
-
 ==切换到另一个任务会导致这些状态被刷新，并引入与当前运行任务相关的新状态，这可能会产生显著的性能成本。==
 
 RR, with a reasonable time slice, is thus an excellent scheduler if response time is our only metric.
-
 ==因此，如果响应时间是我们唯一的指标，那么拥有合理时间片的 RR 是一个极好的调度程序。==
 
 But what about our old friend turnaround time?
-
 ==但是我们那个老朋友——周转时间呢？==
 
 Let's look at our example above again.
-
 ==让我们再次看看上面的例子。==
 
 A, B, and C, each with running times of 5 seconds, arrive at the same time, and RR is the scheduler with a (long) 1-second time slice.
-
 ==A、B 和 C 每个运行时间为 5 秒，它们同时到达，RR 是调度程序，时间片为（较长的）1 秒。==
 
 We can see from the picture above that A finishes at 13, B at 14, and C at 15, for an average of 14.
-
 ==我们可以从上图看到，A 在 13 结束，B 在 14 结束，C 在 15 结束，平均值为 14。==
 
 Pretty awful!
-
 ==相当糟糕！==
 
 It is not surprising, then, that RR is indeed one of the worst policies if turnaround time is our metric.
-
 ==不足为奇的是，如果周转时间是我们的指标，RR 确实是最差的策略之一。==
 
 Intuitively, this should make sense: what RR is doing is stretching out each job as long as it can, by only running each job for a short bit before moving to the next.
-
 ==直观上这也是讲得通的：RR 所做的就是尽可能地拉长每个任务，它只运行每个任务一小会儿就移动到下一个。==
 
 Because turnaround time only cares about when jobs finish, RR is nearly pessimal, even worse than simple FIFO in many cases.
-
 ==因为周转时间只关心任务何时完成，RR 几乎是最差的，在许多情况下甚至比简单的 FIFO 还要糟糕。==
 
 More generally, any policy (such as RR) that is fair, i.e., that evenly divides the CPU among active processes on a small time scale, will perform poorly on metrics such as turnaround time.
-
 ==更一般地说，任何公平的策略（如 RR），即在小的时间尺度上平均分配 CPU 给活动进程的策略，在周转时间等指标上都会表现不佳。==
 
 Indeed, this is an inherent trade-off: if you are willing to be unfair, you can run shorter jobs to completion, but at the cost of response time;
-
 ==确实，这是一个固有的权衡：如果你愿意不公平，你可以运行较短的任务至完成，但代价是响应时间；==
 
 if you instead value fairness, response time is lowered, but at the cost of turnaround time.
-
 ==如果你反而重视公平性，响应时间会降低，但代价是周转时间。==
 
 This type of trade-off is common in systems;
-
 ==这种类型的权衡在系统中很常见；==
 
 you can't have your cake and eat it too.
-
 ==你不能既拥有蛋糕又吃掉它（鱼和熊掌不可兼得）。==
 
 We have developed two types of schedulers.
-
 ==我们已经开发了两种类型的调度程序。==
 
 The first type (SJF, STCF) optimizes turnaround time, but is bad for response time.
-
 ==第一种类型（SJF, STCF）优化了周转时间，但对响应时间不利。==
 
 The second type (RR) optimizes response time but is bad for turnaround.
-
 ==第二种类型（RR）优化了响应时间，但对周转时间不利。==
 
 And we still have two assumptions which need to be relaxed: assumption 4 (that jobs do no I/O), and assumption 5 (that the run-time of each job is known).
-
 ==我们要还有两个假设需要放宽：假设 4（任务不进行 I/O）和假设 5（每个任务的运行时间是已知的）。==
 
 Let's tackle those assumptions next.
-
 ==让我们接下来解决这些假设。==
 
 7.8 Incorporating I/O
-
 ==7.8 纳入 I/O==
 
 First we will relax assumption 4: of course all programs perform I/O.
-
 ==首先我们将放宽假设 4：当然所有程序都会执行 I/O。==
 
 Imagine a program that didn't take any input: it would produce the same output each time.
-
 ==想象一个不接受任何输入的程序：它每次都会产生相同的输出。==
 
 Imagine one without output: it is the proverbial tree falling in the forest, with no one to see it;
-
 ==想象一个没有输出的程序：它就像谚语中森林里倒下的树，没有人看到它；==
 
 it doesn't matter that it ran.
-
 ==它是否运行过并不重要。==
 
 A scheduler clearly has a decision to make when a job initiates an I/O request, because the currently-running job won't be using the CPU during the I/O;
-
 ==当一个任务发起 I/O 请求时，调度程序显然需要做出决定，因为当前运行的任务在 I/O 期间不会使用 CPU；==
 
 it is blocked waiting for I/O completion.
-
 ==它被阻塞以等待 I/O 完成。==
 
 If the I/O is sent to a hard disk drive, the process might be blocked for a few milliseconds or longer, depending on the current I/O load of the drive.
-
 ==如果 I/O 被发送到硬盘驱动器，该进程可能会被阻塞几毫秒或更长时间，具体取决于驱动器当前的 I/O 负载。==
 
 Thus, the scheduler should probably schedule another job on the CPU at that time.
-
 ==因此，调度程序大概应该在那时在 CPU 上调度另一个任务。==
 
 The scheduler also has to make a decision when the I/O completes.
-
 ==当 I/O 完成时，调度程序也必须做出决定。==
 
 When that occurs, an interrupt is raised, and the OS runs and moves the process that issued the I/O from blocked back to the ready state.
-
 ==当这种情况发生时，会产生一个中断，操作系统运行并将发出 I/O 的进程从阻塞状态移回就绪状态。==
 
 Of course, it could even decide to run the job at that point.
-
 ==当然，它甚至可以决定在那个时间点运行该任务。==
 
 How should the OS treat each job?
-
 ==操作系统应该如何对待每个任务？==
 
 To understand this issue better, let us assume we have two jobs, A and B, which each need 50 ms of CPU time.
-
 ==为了更好地理解这个问题，让我们假设有两个任务 A 和 B，它们各需要 50 ms 的 CPU 时间。==
 
 However, there is one obvious difference: A runs for 10 ms and then issues an I/O request (assume here that I/Os each take 10 ms), whereas B simply uses the CPU for 50 ms and performs no I/O.
-
 ==然而，有一个明显的区别：A 运行 10 ms 然后发起一个 I/O 请求（假设这里的 I/O 每次花费 10 ms），而 B 仅仅使用 CPU 50 ms 且不执行 I/O。==
 
 The scheduler runs A first, then B after.
-
 ==调度程序先运行 A，然后运行 B。==
 
 Assume we are trying to build a STCF scheduler.
-
 ==假设我们正试图构建一个 STCF 调度程序。==
 
 How should such a scheduler account for the fact that A is broken up into 5 10-ms sub-jobs, whereas B is just a single 50-ms CPU demand?
-
 ==这样的调度程序该如何考虑到 A 被分解成 5 个 10 ms 的子任务，而 B 只是一个单一的 50 ms CPU 需求这一事实？==
 
 Clearly, just running one job and then the other without considering how to take I/O into account makes little sense.
-
 ==显然，不考虑如何将 I/O 纳入考量而只是运行一个任务然后再运行另一个任务是没有意义的。==
 
 TIP: OVERLAP ENABLES HIGHER UTILIZATION
-
 ==提示：重叠可以实现更高的利用率==
 
 When possible, overlap operations to maximize the utilization of systems.
-
 ==如果可能，重叠操作以最大化系统的利用率。==
 
 Overlap is useful in many different domains, including when performing disk I/O or sending messages to remote machines;
-
 ==重叠在许多不同的领域都很有用，包括执行磁盘 I/O 或向远程机器发送消息时；==
 
 in either case, starting the operation and then switching to other work is a good idea, and improves the overall utilization and efficiency of the system.
-
 ==在任何一种情况下，启动操作然后切换到其他工作都是一个好主意，并且可以提高系统的整体利用率和效率。==
 
 A common approach is to treat each 10-ms sub-job of A as an independent job.
-
 ==一种常见的方法是将 A 的每个 10 ms 子任务视为一个独立的任务。==
 
 Thus, when the system starts, its choice is whether to schedule a 10-ms A or a 50-ms B.
-
 ==因此，当系统启动时，它的选择是调度一个 10 ms 的 A 还是一个 50 ms 的 B。==
 
 With STCF, the choice is clear: choose the shorter one, in this case A.
-
 ==对于 STCF，选择很明确：选择较短的那个，也就是 A。==
 
 Then, when the first sub-job of A has completed, only B is left, and it begins running.
-
 ==然后，当 A 的第一个子任务完成后，只剩下 B，它开始运行。==
 
 Then a new sub-job of A is submitted, and it preempts B and runs for 10 ms.
-
 ==然后 A 的一个新的子任务被提交，它抢占 B 并运行 10 ms。==
 
 Doing so allows for overlap, with the CPU being used by one process while waiting for the I/O of another process to complete;
-
 ==这样做允许重叠，即在一个进程等待 I/O 完成的同时，CPU 被另一个进程使用；==
 
 the system is thus better utilized.
-
 ==系统因此得到了更好的利用。==
 
 And thus we see how a scheduler might incorporate I/O.
-
 ==因此我们可以看到调度程序如何纳入 I/O。==
 
 By treating each CPU burst as a job, the scheduler makes sure processes that are "interactive" get run frequently.
-
 ==通过将每个 CPU 爆发（CPU burst）视为一个任务，调度程序确保“交互式”进程得到频繁运行。==
 
 While those interactive jobs are performing I/O, other CPU-intensive jobs run, thus better utilizing the processor.
-
 ==当这些交互式任务正在执行 I/O 时，其他 CPU 密集型任务运行，从而更好地利用处理器。==
 
 7.9 No More Oracle
-
 ==7.9 不再有预言机==
 
 With a basic approach to I/O in place, we come to our final assumption: that the scheduler knows the length of each job.
-
 ==有了处理 I/O 的基本方法后，我们来到最后一个假设：调度程序知道每个任务的长度。==
 
 As we said before, this is likely the worst assumption we could make.
-
 ==正如我们之前所说，这可能是我们能做出的最糟糕的假设。==
 
 In fact, in a general-purpose OS (like the ones we care about), the OS usually knows very little about the length of each job.
-
 ==事实上，在一个通用操作系统（像我们关心的那些）中，操作系统通常对每个任务的长度知之甚少。==
 
 Thus, how can we build an approach that behaves like SJF/STCF without such a priori knowledge?
-
 ==因此，我们如何才能在没有这种先验知识的情况下，构建一种行为类似 SJF/STCF 的方法？==
 
 Further, how can we incorporate some of the ideas we have seen with the RR scheduler so that response time is also quite good?
-
 ==此外，我们如何才能结合我们看到的 RR 调度程序的一些思想，以便响应时间也相当不错？==
 
 7.10 Summary
-
 ==7.10 总结==
 
 We have introduced the basic ideas behind scheduling and developed two families of approaches.
-
 ==我们已经介绍了调度背后的基本思想，并开发了两类方法。==
 
 The first runs the shortest job remaining and thus optimizes turnaround time;
-
 ==第一类运行剩余时间最短的任务，从而优化周转时间；==
 
 the second alternates between all jobs and thus optimizes response time.
-
 ==第二类在所有任务之间交替运行，从而优化响应时间。==
 
 Both are bad where the other is good, alas, an inherent trade-off common in systems.
-
 ==唉，两者都在对方擅长的地方表现糟糕，这是系统中常见的一种固有权衡。==
 
 We have also seen how we might incorporate I/O into the picture, but have still not solved the problem of the fundamental inability of the OS to see into the future.
-
 ==我们也看到了如何将 I/O 纳入考量，但仍未解决操作系统无法预见未来的根本性问题。==
 
 Shortly, we will see how to overcome this problem, by building a scheduler that uses the recent past to predict the future.
-
 ==很快，我们将看到如何通过构建一个利用最近的过去来预测未来的调度程序来克服这个问题。==
 
 This scheduler is known as the multi-level feedback queue, and it is the topic of the next chapter.
-
 ==这个调度程序被称为多级反馈队列，它是下一章的主题。==
 
 Scheduling: The Multi-Level Feedback Queue
-
 ==调度：多级反馈队列==
 
 In this chapter, we'll tackle the problem of developing one of the most well-known approaches to scheduling, known as the Multi-level Feedback Queue (MLFQ).
-
 ==在本章中，我们将解决开发一种最著名的调度方法的问题，即多级反馈队列（MLFQ）。==
 
 The Multi-level Feedback Queue (MLFQ) scheduler was first described by Corbato et al. in 1962 in a system known as the Compatible Time-Sharing System (CTSS), and this work, along with later work on Multics, led the ACM to award Corbato its highest honor, the Turing Award.
-
 ==多级反馈队列（MLFQ）调度程序最早由 Corbato 等人在 1962 年的一个名为兼容分时系统（CTSS）的系统中描述，这项工作以及后来关于 Multics 的工作，使得 ACM 授予 Corbato 其最高荣誉——图灵奖。==
 
 The scheduler has subsequently been refined throughout the years to the implementations you will encounter in some modern systems.
-
 ==该调度程序在随后的岁月中不断改进，演变成了你在一些现代系统中会遇到的实现。==
 
 The fundamental problem MLFQ tries to address is two-fold.
-
 ==MLFQ 试图解决的根本问题有两个方面。==
 
 First, it would like to optimize turnaround time, which, as we saw in the previous note, is done by running shorter jobs first;
-
 ==首先，它希望优化周转时间，正如我们在之前的笔记中看到的，这通过优先运行较短的任务来实现；==
 
 unfortunately, the OS doesn't generally know how long a job will run for, exactly the knowledge that algorithms like SJF (or STCF) require.
-
 ==不幸的是，操作系统通常不知道一个任务会运行多久，而这正是 SJF（或 STCF）等算法所需的知识。==
 
 Second, MLFQ would like to make a system feel responsive to interactive users (i.e., users sitting and staring at the screen, waiting for a process to finish), and thus minimize response time;
-
 ==其次，MLFQ 希望让系统对交互式用户（即坐在屏幕前等待进程完成的用户）感觉响应灵敏，从而最小化响应时间；==
 
 unfortunately, algorithms like Round Robin reduce response time but are terrible for turnaround time.
-
 ==不幸的是，像轮转（Round Robin）这样的算法虽然减少了响应时间，但周转时间却很糟糕。==
 
 Thus, our problem: given that we in general do not know anything about a process, how can we build a scheduler to achieve these goals?
-
 ==因此，我们的问题是：鉴于我们通常对进程一无所知，我们如何构建一个调度程序来实现这些目标？==
 
 How can the scheduler learn, as the system runs, the characteristics of the jobs it is running, and thus make better scheduling decisions?
-
 ==调度程序如何在系统运行时了解它正在运行的任务的特征，从而做出更好的调度决策？==
 
 THE CRUX: HOW TO SCHEDULE WITHOUT PERFECT KNOWLEDGE?
-
 ==关键问题：如何在没有完美知识的情况下进行调度？==
 
 How can we design a scheduler that both minimizes response time for interactive jobs while also minimizing turnaround time without a priori knowledge of job length?
-
 ==我们如何设计一个调度程序，既能最小化交互式任务的响应时间，又能在没有任务长度先验知识的情况下最小化周转时间？==
 
 TIP: LEARN FROM HISTORY
-
 ==提示：从历史中学习==
 
 The multi-level feedback queue is an excellent example of a system that learns from the past to predict the future.
-
 ==多级反馈队列是一个利用过去来预测未来的系统的绝佳例子。==
 
 Such approaches are common in operating systems (and many other places in Computer Science, including hardware branch predictors and caching algorithms).
-
 ==这种方法在操作系统（以及计算机科学的许多其他领域，包括硬件分支预测器和缓存算法）中很常见。==
 
 Such approaches work when jobs have phases of behavior and are thus predictable;
-
 ==当任务具有行为阶段并因此具有可预测性时，这种方法是有效的；==
 
 of course, one must be careful with such techniques, as they can easily be wrong and drive a system to make worse decisions than they would have with no knowledge at all.
-
 ==当然，必须谨慎使用此类技术，因为它们很容易出错，并导致系统做出的决策比毫无知识时更糟糕。==
 
 8.1 MLFQ: Basic Rules
-
 ==8.1 MLFQ：基本规则==
 
 To build such a scheduler, in this chapter we will describe the basic algorithms behind a multi-level feedback queue;
-
 ==为了构建这样的调度程序，本章我们将描述多级反馈队列背后的基本算法；==
 
 although the specifics of many implemented MLFQs differ, most approaches are similar.
-
 ==尽管许多已实现的 MLFQ 在细节上有所不同，但大多数方法是相似的。==
 
 In our treatment, the MLFQ has a number of distinct queues, each assigned a different priority level.
-
 ==在我们的讨论中，MLFQ 拥有许多不同的队列，每个队列被分配了不同的优先级。==
 
 At any given time, a job that is ready to run is on a single queue.
-
 ==在任何给定时间，一个准备运行的任务位于单个队列中。==
 
 MLFQ uses priorities to decide which job should run at a given time: a job with higher priority (i.e., a job on a higher queue) is chosen to run.
-
 ==MLFQ 使用优先级来决定在给定时间应运行哪个任务：具有较高优先级的任务（即位于较高队列中的任务）被选中运行。==
 
 Of course, more than one job may be on a given queue, and thus have the same priority.
-
 ==当然，可能有多个任务位于同一个队列中，因此具有相同的优先级。==
 
 In this case, we will just use round-robin scheduling among those jobs.
-
 ==在这种情况下，我们将仅仅在这些任务之间使用轮转调度。==
 
 Thus, we arrive at the first two basic rules for MLFQ:
-
 ==因此，我们得出了 MLFQ 的前两条基本规则：==
 
 • Rule 1: If Priority(A) > Priority(B), A runs (B doesn't).
-
 ==• 规则 1：如果 优先级(A) > 优先级(B)，则 A 运行（B 不运行）。==
 
 • Rule 2: If Priority(A) = Priority(B), A & B run in RR.
-
 ==• 规则 2：如果 优先级(A) = 优先级(B)，则 A 和 B 进行轮转调度（RR）。==
 
 The key to MLFQ scheduling therefore lies in how the scheduler sets priorities.
-
 ==因此，MLFQ 调度的关键在于调度程序如何设置优先级。==
 
 Rather than giving a fixed priority to each job, MLFQ varies the priority of a job based on its observed behavior.
-
 ==MLFQ 不是给每个任务一个固定的优先级，而是根据观察到的行为来改变任务的优先级。==
 
 If, for example, a job repeatedly relinquishes the CPU while waiting for input from the keyboard, MLFQ will keep its priority high, as this is how an interactive process might behave.
-
 ==例如，如果一个任务在等待键盘输入时反复放弃 CPU，MLFQ 将保持其高优先级，因为这是交互式进程可能的行为方式。==
 
 If, instead, a job uses the CPU intensively for long periods of time, MLFQ will reduce its priority.
-
 ==相反，如果一个任务长时间密集使用 CPU，MLFQ 将降低其优先级。==
 
 In this way, MLFQ will try to learn about processes as they run, and thus use the history of the job to predict its future behavior.
-
 ==通过这种方式，MLFQ 将尝试在进程运行时了解它们，从而利用任务的历史来预测其未来的行为。==
 
 If we were to put forth a picture of what the queues might look like at a given instant, we might see something like the following (Figure 8.1).
-
 ==如果我们展示某一瞬间队列可能的样子，我们可能会看到如下图所示的情况（图 8.1）。==
 
 In the figure, two jobs (A and B) are at the highest priority level, while job C is in the middle and Job D is at the lowest priority.
-
 ==在图中，两个任务（A 和 B）处于最高优先级，而任务 C 处于中间，任务 D 处于最低优先级。==
 
 Given our current knowledge of how MLFQ works, the scheduler would just alternate time slices between A and B because they are the highest priority jobs in the system;
-
 ==鉴于我们目前对 MLFQ 工作原理的了解，调度程序将只在 A 和 B 之间交替时间片，因为它们是系统中优先级最高的任务；==
 
 poor jobs C and D would never even get to run — an outrage!
-
 ==可怜的任务 C 和 D 甚至永远得不到运行——简直是暴行！==
 
 Of course, just showing a static snapshot of some queues does not really give you an idea of how MLFQ works.
-
 ==当然，仅仅展示一些队列的静态快照并不能真正让你了解 MLFQ 是如何工作的。==
 
 What we need is to understand how job priority changes over time.
-
 ==我们需要的是了解任务优先级随时间如何变化。==
 
 And that, in a surprise only to those who are reading a chapter from this book for the first time, is exactly what we will do next.
-
 ==这正是我们接下来要做的，只有第一次阅读本书这一章的人才会感到惊讶。==
 
 8.2 Attempt #1: How To Change Priority
-
 ==8.2 尝试 #1：如何改变优先级==
 
 We now must decide how MLFQ is going to change the priority level of a job (and thus which queue it is on) over the lifetime of a job.
-
 ==我们现在必须决定 MLFQ 将如何在任务的生命周期内改变其优先级（也就是它所在的队列）。==
 
 To do this, we must keep in mind our workload: a mix of interactive jobs that are short-running (and may frequently relinquish the CPU), and some longer-running "CPU-bound" jobs that need a lot of CPU time but where response time isn't important.
-
 ==为此，我们必须牢记我们的工作负载：混合了运行时间短（且可能频繁放弃 CPU）的交互式任务，以及一些需要大量 CPU 时间但响应时间并不重要的长运行“CPU 密集型”任务。==
 
 For this, we need a new concept, which we will call the job's allotment.
-
 ==为此，我们需要一个新概念，我们称之为任务的配额（allotment）。==
 
 The allotment is the amount of time a job can spend at a given priority level before the scheduler reduces its priority.
-
 ==配额是一个任务在调度程序降低其优先级之前，可以在给定优先级上花费的时间量。==
 
 For simplicity, at first, we will assume the allotment is equal to a single time slice.
-
 ==为了简单起见，起初我们假设配额等于单个时间片。==
 
 Here is our first attempt at a priority-adjustment algorithm:
-
 ==这是我们对优先级调整算法的第一次尝试：==
 
 • Rule 3: When a job enters the system, it is placed at the highest priority (the topmost queue).
-
 ==• 规则 3：当一个任务进入系统时，它被放在最高优先级（最顶层的队列）。==
 
 • Rule 4a: If a job uses up its allotment while running, its priority is reduced (i.e., it moves down one queue).
-
 ==• 规则 4a：如果一个任务在运行时用完了它的配额，它的优先级会被降低（即，它向下移动一个队列）。==
 
 • Rule 4b: If a job gives up the CPU (for example, by performing an I/O operation) before the allotment is up, it stays at the same priority level (i.e., its allotment is reset).
-
 ==• 规则 4b：如果一个任务在配额用完之前放弃 CPU（例如，通过执行 I/O 操作），它保持在相同的优先级（即，它的配额被重置）。==
 
 Example 1: A Single Long-Running Job
-
 ==例子 1：单个长运行任务==
 
 Let's look at some examples.
-
 ==让我们看一些例子。==
 
 First, we'll look at what happens when there has been a long running job in the system, with a time slice of 10 ms (and with the allotment set equal to the time slice).
-
 ==首先，我们来看看当系统中有一个长运行任务时会发生什么，时间片为 10 ms（且配额设为等于时间片）。==
 
 Figure 8.2 shows what happens to this job over time in a three-queue scheduler.
-
 ==图 8.2 展示了在三队列调度程序中，该任务随时间推移发生的情况。==
 
 As you can see in the example, the job enters at the highest priority (Q2).
-
 ==正如你在例子中所见，任务以最高优先级（Q2）进入。==
 
 After a single time slice of 10 ms, the scheduler reduces the job's priority by one, and thus the job is on Q1.
-
 ==在单个 10 ms 时间片后，调度程序将任务的优先级降低一级，因此任务位于 Q1。==
 
 After running at Q1 for a time slice, the job is finally lowered to the lowest priority in the system (Q0), where it remains.
-
 ==在 Q1 运行一个时间片后，任务最终被降低到系统的最低优先级（Q0），并留在那里。==
 
 Pretty simple, no?
-
 ==很简单，不是吗？==
 
 Example 2: Along Came A Short Job
-
 ==例子 2：来了一个短任务==
 
 Now let's look at a more complicated example, and hopefully see how MLFQ tries to approximate SJF.
-
 ==现在让我们看一个更复杂的例子，希望能看到 MLFQ 如何尝试近似 SJF。==
 
 In this example, there are two jobs: A, which is a long-running CPU-intensive job, and B, which is a short-running interactive job.
-
 ==在这个例子中，有两个任务：A，它是一个长运行的 CPU 密集型任务；B，它是一个短运行的交互式任务。==
 
 Assume A has been running for some time, and then B arrives.
-
 ==假设 A 已经运行了一段时间，然后 B 到达。==
 
 What will happen?
-
 ==会发生什么？==
 
 Will MLFQ approximate SJF for B?
-
 ==MLFQ 会对 B 近似 SJF 吗？==
 
 Figure 8.3 (left) plots the results of this scenario.
-
 ==图 8.3（左）绘制了这个场景的结果。==
 
 Job A (shown in black) is running along in the lowest-priority queue (as would any long-running CPU-intensive jobs);
-
 ==任务 A（黑色显示）在最低优先级队列中运行（就像任何长运行的 CPU 密集型任务一样）；==
 
 B (shown in gray) arrives at time $T=100$, and thus is inserted into the highest queue;
-
 ==B（灰色显示）在时间 $T=100$ 到达，因此被插入到最高队列；==
 
 as its run-time is short (only 20 ms), B completes before reaching the bottom queue, in two time slices;
-
 ==由于它的运行时间很短（只有 20 ms），B 在到达底部队列之前就完成了，用了两个时间片；==
 
 then A resumes running (at low priority).
-
 ==然后 A 恢复运行（在低优先级）。==
 
 From this example, you can hopefully understand one of the major goals of the algorithm: because it doesn't know whether a job will be a short job or a long-running job, it first assumes it might be a short job, thus giving the job high priority.
-
 ==从这个例子中，你有望理解该算法的主要目标之一：因为它不知道一个任务是短任务还是长运行任务，它首先假设它可能是一个短任务，从而赋予该任务高优先级。==
 
 If it actually is a short job, it will run quickly and complete;
-
 ==如果它确实是一个短任务，它将快速运行并完成；==
 
 if it is not a short job, it will slowly move down the queues, and thus soon prove itself to be a long-running more batch-like process.
-
 ==如果它不是一个短任务，它将慢慢向下移动队列，从而很快证明自己是一个长运行的、更像批处理的进程。==
 
 In this manner, MLFQ approximates SJF.
-
 ==通过这种方式，MLFQ 近似了 SJF。==
 
 Example 3: What About I/O?
-
 ==例子 3：I/O 呢？==
 
 Let's now look at an example with some I/O.
-
 ==现在让我们看一个带有一些 I/O 的例子。==
 
 As Rule 4b states above, if a process gives up the processor before using up its allotment, we keep it at the same priority level.
-
 ==正如上面的规则 4b 所述，如果一个进程在用完其配额之前放弃处理器，我们将其保持在相同的优先级。==
 
 The intent of this rule is simple: if an interactive job, for example, is doing a lot of I/O (say by waiting for user input from the keyboard or mouse), it will relinquish the CPU before its allotment is complete;
-
 ==这条规则的意图很简单：例如，如果一个交互式任务正在进行大量 I/O（比如等待来自键盘或鼠标的用户输入），它会在配额完成之前放弃 CPU；==
 
 in such case, we don't wish to penalize the job and thus simply keep it at the same level.
-
 ==在这种情况下，我们不希望惩罚该任务，因此只需将其保持在同一级别。==
 
 Figure 8.3 (right) shows an example of how this works, with an interactive job B (shown in gray) that needs the CPU only for 1 ms before performing an I/O competing for the CPU with a long-running batch job A (shown in black).
-
 ==图 8.3（右）展示了这个机制如何工作的例子，其中一个交互式任务 B（灰色显示）在执行 I/O 之前只需要 1 ms 的 CPU 时间，它与一个长运行的批处理任务 A（黑色显示）争夺 CPU。==
 
 The MLFQ approach keeps B at the highest priority because B keeps releasing the CPU;
-
 ==MLFQ 方法将 B 保持在最高优先级，因为 B 不断释放 CPU；==
 
 if B is an interactive job, MLFQ further achieves its goal of running interactive jobs quickly.
-
 ==如果 B 是一个交互式任务，MLFQ 进一步实现了其快速运行交互式任务的目标。==
 
 Problems With Our Current MLFQ
-
 ==当前 MLFQ 的问题==
 
 We thus have a basic MLFQ.
-
 ==因此我们有了一个基本的 MLFQ。==
 
 It seems to do a fairly good job, sharing the CPU fairly between long-running jobs, and letting short or I/O-intensive interactive jobs run quickly.
-
 ==它似乎做得相当不错，在长运行任务之间公平地共享 CPU，并让短的或 I/O 密集的交互式任务快速运行。==
 
 Unfortunately, the approach we have developed thus far contains serious flaws.
-
 ==不幸的是，我们迄今为止开发的方法包含严重的缺陷。==
 
 Can you think of any?
-
 ==你能想到什么吗？==
 
 (This is where you pause and think as deviously as you can)
-
 ==（这里是你停下来尽可能狡猾地思考的地方）==
 
 First, there is the problem of starvation: if there are "too many" interactive jobs in the system, they will combine to consume all CPU time, and thus long-running jobs will never receive any CPU time (they starve).
-
 ==首先，存在饥饿问题：如果系统中有“太多”交互式任务，它们将联合消耗所有 CPU 时间，因此长运行任务将永远得不到任何 CPU 时间（它们饿死了）。==
 
 We'd like to make some progress on these jobs even in this scenario.
-
 ==即使在这种情况下，我们也希望这些任务能取得一些进展。==
 
 Second, a smart user could rewrite their program to game the scheduler.
-
 ==其次，聪明的用户可以重写他们的程序来欺骗调度程序。==
 
 Gaming the scheduler generally refers to the idea of doing something sneaky to trick the scheduler into giving you more than your fair share of the resource.
-
 ==欺骗调度程序通常是指做一些偷偷摸摸的事情来诱使调度程序给你超过你公平份额的资源。==
 
 TIP: SCHEDULING MUST BE SECURE FROM ATTACK
-
 ==提示：调度必须安全以防攻击==
 
 You might think that a scheduling policy, whether inside the OS itself (as discussed herein), or in a broader context (e.g., in a distributed storage system's I/O request handling), is not a security concern, but in increasingly many cases, it is exactly that.
-
 ==你可能认为调度策略，无论是在操作系统内部（如本文所述），还是在更广泛的背景下（例如，在分布式存储系统的 I/O 请求处理中），都不是安全问题，但在越来越多的情况下，它正是安全问题。==
 
 Consider the modern datacenter, in which users from around the world share CPUs, memories, networks, and storage systems;
-
 ==考虑现代数据中心，来自世界各地的用户共享 CPU、内存、网络和存储系统；==
 
 without care in policy design and enforcement, a single user may be able to adversely harm others and gain advantage for itself.
-
 ==如果在策略设计和执行方面不加小心，单个用户可能会恶意伤害他人并为自己获取优势。==
 
 Thus, scheduling policy forms an important part of the security of a system, and should be carefully constructed.
-
 ==因此，调度策略构成了系统安全的重要组成部分，应谨慎构建。==
 
 The algorithm we have described is susceptible to the following attack: before the allotment is used, issue an I/O operation (e.g., to a file) and thus relinquish the CPU;
-
 ==我们描述的算法容易受到以下攻击：在配额用完之前，发出一个 I/O 操作（例如，对文件），从而放弃 CPU；==
 
 doing so allows you to remain in the same queue, and thus gain a higher percentage of CPU time.
-
 ==这样做允许你留在同一个队列中，从而获得更高比例的 CPU 时间。==
 
 When done right (e.g., by running for 99% of the allotment before relinquishing the CPU), a job could nearly monopolize the CPU.
-
 ==如果做得对（例如，在放弃 CPU 之前运行配额的 99%），一个任务几乎可以独占 CPU。==
 
 Finally, a program may change its behavior over time; what was CPU-bound may transition to a phase of interactivity.
-
 ==最后，程序可能会随时间改变其行为；原本是 CPU 密集型的任务可能会过渡到交互阶段。==
 
 With our current approach, such a job would be out of luck and not be treated like the other interactive jobs in the system.
-
 ==用我们目前的方法，这样的任务将运气不佳，不会像系统中的其他交互式任务那样被对待。==
 
 8.3 Attempt #2: The Priority Boost
-
 ==8.3 尝试 #2：优先级提升==
 
 Let's try to change the rules and see if we can avoid the problem of starvation.
-
 ==让我们尝试改变规则，看看是否可以避免饥饿问题。==
 
 What could we do in order to guarantee that CPU-bound jobs will make some progress (even if it is not much?).
-
 ==为了保证 CPU 密集型任务能取得一些进展（即使不多），我们可以做什么？==
 
 The simple idea here is to periodically boost the priority of all the jobs in the system.
-
 ==这里简单的想法是定期提升系统中所有任务的优先级。==
 
 There are many ways to achieve this, but let's just do something simple: throw them all in the topmost queue;
-
 ==有很多方法可以实现这一点，但让我们做些简单的：把它们都扔进最高优先级的队列；==
 
 hence, a new rule:
-
 ==因此，产生了一条新规则：==
 
 • Rule 5: After some time period S, move all the jobs in the system to the topmost queue.
-
 ==• 规则 5：经过一段时间 S 后，将系统中的所有任务移动到最高优先级队列。==
 
 Our new rule solves two problems at once.
-
 ==我们的新规则一次解决了两个问题。==
 
 First, processes are guaranteed not to starve: by sitting in the top queue, a job will share the CPU with other high-priority jobs in a round-robin fashion, and thus eventually receive service.
-
 ==首先，保证进程不会挨饿：通过位于顶部队列，任务将以轮转方式与其他高优先级任务共享 CPU，从而最终获得服务。==
 
 Second, if a CPU-bound job has become interactive, the scheduler treats it properly once it has received the priority boost.
-
 ==其次，如果一个 CPU 密集型任务变得交互式，一旦它获得了优先级提升，调度程序就会正确对待它。==
 
 Let's see an example.
-
 ==让我们看一个例子。==
 
 In this scenario, we just show the behavior of a long-running job when competing for the CPU with two short-running interactive jobs.
-
 ==在这个场景中，我们只展示一个长运行任务在与两个短运行交互式任务争夺 CPU 时的行为。==
 
 Two graphs are shown in Figure 8.4.
-
 ==图 8.4 中显示了两个图表。==
 
 On the left, there is no priority boost, and thus the long-running job gets starved once the two short jobs arrive;
-
 ==在左边，没有优先级提升，因此长运行任务一旦两个短任务到达就会挨饿；==
 
 on the right, there is a priority boost every 100 ms (which is likely too small of a value, but used here for the example), and thus we at least guarantee that the long-running job will make some progress, getting boosted to the highest priority every 100 ms and thus getting to run periodically.
-
 ==在右边，每 100 ms 有一次优先级提升（这可能是一个太小的值，但这里用于示例），因此我们至少保证了长运行任务将取得一些进展，每 100 ms 被提升到最高优先级，从而得到周期性运行。==
 
 Of course, the addition of the time period S leads to the obvious question: what should S be set to?
-
 ==当然，增加时间段 S 引出了一个显而易见的问题：S 应该设为多少？==
 
 John Ousterhout, a well-regarded systems researcher, used to call such values in systems voo-doo constants, because they seemed to require some form of black magic to set them correctly.
-
 ==John Ousterhout，一位备受推崇的系统研究员，过去常将系统中的此类值称为“巫毒常量”，因为它们似乎需要某种形式的黑魔法才能正确设置。==
 
 Unfortunately, S has that flavor.
-
 ==不幸的是，S 就有这种味道。==
 
 If it is set too high, long-running jobs could starve;
-
 ==如果设置得太高，长运行任务可能会挨饿；==
 
 too low, and interactive jobs may not get a proper share of the CPU.
-
 ==太低，交互式任务可能无法获得适当的 CPU 份额。==
 
 As such, it is often left to the system administrator to find the right value or in the modern world, increasingly, to automatic methods based on machine learning.
-
 ==因此，通常留给系统管理员来找到合适的值，或者在现代世界中，越来越多地留给基于机器学习的自动方法。==
 
 8.4 Attempt #3: Better Accounting
-
 ==8.4 尝试 #3：更好的计时==
 
 We now have one more problem to solve: how to prevent gaming of our scheduler?
-
 ==我们现在还有一个问题要解决：如何防止对我们的调度程序的欺骗？==
 
 The real culprit here, as you might have guessed, are Rules 4a and 4b, which let a job retain its priority by relinquishing the CPU before its allotment expires.
-
 ==真正的罪魁祸首，正如你可能已经猜到的，是规则 4a 和 4b，它们允许任务通过在配额到期前放弃 CPU 来保持其优先级。==
 
 So what should we do?
-
 ==那么我们该怎么办？==
 
 TIP: AVOID VOO-DOO CONSTANTS (OUSTERHOUT'S LAW)
-
 ==提示：避免巫毒常量（OUSTERHOUT 定律）==
 
 Avoiding voo-doo constants is a good idea whenever possible.
-
 ==尽可能避免巫毒常量是一个好主意。==
 
 Unfortunately, as in the example above, it is often difficult.
-
 ==不幸的是，如上例所示，这通常很难。==
 
 One could try to make the system learn a good value, but that too is not straightforward.
-
 ==人们可以尝试让系统学习一个好的值，但这也不是直截了当的。==
 
 The frequent result: a configuration file filled with default parameter values that a seasoned administrator can tweak when something isn't quite working correctly.
-
 ==常见的结果是：一个充满默认参数值的配置文件，经验丰富的管理员可以在某些东西工作不正常时对其进行调整。==
 
 As you can imagine, these are often left unmodified, and thus we are left to hope that the defaults work well in the field.
-
 ==可以想象，这些通常保持未修改状态，因此我们只能希望默认值在实际应用中工作良好。==
 
 This tip brought to you by our old OS professor, John Ousterhout, and hence we call it Ousterhout's Law.
-
 ==这个提示是由我们的老操作系统教授 John Ousterhout 带来的，因此我们称之为 Ousterhout 定律。==
 
 The solution here is to perform better accounting of CPU time at each level of the MLFQ.
-
 ==这里的解决方案是在 MLFQ 的每个级别执行更好的 CPU 时间计时。==
 
 Instead of forgetting how much of its allotment a process used at a given level when it performs I/O, the scheduler should keep track;
-
 ==调度程序不应在进程执行 I/O 时忘记它在给定级别使用了多少配额，而应进行跟踪；==
 
 once a process has used its allotment, it is demoted to the next priority queue.
-
 ==一旦一个进程用完了它的配额，它就会被降级到下一个优先级队列。==
 
 Whether it uses its allotment in one long burst or many small ones should not matter.
-
 ==无论它是在一次长爆发中还是多次小爆发中用完其配额都不重要。==
 
 We thus rewrite Rules 4a and 4b to the following single rule:
-
 ==因此，我们将规则 4a 和 4b 重写为以下单一规则：==
 
 • Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue).
-
 ==• 规则 4：一旦一个任务用完了它在给定级别的时间配额（无论它放弃了多少次 CPU），它的优先级就会降低（即，它向下移动一个队列）。==
 
 Let's look at an example.
-
 ==让我们看一个例子。==
 
 Figure 8.5 shows what happens when a workload tries to game the scheduler with the old Rules 4a and 4b (on the left) as well the new anti-gaming Rule 4.
-
 ==图 8.5 展示了当工作负载试图利用旧规则 4a 和 4b（左侧）以及新的反欺骗规则 4 欺骗调度程序时会发生什么。==
 
 Without any protection from gaming, a process can issue an I/O before its allotment ends, thus staying at the same priority level, and dominating CPU time.
-
 ==没有任何防止欺骗的保护，进程可以在配额结束前发出 I/O，从而停留在同一优先级水平，并主导 CPU 时间。==
 
 With better accounting in place (right), regardless of the I/O behavior of the process, it slowly moves down the queues, and thus cannot gain an unfair share of the CPU.
-
 ==有了更好的计时（右侧），无论进程的 I/O 行为如何，它都会慢慢向下移动队列，因此无法获得不公平的 CPU 份额。==
 
 8.5 Tuning MLFQ And Other Issues
-
 ==8.5 调优 MLFQ 及其他问题==
 
 A few other issues arise with MLFQ scheduling.
-
 ==MLFQ 调度还出现了一些其他问题。==
 
 One big question is how to parameterize such a scheduler.
-
 ==一个大问题是如何参数化这样的调度程序。==
 
 For example, how many queues should there be?
-
 ==例如，应该有多少个队列？==
 
 How big should the time slice be per queue?
-
 ==每个队列的时间片应该多大？==
 
 The allotment?
-
 ==配额呢？==
 
 How often should priority be boosted in order to avoid starvation and account for changes in behavior?
-
 ==为了避免饥饿并顾及行为的变化，优先级应该多久提升一次？==
 
 There are no easy answers to these questions, and thus only some experience with workloads and subsequent tuning of the scheduler will lead to a satisfactory balance.
-
 ==这些问题没有简单的答案，因此只有对工作负载的一些经验以及随后的调度程序调优才能带来令人满意的平衡。==
 
 For example, most MLFQ variants allow for varying time-slice length across different queues.
-
 ==例如，大多数 MLFQ 变体允许不同队列具有不同的时间片长度。==
 
 The high-priority queues are usually given short time slices;
-
 ==高优先级队列通常被给予短时间片；==
 
 they are comprised of interactive jobs, after all, and thus quickly alternating between them makes sense (e.g., 10 or fewer milliseconds).
-
 ==毕竟它们由交互式任务组成，因此在它们之间快速交替是有意义的（例如，10 毫秒或更少）。==
 
 The low-priority queues, in contrast, contain long-running jobs that are CPU-bound;
-
 ==相比之下，低优先级队列包含 CPU 密集型的长运行任务；==
 
 hence, longer time slices work well (e.g., 100s of ms).
-
 ==因此，较长的时间片效果很好（例如，数百毫秒）。==
 
 Figure 8.6 shows an example in which two jobs run for 20 ms at the highest queue (with a 10-ms time slice), 40 ms in the middle (20-ms time slice), and with a 40-ms time slice at the lowest.
-
 ==图 8.6 展示了一个例子，其中两个任务在最高队列运行 20 ms（时间片为 10 ms），在中间运行 40 ms（时间片为 20 ms），在最低处时间片为 40 ms。==
 
 The Solaris MLFQ implementation — the Time-Sharing scheduling class, or TS — is particularly easy to configure;
-
 ==Solaris 的 MLFQ 实现——分时调度类，或称 TS——特别容易配置；==
 
 it provides a set of tables that determine exactly how the priority of a process is altered throughout its lifetime, how long each time slice is, and how often to boost the priority of a job;
-
 ==它提供了一组表，精确决定了进程在其生命周期中优先级如何改变，每个时间片多长，以及多久提升一次任务的优先级；==
 
 an administrator can muck with this table in order to make the scheduler behave in different ways.
-
 ==管理员可以修改这个表，以使调度程序表现出不同的行为方式。==
 
 Default values for the table are 60 queues, with slowly increasing time-slice lengths from 20 milliseconds (highest priority) to a few hundred milliseconds (lowest), and priorities boosted around every 1 second or so.
-
 ==该表的默认值是 60 个队列，时间片长度从 20 毫秒（最高优先级）缓慢增加到几百毫秒（最低优先级），优先级大约每 1 秒左右提升一次。==
 
 Other MLFQ schedulers don't use a table or the exact rules described in this chapter;
-
 ==其他 MLFQ 调度程序不使用表或本章描述的确切规则；==
 
 rather they adjust priorities using mathematical formulae.
-
 ==而是使用数学公式调整优先级。==
 
 For example, the FreeBSD scheduler (version 4.3) uses a formula to calculate the current priority level of a job, basing it on how much CPU the process has used;
-
 ==例如，FreeBSD 调度程序（版本 4.3）使用一个公式来计算任务的当前优先级，基于进程已使用了多少 CPU；==
 
 in addition, usage is decayed over time, providing the desired priority boost in a different manner than described herein.
-
 ==此外，使用量随时间衰减，以不同于本文所述的方式提供所需的优先级提升。==
 
 See Epema's paper for an excellent overview of such decay-usage algorithms and their properties.
-
 ==请参阅 Epema 的论文，了解此类衰减使用算法及其属性的精彩概述。==
 
 Finally, many schedulers have a few other features that you might encounter.
-
 ==最后，许多调度程序还有一些你可能会遇到的其他功能。==
 
 For example, some schedulers reserve the highest priority levels for operating system work;
-
 ==例如，一些调度程序为操作系统工作保留最高优先级；==
 
 thus typical user jobs can never obtain the highest levels of priority in the system.
-
 ==因此，典型的用户任务永远无法获得系统中的最高优先级。==
 
 Some systems also allow some user advice to help set priorities;
-
 ==一些系统还允许一些用户建议来帮助设置优先级；==
 
 for example, by using the command-line utility nice you can increase or decrease the priority of a job (somewhat) and thus increase or decrease its chances of running at any given time.
-
 ==例如，通过使用命令行实用程序 nice，你可以（稍微）增加或减少任务的优先级，从而增加或减少其在任何给定时间运行的机会。==
 
 See the man page for more.
-
 ==更多信息请参阅 man 页面。==
 
 TIP: USE ADVICE WHERE POSSIBLE
-
 ==提示：尽可能使用建议==
 
 As the operating system rarely knows what is best for each and every process of the system, it is often useful to provide interfaces to allow users or administrators to provide some hints to the OS.
-
 ==由于操作系统很少知道什么对系统的每个进程都是最好的，因此提供接口允许用户或管理员向操作系统提供一些提示通常很有用。==
 
 We often call such hints advice, as the OS need not necessarily pay attention to it, but rather might take the advice into account in order to make a better decision.
-
 ==我们通常称此类提示为建议，因为操作系统不一定非要注意它，而是可以将建议纳入考虑，以便做出更好的决定。==
 
 Such hints are useful in many parts of the OS, including the scheduler (e.g., with nice), memory manager (e.g., madvise), and file system (e.g., informed prefetching and caching).
-
 ==此类提示在操作系统的许多部分都很有用，包括调度程序（例如用 nice）、内存管理器（例如 madvise）和文件系统（例如知情预取和缓存）。==
 
 8.6 MLFQ: Summary
-
 ==8.6 MLFQ：总结==
 
 We have described a scheduling approach known as the Multi-Level Feedback Queue (MLFQ).
-
 ==我们已经描述了一种称为多级反馈队列（MLFQ）的调度方法。==
 
 Hopefully you can now see why it is called that: it has multiple levels of queues, and uses feedback to determine the priority of a given job.
-
 ==希望你现在能明白为什么它叫这个名字：它有多级队列，并使用反馈来确定给定任务的优先级。==
 
 History is its guide: pay attention to how jobs behave over time and treat them accordingly.
-
 ==历史是它的向导：关注任务随时间的行为表现，并据此对待它们。==
 
 The refined set of MLFQ rules, spread throughout the chapter, are reproduced here for your viewing pleasure:
-
 ==本章中详述的经过改进的 MLFQ 规则集在此重现，以供您查阅：==
 
 • Rule 1: If Priority(A) > Priority(B), A runs (B doesn't).
-
 ==• 规则 1：如果 优先级(A) > 优先级(B)，则 A 运行（B 不运行）。==
 
 • Rule 2: If Priority(A) = Priority(B), A & B run in round-robin fashion using the time slice (quantum length) of the given queue.
-
 ==• 规则 2：如果 优先级(A) = 优先级(B)，则 A 和 B 使用给定队列的时间片（量子长度）以轮转方式运行。==
 
 • Rule 3: When a job enters the system, it is placed at the highest priority (the topmost queue).
-
 ==• 规则 3：当一个任务进入系统时，它被放在最高优先级（最顶层的队列）。==
 
 • Rule 4: Once a job uses up its time allotment at a given level (regardless of how many times it has given up the CPU), its priority is reduced (i.e., it moves down one queue).
-
 ==• 规则 4：一旦一个任务用完了它在给定级别的时间配额（无论它放弃了多少次 CPU），它的优先级就会降低（即，它向下移动一个队列）。==
 
 • Rule 5: After some time period S, move all the jobs in the system to the topmost queue.
-
 ==• 规则 5：经过一段时间 S 后，将系统中的所有任务移动到最高优先级队列。==
 
 MLFQ is interesting for the following reason: instead of demanding a priori knowledge of the nature of a job, it observes the execution of a job and prioritizes it accordingly.
-
 ==MLFQ 之所以有趣，原因如下：它不要求对任务的性质有先验知识，而是观察任务的执行并相应地进行优先级排序。==
 
 In this way, it manages to achieve the best of both worlds: it can deliver excellent overall performance (similar to SJF/STCF) for short-running interactive jobs, and is fair and makes progress for long-running CPU-intensive workloads.
-
 ==通过这种方式，它设法实现了两全其美：它可以为短运行的交互式任务提供出色的整体性能（类似于 SJF/STCF），并且对于长运行的 CPU 密集型工作负载也是公平的并能取得进展。==
 
 For this reason, many systems, including BSD UNIX derivatives, Solaris, and Windows NT and subsequent Windows operating systems use a form of MLFQ as their base scheduler.
-
 ==因此，许多系统，包括 BSD UNIX 衍生系统、Solaris 以及 Windows NT 和随后的 Windows 操作系统，都使用某种形式的 MLFQ 作为其基础调度程序。==
 
 Scheduling: Proportional Share
-
 ==调度：比例份额==
 
 In this chapter, we'll examine a different type of scheduler known as a proportional-share scheduler, also sometimes referred to as a fair-share scheduler.
-
 ==在本章中，我们将研究一种不同类型的调度程序，称为比例份额调度程序，有时也称为公平份额调度程序。==
 
 Proportional-share is based around a simple concept: instead of optimizing for turnaround or response time, a scheduler might instead try to guarantee that each job obtain a certain percentage of CPU time.
-
 ==比例份额基于一个简单的概念：调度程序不是优化周转时间或响应时间，而是试图保证每个任务获得一定比例的 CPU 时间。==
 
 An excellent early example of proportional-share scheduling is found in research by Waldspurger and Weihl, and is known as lottery scheduling;
-
 ==比例份额调度的一个极好的早期例子可以在 Waldspurger 和 Weihl 的研究中找到，被称为彩票调度；==
 
 however, the idea is certainly older.
-
 ==然而，这个想法肯定更古老。==
 
 The basic idea is quite simple: every so often, hold a lottery to determine which process should get to run next;
-
 ==基本思想很简单：每隔一段时间，举行一次彩票抽奖，以确定哪个进程应该下一个运行；==
 
 processes that should run more often should be given more chances to win the lottery.
-
 ==应该运行得更频繁的进程应该被给予更多的机会赢得彩票。==
 
 Easy, no?
-
 ==很简单，不是吗？==
 
 Now, onto the details!
-
 ==现在，进入细节！==
 
 But not before our crux:
-
 ==但在那之前是我们的关键问题：==
 
 CRUX: HOW TO SHARE THE CPU PROPORTIONALLY
-
 ==关键问题：如何按比例共享 CPU==
 
 How can we design a scheduler to share the CPU in a proportional manner?
-
 ==我们如何设计一个调度程序来按比例共享 CPU？==
 
 What are the key mechanisms for doing so?
-
 ==这样做的关键机制是什么？==
 
 How effective are they?
-
 ==它们有多有效？==
 
 9.1 Basic Concept: Tickets Represent Your Share
-
 ==9.1 基本概念：彩票代表你的份额==
 
 Underlying lottery scheduling is one very basic concept: tickets, which are used to represent the share of a resource that a process (or user or whatever) should receive.
-
 ==彩票调度的基础是一个非常基本的概念：彩票，它用于代表一个进程（或用户或其他）应该获得的资源份额。==
 
 The percent of tickets that a process has represents its share of the system resource in question.
-
 ==一个进程拥有的彩票百分比代表了它在相关系统资源中的份额。==
 
 Let's look at an example.
-
 ==让我们看一个例子。==
 
 Imagine two processes, A and B, and further that A has 75 tickets while B has only 25.
-
 ==想象两个进程 A 和 B，并且 A 有 75 张彩票，而 B 只有 25 张。==
 
 Thus, what we would like is for A to receive 75% of the CPU and B the remaining 25%.
-
 ==因此，我们要的是 A 获得 75% 的 CPU，而 B 获得剩余的 25%。==
 
 Lottery scheduling achieves this probabilistically (but not deterministically) by holding a lottery every so often (say, every time slice).
-
 ==彩票调度通过每隔一段时间（比如，每个时间片）举行一次彩票抽奖，以概率性地（但不是确定性地）实现这一目标。==
 
 Holding a lottery is straightforward: the scheduler must know how many total tickets there are (in our example, there are 100).
-
 ==举行彩票抽奖很简单：调度程序必须知道总共有多少张彩票（在我们的例子中，有 100 张）。==
 
 The scheduler then picks a winning ticket, which is a number from 0 to 99.
-
 ==然后调度程序挑选一张中奖彩票，这是一个从 0 到 99 的数字。==
 
 Assuming A holds tickets 0 through 74 and B 75 through 99, the winning ticket simply determines whether A or B runs.
-
 ==假设 A 持有彩票 0 到 74，B 持有 75 到 99，中奖彩票仅仅决定是 A 还是 B 运行。==
 
 The scheduler then loads the state of that winning process and runs it.
-
 ==然后调度程序加载该获胜进程的状态并运行它。==
 
 TIP: USE RANDOMNESS
-
 ==提示：使用随机性==
 
 One of the most beautiful aspects of lottery scheduling is its use of randomness.
-
 ==彩票调度最美妙的方面之一是它对随机性的使用。==
 
 When you have to make a decision, using such a randomized approach is often a robust and simple way of doing so.
-
 ==当你必须做出决定时，使用这种随机化方法通常是一种稳健且简单的做法。==
 
 Random approaches have at least three advantages over more traditional decisions.
-
 ==与更传统的决策相比，随机方法至少有三个优点。==
 
 First, random often avoids strange corner-case behaviors that a more traditional algorithm may have trouble handling.
-
 ==首先，随机通常避免了更传统的算法可能难以处理的奇怪的边缘情况行为。==
 
 For example, consider the LRU replacement policy (studied in more detail in a future chapter on virtual memory);
-
 ==例如，考虑 LRU 替换策略（在未来关于虚拟内存的一章中会有更详细的研究）；==
 
 while often a good replacement algorithm, LRU attains worst-case performance for some cyclic-sequential workloads.
-
 ==虽然通常是一个很好的替换算法，但 LRU 在某些循环顺序工作负载下会达到最差性能。==
 
 Random, on the other hand, has no such worst case.
-
 ==另一方面，随机没有这种最差情况。==
 
 Second, random also is lightweight, requiring little state to track alternatives.
-
 ==其次，随机也是轻量级的，几乎不需要状态来跟踪备选方案。==
 
 In a traditional fair-share scheduling algorithm, tracking how much CPU each process has received requires per-process accounting, which must be updated after running each process.
-
 ==在传统的公平份额调度算法中，跟踪每个进程获得了多少 CPU 需要按进程进行计时，这必须在运行每个进程后更新。==
 
 Doing so randomly necessitates only the most minimal of per-process state (e.g., the number of tickets each has).
-
 ==随机地这样做只需要最少的每进程状态（例如，每个进程拥有的彩票数量）。==
 
 Finally, random can be quite fast.
-
 ==最后，随机可以相当快。==
 
 As long as generating a random number is quick, making the decision is also, and thus random can be used in a number of places where speed is required.
-
 ==只要生成随机数很快，做出决定也很快，因此随机可以用于许多需要速度的地方。==
 
 Of course, the faster the need, the more random tends towards pseudo-random.
-
 ==当然，需求越快，随机就越倾向于伪随机。==
 
 SCHEDULING: PROPORTIONAL SHARE
-
 ==调度：比例份额==
 
   
 
 TIP: USE TICKETS TO REPRESENT SHARES
-
 ==提示：使用彩票表示份额==
 
   
 
 One of the most powerful (and basic) mechanisms in the design of lottery (and stride) scheduling is that of the ticket.
-
 ==彩票（lottery）调度（以及步长调度）设计中最强大（也是最基础）的机制之一就是彩票。==
 
   
 
 The ticket is used to represent a process's share of the CPU in these examples, but can be applied much more broadly.
-
 ==在这些例子中，彩票用于表示进程占有的 CPU 份额，但它的应用范围其实可以更广。==
 
   
 
 For example, in more recent work on virtual memory management for hypervisors, Waldspurger shows how tickets can be used to represent a guest operating system's share of memory [W02].
-
 ==例如，在关于虚拟机监视器虚拟内存管理的较新研究中，Waldspurger 展示了如何利用彩票来表示客户操作系统（Guest OS）占有的内存份额 [W02]。==
 
   
 
 Thus, if you are ever in need of a mechanism to represent a proportion of ownership, this concept just might be... (wait for it) ... the ticket.
-
 ==因此，如果你需要一种机制来表示所有权的比例，这个概念可能正是……（等着瞧）……彩票。==
 
   
 
 9.2 Ticket Mechanisms
-
 ==9.2 彩票机制==
 
   
 
 Lottery scheduling also provides a number of mechanisms to manipulate tickets in different and sometimes useful ways.
-
 ==彩票调度还提供了一些以不同且有用的方式来操纵彩票的机制。==
 
   
 
 One way is with the concept of ticket currency.
-
 ==其中一种方式是利用彩票货币（ticket currency）的概念。==
 
   
 
 Currency allows a user with a set of tickets to allocate tickets among their own jobs in whatever currency they would like;
-
 ==货币允许拥有一组彩票的用户以其喜欢的任何货币在自己的作业之间分配彩票；==
 
   
 
 the system then automatically converts said currency into the correct global value.
-
 ==然后系统会自动将该货币兑换为正确的全局价值。==
 
   
 
 For example, assume users A and B have each been given 100 tickets.
-
 ==例如，假设用户 A 和用户 B 各自分到了 100 张彩票。==
 
   
 
 User A is running two jobs, A1 and A2, and gives them each 500 tickets (out of 1000 total) in A's currency.
-
 ==用户 A 运行两个作业 A1 和 A2，并用 A 的货币给每个作业分配了 500 张彩票（总共 1000 张）。==
 
   
 
 User B is running only 1 job and gives it 10 tickets (out of 10 total).
-
 ==用户 B 只运行 1 个作业，并给它分配了 10 张彩票（总共 10 张）。==
 
   
 
 The system converts A1's and A2's allocation from 500 each in A's currency to 50 each in the global currency;
-
 ==系统将 A1 和 A2 的分配额从 A 货币下的各 500 张转换为全局货币下的各 50 张；==
 
   
 
 similarly, B1's 10 tickets is converted to 100 tickets.
-
 ==同样地，B1 的 10 张彩票被转换为 100 张彩票。==
 
   
 
 The lottery is then held over the global ticket currency (200 total) to determine which job runs.
-
 ==然后，基于全局彩票货币（总共 200 张）进行开奖，以决定运行哪个作业。==
 
   
 
 Another useful mechanism is ticket transfer.
-
 ==另一个有用的机制是彩票转让（ticket transfer）。==
 
   
 
 With transfers, a process can temporarily hand off its tickets to another process.
-
 ==通过转让，一个进程可以暂时将其彩票交给另一个进程。==
 
   
 
 This ability is especially useful in a client/server setting, where a client process sends a message to a server asking it to do some work on the client's behalf.
-
 ==这种能力在客户端/服务器环境中特别有用，此时客户端进程向服务器发送消息，请求服务器代表其完成某些工作。==
 
   
 
 To speed up the work, the client can pass the tickets to the server and thus try to maximize the performance of the server while the server is handling the client's request.
-
 ==为了加速工作，客户端可以将彩票传递给服务器，从而试图在服务器处理客户端请求时最大化服务器的性能。==
 
   
 
 When finished, the server then transfers the tickets back to the client and all is as before.
-
 ==当完成后，服务器再将彩票转回给客户端，一切恢复如初。==
 
   
 
 Finally, ticket inflation can sometimes be a useful technique.
-
 ==最后，彩票通胀（ticket inflation）有时也是一种有用的技术。==
 
   
 
 With inflation, a process can temporarily raise or lower the number of tickets it owns.
-
 ==通过通胀，进程可以暂时增加或减少其拥有的彩票数量。==
 
   
 
 Of course, in a competitive scenario with processes that do not trust one another, this makes little sense;
-
 ==当然，在进程互不信任的竞争场景中，这没有什么意义；==
 
   
 
 one greedy process could give itself a vast number of tickets and take over the machine.
-
 ==一个贪婪的进程可能会给自己分配大量的彩票从而霸占机器。==
 
   
 
 Rather, inflation can be applied in an environment where a group of processes trust one another;
-
 ==相反，通胀可以应用于一组进程相互信任的环境中；==
 
   
 
 in such a case, if any one process knows it needs more CPU time, it can boost its ticket value as a way to reflect that need to the system, all without communicating with any other processes.
-
 ==在这种情况下，如果任何一个进程知道它需要更多的 CPU 时间，它可以增加自己的彩票价值，以此向系统反映这种需求，而无需与其他任何进程通信。==
 
   
 
 9.3 Implementation
-
 ==9.3 实现==
 
   
 
 Probably the most amazing thing about lottery scheduling is the simplicity of its implementation.
-
 ==彩票调度最令人惊奇的地方可能在于其实现的简单性。==
 
   
 
 All you need is a good random number generator to pick the winning ticket, a data structure to track the processes of the system (e.g., a list), and the total number of tickets.
-
 ==你只需要一个好的随机数生成器来抽取中奖彩票，一个用于跟踪系统进程的数据结构（例如列表），以及彩票的总数。==
 
   
 
 Let's assume we keep the processes in a list.
-
 ==让我们假设我们将进程保存在一个列表中。==
 
   
 
 Here is an example comprised of three processes, A, B, and C, each with some number of tickets.
-
 ==这是一个由三个进程 A、B 和 C 组成的示例，每个进程都有一定数量的彩票。==
 
   
 
 To make a scheduling decision, we first have to pick a random number (the winner) from the total number of tickets (400).
-
 ==为了做出调度决策，我们首先必须从彩票总数（400）中选取一个随机数（中奖者）。==
 
   
 
 Let's say we pick the number 300.
-
 ==假设我们要选取的数字是 300。==
 
   
 
 Then, we simply traverse the list, with a simple counter used to help us find the winner (Figure 9.1).
-
 ==然后，我们只需遍历列表，并使用一个简单的计数器来帮助我们找到赢家（图 9.1）。==
 
   
 
 The code walks the process list, adding each ticket value to counter until the value exceeds winner.
-
 ==代码遍历进程列表，将每个彩票值加到计数器上，直到该值超过中奖号码。==
 
   
 
 Once that is the case, the current list element is the winner.
-
 ==一旦出现这种情况，当前的列表元素就是赢家。==
 
   
 
 With our example of the winning ticket being 300, the following takes place.
-
 ==以中奖彩票为 300 为例，过程如下。==
 
   
 
 First, counter is incremented to 100 to account for A's tickets;
-
 ==首先，计数器增加到 100 以计入 A 的彩票；==
 
   
 
 because 100 is less than 300, the loop continues.
-
 ==因为 100 小于 300，循环继续。==
 
   
 
 Then counter would be updated to 150 (B's tickets), still less than 300 and thus again we continue.
-
 ==然后计数器将更新为 150（加上 B 的彩票），仍然小于 300，因此我们再次继续。==
 
   
 
 Finally, counter is updated to 400 (clearly greater than 300), and thus we break out of the loop with current pointing at C (the winner).
-
 ==最后，计数器更新为 400（显然大于 300），因此我们跳出循环，此时 current 指向 C（赢家）。==
 
   
 
 To make this process most efficient, it might generally be best to organize the list in sorted order, from the highest number of tickets to the lowest.
-
 ==为了使这个过程最高效，通常最好按排序顺序组织列表，从彩票数量最多到最少。==
 
   
 
 The ordering does not affect the correctness of the algorithm;
-
 ==排序不会影响算法的正确性；==
 
   
 
 however, it does ensure in general that the fewest number of list iterations are taken, especially if there are a few processes that possess most of the tickets.
-
 ==然而，这通常能确保进行最少的列表迭代，特别是当有少数进程拥有大部分彩票时。==
 
   
 
 9.4 An Example
-
 ==9.4 一个例子==
 
   
 
 To make the dynamics of lottery scheduling more understandable, we now perform a brief study of the completion time of two jobs competing against one another, each with the same number of tickets (100) and same run time (R, which we will vary).
-
 ==为了让彩票调度的动态过程更易于理解，我们现在简要研究两个相互竞争的作业的完成时间，它们拥有相同数量的彩票（100）和相同的运行时间（R，我们会改变这个值）。==
 
   
 
 In this scenario, we'd like for each job to finish at roughly the same time, but due to the randomness of lottery scheduling, sometimes one job finishes before the other.
-
 ==在这种情况下，我们希望每个作业都在大致相同的时间完成，但由于彩票调度的随机性，有时一个作业会先于另一个完成。==
 
   
 
 To quantify this difference, we define a simple fairness metric, F which is simply the time the first job completes divided by the time that the second job completes.
-
 ==为了量化这种差异，我们定义了一个简单的公平性指标 F，即第一个作业完成的时间除以第二个作业完成的时间。==
 
   
 
 When both jobs finish at nearly the same time, F will be quite close to 1.
-
 ==当两个作业几乎同时完成时，F 将非常接近 1。==
 
   
 
 In this scenario, that is our goal: a perfectly fair scheduler would achieve F = 1.
-
 ==在这种情况下，这是我们的目标：一个完全公平的调度器将实现 F = 1。==
 
   
 
 As you can see from the graph, when the job length is not very long, average fairness can be quite low.
-
 ==从图中可以看出，当作业长度不是很长时，平均公平性可能会很低。==
 
   
 
 Only as the jobs run for a significant number of time slices does the lottery scheduler approach the desired fair outcome.
-
 ==只有当作业运行了相当数量的时间片后，彩票调度器才会接近预期的公平结果。==
 
   
 
 9.5 How To Assign Tickets?
-
 ==9.5 如何分配彩票？==
 
   
 
 One problem we have not addressed with lottery scheduling is: how to assign tickets to jobs?
-
 ==我们在彩票调度中尚未解决的一个问题是：如何给作业分配彩票？==
 
   
 
 This problem is a tough one, because of course how the system behaves is strongly dependent on how tickets are allocated.
-
 ==这是一个棘手的问题，因为系统的行为当然在很大程度上取决于彩票是如何分配的。==
 
   
 
 One approach is to assume that the users know best;
-
 ==一种方法是假设用户最清楚；==
 
   
 
 in such a case, each user is handed some number of tickets, and a user can allocate tickets to any jobs they run as desired.
-
 ==在这种情况下，每个用户被分发一定数量的彩票，用户可以根据需要将彩票分配给他们运行的任何作业。==
 
   
 
 However, this solution is a non-solution: it really doesn't tell you what to do.
-
 ==然而，这个解决方案等于没有解决问题：它实际上并没有告诉你该怎么做。==
 
   
 
 Thus, given a set of jobs, the "ticket-assignment problem" remains open.
-
 ==因此，给定一组作业，“彩票分配问题”仍然悬而未决。==
 
   
 
 9.6 Stride Scheduling
-
 ==9.6 步长调度==
 
   
 
 You might also be wondering: why use randomness at all?
-
 ==你可能还会想：为什么要使用随机性呢？==
 
   
 
 As we saw above, while randomness gets us a simple (and approximately correct) scheduler, it occasionally will not deliver the exact right proportions, especially over short time scales.
-
 ==正如我们在上面看到的，虽然随机性为我们要来了一个简单（且近似正确）的调度器，但它偶尔无法提供完全正确的比例，特别是在短时间范围内。==
 
   
 
 For this reason, Waldspurger invented stride scheduling, a deterministic fair-share scheduler [W95].
-
 ==出于这个原因，Waldspurger 发明了步长调度（stride scheduling），这是一种确定性的公平份额调度器 [W95]。==
 
   
 
 Stride scheduling is also straightforward.
-
 ==步长调度也很直观。==
 
   
 
 Each job in the system has a stride, which is inverse in proportion to the number of tickets it has.
-
 ==系统中的每个作业都有一个步长（stride），其与它拥有的彩票数量成反比。==
 
   
 
 In our example above, with jobs A, B, and C, with 100, 50, and 250 tickets, respectively, we can compute the stride of each by dividing some large number by the number of tickets each process has been assigned.
-
 ==在上面的例子中，作业 A、B 和 C 分别拥有 100、50 和 250 张彩票，我们可以通过用一个大数除以每个进程被分配的彩票数量来计算每个进程的步长。==
 
   
 
 For example, if we divide 10,000 by each of those ticket values, we obtain the following stride values for A, B, and C: 100, 200, and 40.
-
 ==例如，如果我们用 10,000 除以这些彩票值，我们会得到 A、B 和 C 的步长值分别为：100、200 和 40。==
 
   
 
 We call this value the stride of each process;
-
 ==我们将此值称为每个进程的步长；==
 
   
 
 every time a process runs, we will increment a counter for it (called its pass value) by its stride to track its global progress.
-
 ==每次进程运行时，我们会将其计数器（称为行程值，pass value）增加其步长，以跟踪其全局进度。==
 
   
 
 The scheduler then uses the stride and pass to determine which process should run next.
-
 ==然后调度器使用步长和行程值来确定接下来应该运行哪个进程。==
 
   
 
 The basic idea is simple: at any given time, pick the process to run that has the lowest pass value so far;
-
 ==基本思想很简单：在任何给定时间，选择目前行程值最低的进程运行；==
 
   
 
 when you run a process, increment its pass counter by its stride.
-
 ==当你运行一个进程时，将其行程计数器增加其步长。==
 
   
 
 Lottery scheduling achieves the proportions probabilistically over time;
-
 ==彩票调度随时间推移以概率方式实现比例；==
 
   
 
 stride scheduling gets them exactly right at the end of each scheduling cycle.
-
 ==步长调度在每个调度周期结束时都能完全正确地实现比例。==
 
   
 
 So you might be wondering: given the precision of stride scheduling, why use lottery scheduling at all?
-
 ==所以你可能会想：既然步长调度如此精确，为什么还要使用彩票调度呢？==
 
   
 
 Well, lottery scheduling has one nice property that stride scheduling does not: no global state.
-
 ==嗯，彩票调度有一个步长调度所没有的良好属性：没有全局状态。==
 
   
 
 Imagine a new job enters in the middle of our stride scheduling example above; what should its pass value be?
-
 ==想象一下，在上面的步长调度示例中途加入了一个新作业；它的行程值应该是多少？==
 
   
 
 Should it be set to 0? If so, it will monopolize the CPU.
-
 ==应该设为 0 吗？如果是这样，它将独占 CPU。==
 
   
 
 With lottery scheduling, there is no global state per process;
-
 ==使用彩票调度，每个进程没有全局状态；==
 
   
 
 we simply add a new process with whatever tickets it has, update the single global variable to track how many total tickets we have, and go from there.
-
 ==我们只需添加一个带有其彩票的新进程，更新跟踪总彩票数量的单个全局变量，然后继续即可。==
 
   
 
 In this way, lottery makes it much easier to incorporate new processes in a sensible manner.
-
 ==通过这种方式，彩票调度使得以合理的方式纳入新进程变得容易得多。==
 
   
 
 9.7 The Linux Completely Fair Scheduler (CFS)
-
 ==9.7 Linux 完全公平调度器（CFS）==
 
   
 
 Despite these earlier works in fair-share scheduling, the current Linux approach achieves similar goals in an alternate manner.
-
 ==尽管有这些早期的公平份额调度研究，当前的 Linux 方法以另一种方式实现了类似的目标。==
 
   
 
 The scheduler, entitled the Completely Fair Scheduler (or CFS) [J09], implements fair-share scheduling, but does so in a highly efficient and scalable manner.
-
 ==该调度器名为完全公平调度器（或 CFS）[J09]，它实现了公平份额调度，但以一种高效且可扩展的方式进行。==
 
   
 
 To achieve its efficiency goals, CFS aims to spend very little time making scheduling decisions, through both its inherent design and its clever use of data structures well-suited to the task.
-
 ==为了实现其效率目标，CFS 旨在通过其内在设计和巧妙使用适合该任务的数据结构，在制定调度决策上花费极少的时间。==
 
   
 
 Recent studies have shown that scheduler efficiency is surprisingly important;
-
 ==最近的研究表明，调度器效率惊人地重要；==
 
   
 
 specifically, in a study of Google datacenters, Kanev et al. show that even after aggressive optimization, scheduling uses about 5% of overall datacenter CPU time [K+15].
-
 ==具体来说，在对 Google 数据中心的一项研究中，Kanev 等人表明，即使经过积极优化，调度仍占用了整个数据中心约 5% 的 CPU 时间 [K+15]。==
 
   
 
 Reducing that overhead as much as possible is thus a key goal in modern scheduler architecture.
-
 ==因此，尽可能减少这种开销是现代调度器架构的一个关键目标。==
 
   
 
 Basic Operation
-
 ==基本操作==
 
   
 
 Whereas most schedulers are based around the concept of a fixed time slice, CFS operates a bit differently.
-
 ==虽然大多数调度器都基于固定时间片的概念，但 CFS 的运作方式略有不同。==
 
   
 
 Its goal is simple: to fairly divide a CPU evenly among all competing processes.
-
 ==它的目标很简单：在所有竞争进程之间公平地平均分配 CPU。==
 
   
 
 It does so through a simple counting-based technique known as virtual runtime (vruntime).
-
 ==它通过一种简单的基于计数的被称为虚拟运行时间（vruntime）的技术来实现这一点。==
 
   
 
 As each process runs, it accumulates vruntime.
-
 ==随着每个进程的运行，它会积累 vruntime。==
 
   
 
 In the most basic case, each process's vruntime increases at the same rate, in proportion with physical (real) time.
-
 ==在最基本的情况下，每个进程的 vruntime 以相同的速率增加，与物理（实际）时间成正比。==
 
   
 
 When a scheduling decision occurs, CFS will pick the process with the lowest vruntime to run next.
-
 ==当进行调度决策时，CFS 将选择具有最低 vruntime 的进程在接下来运行。==
 
   
 
 This raises a question: how does the scheduler know when to stop the currently running process, and run the next one?
-
 ==这提出了一个问题：调度器如何知道何时停止当前运行的进程并运行下一个进程？==
 
   
 
 The tension here is clear: if CFS switches too often, fairness is increased, as CFS will ensure that each process receives its share of CPU even over miniscule time windows, but at the cost of performance (too much context switching);
-
 ==这里的矛盾显而易见：如果 CFS 切换得太频繁，公平性会增加，因为 CFS 甚至在微小的时间窗口内也能确保每个进程获得其 CPU 份额，但这会以性能为代价（过多的上下文切换）；==
 
   
 
 if CFS switches less often, performance is increased (reduced context switching), but at the cost of near-term fairness.
-
 ==如果 CFS 切换得不那么频繁，性能会提高（减少了上下文切换），但这会以短期公平性为代价。==
 
   
 
 CFS manages this tension through various control parameters. The first is sched_latency.
-
 ==CFS 通过各种控制参数来管理这种矛盾。第一个是 sched_latency（调度延迟）。==
 
   
 
 CFS uses this value to determine how long one process should run before considering a switch (effectively determining its time slice but in a dynamic fashion).
-
 ==CFS 使用此值来确定一个进程在考虑切换之前应运行多长时间（实际上是以动态方式确定其时间片）。==
 
   
 
 A typical sched_latency value is 48 (milliseconds);
-
 ==典型的 sched_latency 值为 48（毫秒）；==
 
   
 
 CFS divides this value by the number (n) of processes running on the CPU to determine the time slice for a process, and thus ensures that over this period of time, CFS will be completely fair.
-
 ==CFS 将此值除以 CPU 上运行的进程数 (n)，以确定进程的时间片，从而确保在这段时间内，CFS 将是完全公平的。==
 
   
 
 For example, if there are n=4 processes running, CFS divides the value of sched_latency by n to arrive at a per-process time slice of 12 ms.
-
 ==例如，如果有 n=4 个进程在运行，CFS 将 sched_latency 的值除以 n，得出每个进程的时间片为 12 毫秒。==
 
   
 
 CFS then schedules the first job and runs it until it has used 12 ms of (virtual) runtime, and then checks to see if there is a job with lower vruntime to run instead.
-
 ==然后 CFS 调度第一个作业并运行它，直到它使用了 12 毫秒的（虚拟）运行时间，然后检查是否有 vruntime 更低的作业可以运行。==
 
   
 
 But what if there are "too many" processes running? Wouldn't that lead to too small of a time slice, and thus too many context switches?
-
 ==但是如果有“太多”进程在运行怎么办？那不会导致时间片太小，从而导致太多的上下文切换吗？==
 
   
 
 Good question! And the answer is yes.
-
 ==好问题！答案是肯定的。==
 
   
 
 To address this issue, CFS adds another parameter, min_granularity, which is usually set to a value like 6 ms.
-
 ==为了解决这个问题，CFS 添加了另一个参数 min_granularity（最小粒度），通常设置为 6 毫秒之类的值。==
 
   
 
 CFS will never set the time slice of a process to less than this value, ensuring that not too much time is spent in scheduling overhead.
-
 ==CFS 绝不会将进程的时间片设置为小于此值，以确保不会在调度开销上花费太多时间。==
 
   
 
 Weighting (Niceness)
-
 ==加权（Niceness）==
 
   
 
 CFS also enables controls over process priority, enabling users or administrators to give some processes a higher share of the CPU.
-
 ==CFS 还启用了对进程优先级的控制，允许用户或管理员给予某些进程更高的 CPU 份额。==
 
   
 
 It does this not with tickets, but through a classic UNIX mechanism known as the nice level of a process.
-
 ==它不是通过彩票，而是通过一种被称为进程 nice 值的经典 UNIX 机制来实现这一点的。==
 
   
 
 The nice parameter can be set anywhere from -20 to +19 for a process, with a default of 0.
-
 ==进程的 nice 参数可以设置为 -20 到 +19 之间的任何值，默认为 0。==
 
   
 
 Positive nice values imply lower priority and negative values imply higher priority;
-
 ==正的 nice 值意味着较低的优先级，负值意味着较高的优先级；==
 
   
 
 when you're too nice, you just don't get as much (scheduling) attention, alas.
-
 ==当你太“nice”（友善/优先级低）时，你就得不到那么多（调度）关注，唉。==
 
   
 
 Using Red-Black Trees
-
 ==使用红黑树==
 
   
 
 One major focus of CFS is efficiency, as stated above.
-
 ==如前所述，CFS 的一个主要关注点是效率。==
 
   
 
 For a scheduler, there are many facets of efficiency, but one of them is as simple as this: when the scheduler has to find the next job to run, it should do so as quickly as possible.
-
 ==对于调度器来说，效率有很多方面，但其中之一非常简单：当调度器必须找到下一个要运行的作业时，它应该尽可能快地完成。==
 
   
 
 Simple data structures like lists don't scale: modern systems sometimes are comprised of 1000s of processes, and thus searching through a long-list every so many milliseconds is wasteful.
-
 ==简单的列表等数据结构无法扩展：现代系统有时由数千个进程组成，因此每隔几毫秒搜索一次长列表是浪费的。==
 
   
 
 CFS addresses this by keeping processes in a red-black tree [B72].
-
 ==CFS 通过将进程保存在红黑树 [B72] 中来解决这个问题。==
 
   
 
 A red-black tree is one of many types of balanced trees;
-
 ==红黑树是众多平衡树类型中的一种；==
 
   
 
 in contrast to a simple binary tree (which can degenerate to list-like performance under worst-case insertion patterns), balanced trees do a little extra work to maintain low depths, and thus ensure that operations are logarithmic (and not linear) in time.
-
 ==与简单的二叉树（在最坏的插入模式下性能会退化为链表）相比，平衡树做了一些额外的工作来保持较低的深度，从而确保操作时间是对数的（而不是线性的）。==
 
   
 
 CFS does not keep all processes in this structure; rather, only running (or runnable) processes are kept therein.
-
 ==CFS 并不将所有进程都保存在这个结构中；相反，其中只保留正在运行（或可运行）的进程。==
 
   
 
 If a process goes to sleep (say, waiting on an I/O to complete, or for a network packet to arrive), it is removed from the tree and kept track of elsewhere.
-
 ==如果一个进程进入睡眠状态（例如，等待 I/O 完成，或等待网络数据包到达），它就会从树中移除并被跟踪在其他地方。==
 
   
 
 Dealing With I/O And Sleeping Processes
-
 ==处理 I/O 和睡眠进程==
 
   
 
 One problem with picking the lowest vruntime to run next arises with jobs that have gone to sleep for a long period of time.
-
 ==选择最低 vruntime 的作业运行会导致一个问题，这出现在长时间睡眠的作业上。==
 
   
 
 Imagine two processes, A and B, one of which (A) runs continuously, and the other (B) which has gone to sleep for a long period of time (say, 10 seconds).
-
 ==想象两个进程 A 和 B，其中一个（A）连续运行，另一个（B）已经睡眠了很长一段时间（比如 10 秒）。==
 
   
 
 When B wakes up, its vruntime will be 10 seconds behind A's, and thus (if we're not careful), B will now monopolize the CPU for the next 10 seconds while it catches up, effectively starving A.
-
 ==当 B 醒来时，它的 vruntime 将比 A 落后 10 秒，因此（如果我们不小心的话），B 将在接下来的 10 秒内独占 CPU 以追赶进度，实际上导致 A 饥饿。==
 
   
 
 CFS handles this case by altering the vruntime of a job when it wakes up.
-
 ==CFS 通过在作业醒来时更改其 vruntime 来处理这种情况。==
 
   
 
 Specifically, CFS sets the vruntime of that job to the minimum value found in the tree (remember, the tree only contains running jobs) [B+18].
-
 ==具体来说，CFS 将该作业的 vruntime 设置为树中找到的最小值（记住，树只包含正在运行的作业）[B+18]。==
 
   
 
 In this way, CFS avoids starvation, but not without a cost: jobs that sleep for short periods of time frequently do not ever get their fair share of the CPU [AC97].
-
 ==通过这种方式，CFS 避免了饥饿，但并非没有代价：频繁短暂睡眠的作业永远无法获得其公平的 CPU 份额 [AC97]。==
 
   
 
 9.8 Summary
-
 ==9.8 总结==
 
   
 
 We have introduced the concept of proportional-share scheduling and briefly discussed three approaches: lottery scheduling, stride scheduling, and the Completely Fair Scheduler (CFS) of Linux.
-
 ==我们介绍了比例份额调度的概念，并简要讨论了三种方法：彩票调度、步长调度和 Linux 的完全公平调度器（CFS）。==
 
   
 
 Lottery uses randomness in a clever way to achieve proportional share; stride does so deterministically.
-
 ==彩票调度巧妙地利用随机性来实现比例份额；步长调度则以确定性的方式实现。==
 
   
 
 CFS, the only "real" scheduler discussed in this chapter, is a bit like weighted round-robin with dynamic time slices, but built to scale and perform well under load;
-
 ==CFS 是本章讨论的唯一“真实”调度器，它有点像带有动态时间片的加权轮转调度，但它是为在负载下扩展和良好运行而构建的；==
 
   
 
 to our knowledge, it is the most widely used fair-share scheduler in existence today.
-
 ==据我们要知，它是当今存在的使用最广泛的公平份额调度器。==
 
   
 
 No scheduler is a panacea, and fair-share schedulers have their fair share of problems.
-
 ==没有哪个调度器是万能药，公平份额调度器也有其自身的问题。==
 
   
 
 Multiprocessor Scheduling (Advanced)
-
 ==多处理器调度（进阶）==
 
   
 
 CRUX: HOW TO SCHEDULE JOBS ON MULTIPLE CPUS
-
 ==关键问题：如何在多个 CPU 上调度作业==
 
   
 
 How should the OS schedule jobs on multiple CPUs?
-
 ==操作系统应该如何在多个 CPU 上调度作业？==
 
   
 
 What new problems arise? Do the same old techniques work, or are new ideas required?
-
 ==会出现什么新问题？相同的旧技术还管用吗，还是需要新思路？==
 
   
 
 10.1 Background: Multiprocessor Architecture
-
 ==10.1 背景：多处理器架构==
 
   
 
 To understand the new issues surrounding multiprocessor scheduling, we have to understand a new and fundamental difference between single-CPU hardware and multi-CPU hardware.
-
 ==要理解围绕多处理器调度的新问题，我们必须理解单 CPU 硬件和多 CPU 硬件之间的一个新的根本差异。==
 
   
 
 This difference centers around the use of hardware caches (e.g., Figure 10.1), and exactly how data is shared across multiple processors.
-
 ==这种差异集中在硬件缓存的使用（例如图 10.1），以及数据究竟如何在多个处理器之间共享。==
 
   
 
 In a system with a single CPU, there are a hierarchy of hardware caches that in general help the processor run programs faster.
-
 ==在单 CPU 系统中，存在硬件缓存层次结构，通常有助于处理器更快地运行程序。==
 
   
 
 Caches are small, fast memories that (in general) hold copies of popular data that is found in the main memory of the system.
-
 ==缓存是小而快的存储器，（通常）保存着系统主内存中热门数据的副本。==
 
   
 
 Main memory, in contrast, holds all of the data, but access to this larger memory is slower.
-
 ==相比之下，主内存保存所有数据，但访问这个更大的内存速度较慢。==
 
   
 
 By keeping frequently accessed data in a cache, the system can make the large, slow memory appear to be a fast one.
-
 ==通过将频繁访问的数据保存在缓存中，系统可以使大而慢的内存看起来像快内存一样。==
 
   
 
 Now for the tricky part: what happens when you have multiple processors in a single system, with a single shared main memory, as we see in Figure 10.2?
-
 ==现在的棘手部分是：当你如我们在图 10.2 中看到的那样，在一个系统中拥有多个处理器，并共享一个主内存时，会发生什么？==
 
   
 
 As it turns out, caching with multiple CPUs is much more complicated.
-
 ==事实证明，多 CPU 缓存要复杂得多。==
 
   
 
 Imagine, for example, that a program running on CPU 1 reads a data item (with value D) at address A;
-
 ==例如，想象一个在 CPU 1 上运行的程序读取地址 A 处的数据项（值为 D）；==
 
   
 
 because the data is not in the cache on CPU 1, the system fetches it from main memory, and gets the value D.
-
 ==因为数据不在 CPU 1 的缓存中，系统从主内存中获取它，并得到值 D。==
 
   
 
 The program then modifies the value at address A, just updating its cache with the new value D';
-
 ==程序然后修改地址 A 处的值，仅用新值 D' 更新其缓存；==
 
   
 
 writing the data through all the way to main memory is slow, so the system will (usually) do that later.
-
 ==将数据一直写回主内存很慢，所以系统（通常）会在稍后进行。==
 
   
 
 Then assume the OS decides to stop running the program and move it to CPU 2.
-
 ==然后假设操作系统决定停止运行该程序并将其移动到 CPU 2。==
 
   
 
 The program then re-reads the value at address A;
-
 ==程序随后重新读取地址 A 处的值；==
 
   
 
 there is no such data in CPU 2's cache, and thus the system fetches the value from main memory, and gets the old value D instead of the correct value D'.
-
 ==CPU 2 的缓存中没有此类数据，因此系统从主内存中获取该值，得到的是旧值 D 而不是正确的值 D'。==
 
   
 
 Oops!
-
 ==哎呀！==
 
   
 
 This general problem is called the problem of cache coherence, and there is a vast research literature that describes many different subtleties involved with solving the problem [SHW11].
-
 ==这个普遍存在的问题被称为缓存一致性（cache coherence）问题，有大量的研究文献描述了解决该问题所涉及的许多不同细节 [SHW11]。==
 
   
 
 The basic solution is provided by the hardware: by monitoring memory accesses, hardware can ensure that basically the "right thing" happens and that the view of a single shared memory is preserved.
-
 ==基本解决方案由硬件提供：通过监控内存访问，硬件可以确保基本发生“正确的事情”，并保留单个共享内存的视图。==
 
   
 
 One way to do this on a bus-based system (as described above) is to use an old technique known as bus snooping [G83];
-
 ==在基于总线的系统（如上所述）中，做到这一点的一种方法是使用一种称为总线窥探（bus snooping）的旧技术 [G83]；==
 
   
 
 each cache pays attention to memory updates by observing the bus that connects them to main memory.
-
 ==每个缓存通过观察连接它们到主内存的总线来关注内存更新。==
 
   
 
 When a CPU then sees an update for a data item it holds in its cache, it will notice the change and either invalidate its copy (i.e., remove it from its own cache) or update it (i.e., put the new value into its cache too).
-
 ==当 CPU 看到它在其缓存中持有的数据项有更新时，它会注意到这种变化，要么使其副本无效（即，从其自己的缓存中移除它），要么更新它（即，将新值也放入其缓存中）。==
 
   
 
 10.2 Don't Forget Synchronization
-
 ==10.2 别忘了同步==
 
   
 
 Given that the caches do all of this work to provide coherence, do programs (or the OS itself) have to worry about anything when they access shared data?
-
 ==既然缓存做了所有这些工作来提供一致性，程序（或操作系统本身）在访问共享数据时还需要担心什么吗？==
 
   
 
 The answer, unfortunately, is yes, and is documented in great detail in the second piece of this book on the topic of concurrency.
-
 ==不幸的是，答案是肯定的，这在本书关于并发主题的第二部分中有非常详细的记录。==
 
   
 
 When accessing (and in particular, updating) shared data items or structures across CPUs, mutual exclusion primitives (such as locks) should likely be used to guarantee correctness.
-
 ==当跨 CPU 访问（特别是更新）共享数据项或结构时，可能应该使用互斥原语（如锁）来保证正确性。==
 
   
 
 Without locks, adding or removing elements from the queue concurrently will not work as expected, even with the underlying coherence protocols;
-
 ==如果没有锁，即使有底层的相关性协议，并发地从队列中添加或删除元素也无法按预期工作；==
 
   
 
 one needs locks to atomically update the data structure to its new state.
-
 ==需要锁来原子地将数据结构更新到其新状态。==
 
   
 
 10.3 One Final Issue: Cache Affinity
-
 ==10.3 最后一个问题：缓存亲和性==
 
   
 
 One final issue arises in building a multiprocessor cache scheduler, known as cache affinity [TTG95].
-
 ==在构建多处理器缓存调度器时出现了最后一个问题，称为缓存亲和性（cache affinity）[TTG95]。==
 
   
 
 This notion is simple: a process, when run on a particular CPU, builds up a fair bit of state in the caches (and TLBs) of the CPU.
-
 ==这个概念很简单：一个进程在特定 CPU 上运行时，会在该 CPU 的缓存（和 TLB）中建立相当多的状态。==
 
   
 
 The next time the process runs, it is often advantageous to run it on the same CPU, as it will run faster if some of its state is already present in the caches on that CPU.
-
 ==下次该进程运行时，在同一个 CPU 上运行通常是有利的，因为如果它的某些状态已经存在于该 CPU 的缓存中，它将运行得更快。==
 
   
 
 Thus, a multiprocessor scheduler should consider cache affinity when making its scheduling decisions, perhaps preferring to keep a process on the same CPU if at all possible.
-
 ==因此，多处理器调度器在做出调度决策时应考虑缓存亲和性，如果可能的话，也许倾向于将进程保持在同一个 CPU 上。==
 
   
 
 10.4 Single-Queue Scheduling
-
 ==10.4 单队列调度==
 
   
 
 The most basic approach is to simply reuse the basic framework for single processor scheduling, by putting all jobs that need to be scheduled into a single queue;
-
 ==最基本的方法是简单地重用单处理器调度的基本框架，将所有需要调度的作业放入一个队列中；==
 
   
 
 we call this single-queue multiprocessor scheduling or SQMS for short.
-
 ==我们称之为单队列多处理器调度，简称 SQMS。==
 
   
 
 However, SQMS has obvious shortcomings. The first problem is a lack of scalability.
-
 ==然而，SQMS 有明显的缺点。第一个问题是缺乏可扩展性。==
 
   
 
 To ensure the scheduler works correctly on multiple CPUs, the developers will have inserted some form of locking into the code, as described above.
-
 ==为了确保调度器在多个 CPU 上正确工作，开发人员将在代码中插入某种形式的锁，如上所述。==
 
   
 
 Locks ensure that when SQMS code accesses the single queue (say, to find the next job to run), the proper outcome arises.
-
 ==锁确保当 SQMS 代码访问单队列（例如，查找下一个要运行的作业）时，会产生正确的结果。==
 
   
 
 Locks, unfortunately, can greatly reduce performance, particularly as the number of CPUs in the systems grows [A90].
-
 ==不幸的是，锁会大大降低性能，特别是随着系统中 CPU 数量的增加 [A90]。==
 
   
 
 The second main problem with SQMS is cache affinity.
-
 ==SQMS 的第二个主要问题是缓存亲和性。==
 
   
 
 Because each CPU simply picks the next job to run from the globally-shared queue, each job ends up bouncing around from CPU to CPU, thus doing exactly the opposite of what would make sense from the standpoint of cache affinity.
-
 ==因为每个 CPU 只是从全局共享队列中选取下一个作业来运行，每个作业最终会在 CPU 之间跳来跳去，这恰恰与从缓存亲和性角度来看合理的做法背道而驰。==
 
   
 
 To handle this problem, most SQMS schedulers include some kind of affinity mechanism to try to make it more likely that process will continue to run on the same CPU if possible.
-
 ==为了处理这个问题，大多数 SQMS 调度器都包含某种亲和性机制，试图使进程尽可能继续在同一个 CPU 上运行。==
 
   
 
 10.5 Multi-Queue Scheduling
-
 ==10.5 多队列调度==
 
   
 
 Because of the problems caused in single-queue schedulers, some systems opt for multiple queues, e.g., one per CPU.
-
 ==由于单队列调度器引起的问题，一些系统选择多队列，例如每个 CPU 一个队列。==
 
   
 
 We call this approach multi-queue multiprocessor scheduling (or MQMS).
-
 ==我们将这种方法称为多队列多处理器调度（或 MQMS）。==
 
   
 
 In MQMS, our basic scheduling framework consists of multiple scheduling queues.
-
 ==在 MQMS 中，我们的基本调度框架由多个调度队列组成。==
 
   
 
 Each queue will likely follow a particular scheduling discipline, such as round robin, though of course any algorithm can be used.
-
 ==每个队列可能会遵循特定的调度规则，例如轮转调度，当然也可以使用任何算法。==
 
   
 
 When a job enters the system, it is placed on exactly one scheduling queue, according to some heuristic (e.g., random, or picking one with fewer jobs than others).
-
 ==当一个作业进入系统时，根据某种启发式算法（例如随机，或选择作业较少的队列），它被放置在且仅放置在一个调度队列中。==
 
   
 
 Then it is scheduled essentially independently, thus avoiding the problems of information sharing and synchronization found in the single-queue approach.
-
 ==然后它基本上是独立调度的，从而避免了单队列方法中发现的信息共享和同步问题。==
 
   
 
 MQMS has a distinct advantage of SQMS in that it should be inherently more scalable.
-
 ==MQMS 相比 SQMS 有一个明显的优势，即它本质上应该更具可扩展性。==
 
   
 
 As the number of CPUs grows, so too does the number of queues, and thus lock and cache contention should not become a central problem.
-
 ==随着 CPU 数量的增加，队列数量也会增加，因此锁和缓存争用不应成为核心问题。==
 
   
 
 In addition, MQMS intrinsically provides cache affinity;
-
 ==此外，MQMS 本质上提供了缓存亲和性；==
 
   
 
 jobs stay on the same CPU and thus reap the advantage of reusing cached contents therein.
-
 ==作业停留在同一个 CPU 上，从而获得重用其中缓存内容的好处。==
 
   
 
 But, if you've been paying attention, you might see that we have a new problem, which is fundamental in the multi-queue based approach: load imbalance.
-
 ==但是，如果你一直在关注，你可能会发现我们有一个新问题，这是多队列方法中的根本问题：负载不平衡。==
 
   
 
 If we then run our round-robin policy on each queue of the system, we will see this resulting schedule:
-
 ==如果我们随后在系统的每个队列上运行我们的轮转策略，我们将看到这样的结果调度：==
 
   
 
 As you can see from this diagram, A gets twice as much CPU as B and D, which is not the desired outcome.
-
 ==从图中可以看出，A 获得的 CPU 资源是 B 和 D 的两倍，这不是预期的结果。==
 
   
 
 How terrible - CPU 0 is idle! (insert dramatic and sinister music here)
-
 ==太糟糕了——CPU 0 是空闲的！（此处插入戏剧性和阴险的音乐）==
 
 MULTIPROCESSOR SCHEDULING (ADVANCED)
@@ -8459,61 +7591,51 @@ However, most programmers do not type in a number here directly (such as 10); in
 
 
 INTERLUDE: MEMORY API
-
 ==插叙：内存 API==
 
   
 
 TIP: WHEN IN DOUBT, TRY IT OUT
-
 ==提示：有疑问时，亲自试一试==
 
   
 
 If you aren't sure how some routine or operator you are using behaves, there is no substitute for simply trying it out and making sure it behaves as you expect.
-
 ==如果您不确定正在使用的某个例程或运算符的具体行为，没有什么比亲自尝试并确保其行为符合您的预期更好的方法了。==
 
   
 
 While reading the manual pages or other documentation is useful, how it works in practice is what matters.
-
 ==虽然阅读手册页或其他文档很有用，但在实践中它是如何工作的才是最重要的。==
 
   
 
 Write some code and test it!
-
 ==写一些代码并进行测试！==
 
   
 
 That is no doubt the best way to make sure your code behaves as you desire.
-
 ==毫无疑问，这是确保您的代码按照您的意愿运行的最佳方式。==
 
   
 
 Indeed, that is what we did to double-check the things we were saying about sizeof() were actually true!
-
 ==事实上，为了再次核实我们关于 sizeof() 的说法是否属实，我们就是这么做的！==
 
   
 
 It is considered poor form to do so.
-
 ==这样做被认为是糟糕的编程风格。==
 
   
 
 Instead, various routines and macros are utilized.
-
 ==取而代之的是，人们使用各种例程和宏。==
 
   
 
 For example, to allocate space for a double-precision floating point value, you simply do this:
-
 ==例如，要为一个双精度浮点值分配空间，您只需这样做：==
 
   
@@ -8525,37 +7647,31 @@ double *d = (double *) malloc(sizeof(double));
   
 
 Wow, that's a lot of double-ing!
-
 ==哇，这里的 double 可真多！==
 
   
 
 This invocation of malloc() uses the sizeof() operator to request the right amount of space.
-
 ==这次 malloc() 的调用使用了 sizeof() 运算符来请求正确大小的空间。==
 
   
 
 In C, this is generally thought of as a compile-time operator, meaning that the actual size is known at compile time and thus a number (in this case, 8, for a double) is substituted as the argument to malloc().
-
 ==在 C 语言中，这通常被认为是一个编译时运算符，意味着实际大小在编译时就是已知的，因此一个数字（在本例中，double 为 8）会被替换为 malloc() 的参数。==
 
   
 
 For this reason, sizeof() is correctly thought of as an operator and not a function call (a function call would take place at run time).
-
 ==因此，将 sizeof() 视为运算符而不是函数调用是正确的（函数调用会发生在运行时）。==
 
   
 
 You can also pass in the name of a variable (and not just a type) to sizeof(), but in some cases you may not get the desired results, so be careful.
-
 ==您也可以将变量名（而不仅仅是类型）传递给 sizeof()，但在某些情况下您可能无法得到想要的结果，所以要小心。==
 
   
 
 For example, let's look at the following code snippet:
-
 ==例如，让我们看看下面的代码片段：==
 
   
@@ -8573,25 +7689,21 @@ printf("%d\n", sizeof(x));
   
 
 In the first line, we've declared space for an array of 10 integers, which is fine and dandy.
-
 ==在第一行，我们声明了 10 个整数数组的空间，这很好。==
 
   
 
 However, when we use sizeof() in the next line, it returns a small value, such as 4 (on 32-bit machines) or 8 (on 64-bit machines).
-
 ==然而，当我们在下一行使用 sizeof() 时，它返回一个很小的值，例如 4（在 32 位机器上）或 8（在 64 位机器上）。==
 
   
 
 The reason is that in this case, sizeof() thinks we are simply asking how big a pointer to an integer is, not how much memory we have dynamically allocated.
-
 ==原因是，在这种情况下，sizeof() 认为我们只是在询问指向整数的指针有多大，而不是我们动态分配了多少内存。==
 
   
 
 However, sometimes sizeof() does work as you might expect:
-
 ==但是，有时 sizeof() 确实会按您的预期工作：==
 
   
@@ -8609,79 +7721,66 @@ printf("%d\n", sizeof(x));
   
 
 In this case, there is enough static information for the compiler to know that 40 bytes have been allocated.
-
 ==在这种情况下，编译器有足够的静态信息知道已经分配了 40 个字节。==
 
   
 
 Another place to be careful is with strings.
-
 ==另一个需要小心的地方是字符串。==
 
   
 
 When declaring space for a string, use the following idiom: malloc(strlen(s) + 1), which gets the length of the string using the function strlen(), and adds 1 to it in order to make room for the end-of-string character.
-
 ==当为字符串声明空间时，请使用以下习语：malloc(strlen(s) + 1)，它使用函数 strlen() 获取字符串的长度，并加 1 以便为字符串结束符腾出空间。==
 
   
 
 Using sizeof() may lead to trouble here.
-
 ==在这里使用 sizeof() 可能会导致麻烦。==
 
   
 
 You might also notice that malloc() returns a pointer to type void.
-
 ==您可能还注意到 malloc() 返回一个 void 类型的指针。==
 
   
 
 Doing so is just the way in C to pass back an address and let the programmer decide what to do with it.
-
 ==这样做只是 C 语言传回地址并让程序员决定如何处理它的一种方式。==
 
   
 
 The programmer further helps out by using what is called a cast.
-
 ==程序员通过使用所谓的强制类型转换（cast）来进一步提供帮助。==
 
   
 
 In our example above, the programmer casts the return type of malloc() to a pointer to a double.
-
 ==在我们上面的例子中，程序员将 malloc() 的返回类型转换为指向 double 的指针。==
 
   
 
 Casting doesn't really accomplish anything, other than tell the compiler and other programmers who might be reading your code: "yeah, I know what I'm doing."
-
 ==强制类型转换实际上并没有完成任何事情，除了告诉编译器和其他可能阅读您代码的程序员：“是的，我知道我在做什么。”==
 
   
 
 By casting the result of malloc(), the programmer is just giving some reassurance; the cast is not needed for the correctness.
-
 ==通过转换 malloc() 的结果，程序员只是给出了一些保证；这种转换对于正确性来说并不是必需的。==
 
   
 
 14.3 The free() Call
-
 ==14.3 free() 调用==
 
   
 
 As it turns out, allocating memory is the easy part of the equation; knowing when, how, and even if to free memory is the hard part.
-
 ==事实证明，分配内存是等式中容易的部分；知道何时、如何甚至是否释放内存才是困难的部分。==
 
   
 
 To free heap memory that is no longer in use, programmers simply call free():
-
 ==要释放不再使用的堆内存，程序员只需调用 free()：==
 
   
@@ -8699,85 +7798,71 @@ free(x);
   
 
 The routine takes one argument, a pointer returned by malloc().
-
 ==该例程接受一个参数，即 malloc() 返回的指针。==
 
   
 
 Thus, you might notice, the size of the allocated region is not passed in by the user, and must be tracked by the memory-allocation library itself.
-
 ==因此，您可能会注意到，分配区域的大小不是由用户传入的，而必须由内存分配库本身来跟踪。==
 
   
 
 14.4 Common Errors
-
 ==14.4 常见错误==
 
   
 
 There are a number of common errors that arise in the use of malloc() and free().
-
 ==在使用 malloc() 和 free() 时会出现许多常见错误。==
 
   
 
 Here are some we've seen over and over again in teaching the undergraduate operating systems course.
-
 ==以下是我们在教授本科操作系统课程时反复看到的一些错误。==
 
   
 
 All of these examples compile and run with nary a peep from the compiler.
-
 ==所有这些示例都能编译并运行，编译器甚至不会发出一点声音。==
 
   
 
 While compiling a C program is necessary to build a correct C program, it is far from sufficient, as you will learn (often in the hard way).
-
 ==虽然编译 C 程序是构建正确 C 程序的必要条件，但这还远远不够，正如您将（通常通过惨痛教训）了解到的那样。==
 
   
 
 Correct memory management has been such a problem, in fact, that many newer languages have support for automatic memory management.
-
 ==事实上，正确的内存管理一直是个大问题，以至于许多较新的语言都支持自动内存管理。==
 
   
 
 In such languages, while you call something akin to malloc() to allocate memory (usually new or something similar to allocate a new object), you never have to call something to free space.
-
 ==在这些语言中，虽然您调用类似于 malloc() 的东西来分配内存（通常是 new 或类似的命令来分配新对象），但您永远不必调用某种东西来释放空间。==
 
   
 
 Rather, a garbage collector runs and figures out what memory you no longer have references to and frees it for you.
-
 ==相反，垃圾收集器（garbage collector）会运行并找出您不再引用的内存，并为您释放它。==
 
   
 
 Forgetting To Allocate Memory
-
 ==忘记分配内存==
 
   
 
 Many routines expect memory to be allocated before you call them.
-
 ==许多例程期望在您调用它们之前已经分配了内存。==
 
   
 
 For example, the routine strcpy(dst, src) copies a string from a source pointer to a destination pointer.
-
 ==例如，例程 strcpy(dst, src) 将字符串从源指针复制到目标指针。==
 
   
 
 However, if you are not careful, you might do this:
-
 ==但是，如果您不小心，您可能会这样做：==
 
   
@@ -8795,61 +7880,51 @@ char *dst;
   
 
 // oops! unallocated
-
 ==// 哎呀！未分配==
 
   
 
 strcpy(dst, src); // segfault and die
-
 ==strcpy(dst, src); // 段错误并崩溃==
 
   
 
 TIP: IT COMPILED OR IT RAN != IT IS CORRECT
-
 ==提示：它编译通过了或它运行了 != 它是正确的==
 
   
 
 Just because a program compiled(!) or even ran once or many times correctly does not mean the program is correct.
-
 ==仅仅因为一个程序编译通过了（！），甚至正确运行了一次或多次，并不意味着该程序是正确的。==
 
   
 
 Many events may have conspired to get you to a point where you believe it works, but then something changes and it stops.
-
 ==许多事件可能凑巧让您认为它能工作，但随后某些事情发生了变化，它就停止工作了。==
 
   
 
 A common student reaction is to say (or yell) "But it worked before!" and then blame the compiler, operating system, hardware, or even (dare we say it) the professor.
-
 ==学生常见的反应是说（或大喊）“但它以前是好的！”，然后责怪编译器、操作系统、硬件，甚至（我们要说出来吗）教授。==
 
   
 
 But the problem is usually right where you think it would be, in your code.
-
 ==但问题通常就在您认为可能存在的地方，即您的代码中。==
 
   
 
 Get to work and debug it before you blame those other components.
-
 ==在责怪其他组件之前，先去调试它。==
 
   
 
 When you run this code, it will likely lead to a segmentation fault, which is a fancy term for YOU DID SOMETHING WRONG WITH MEMORY YOU FOOLISH PROGRAMMER AND I AM ANGRY.
-
 ==当您运行此代码时，它可能会导致分段错误（segmentation fault），这是一个花哨的术语，意思是“你这个愚蠢的程序员在内存上做错了什么，我很生气”。==
 
   
 
 In this case, the proper code might instead look like this:
-
 ==在这种情况下，正确的代码可能如下所示：==
 
   
@@ -8867,37 +7942,31 @@ char *dst = (char *) malloc(strlen(src) + 1);
   
 
 strcpy(dst, src); // work properly
-
 ==strcpy(dst, src); // 正常工作==
 
   
 
 Alternately, you could use strdup() and make your life even easier.
-
 ==或者，您可以使用 strdup() 让您的生活更轻松。==
 
   
 
 Read the strdup man page for more information.
-
 ==阅读 strdup 手册页以获取更多信息。==
 
   
 
 Not Allocating Enough Memory
-
 ==未分配足够的内存==
 
   
 
 A related error is not allocating enough memory, sometimes called a buffer overflow.
-
 ==一个相关的错误是未分配足够的内存，有时称为缓冲区溢出。==
 
   
 
 In the example above, a common error is to make almost enough room for the destination buffer.
-
 ==在上面的例子中，一个常见的错误是为目标缓冲区分配了“几乎”足够的空间。==
 
   
@@ -8909,691 +7978,576 @@ char *src = "hello";
   
 
 char *dst = (char *) malloc(strlen(src)); // too small!
-
 ==char *dst = (char *) malloc(strlen(src)); // 太小了！==
 
   
 
 strcpy(dst, src); // work properly
-
 ==strcpy(dst, src); // 正常工作==
 
   
 
 Oddly enough, depending on how malloc is implemented and many other details, this program will often run seemingly correctly.
-
 ==奇怪的是，取决于 malloc 的实现方式以及许多其他细节，该程序通常看起来运行正常。==
 
   
 
 In some cases, when the string copy executes, it writes one byte too far past the end of the allocated space, but in some cases this is harmless, perhaps overwriting a variable that isn't used anymore.
-
 ==在某些情况下，当字符串复制执行时，它会写到超出分配空间末尾一个字节的地方，但在某些情况下这是无害的，也许覆盖了一个不再使用的变量。==
 
   
 
 In some cases, these overflows can be incredibly harmful, and in fact are the source of many security vulnerabilities in systems [W06].
-
 ==在某些情况下，这些溢出可能极具危害性，实际上是系统中许多安全漏洞的根源 [W06]。==
 
   
 
 In other cases, the malloc library allocated a little extra space anyhow, and thus your program actually doesn't scribble on some other variable's value and works quite fine.
-
 ==在其他情况下，malloc 库无论如何都分配了一点额外的空间，因此您的程序实际上并没有在其他变量的值上乱写，并且运行得很好。==
 
   
 
 In even other cases, the program will indeed fault and crash.
-
 ==在另外一些情况下，程序确实会出错并崩溃。==
 
   
 
 And thus we learn another valuable lesson: even though it ran correctly once, doesn't mean it's correct.
-
 ==因此我们学到了另一个宝贵的教训：即使它正确运行了一次，并不意味着它是正确的。==
 
   
 
 Forgetting to Initialize Allocated Memory
-
 ==忘记初始化分配的内存==
 
   
 
 With this error, you call malloc() properly, but forget to fill in some values into your newly-allocated data type.
-
 ==对于这个错误，您正确调用了 malloc()，但忘记在您新分配的数据类型中填入一些值。==
 
   
 
 Don't do this!
-
 ==不要这样做！==
 
   
 
 If you do forget, your program will eventually encounter an uninitialized read, where it reads from the heap some data of unknown value.
-
 ==如果您真的忘记了，您的程序最终会遇到未初始化读取，即从堆中读取一些未知值的数据。==
 
   
 
 Who knows what might be in there?
-
 ==谁知道里面会有什么？==
 
   
 
 If you're lucky, some value such that the program still works (e.g., zero).
-
 ==如果您幸运的话，可能是一些仍然让程序工作的值（例如，零）。==
 
   
 
 If you're not lucky, something random and harmful.
-
 ==如果您不幸的话，可能是一些随机且有害的东西。==
 
   
 
 Forgetting To Free Memory
-
 ==忘记释放内存==
 
   
 
 Another common error is known as a memory leak, and it occurs when you forget to free memory.
-
 ==另一个常见的错误被称为内存泄漏，当您忘记释放内存时就会发生。==
 
   
 
 In long-running applications or systems (such as the OS itself), this is a huge problem, as slowly leaking memory eventually leads one to run out of memory, at which point a restart is required.
-
 ==在长时间运行的应用程序或系统（如操作系统本身）中，这是一个巨大的问题，因为缓慢的内存泄漏最终会导致内存耗尽，此时就需要重启。==
 
   
 
 Thus, in general, when you are done with a chunk of memory, you should make sure to free it.
-
 ==因此，一般来说，当您用完一块内存时，您应该确保释放它。==
 
   
 
 Note that using a garbage-collected language doesn't help here: if you still have a reference to some chunk of memory, no garbage collector will ever free it, and thus memory leaks remain a problem even in more modern languages.
-
 ==请注意，使用垃圾收集语言在这里并没有帮助：如果您仍然保留对某块内存的引用，垃圾收集器就永远不会释放它，因此即使在更现代的语言中，内存泄漏仍然是一个问题。==
 
   
 
 In some cases, it may seem like not calling free() is reasonable.
-
 ==在某些情况下，不调用 free() 似乎是合理的。==
 
   
 
 For example, your program is short-lived, and will soon exit; in this case, when the process dies, the OS will clean up all of its allocated pages and thus no memory leak will take place per se.
-
 ==例如，您的程序是短命的，很快就会退出；在这种情况下，当进程死亡时，操作系统将清理其所有分配的页面，因此本质上不会发生内存泄漏。==
 
   
 
 While this certainly "works" (see the aside on page 7), it is probably a bad habit to develop, so be wary of choosing such a strategy.
-
 ==虽然这肯定“行得通”（参见第 7 页的旁注），但这可能是一个坏习惯，所以要警惕选择这种策略。==
 
   
 
 In the long run, one of your goals as a programmer is to develop good habits; one of those habits is understanding how you are managing memory, and (in languages like C), freeing the blocks you have allocated.
-
 ==从长远来看，作为一名程序员，您的目标之一是养成良好的习惯；其中一个习惯是了解您如何管理内存，并（在像 C 这样的语言中）释放您分配的块。==
 
   
 
 Even if you can get away with not doing so, it is probably good to get in the habit of freeing each and every byte you explicitly allocate.
-
 ==即使您可以侥幸不这样做，养成释放您显式分配的每一个字节的习惯可能也是好的。==
 
   
 
 Freeing Memory Before You Are Done With It
-
 ==在用完之前释放内存==
 
   
 
 Sometimes a program will free memory before it is finished using it; such a mistake is called a dangling pointer, and it, as you can guess, is also a bad thing.
-
 ==有时程序会在用完内存之前释放它；这种错误被称为悬空指针，正如您所猜测的，这也是一件坏事。==
 
   
 
 The subsequent use can crash the program, or overwrite valid memory (e.g., you called free(), but then called malloc() again to allocate something else, which then recycles the errantly-freed memory).
-
 ==随后的使用可能会使程序崩溃，或覆盖有效的内存（例如，您调用了 free()，但随后又调用 malloc() 分配其他东西，这将重新使用被错误释放的内存）。==
 
   
 
 ASIDE: WHY NO MEMORY IS LEAKED ONCE YOUR PROCESS EXITS
-
 ==旁注：为什么一旦进程退出就不会有内存泄漏==
 
   
 
 When you write a short-lived program, you might allocate some space using malloc().
-
 ==当您编写一个短命的程序时，您可能会使用 malloc() 分配一些空间。==
 
   
 
 The program runs and is about to complete: is there need to call free() a bunch of times just before exiting?
-
 ==程序运行并即将完成：是否有必要在退出前调用一堆 free()？==
 
   
 
 While it seems wrong not to, no memory will be "lost" in any real sense.
-
 ==虽然不这样做似乎是错误的，但实际上没有任何内存会“丢失”。==
 
   
 
 The reason is simple: there are really two levels of memory management in the system.
-
 ==原因很简单：系统中实际上有两个层级的内存管理。==
 
   
 
 The first level of memory management is performed by the OS, which hands out memory to processes when they run, and takes it back when processes exit (or otherwise die).
-
 ==第一级内存管理由操作系统执行，它在进程运行时将内存分发给进程，并在进程退出（或以其他方式死亡）时将其收回。==
 
   
 
 The second level of management is within each process, for example within the heap when you call malloc() and free().
-
 ==第二级管理是在每个进程内部，例如当您调用 malloc() 和 free() 时的堆内部。==
 
   
 
 Even if you fail to call free() (and thus leak memory in the heap), the operating system will reclaim all the memory of the process (including those pages for code, stack, and, as relevant here, heap) when the program is finished running.
-
 ==即使您没有调用 free()（从而在堆中泄漏内存），操作系统也会在程序运行结束时回收进程的所有内存（包括代码、栈以及这里相关的堆页面）。==
 
   
 
 No matter what the state of your heap in your address space, the OS takes back all of those pages when the process dies, thus ensuring that no memory is lost despite the fact that you didn't free it.
-
 ==无论您的地址空间中的堆处于什么状态，当进程死亡时，操作系统都会收回所有这些页面，从而确保尽管您没有释放它，也没有内存丢失。==
 
   
 
 Thus, for short-lived programs, leaking memory often does not cause any operational problems (though it may be considered poor form).
-
 ==因此，对于短命的程序，内存泄漏通常不会导致任何操作问题（尽管这可能被认为是糟糕的编程风格）。==
 
   
 
 When you write a long-running server (such as a web server or database management system, which never exit), leaked memory is a much bigger issue, and will eventually lead to a crash when the application runs out of memory.
-
 ==当您编写一个长时间运行的服务器（例如 Web 服务器或数据库管理系统，它们从不退出）时，内存泄漏是一个更大的问题，最终会导致应用程序在内存耗尽时崩溃。==
 
   
 
 And of course, leaking memory is an even larger issue inside one particular program: the operating system itself.
-
 ==当然，在某个特定程序内部，内存泄漏是一个更大的问题：那就是操作系统本身。==
 
   
 
 Showing us once again: those who write the kernel code have the toughest job of all...
-
 ==这再次向我们表明：编写内核代码的人拥有最艰巨的工作……==
 
   
 
 Freeing Memory Repeatedly
-
 ==重复释放内存==
 
   
 
 Programs also sometimes free memory more than once; this is known as the double free.
-
 ==程序有时也会多次释放内存；这被称为双重释放（double free）。==
 
   
 
 The result of doing so is undefined.
-
 ==这样做的结果是未定义的。==
 
   
 
 As you can imagine, the memory-allocation library might get confused and do all sorts of weird things; crashes are a common outcome.
-
 ==正如您可以想象的那样，内存分配库可能会感到困惑并做出各种奇怪的事情；崩溃是常见的结果。==
 
   
 
 Calling free() Incorrectly
-
 ==错误地调用 free()==
 
   
 
 One last problem we discuss is the call of free() incorrectly.
-
 ==我们讨论的最后一个问题是错误地调用 free()。==
 
   
 
 After all, free() expects you only to pass to it one of the pointers you received from malloc() earlier.
-
 ==毕竟，free() 期望您只传递给它之前从 malloc() 接收到的指针之一。==
 
   
 
 When you pass in some other value, bad things can (and do) happen.
-
 ==当您传入其他值时，坏事可能（并且确实）会发生。==
 
   
 
 Thus, such invalid frees are dangerous and of course should also be avoided.
-
 ==因此，这种无效的释放是危险的，当然也应该避免。==
 
   
 
 Summary
-
 ==总结==
 
   
 
 As you can see, there are lots of ways to abuse memory.
-
 ==正如您所见，有很多滥用内存的方法。==
 
   
 
 Because of frequent errors with memory, a whole ecosphere of tools have developed to help find such problems in your code.
-
 ==由于内存错误频繁发生，整个工具生态系统已经发展起来，以帮助查找代码中的此类问题。==
 
   
 
 Check out both purify [HJ92] and valgrind [SN05]; both are excellent at helping you locate the source of your memory-related problems.
-
 ==查看 purify [HJ92] 和 valgrind [SN05]；两者都非常擅长帮助您定位内存相关问题的根源。==
 
   
 
 Once you become accustomed to using these powerful tools, you will wonder how you survived without them.
-
 ==一旦您习惯了使用这些强大的工具，您会想知道没有它们您是如何生存下来的。==
 
   
 
 14.5 Underlying OS Support
-
 ==14.5 底层操作系统支持==
 
   
 
 You might have noticed that we haven't been talking about system calls when discussing malloc() and free().
-
 ==您可能已经注意到，在讨论 malloc() 和 free() 时，我们没有谈论系统调用。==
 
   
 
 The reason for this is simple: they are not system calls, but rather library calls.
-
 ==原因很简单：它们不是系统调用，而是库调用。==
 
   
 
 Thus the malloc library manages space within your virtual address space, but itself is built on top of some system calls which call into the OS to ask for more memory or release some back to the system.
-
 ==因此，malloc 库管理您的虚拟地址空间内的空间，但其本身是构建在一些系统调用之上的，这些系统调用调用操作系统以请求更多内存或将部分内存释放回系统。==
 
   
 
 One such system call is called brk, which is used to change the location of the program's break: the location of the end of the heap.
-
 ==一种这样的系统调用称为 brk，用于更改程序断点（break）的位置：即堆结束的位置。==
 
   
 
 It takes one argument (the address of the new break), and thus either increases or decreases the size of the heap based on whether the new break is larger or smaller than the current break.
-
 ==它接受一个参数（新断点的地址），因此根据新断点是大于还是小于当前断点，来增加或减少堆的大小。==
 
   
 
 An additional call sbrk is passed an increment but otherwise serves a similar purpose.
-
 ==另一个调用 sbrk 传递的是增量，但除此之外用途相似。==
 
   
 
 Note that you should never directly call either brk or sbrk.
-
 ==请注意，您永远不应该直接调用 brk 或 sbrk。==
 
   
 
 They are used by the memory-allocation library; if you try to use them, you will likely make something go (horribly) wrong.
-
 ==它们由内存分配库使用；如果您尝试使用它们，您可能会让事情变得（非常）糟糕。==
 
   
 
 Stick to malloc() and free() instead.
-
 ==坚持使用 malloc() 和 free() 吧。==
 
   
 
 Finally, you can also obtain memory from the operating system via the mmap() call.
-
 ==最后，您还可以通过 mmap() 调用从操作系统获取内存。==
 
   
 
 By passing in the correct arguments, mmap() can create an anonymous memory region within your program - a region which is not associated with any particular file but rather with swap space, something we'll discuss in detail later on in virtual memory.
-
 ==通过传入正确的参数，mmap() 可以在您的程序中创建一个匿名内存区域——一个不与任何特定文件关联，而是与交换空间关联的区域，我们稍后将在虚拟内存中详细讨论这一点。==
 
   
 
 This memory can then also be treated like a heap and managed as such.
-
 ==然后，这块内存也可以像堆一样被对待和管理。==
 
   
 
 Read the manual page of mmap() for more details.
-
 ==阅读 mmap() 的手册页以获取更多详细信息。==
 
   
 
 14.6 Other Calls
-
 ==14.6 其他调用==
 
   
 
 There are a few other calls that the memory-allocation library supports.
-
 ==内存分配库还支持其他一些调用。==
 
   
 
 For example, calloc() allocates memory and also zeroes it before returning; this prevents some errors where you assume that memory is zeroed and forget to initialize it yourself (see the paragraph on "uninitialized reads" above).
-
 ==例如，calloc() 分配内存并在返回前将其清零；这可以防止一些错误，即您假设内存已清零但忘记自己初始化它（参见上面关于“未初始化读取”的段落）。==
 
   
 
 The routine realloc() can also be useful, when you've allocated space for something (say, an array), and then need to add something to it: realloc() makes a new larger region of memory, copies the old region into it, and returns the pointer to the new region.
-
 ==例程 realloc() 也很有用，当您为某物（比如数组）分配了空间，然后需要向其中添加内容时：realloc() 会创建一个新的更大的内存区域，将旧区域复制到其中，并返回指向新区域的指针。==
 
   
 
 14.7 Summary
-
 ==14.7 总结==
 
   
 
 We have introduced some of the APIs dealing with memory allocation.
-
 ==我们介绍了一些处理内存分配的 API。==
 
   
 
 As always, we have just covered the basics; more details are available elsewhere.
-
 ==一如既往，我们只涵盖了基础知识；更多详细信息可在其他地方找到。==
 
   
 
 Read the C book [KR88] and Stevens [SR05] (Chapter 7) for more information.
-
 ==阅读 C 语言书籍 [KR88] 和 Stevens [SR05]（第 7 章）以获取更多信息。==
 
   
 
 For a cool modern paper on how to detect and correct many of these problems automatically, see Novark et al. [N+07]; this paper also contains a nice summary of common problems and some neat ideas on how to find and fix them.
-
 ==若想了解一篇关于如何自动检测和纠正许多此类问题的很酷的现代论文，请参阅 Novark 等人的文章 [N+07]；这篇论文还包含对常见问题的精彩总结，以及关于如何发现和修复这些问题的一些巧妙想法。==
 
   
 
 Mechanism: Address Translation
-
 ==机制：地址转换==
 
   
 
 In developing the virtualization of the CPU, we focused on a general mechanism known as limited direct execution (or LDE).
-
 ==在开发 CPU 虚拟化时，我们关注了一种称为受限直接执行（Limited Direct Execution，或 LDE）的通用机制。==
 
   
 
 The idea behind LDE is simple: for the most part, let the program run directly on the hardware; however, at certain key points in time (such as when a process issues a system call, or a timer interrupt occurs), arrange so that the OS gets involved and makes sure the "right" thing happens.
-
 ==LDE 背后的想法很简单：在大多数情况下，让程序直接在硬件上运行；但是，在某些关键时间点（例如当进程发出系统调用或发生定时器中断时），安排操作系统介入并确保发生“正确”的事情。==
 
   
 
 Thus, the OS, with a little hardware support, tries its best to get out of the way of the running program, to deliver an efficient virtualization; however, by interposing at those critical points in time, the OS ensures that it maintains control over the hardware.
-
 ==因此，操作系统在少量硬件支持下，尽力不干扰正在运行的程序，以提供高效的虚拟化；然而，通过在这些关键时间点介入，操作系统确保其保持对硬件的控制。==
 
   
 
 Efficiency and control together are two of the main goals of any modern operating system.
-
 ==效率和控制是任何现代操作系统的两个主要目标。==
 
   
 
 In virtualizing memory, we will pursue a similar strategy, attaining both efficiency and control while providing the desired virtualization.
-
 ==在虚拟化内存时，我们将采取类似的策略，在提供所需的虚拟化的同时实现效率和控制。==
 
   
 
 Efficiency dictates that we make use of hardware support, which at first will be quite rudimentary (e.g., just a few registers) but will grow to be fairly complex (e.g., TLBs, page-table support, and so forth, as you will see).
-
 ==效率要求我们利用硬件支持，起初这些支持将非常基础（例如，仅几个寄存器），但随后将变得相当复杂（例如，TLB、页表支持等，正如您将看到的）。==
 
   
 
 Control implies that the OS ensures that no application is allowed to access any memory but its own; thus, to protect applications from one another, and the OS from applications, we will need help from the hardware here too.
-
 ==控制意味着操作系统确保不允许任何应用程序访问除其自身以外的任何内存；因此，为了保护应用程序互不干扰，以及保护操作系统免受应用程序的影响，我们也需要硬件的帮助。==
 
   
 
 Finally, we will need a little more from the VM system, in terms of flexibility; specifically, we'd like for programs to be able to use their address spaces in whatever way they would like, thus making the system easier to program.
-
 ==最后，我们需要虚拟机系统提供更多一点的灵活性；具体来说，我们希望程序能够以它们喜欢的任何方式使用其地址空间，从而使系统更易于编程。==
 
   
 
 And thus we arrive at the refined crux:
-
 ==因此，我们得出了改进后的关键问题：==
 
   
 
 THE CRUX: HOW TO EFFICIENTLY AND FLEXIBLY VIRTUALIZE MEMORY
-
 ==关键问题：如何高效且灵活地虚拟化内存==
 
   
 
 How can we build an efficient virtualization of memory?
-
 ==我们如何构建高效的内存虚拟化？==
 
   
 
 How do we provide the flexibility needed by applications?
-
 ==我们如何提供应用程序所需的灵活性？==
 
   
 
 How do we maintain control over which memory locations an application can access, and thus ensure that application memory accesses are properly restricted?
-
 ==我们如何保持对应用程序可以访问哪些内存位置的控制，从而确保应用程序的内存访问受到适当限制？==
 
   
 
 How do we do all of this efficiently?
-
 ==我们如何高效地完成这一切？==
 
   
 
 The generic technique we will use, which you can consider an addition to our general approach of limited direct execution, is something that is referred to as hardware-based address translation, or just address translation for short.
-
 ==我们将使用的通用技术，您可以将其视为我们受限直接执行通用方法的补充，被称为基于硬件的地址转换，或者简称为地址转换。==
 
   
 
 With address translation, the hardware transforms each memory access (e.g., an instruction fetch, load, or store), changing the virtual address provided by the instruction to a physical address where the desired information is actually located.
-
 ==通过地址转换，硬件转换每次内存访问（例如，指令获取、加载或存储），将指令提供的虚拟地址更改为所需信息实际所在的物理地址。==
 
   
 
 Thus, on each and every memory reference, an address translation is performed by the hardware to redirect application memory references to their actual locations in memory.
-
 ==因此，对于每一次内存引用，硬件都会执行地址转换，将应用程序的内存引用重定向到它们在内存中的实际位置。==
 
   
 
 Of course, the hardware alone cannot virtualize memory, as it just provides the low-level mechanism for doing so efficiently.
-
 ==当然，仅靠硬件无法虚拟化内存，因为它只是提供了高效执行此操作的底层机制。==
 
   
 
 The OS must get involved at key points to set up the hardware so that the correct translations take place; it must thus manage memory, keeping track of which locations are free and which are in use, and judiciously intervening to maintain control over how memory is used.
-
 ==操作系统必须在关键点介入以设置硬件，以便进行正确的转换；因此，它必须管理内存，跟踪哪些位置是空闲的，哪些正在使用，并明智地进行干预以保持对内存使用方式的控制。==
 
   
 
 Once again the goal of all of this work is to create a beautiful illusion: that the program has its own private memory, where its own code and data reside.
-
 ==所有这些工作的目标再次是创造一个美丽的错觉：程序拥有自己的私有内存，其自己的代码和数据驻留其中。==
 
   
 
 Behind that virtual reality lies the ugly physical truth: that many programs are actually sharing memory at the same time, as the CPU (or CPUs) switches between running one program and the next.
-
 ==在这个虚拟现实背后隐藏着丑陋的物理真相：实际上许多程序同时共享内存，因为 CPU（或多个 CPU）在运行一个程序和下一个程序之间切换。==
 
   
 
 Through virtualization, the OS (with the hardware's help) turns the ugly machine reality into a useful, powerful, and easy to use abstraction.
-
 ==通过虚拟化，操作系统（在硬件的帮助下）将丑陋的机器现实转化为有用、强大且易于使用的抽象。==
 
   
 
 15.1 Assumptions
-
 ==15.1 假设==
 
   
 
 Our first attempts at virtualizing memory will be very simple, almost laughably so.
-
 ==我们要进行的第一次内存虚拟化尝试将非常简单，简直有些可笑。==
 
   
 
 Go ahead, laugh all you want; pretty soon it will be the OS laughing at you, when you try to understand the ins and outs of TLBs, multi-level page tables, and other technical wonders.
-
 ==来吧，尽管笑吧；很快，当您试图理解 TLB、多级页表和其他技术奇迹的来龙去脉时，就轮到操作系统嘲笑您了。==
 
   
 
 Don't like the idea of the OS laughing at you?
-
 ==不喜欢操作系统嘲笑您的想法？==
 
   
 
 Well, you may be out of luck then; that's just how the OS rolls.
-
 ==好吧，那您可能倒霉了；操作系统就是这么行事的。==
 
   
 
 Specifically, we will assume for now that the user's address space must be placed contiguously in physical memory.
-
 ==具体来说，我们暂时假设用户的地址空间必须连续地放置在物理内存中。==
 
   
 
 We will also assume, for simplicity, that the size of the address space is not too big; specifically, that it is less than the size of physical memory.
-
 ==为了简单起见，我们还将假设地址空间的大小不要太大；具体来说，它小于物理内存的大小。==
 
   
 
 Finally, we will also assume that each address space is exactly the same size.
-
 ==最后，我们还将假设每个地址空间的大小完全相同。==
 
   
 
 Don't worry if these assumptions sound unrealistic; we will relax them as we go, thus achieving a realistic virtualization of memory.
-
 ==如果这些假设听起来不切实际，请不要担心；我们将逐步放宽这些假设，从而实现逼真的内存虚拟化。==
 
   
 
 15.2 An Example
-
 ==15.2 一个例子==
 
   
 
 To understand better what we need to do to implement address translation, and why we need such a mechanism, let's look at a simple example.
-
 ==为了更好地理解我们需要做什么来实现地址转换，以及为什么我们需要这种机制，让我们看一个简单的例子。==
 
   
 
 Imagine there is a process whose address space is as indicated in Figure 15.1.
-
 ==想象一下有一个进程，其地址空间如图 15.1 所示。==
 
   
 
 What we are going to examine here is a short code sequence that loads a value from memory, increments it by three, and then stores the value back into memory.
-
 ==我们要在这里检查的是一段简短的代码序列，它从内存中加载一个值，将其增加 3，然后将该值存回内存。==
 
   
 
 You can imagine the C-language representation of this code might look like this:
-
 ==您可以想象这段代码的 C 语言表示可能如下所示：==
 
   
@@ -9605,265 +8559,221 @@ void func() {
   
 
 int x = 3000; // thanks, Perry.
-
 ==int x = 3000; // 谢谢，Perry。==
 
   
 
 x = x + 3; // line of code we are interested in
-
 ==x = x + 3; // 我们感兴趣的代码行==
 
   
 
 The compiler turns this line of code into assembly, which might look something like this (in x86 assembly).
-
 ==编译器将这行代码转换为汇编代码，可能看起来像这样（在 x86 汇编中）。==
 
   
 
 Use objdump on Linux or otool on a Mac to disassemble it:
-
 ==在 Linux 上使用 objdump 或在 Mac 上使用 otool 来反汇编它：==
 
   
 
 128: movl 0x0(%ebx), %eax ; load 0+ebx into eax
-
 ==128: movl 0x0(%ebx), %eax ; 将 0+ebx 加载到 eax==
 
   
 
 132: addl $0x03, %eax ; add 3 to eax register
-
 ==132: addl $0x03, %eax ; 将 3 加到 eax 寄存器==
 
   
 
 135: movl %eax, 0x0(%ebx) ; store eax back to mem
-
 ==135: movl %eax, 0x0(%ebx) ; 将 eax 存回内存==
 
   
 
 This code snippet is relatively straightforward; it presumes that the address of x has been placed in the register ebx, and then loads the value at that address into the general-purpose register eax using the movl instruction (for "longword" move).
-
 ==这段代码片段相对简单；它假定 x 的地址已放入寄存器 ebx 中，然后使用 movl 指令（用于“长字”移动）将该地址处的值加载到通用寄存器 eax 中。==
 
   
 
 The next instruction adds 3 to eax, and the final instruction stores the value in eax back into memory at that same location.
-
 ==下一条指令将 3 加到 eax，最后一条指令将 eax 中的值存回内存中的同一位置。==
 
   
 
 In Figure 15.1 (page 4), observe how both the code and data are laid out in the process's address space; the three-instruction code sequence is located at address 128 (in the code section near the top), and the value of the variable x at address 15 KB (in the stack near the bottom).
-
 ==在图 15.1（第 4 页）中，观察代码和数据是如何在进程的地址空间中布局的；三条指令的代码序列位于地址 128 处（在顶部的代码段附近），变量 x 的值位于地址 15 KB 处（在底部的栈附近）。==
 
   
 
 In the figure, the initial value of x is 3000, as shown in its location on the stack.
-
 ==在图中，x 的初始值为 3000，如其在栈上的位置所示。==
 
   
 
 When these instructions run, from the perspective of the process, the following memory accesses take place.
-
 ==当这些指令运行时，从进程的角度来看，会发生以下内存访问。==
 
   
 
 • Fetch instruction at address 128
-
 ==• 获取地址 128 处的指令==
 
   
 
 • Execute this instruction (load from address 15 KB)
-
 ==• 执行此指令（从地址 15 KB 加载）==
 
   
 
 • Fetch instruction at address 132
-
 ==• 获取地址 132 处的指令==
 
   
 
 • Execute this instruction (no memory reference)
-
 ==• 执行此指令（无内存引用）==
 
   
 
 • Fetch the instruction at address 135
-
 ==• 获取地址 135 处的指令==
 
   
 
 • Execute this instruction (store to address 15 KB)
-
 ==• 执行此指令（存储到地址 15 KB）==
 
   
 
 TIP: INTERPOSITION IS POWERFUL
-
 ==提示：介入（Interposition）是强大的==
 
   
 
 Interposition is a generic and powerful technique that is often used to great effect in computer systems.
-
 ==介入是一种通用且强大的技术，通常在计算机系统中发挥巨大作用。==
 
   
 
 In virtualizing memory, the hardware will interpose on each memory access, and translate each virtual address issued by the process to a physical address where the desired information is actually stored.
-
 ==在虚拟化内存时，硬件会介入每一次内存访问，并将进程发出的每个虚拟地址转换为所需信息实际存储的物理地址。==
 
   
 
 However, the general technique of interposition is much more broadly applicable; indeed, almost any well-defined interface can be interposed upon, to add new functionality or improve some other aspect of the system.
-
 ==然而，介入这一通用技术的适用范围要广得多；实际上，几乎任何定义良好的接口都可以被介入，以添加新功能或改进系统的其他方面。==
 
   
 
 One of the usual benefits of such an approach is transparency; the interposition often is done without changing the interface of the client, thus requiring no changes to said client.
-
 ==这种方法的通常好处之一是透明性；介入通常在不改变客户端接口的情况下完成，因此无需对所述客户端进行任何更改。==
 
   
 
 From the program's perspective, its address space starts at address 0 and grows to a maximum of 16 KB; all memory references it generates should be within these bounds.
-
 ==从程序的角度来看，其地址空间从地址 0 开始，最大增长到 16 KB；它生成的所有内存引用都应在这些范围内。==
 
   
 
 However, to virtualize memory, the OS wants to place the process somewhere else in physical memory, not necessarily at address 0.
-
 ==然而，为了虚拟化内存，操作系统希望将进程放置在物理内存的其他位置，不一定是在地址 0。==
 
   
 
 Thus, we have the problem: how can we relocate this process in memory in a way that is transparent to the process?
-
 ==因此，我们遇到了一个问题：我们如何才能以对进程透明的方式在内存中重新定位该进程？==
 
   
 
 How can we provide the illusion of a virtual address space starting at 0, when in reality the address space is located at some other physical address?
-
 ==当地址空间实际上位于其他物理地址时，我们如何提供从 0 开始的虚拟地址空间的错觉？==
 
   
 
 An example of what physical memory might look like once this process's address space has been placed in memory is found in Figure 15.2.
-
 ==图 15.2 显示了该进程的地址空间被放置在内存中后，物理内存可能的样子。==
 
   
 
 In the figure, you can see the OS using the first slot of physical memory for itself, and that it has relocated the process from the example above into the slot starting at physical memory address 32 KB.
-
 ==在图中，您可以看到操作系统使用物理内存的第一个槽位供自己使用，并且它已将上述示例中的进程重新定位到从物理内存地址 32 KB 开始的槽位中。==
 
   
 
 The other two slots are free (16 KB-32 KB and 48 KB-64 KB).
-
 ==其他两个槽位是空闲的（16 KB-32 KB 和 48 KB-64 KB）。==
 
   
 
 15.3 Dynamic (Hardware-based) Relocation
-
 ==15.3 动态（基于硬件的）重定位==
 
   
 
 To gain some understanding of hardware-based address translation, we'll first discuss its first incarnation.
-
 ==为了对基于硬件的地址转换有所了解，我们将首先讨论它的最初形式。==
 
   
 
 Introduced in the first time-sharing machines of the late 1950's is a simple idea referred to as base and bounds; the technique is also referred to as dynamic relocation; we'll use both terms interchangeably [SS74].
-
 ==在 20 世纪 50 年代末的第一批分时机器中引入了一个简单的想法，称为基址和界限（base and bounds）；该技术也被称为动态重定位（dynamic relocation）；我们将互换使用这两个术语 [SS74]。==
 
   
 
 Specifically, we'll need two hardware registers within each CPU: one is called the base register, and the other the bounds (sometimes called a limit register).
-
 ==具体来说，我们在每个 CPU 中需要两个硬件寄存器：一个称为基址寄存器（base register），另一个称为界限寄存器（bounds register，有时称为限长寄存器）。==
 
   
 
 This base-and-bounds pair is going to allow us to place the address space anywhere we'd like in physical memory, and do so while ensuring that the process can only access its own address space.
-
 ==这对基址和界限寄存器将允许我们将地址空间放置在物理内存中的任何位置，并且在这样做的同时确保进程只能访问其自己的地址空间。==
 
   
 
 In this setup, each program is written and compiled as if it is loaded at address zero.
-
 ==在这种设置下，每个程序的编写和编译都好像它是加载在地址零处一样。==
 
   
 
 However, when a program starts running, the OS decides where in physical memory it should be loaded and sets the base register to that value.
-
 ==然而，当程序开始运行时，操作系统决定它应该加载到物理内存的哪个位置，并将基址寄存器设置为该值。==
 
   
 
 In the example above, the OS decides to load the process at physical address 32 KB and thus sets the base register to this value.
-
 ==在上面的例子中，操作系统决定将进程加载到物理地址 32 KB 处，因此将基址寄存器设置为该值。==
 
   
 
 Interesting things start to happen when the process is running.
-
 ==当进程运行时，有趣的事情开始发生。==
 
   
 
 Now, when any memory reference is generated by the process, it is translated by the processor in the following manner:
-
 ==现在，当进程生成任何内存引用时，处理器会按以下方式对其进行转换：==
 
   
 
 physical address = virtual address + base
-
 ==物理地址 = 虚拟地址 + 基址==
 
   
 
 Each memory reference generated by the process is a virtual address; the hardware in turn adds the contents of the base register to this address and the result is a physical address that can be issued to the memory system.
-
 ==进程生成的每个内存引用都是一个虚拟地址；硬件随即把基址寄存器的内容加到这个地址上，结果是可以发送给内存系统的物理地址。==
 
   
 
 To understand this better, let's trace through what happens when a single instruction is executed.
-
 ==为了更好地理解这一点，让我们追踪一下执行一条指令时会发生什么。==
 
   
 
 Specifically, let's look at one instruction from our earlier sequence:
-
 ==具体来说，让我们看看我们之前序列中的一条指令：==
 
   
@@ -9875,551 +8785,459 @@ Specifically, let's look at one instruction from our earlier sequence:
   
 
 The program counter (PC) is set to 128; when the hardware needs to fetch this instruction, it first adds the value to the base register value of 32 KB (32768) to get a physical address of 32896; the hardware then fetches the instruction from that physical address.
-
 ==程序计数器 (PC) 设置为 128；当硬件需要获取此指令时，它首先将该值与 32 KB (32768) 的基址寄存器值相加，得到物理地址 32896；然后硬件从该物理地址获取指令。==
 
   
 
 Next, the processor begins executing the instruction.
-
 ==接下来，处理器开始执行指令。==
 
 MECHANISM: ADDRESS TRANSLATION
-
 ==机制：地址转换==
 
   
 
 The following table outlines the OS and Hardware actions at boot time.
-
 ==下表概述了启动时操作系统和硬件的动作。==
 
   
 
 OS @ boot (kernel mode)
-
 ==操作系统 @ 启动（内核模式）==
 
   
 
 Hardware
-
 ==硬件==
 
   
 
 (No Program Yet)
-
 ==（尚无程序）==
 
   
 
 initialize trap table
-
 ==初始化陷阱表==
 
   
 
 remember addresses of system call handler
-
 ==记住系统调用处理程序的地址==
 
   
 
 remember addresses of timer handler
-
 ==记住时钟处理程序的地址==
 
   
 
 remember addresses of illegal mem-access handler
-
 ==记住非法内存访问处理程序的地址==
 
   
 
 remember addresses of illegal instruction handler
-
 ==记住非法指令处理程序的地址==
 
   
 
 start interrupt timer
-
 ==启动中断计时器==
 
   
 
 initialize process table
-
 ==初始化进程表==
 
   
 
 initialize free list
-
 ==初始化空闲列表==
 
   
 
 start timer; interrupt after X ms
-
 ==启动计时器；X 毫秒后中断==
 
   
 
 Figure 15.5: Limited Direct Execution (Dynamic Relocation) @ Boot
-
 ==图 15.5：受限直接执行（动态重定位）@ 启动==
 
   
 
 execute instructions that it shouldn't.
-
 ==执行它不该执行的指令。==
 
   
 
 Bye bye, misbehaving process; it's been nice knowing you.
-
 ==再见，行为不端的进程；很高兴认识你。==
 
   
 
 Figures 15.5 and 15.6 (page 12) illustrate much of the hardware/OS interaction in a timeline.
-
 ==图 15.5 和 15.6（第 12 页）在时间轴上展示了大部分硬件与操作系统的交互。==
 
   
 
 The first figure shows what the OS does at boot time to ready the machine for use, and the second shows what happens when a process (Process A) starts running.
-
 ==第一张图展示了操作系统在启动时为机器做好准备所做的工作，第二张图展示了当一个进程（进程 A）开始运行时发生的情况。==
 
   
 
 Note how its memory translations are handled by the hardware with no OS intervention.
-
 ==请注意，其内存转换是如何由硬件处理的，而无需操作系统的干预。==
 
   
 
 At some point (middle of second figure), a timer interrupt occurs, and the OS switches to Process B, which executes a "bad load" (to an illegal memory address).
-
 ==在某个时刻（第二张图的中间），发生了时钟中断，操作系统切换到进程 B，该进程执行了一个“错误的加载”（针对一个非法的内存地址）。==
 
   
 
 At that point, the OS must get involved, terminating the process and cleaning up by freeing B's memory and removing its entry from the process table.
-
 ==此时，操作系统必须介入，终止该进程，并通过释放 B 的内存及其在进程表中的条目来进行清理。==
 
   
 
 As you can see from the figures, we are still following the basic approach of limited direct execution.
-
 ==正如你从图中看到的，我们要依然遵循受限直接执行的基本方法。==
 
   
 
 In most cases, the OS just sets up the hardware appropriately and lets the process run directly on the CPU.
-
 ==在大多数情况下，操作系统只是适当地设置硬件，并让进程直接在 CPU 上运行。==
 
   
 
 Only when the process misbehaves does the OS have to become involved.
-
 ==只有当进程行为不端时，操作系统才必须介入。==
 
   
 
 15.6 Summary
-
 ==15.6 小结==
 
   
 
 In this chapter, we have extended the concept of limited direct execution with a specific mechanism used in virtual memory, known as address translation.
-
 ==在本章中，我们利用虚拟内存中使用的一种特定机制——即地址转换，扩展了受限直接执行的概念。==
 
   
 
 With address translation, the OS can control each and every memory access from a process, ensuring the accesses stay within the bounds of the address space.
-
 ==通过地址转换，操作系统可以控制进程的每一次内存访问，确保访问保持在地址空间的边界内。==
 
   
 
 Key to the efficiency of this technique is hardware support, which performs the translation quickly for each access, turning virtual addresses (the process's view of memory) into physical ones (the actual view).
-
 ==这项技术效率的关键在于硬件支持，它为通过将虚拟地址（进程的内存视图）转换为物理地址（实际视图），快速地对每次访问执行转换。==
 
   
 
 All of this is performed in a way that is transparent to the process that has been relocated.
-
 ==所有这些操作对被重定位的进程来说都是透明的。==
 
   
 
 The process has no idea its memory references are being translated, making for a wonderful illusion.
-
 ==进程不知道它的内存引用正在被转换，从而制造了一种美妙的错觉。==
 
   
 
 We have also seen one particular form of virtualization, known as base and bounds or dynamic relocation.
-
 ==我们也看到了一种特定的虚拟化形式，称为基址和界限或动态重定位。==
 
   
 
 Base-and-bounds virtualization is quite efficient, as only a little more hardware logic is required to add a base register to the virtual address and check that the address generated by the process is in bounds.
-
 ==基址和界限虚拟化非常高效，因为只需要增加少量的硬件逻辑，用于将基址寄存器加到虚拟地址上，并检查进程生成的地址是否在界限内。==
 
   
 
 The following table outlines the OS and Hardware actions at runtime.
-
 ==下表概述了运行时操作系统和硬件的动作。==
 
   
 
 OS @ run (kernel mode)
-
 ==操作系统 @ 运行（内核模式）==
 
   
 
 Hardware
-
 ==硬件==
 
   
 
 Program (user mode)
-
 ==程序（用户模式）==
 
   
 
 To start process A:
-
 ==启动进程 A：==
 
   
 
 allocate entry in process table
-
 ==在进程表中分配条目==
 
   
 
 alloc memory for process
-
 ==为进程分配内存==
 
   
 
 set base/bound registers
-
 ==设置基址/界限寄存器==
 
   
 
 return-from-trap (into A)
-
 ==从陷阱返回（进入 A）==
 
   
 
 restore registers of A
-
 ==恢复 A 的寄存器==
 
   
 
 move to user mode
-
 ==切换到用户模式==
 
   
 
 jump to A's (initial) PC
-
 ==跳转到 A 的（初始）PC==
 
   
 
 Process A runs
-
 ==进程 A 运行==
 
   
 
 Fetch instruction
-
 ==取指令==
 
   
 
 translate virtual address
-
 ==转换虚拟地址==
 
   
 
 perform fetch
-
 ==执行取指==
 
   
 
 Execute instruction (A runs...)
-
 ==执行指令（A 运行...）==
 
   
 
 Timer interrupt
-
 ==时钟中断==
 
   
 
 move to kernel mode
-
 ==切换到内核模式==
 
   
 
 jump to handler
-
 ==跳转到处理程序==
 
   
 
 Handle timer
-
 ==处理计时器==
 
   
 
 decide: stop A, run B
-
 ==决定：停止 A，运行 B==
 
   
 
 call switch() routine
-
 ==调用 switch() 例程==
 
   
 
 save regs(A) to proc-struct(A) (including base/bounds)
-
 ==保存 regs(A) 到 proc-struct(A)（包括基址/界限）==
 
   
 
 restore regs(B) from proc-struct(B) (including base/bounds)
-
 ==从 proc-struct(B) 恢复 regs(B)（包括基址/界限）==
 
   
 
 return-from-trap (into B)
-
 ==从陷阱返回（进入 B）==
 
   
 
 restore registers of B
-
 ==恢复 B 的寄存器==
 
   
 
 move to user mode
-
 ==切换到用户模式==
 
   
 
 jump to B's PC
-
 ==跳转到 B 的 PC==
 
   
 
 Process B runs
-
 ==进程 B 运行==
 
   
 
 Execute bad load
-
 ==执行错误的加载==
 
   
 
 if explicit load/store:
-
 ==如果是显式加载/存储：==
 
   
 
 ensure address is legal
-
 ==确保地址合法==
 
   
 
 translate virtual address
-
 ==转换虚拟地址==
 
   
 
 perform load/store
-
 ==执行加载/存储==
 
   
 
 Load is out-of-bounds;
-
 ==加载越界；==
 
   
 
 move to kernel mode
-
 ==切换到内核模式==
 
   
 
 jump to trap handler
-
 ==跳转到陷阱处理程序==
 
   
 
 Handle the trap
-
 ==处理陷阱==
 
   
 
 decide to kill process B
-
 ==决定杀死进程 B==
 
   
 
 deallocate B's memory
-
 ==释放 B 的内存==
 
   
 
 free B's entry in process table
-
 ==释放 B 在进程表中的条目==
 
   
 
 MECHANISM: ADDRESS TRANSLATION
-
 ==机制：地址转换==
 
   
 
 Figure 15.6: Limited Direct Execution (Dynamic Relocation) @ Runtime
-
 ==图 15.6：受限直接执行（动态重定位）@ 运行==
 
   
 
 Base-and-bounds also offers protection; the OS and hardware combine to ensure no process can generate memory references outside its own address space.
-
 ==基址和界限也提供了保护；操作系统和硬件结合起来，确保没有进程可以生成超出其自身地址空间的内存引用。==
 
   
 
 Protection is certainly one of the most important goals of the OS.
-
 ==保护无疑是操作系统最重要的目标之一。==
 
   
 
 Without it, the OS could not control the machine (if processes were free to overwrite memory, they could easily do nasty things like overwrite the trap table and take over the system).
-
 ==没有它，操作系统将无法控制机器（如果进程可以随意覆盖内存，它们很容易做出一些恶劣的事情，比如覆盖陷阱表并接管系统）。==
 
   
 
 Unfortunately, this simple technique of dynamic relocation does have its inefficiencies.
-
 ==不幸的是，这种简单的动态重定位技术确实有其低效之处。==
 
   
 
 For example, as you can see in Figure 15.2 (page 5), the relocated process is using physical memory from 32 KB to 48 KB.
-
 ==例如，正如你在图 15.2（第 5 页）中看到的，重定位后的进程正在使用从 32 KB 到 48 KB 的物理内存。==
 
   
 
 However, because the process stack and heap are not too big, all of the space between the two is simply wasted.
-
 ==然而，由于进程的栈和堆都不是很大，两者之间的所有空间都被白白浪费了。==
 
   
 
 This type of waste is usually called internal fragmentation, as the space inside the allocated unit is not all used (i.e., is fragmented) and thus wasted.
-
 ==这种类型的浪费通常被称为内部碎片，因为分配单元内部的空间并未被全部使用（即被分割了），因此被浪费了。==
 
   
 
 In our current approach, although there might be enough physical memory for more processes, we are currently restricted to placing an address space in a fixed-sized slot and thus internal fragmentation can arise.
-
 ==在我们当前的方法中，尽管物理内存可能足够容纳更多的进程，但我们目前受限于将地址空间放置在固定大小的槽位中，因此可能会产生内部碎片。==
 
   
 
 Thus, we are going to need more sophisticated machinery, to try to better utilize physical memory and avoid internal fragmentation.
-
 ==因此，我们需要更复杂的机制，以尝试更好地利用物理内存并避免内部碎片。==
 
   
 
 Our first attempt will be a slight generalization of base and bounds known as segmentation, which we will discuss next.
-
 ==我们的第一次尝试将是基址和界限的一个轻微的泛化，称为分段，我们将在接下来讨论它。==
 
   
 
 2A different solution might instead place a fixed-sized stack within the address space, just below the code region, and a growing heap below that.
-
 ==脚注 2：另一种解决方案可能是将固定大小的栈放置在地址空间内，紧靠代码区域的下方，并在其下方放置一个增长的堆。==
 
   
 
 However, this limits flexibility by making recursion and deeply-nested function calls challenging, and thus is something we hope to avoid.
-
 ==然而，这限制了灵活性，使得递归和深度嵌套的函数调用变得充满挑战，因此这是我们希望避免的事情。==
 
   
 
 References
-
 ==参考文献==
 
   
@@ -10431,7 +9249,6 @@ References
   
 
 This paper is a nice summary of early work on dynamic relocation, as well as some basics on static relocation.
-
 ==这篇论文很好地总结了关于动态重定位的早期工作，以及关于静态重定位的一些基础知识。==
 
   
@@ -10443,13 +9260,11 @@ This paper is a nice summary of early work on dynamic relocation, as well as som
   
 
 Microprocessors & Microsystems archive, Volume 14:7 (September 1990). An example of a relocating loader for MS-DOS.
-
 ==Microprocessors & Microsystems archive, Volume 14:7 (September 1990). 一个用于 MS-DOS 的重定位加载器的例子。==
 
   
 
 Not the first one, but just a relatively modern example of how such a system works.
-
 ==虽然不是第一个，但它是一个展示此类系统如何工作的相对现代的例子。==
 
   
@@ -10461,31 +9276,26 @@ Not the first one, but just a relatively modern example of how such a system wor
   
 
 From this paper: "The concepts of base-and-bound register and hardware-interpreted descriptors appeared, apparently independently, between 1957 and 1959 on three projects with diverse goals."
-
 ==摘自该论文：“基址和界限寄存器以及硬件解释描述符的概念，显然是在 1957 年至 1959 年间，在三个目标各异的项目中独立出现的。”==
 
   
 
 We found this quote on Mark Smotherman's cool history pages [S04]; see them for more information.
-
 ==我们在 Mark Smotherman 很酷的历史页面 [S04] 上发现了这段引文；更多信息请参阅该页面。==
 
   
 
 [S04] "System Call Support" by Mark Smotherman. May 2004. people.cs.clemson.edu/~mark/syscall.html. A neat history of system call support.
-
 ==[S04] "System Call Support" by Mark Smotherman. May 2004. people.cs.clemson.edu/~mark/syscall.html. 一段关于系统调用支持的精彩历史。==
 
   
 
 Smotherman has also collected some early history on items like interrupts and other fun aspects of computing history.
-
 ==Smotherman 还收集了一些关于中断等项目的早期历史，以及计算历史中其他有趣的方面。==
 
   
 
 See his web pages for more details.
-
 ==请查看他的网页以获取更多详情。==
 
   
@@ -10497,487 +9307,405 @@ See his web pages for more details.
   
 
 A terrific paper about how you can use compiler support to bound memory references from a program, without hardware support.
-
 ==一篇极好的论文，介绍了如何在没有硬件支持的情况下，利用编译器支持来限制程序的内存引用。==
 
   
 
 The paper sparked renewed interest in software techniques for isolation of memory references.
-
 ==这篇论文重新引发了人们对用于隔离内存引用的软件技术的兴趣。==
 
   
 
 [W17] Answer to footnote: "Is there anything other than havoc that can be wreaked?" by Waciuma Wanjohi.
-
 ==[W17] 回答脚注：“除了浩劫（havoc），还有什么可以被造成（wreaked）吗？” by Waciuma Wanjohi.==
 
   
 
 October 2017. Amazingly, this enterprising reader found the answer via google's Ngram viewing tool.
-
 ==2017 年 10 月。令人惊讶的是，这位富有进取心的读者通过 Google 的 Ngram 查看工具找到了答案。==
 
   
 
 The answer, thanks to Mr. Wanjohi: "It's only since about 1970 that 'wreak havoc' has been more popular than 'wreak vengeance'. In the 1800s, the word wreak was almost always followed by 'his/their vengeance'."
-
 ==感谢 Wanjohi 先生提供的答案：“直到 1970 年左右，‘wreak havoc’（造成浩劫）才比 ‘wreak vengeance’（实施报复）更流行。在 19 世纪，wreak 这个词几乎总是跟在 ‘his/their vengeance’ 后面。”==
 
   
 
 Apparently, when you wreak, you are up to no good, but at least wreakers have some options now.
-
 ==显然，当你在 wreak 时，你肯定没干好事，但至少现在的 wreaker 们有了一些选择。==
 
   
 
 Homework (Simulation)
-
 ==作业（模拟）==
 
   
 
 The program relocation.py allows you to see how address translations are performed in a system with base and bounds registers.
-
 ==程序 relocation.py 允许你查看在具有基址和界限寄存器的系统中是如何执行地址转换的。==
 
   
 
 See the README for details.
-
 ==详情请参阅 README。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. Run with seeds 1, 2, and 3, and compute whether each virtual address generated by the process is in or out of bounds.
-
 ==2. 使用种子 1、2 和 3 运行，并计算进程生成的每个虚拟地址是在界限内还是界限外。==
 
   
 
 If in bounds, compute the translation.
-
 ==如果在界限内，计算转换结果。==
 
   
 
 2. Run with these flags: s0n 10. What value do you have to set -l (the bounds register) to in order to ensure that all the generated virtual addresses are within bounds?
-
 ==3. 使用这些标志运行：s0n 10。你需要将 -l（界限寄存器）设置为多少，才能确保所有生成的虚拟地址都在界限内？==
 
 4. Run with these flags: s 1n 101 100. What is the maximum value that base can be set to, such that the address space still fits into physical memory in its entirety?
-
 ==5. 使用这些标志运行：s 1n 101 100。基址最大可以设置为多少，才能使地址空间仍然完整地放入物理内存中？==
 
 6. Run some of the same problems above, but with larger address spaces (-a) and physical memories (-p).
-
 ==7. 运行上述相同的一些问题，但使用更大的地址空间 (-a) 和物理内存 (-p)。==
 
 8. What fraction of randomly-generated virtual addresses are valid, as a function of the value of the bounds register?
-
 ==9. 作为界限寄存器值的函数，随机生成的虚拟地址中有效的比例是多少？==
 
   
 
 Make a graph from running with different random seeds, with limit values ranging from 0 up to the maximum size of the address space.
-
 ==通过使用不同的随机种子运行，并使用从 0 到地址空间最大范围的限制值，绘制一张图表。==
 
   
 
 Segmentation
-
 ==分段==
 
   
 
 So far we have been putting the entire address space of each process in memory.
-
 ==到目前为止，我们将每个进程的整个地址空间都放入了内存中。==
 
   
 
 With the base and bounds registers, the OS can easily relocate processes to different parts of physical memory.
-
 ==有了基址和界限寄存器，操作系统可以轻松地将进程重定位到物理内存的不同部分。==
 
   
 
 However, you might have noticed something interesting about these address spaces of ours: there is a big chunk of "free" space right in the middle, between the stack and the heap.
-
 ==然而，你可能已经注意到关于我们要讨论的这些地址空间的一些有趣之处：在栈和堆之间，正中间有一大块“空闲”空间。==
 
   
 
 As you can imagine from Figure 16.1, although the space between the stack and heap is not being used by the process, it is still taking up physical memory when we relocate the entire address space somewhere in physical memory.
-
 ==你可以从图 16.1 中想象到，尽管栈和堆之间的空间没有被进程使用，但当我们把整个地址空间重定位到物理内存的某个地方时，它仍然占用了物理内存。==
 
   
 
 Thus, the simple approach of using a base and bounds register pair to virtualize memory is wasteful.
-
 ==因此，简单地使用一对基址和界限寄存器来虚拟化内存是浪费的。==
 
   
 
 It also makes it quite hard to run a program when the entire address space doesn't fit into memory.
-
 ==当整个地址空间无法装入内存时，这也使得运行程序变得非常困难。==
 
   
 
 Thus, base and bounds is not as flexible as we would like. And thus:
-
 ==因此，基址和界限并不像我们希望的那样灵活。因此：==
 
   
 
 THE CRUX: HOW TO SUPPORT A LARGE ADDRESS SPACE
-
 ==关键问题：如何支持大地址空间==
 
   
 
 How do we support a large address space with (potentially) a lot of free space between the stack and the heap?
-
 ==我们如何支持一个在栈和堆之间（可能）有大量空闲空间的大地址空间？==
 
   
 
 Note that in our examples, with tiny (pretend) address spaces, the waste doesn't seem too bad.
-
 ==请注意，在我们的例子中，使用微小的（假想的）地址空间，这种浪费看起来并不太严重。==
 
   
 
 Imagine, however, a 32-bit address space (4 GB in size).
-
 ==然而，想象一个 32 位的地址空间（大小为 4 GB）。==
 
   
 
 A typical program will only use megabytes of memory, but still would demand that the entire address space be resident in memory.
-
 ==一个典型的程序只会使用几兆字节的内存，但仍然会要求整个地址空间驻留在内存中。==
 
   
 
 16.1 Segmentation: Generalized Base/Bounds
-
 ==16.1 分段：广义的基址/界限==
 
   
 
 To solve this problem, an idea was born, and it is called segmentation.
-
 ==为了解决这个问题，诞生了一个想法，它被称为分段。==
 
   
 
 It is quite an old idea, going at least as far back as the very early 1960's [H61, G62].
-
 ==这是一个相当古老的想法，至少可以追溯到 20 世纪 60 年代初 [H61, G62]。==
 
   
 
 The idea is simple: instead of having just one base and bounds pair in our MMU, why not have a base and bounds pair per logical segment of the address space?
-
 ==这个想法很简单：与其在我们的 MMU 中只有一对基址和界限，为什么不为地址空间的每个逻辑段都配备一对基址和界限呢？==
 
   
 
 A segment is just a contiguous portion of the address space of a particular length, and in our canonical address space, we have three logically-different segments: code, stack, and heap.
-
 ==段只是地址空间中特定长度的连续部分，在我们的标准地址空间中，我们有三个逻辑上不同的段：代码段、栈段和堆段。==
 
   
 
 Figure 16.1: An Address Space (Again)
-
 ==图 16.1：地址空间（再次展示）==
 
   
 
 What segmentation allows the OS to do is to place each one of those segments in different parts of physical memory, and thus avoid filling physical memory with unused virtual address space.
-
 ==分段允许操作系统做的是将这些段中的每一个放置在物理内存的不同部分，从而避免用未使用的虚拟地址空间填满物理内存。==
 
   
 
 Let's look at an example. Assume we want to place the address space from Figure 16.1 into physical memory.
-
 ==让我们看一个例子。假设我们想把图 16.1 中的地址空间放入物理内存。==
 
   
 
 With a base and bounds pair per segment, we can place each segment independently in physical memory.
-
 ==通过为每个段配备一对基址和界限，我们可以将每个段独立地放置在物理内存中。==
 
   
 
 For example, see Figure 16.2 (page 3); there you see a 64KB physical memory with those three segments in it (and 16KB reserved for the OS).
-
 ==例如，见图 16.2（第 3 页）；在那里你可以看到一个 64KB 的物理内存，其中包含那三个段（以及为操作系统保留的 16KB）。==
 
   
 
 Figure 16.2: Placing Segments In Physical Memory
-
 ==图 16.2：将段放置在物理内存中==
 
   
 
 As you can see in the diagram, only used memory is allocated space in physical memory, and thus large address spaces with large amounts of unused address space (which we sometimes call sparse address spaces) can be accommodated.
-
 ==正如你在图中看到的，只有被使用的内存才会在物理内存中分配空间，因此可以容纳具有大量未使用地址空间（我们有时称之为稀疏地址空间）的大地址空间。==
 
   
 
 The hardware structure in our MMU required to support segmentation is just what you'd expect: in this case, a set of three base and bounds register pairs.
-
 ==我们的 MMU 中支持分段所需的硬件结构正是你所期望的：在这种情况下，是一组三对基址和界限寄存器。==
 
   
 
 Figure 16.3 below shows the register values for the example above.
-
 ==下面的图 16.3 显示了上述示例的寄存器值。==
 
   
 
 Each bounds register holds the size of a segment.
-
 ==每个界限寄存器保存一个段的大小。==
 
   
 
 Figure 16.3: Segment Register Values
-
 ==图 16.3：段寄存器值==
 
   
 
 You can see from the figure that the code segment is placed at physical address 32KB and has a size of 2KB and the heap segment is placed at 34KB and has a size of 3KB.
-
 ==你可以从图中看到，代码段被放置在物理地址 32KB 处，大小为 2KB，堆段被放置在 34KB 处，大小为 3KB。==
 
   
 
 The size segment here is exactly the same as the bounds register introduced previously.
-
 ==这里的段大小与之前介绍的界限寄存器完全相同。==
 
   
 
 It tells the hardware exactly how many bytes are valid in this segment (and thus, enables the hardware to determine when a program has made an illegal access outside of those bounds).
-
 ==它确切地告诉硬件该段中有多少字节是有效的（因此，使硬件能够确定程序何时进行了超出这些界限的非法访问）。==
 
   
 
 Let's do an example translation, using the address space in Figure 16.1.
-
 ==让我们使用图 16.1 中的地址空间做一个转换示例。==
 
   
 
 Assume a reference is made to virtual address 100 (which is in the code segment, as you can see visually in Figure 16.1, page 2).
-
 ==假设引用了虚拟地址 100（正如你在第 2 页图 16.1 中直观看到的，它位于代码段中）。==
 
   
 
 ASIDE: THE SEGMENTATION FAULT
-
 ==旁注：分段错误==
 
   
 
 The term segmentation fault or violation arises from a memory access on a segmented machine to an illegal address.
-
 ==术语“分段错误”或“违规”源于分段机器上对非法地址的内存访问。==
 
   
 
 Humorously, the term persists, even on machines with no support for segmentation at all.
-
 ==有趣的是，即使在完全不支持分段的机器上，这个术语依然存在。==
 
   
 
 Or not so humorously, if you can't figure out why your code keeps faulting.
-
 ==或者不那么有趣的是，如果你搞不清楚为什么你的代码一直出错。==
 
   
 
 When the reference takes place (say, on an instruction fetch), the hardware will add the base value to the offset into this segment (100 in this case) to arrive at the desired physical address: , or 32868.
-
 ==当引用发生时（比如，在取指令时），硬件会将基址值加到该段内的偏移量（本例中为 100）上，得出所需的物理地址：，即 32868。==
 
   
 
 It will then check that the address is within bounds (100 is less than 2KB), find that it is, and issue the reference to physical memory address 32868.
-
 ==然后它会检查地址是否在界限内（100 小于 2KB），发现确实在界限内，于是向物理内存地址 32868 发出引用。==
 
   
 
 Now let's look at an address in the heap, virtual address 4200 (again refer to Figure 16.1).
-
 ==现在让我们看看堆中的一个地址，虚拟地址 4200（再次参考图 16.1）。==
 
   
 
 If we just add the virtual address 4200 to the base of the heap (34KB), we get a physical address of 39016, which is not the correct physical address.
-
 ==如果我们只是将虚拟地址 4200 加到堆的基址（34KB）上，我们会得到物理地址 39016，这不是正确的物理地址。==
 
   
 
 What we need to first do is extract the offset into the heap, i.e., which byte(s) in this segment the address refers to.
-
 ==我们需要先做的是提取堆内的偏移量，即该地址指的是该段中的哪个（些）字节。==
 
   
 
 Because the heap starts at virtual address 4KB (4096), the offset of 4200 is actually 4200 minus 4096, or 104.
-
 ==因为堆从虚拟地址 4KB（4096）开始，所以 4200 的偏移量实际上是 4200 减去 4096，即 104。==
 
   
 
 We then take this offset (104) and add it to the base register physical address (34K) to get the desired result: 34920.
-
 ==然后我们要取这个偏移量（104）并将它加到基址寄存器的物理地址（34K）上，得到想要的结果：34920。==
 
   
 
 What if we tried to refer to an illegal address (i.e., a virtual address of 7KB or greater), which is beyond the end of the heap?
-
 ==如果我们试图引用一个非法地址（即 7KB 或更大的虚拟地址），即超出了堆的末尾，会发生什么？==
 
   
 
 You can imagine what will happen: the hardware detects that the address is out of bounds, traps into the OS, likely leading to the termination of the offending process.
-
 ==你可以想象会发生什么：硬件检测到地址越界，陷入操作系统，很可能导致违规进程被终止。==
 
   
 
 And now you know the origin of the famous term that all C programmers learn to dread: the segmentation violation or segmentation fault.
-
 ==现在你知道了所有 C 程序员都学会恐惧的那个著名术语的起源：分段违规或分段错误。==
 
   
 
 16.2 Which Segment Are We Referring To?
-
 ==16.2 我们引用的是哪个段？==
 
   
 
 The hardware uses segment registers during translation.
-
 ==硬件在转换过程中使用段寄存器。==
 
   
 
 How does it know the offset into a segment, and to which segment an address refers?
-
 ==它是如何知道段内的偏移量，以及一个地址引用的是哪个段的？==
 
   
 
 One common approach, sometimes referred to as an explicit approach, is to chop up the address space into segments based on the top few bits of the virtual address.
-
 ==一种常见的方法，有时被称为显式方法，是根据虚拟地址的高几位将地址空间分割成段。==
 
   
 
 This technique was used in the VAX/VMS system [LL82].
-
 ==VAX/VMS 系统 [LL82] 使用了这种技术。==
 
   
 
 In our example above, we have three segments; thus we need two bits to accomplish our task.
-
 ==在上面的例子中，我们有三个段；因此我们需要两位来完成任务。==
 
   
 
 If we use the top two bits of our 14-bit virtual address to select the segment, our virtual address looks like this:
-
 ==如果我们使用 14 位虚拟地址的前两位来选择段，我们的虚拟地址看起来是这样的：==
 
   
 
 In our example, then, if the top two bits are 00, the hardware knows the virtual address is in the code segment, and thus uses the code base and bounds pair to relocate the address to the correct physical location.
-
 ==在我们的例子中，如果前两位是 00，硬件就知道虚拟地址在代码段中，因此使用代码基址和界限对将地址重定位到正确的物理位置。==
 
   
 
 If the top two bits are 01, the hardware knows the address is in the heap, and thus uses the heap base and bounds.
-
 ==如果前两位是 01，硬件就知道地址在堆中，因此使用堆的基址和界限。==
 
   
 
 Let's take our example heap virtual address from above (4200) and translate it, just to make sure this is clear.
-
 ==让我们拿上面的堆虚拟地址示例（4200）进行转换，以确保这一点很清楚。==
 
   
 
 The virtual address 4200, in binary form, can be seen here: 01 0000 0110 1000.
-
 ==虚拟地址 4200 的二进制形式如下所示：01 0000 0110 1000。==
 
   
 
 As you can see from the picture, the top two bits (01) tell the hardware which segment we are referring to.
-
 ==从图中可以看出，前两位（01）告诉硬件我们引用的是哪个段。==
 
   
 
 The bottom 12 bits are the offset into the segment: 0000 0110 1000, or hex 0x068, or 104 in decimal.
-
 ==后 12 位是段内的偏移量：0000 0110 1000，或十六进制 0x068，或十进制 104。==
 
   
 
 Thus, the hardware simply takes the first two bits to determine which segment register to use, and then takes the next 12 bits as the offset into the segment.
-
 ==因此，硬件只需取前两位来确定使用哪个段寄存器，然后取接下来的 12 位作为段内的偏移量。==
 
   
 
 By adding the base register to the offset, the hardware arrives at the final physical address.
-
 ==通过将基址寄存器加到偏移量上，硬件得出了最终的物理地址。==
 
   
 
 Note the offset eases the bounds check too: we can simply check if the offset is less than the bounds; if not, the address is illegal.
-
 ==注意，偏移量也简化了界限检查：我们可以简单地检查偏移量是否小于界限；如果不是，则地址非法。==
 
   
 
 Thus, if base and bounds were arrays (with one entry per segment), the hardware would be doing something like this to obtain the desired physical address:
-
 ==因此，如果基址和界限是数组（每个段一个条目），硬件将执行类似以下的操作来获取所需的物理地址：==
 
   
@@ -11013,673 +9741,561 @@ Register = AccessMemory(PhysAddr)
   
 
 In our running example, we can fill in values for the constants above.
-
 ==在我们正在运行的示例中，我们可以填入上述常数的值。==
 
   
 
 Specifically, SEG_MASK would be set to 0x3000, SEG_SHIFT to 12, and OFFSET_MASK to 0xFFF.
-
 ==具体来说，SEG_MASK 将被设置为 0x3000，SEG_SHIFT 设置为 12，OFFSET_MASK 设置为 0xFFF。==
 
   
 
 You may also have noticed that when we use the top two bits, and we only have three segments (code, heap, stack), one segment of the address space goes unused.
-
 ==你可能也注意到了，当我们使用前两位，而只有三个段（代码、堆、栈）时，地址空间的一个段未被使用。==
 
   
 
 To fully utilize the virtual address space (and avoid an unused segment), some systems put code in the same segment as the heap and thus use only one bit to select which segment to use [LL82].
-
 ==为了充分利用虚拟地址空间（并避免未使用的段），有些系统将代码放在与堆相同的段中，因此只使用一位来选择使用哪个段 [LL82]。==
 
   
 
 Another issue with using the top so many bits to select a segment is that it limits use of the virtual address space.
-
 ==使用前几位来选择段的另一个问题是，它限制了虚拟地址空间的使用。==
 
   
 
 Specifically, each segment is limited to a maximum size, which in our example is 4KB (using the top two bits to choose segments implies the 16KB address space gets chopped into four pieces, or 4KB in this example).
-
 ==具体来说，每个段都被限制在最大尺寸内，在我们的例子中是 4KB（使用前两位选择段意味着 16KB 的地址空间被切成四块，本例中即为 4KB）。==
 
   
 
 If a running program wishes to grow a segment (say the heap, or the stack) beyond that maximum, the program is out of luck.
-
 ==如果一个正在运行的程序希望将某个段（比如堆或栈）增长到超过该最大值，那它就没运气了。==
 
   
 
 There are other ways for the hardware to determine which segment a particular address is in.
-
 ==还有其他方法可以让硬件确定特定地址位于哪个段中。==
 
   
 
 In the implicit approach, the hardware determines the segment by noticing how the address was formed.
-
 ==在隐式方法中，硬件通过注意地址是如何形成的来确定段。==
 
   
 
 If, for example, the address was generated from the program counter (i.e., it was an instruction fetch), then the address is within the code segment.
-
 ==例如，如果地址是从程序计数器生成的（即这是一次取指令），那么该地址就在代码段内。==
 
   
 
 If the address is based off of the stack or base pointer, it must be in the stack segment.
-
 ==如果地址是基于栈指针或基址指针的，它一定在栈段内。==
 
   
 
 Any other address must be in the heap.
-
 ==任何其他地址一定在堆中。==
 
   
 
 16.3 What About The Stack?
-
 ==16.3 栈呢？==
 
   
 
 Thus far, we've left out one important component of the address space: the stack.
-
 ==到目前为止，我们遗漏了地址空间的一个重要组成部分：栈。==
 
   
 
 The stack has been relocated to physical address 28KB in the diagram above, but with one critical difference: it grows backwards (i.e., towards lower addresses).
-
 ==在上面的图中，栈已被重定位到物理地址 28KB，但有一个关键的区别：它是向后增长的（即向低地址方向增长）。==
 
   
 
 In physical memory, it "starts" at  and grows back to 26KB, corresponding to virtual addresses 16KB to 14KB.
-
 ==在物理内存中，它“开始”于  并向后增长到 26KB，对应于虚拟地址 16KB 到 14KB。==
 
   
 
 Translation must proceed differently.
-
 ==转换必须以不同的方式进行。==
 
   
 
 The first thing we need is a little extra hardware support.
-
 ==我们首先需要的是一点额外的硬件支持。==
 
   
 
 Instead of just base and bounds values, the hardware also needs to know which way the segment grows (a bit, for example, that is set to 1 when the segment grows in the positive direction, and 0 for negative).
-
 ==硬件不仅需要基址和界限值，还需要知道段的增长方向（例如，用一个位，当段向正方向增长时设为 1，负方向设为 0）。==
 
   
 
 Our updated view of what the hardware tracks is seen in Figure 16.4.
-
 ==我们在图 16.4 中看到了硬件跟踪内容的更新视图。==
 
   
 
 Figure 16.4: Segment Registers (With Negative-Growth Support)
-
 ==图 16.4：段寄存器（支持负向增长）==
 
   
 
 With the hardware understanding that segments can grow in the negative direction, the hardware must now translate such virtual addresses slightly differently.
-
 ==随着硬件理解了段可以向负方向增长，硬件现在必须以略微不同的方式转换此类虚拟地址。==
 
   
 
 Let's take an example stack virtual address and translate it to understand the process.
-
 ==让我们举一个栈虚拟地址的例子并进行转换，以理解这个过程。==
 
   
 
 In this example, assume we wish to access virtual address 15KB, which should map to physical address 27KB.
-
 ==在这个例子中，假设我们希望访问虚拟地址 15KB，它应该映射到物理地址 27KB。==
 
   
 
 Our virtual address, in binary form, thus looks like this: 11 1100 0000 0000 (hex 0x3C00).
-
 ==因此，我们的虚拟地址的二进制形式如下：11 1100 0000 0000（十六进制 0x3C00）。==
 
   
 
 The hardware uses the top two bits (11) to designate the segment, but then we are left with an offset of 3KB.
-
 ==硬件使用前两位（11）来指定段，但我们剩下的偏移量是 3KB。==
 
   
 
 To obtain the correct negative offset, we must subtract the maximum segment size from 3KB: in this example, a segment can be 4KB, and thus the correct negative offset is 3KB minus 4KB which equals -1KB.
-
 ==为了获得正确的负偏移量，我们必须从 3KB 中减去最大段大小：在本例中，一个段可以是 4KB，因此正确的负偏移量是 3KB 减去 4KB，等于 -1KB。==
 
   
 
 We simply add the negative offset (-1KB) to the base (28KB) to arrive at the correct physical address: 27KB.
-
 ==我们只需将负偏移量（-1KB）加到基址（28KB）上，即可得出正确的物理地址：27KB。==
 
   
 
 The bounds check can be calculated by ensuring the absolute value of the negative offset is less than or equal to the segment's current size (in this case, 2KB).
-
 ==可以通过确保负偏移量的绝对值小于或等于段的当前大小（本例中为 2KB）来计算界限检查。==
 
   
 
 Although we say, for simplicity, that the stack "starts" at 28KB, this value is actually the byte just below the location of the backward growing region.
-
 ==虽然为了简单起见，我们说栈“开始”于 28KB，但这个值实际上是紧靠向后增长区域下方的字节。==
 
   
 
 The first valid byte is actually 28KB minus 1.
-
 ==第一个有效字节实际上是 28KB 减 1。==
 
   
 
 In contrast, forward-growing regions start at the address of the first byte of the segment.
-
 ==相比之下，向前增长的区域从段的第一个字节的地址开始。==
 
   
 
 We take this approach because it makes the math to compute the physical address straightforward: the physical address is just the base plus the negative offset.
-
 ==我们采用这种方法是因为它使得计算物理地址的数学运算变得简单直观：物理地址就是基址加上负偏移量。==
 
   
 
 16.4 Support for Sharing
-
 ==16.4 支持共享==
 
   
 
 As support for segmentation grew, system designers soon realized that they could realize new types of efficiencies with a little more hardware support.
-
 ==随着对分段支持的增加，系统设计者很快意识到，只需增加一点硬件支持，他们就可以实现新型的效率。==
 
   
 
 Specifically, to save memory, sometimes it is useful to share certain memory segments between address spaces.
-
 ==具体来说，为了节省内存，有时在地址空间之间共享某些内存段是很有用的。==
 
   
 
 In particular, code sharing is common and still in use in systems today.
-
 ==特别是代码共享，这在当今的系统中仍然很常见并被使用。==
 
   
 
 To support sharing, we need a little extra support from the hardware, in the form of protection bits.
-
 ==为了支持共享，我们需要硬件提供一点额外的支持，形式为保护位。==
 
   
 
 Basic support adds a few bits per segment, indicating whether or not a program can read or write a segment, or perhaps execute code that lies within the segment.
-
 ==基本支持为每个段增加几个位，指示程序是否可以读取或写入某个段，或者是否可以执行位于该段内的代码。==
 
   
 
 By setting a code segment to read-only, the same code can be shared across multiple processes, without worry of harming isolation.
-
 ==通过将代码段设置为只读，同一代码可以在多个进程之间共享，而无需担心破坏隔离性。==
 
   
 
 While each process still thinks that it is accessing its own private memory, the OS is secretly sharing memory which cannot be modified by the process, and thus the illusion is preserved.
-
 ==虽然每个进程仍然认为它在访问自己的私有内存，但操作系统正在秘密地共享该进程无法修改的内存，从而保留了这种错觉。==
 
   
 
 An example of the additional information tracked by the hardware (and OS) is shown in Figure 16.5.
-
 ==图 16.5 显示了硬件（和操作系统）跟踪的附加信息的一个示例。==
 
   
 
 As you can see, the code segment is set to read and execute, and thus the same physical segment in memory could be mapped into multiple virtual address spaces.
-
 ==正如你所看到的，代码段被设置为读取和执行，因此内存中的同一个物理段可以映射到多个虚拟地址空间中。==
 
   
 
 Figure 16.5: Segment Register Values (with Protection)
-
 ==图 16.5：段寄存器值（带保护）==
 
   
 
 With protection bits, the hardware algorithm described earlier would also have to change.
-
 ==有了保护位，前面描述的硬件算法也必须改变。==
 
   
 
 In addition to checking whether a virtual address is within bounds, the hardware also has to check whether a particular access is permissible.
-
 ==除了检查虚拟地址是否在界限内，硬件还必须检查特定的访问是否被允许。==
 
   
 
 If a user process tries to write to a read-only segment, or execute from a non-executable segment, the hardware should raise an exception, and thus let the OS deal with the offending process.
-
 ==如果用户进程试图写入只读段，或从不可执行段执行代码，硬件应引发异常，从而让操作系统处理违规进程。==
 
   
 
 16.5 Fine-grained vs. Coarse-grained Segmentation
-
 ==16.5 细粒度与粗粒度分段==
 
   
 
 Most of our examples thus far have focused on systems with just a few segments (i.e., code, stack, heap).
-
 ==到目前为止，我们的大多数示例都集中在只有几个段（即代码、栈、堆）的系统上。==
 
   
 
 We can think of this segmentation as coarse-grained, as it chops up the address space into relatively large, coarse chunks.
-
 ==我们可以将这种分段视为粗粒度的，因为它将地址空间切分成相对较大、粗糙的块。==
 
   
 
 However, some early systems (e.g., Multics [CV65,DD68]) were more flexible and allowed for address spaces to consist of a large number of smaller segments, referred to as fine-grained segmentation.
-
 ==然而，一些早期系统（如 Multics [CV65,DD68]）更加灵活，允许地址空间由大量较小的段组成，这被称为细粒度分段。==
 
   
 
 Supporting many segments requires even further hardware support, with a segment table of some kind stored in memory.
-
 ==支持许多段需要更进一步的硬件支持，即在内存中存储某种段表。==
 
   
 
 Such segment tables usually support the creation of a very large number of segments, and thus enable a system to use segments in more flexible ways than we have thus far discussed.
-
 ==此类段表通常支持创建非常多的段，从而使系统能够以比我们目前讨论的更灵活的方式使用段。==
 
   
 
 For example, early machines like the Burroughs B5000 had support for thousands of segments, and expected a compiler to chop code and data into separate segments which the OS and hardware would then support [RK68].
-
 ==例如，像 Burroughs B5000 这样的早期机器支持数千个段，并期望编译器将代码和数据切分成单独的段，然后由操作系统和硬件提供支持 [RK68]。==
 
   
 
 The thinking at the time was that by having fine-grained segments, the OS could better learn about which segments are in use and which are not and thus utilize main memory more effectively.
-
 ==当时的想法是，通过拥有细粒度的段，操作系统可以更好地了解哪些段正在使用，哪些没有，从而更有效地利用主存。==
 
   
 
 Figure 16.6: Non-compacted and Compacted Memory
-
 ==图 16.6：未压缩和压缩的内存==
 
   
 
 16.6 OS Support
-
 ==16.6 操作系统支持==
 
   
 
 You now should have a basic idea as to how segmentation works.
-
 ==你现在应该对分段的工作原理有了基本的了解。==
 
   
 
 Pieces of the address space are relocated into physical memory as the system runs, and thus a huge savings of physical memory is achieved relative to our simpler approach with just a single base/bounds pair for the entire address space.
-
 ==地址空间的片段在系统运行时被重定位到物理内存中，因此相对于我们只为整个地址空间使用一对基址/界限的简单方法，实现了物理内存的巨大节省。==
 
   
 
 Specifically, all the unused space between the stack and the heap need not be allocated in physical memory, allowing us to fit more address spaces into physical memory and support a large and sparse virtual address space per process.
-
 ==具体来说，栈和堆之间所有未使用的空间不需要在物理内存中分配，这使我们能够将更多的地址空间装入物理内存，并支持每个进程拥有一个巨大且稀疏的虚拟地址空间。==
 
   
 
 However, segmentation raises a number of new issues for the operating system.
-
 ==然而，分段给操作系统带来了一些新问题。==
 
   
 
 The first is an old one: what should the OS do on a context switch?
-
 ==第一个是一个老问题：在上下文切换时操作系统应该做什么？==
 
   
 
 You should have a good guess by now: the segment registers must be saved and restored.
-
 ==你现在应该已经猜到了：必须保存和恢复段寄存器。==
 
   
 
 Clearly, each process has its own virtual address space, and the OS must make sure to set up these registers correctly before letting the process run again.
-
 ==显然，每个进程都有自己的虚拟地址空间，操作系统必须确保在让进程再次运行之前正确设置这些寄存器。==
 
   
 
 The second is OS interaction when segments grow (or perhaps shrink).
-
 ==第二个是当段增长（或者可能收缩）时的操作系统交互。==
 
   
 
 For example, a program may call malloc() to allocate an object.
-
 ==例如，程序可能会调用 malloc() 来分配一个对象。==
 
   
 
 In some cases, the existing heap will be able to service the request, and thus malloc() will find free space for the object and return a pointer to it to the caller.
-
 ==在某些情况下，现有的堆将能够满足请求，因此 malloc() 将为对象找到空闲空间并将指向它的指针返回给调用者。==
 
   
 
 In others, however, the heap segment itself may need to grow.
-
 ==然而在其他情况下，堆段本身可能需要增长。==
 
   
 
 In this case, the memory-allocation library will perform a system call to grow the heap (e.g., the traditional UNIX sbrk() system call).
-
 ==在这种情况下，内存分配库将执行系统调用以增长堆（例如，传统的 UNIX sbrk() 系统调用）。==
 
   
 
 The OS will then (usually) provide more space, updating the segment size register to the new (bigger) size, and informing the library of success.
-
 ==然后操作系统（通常）将提供更多空间，将段大小寄存器更新为新的（更大的）大小，并通知库成功。==
 
   
 
 The library can then allocate space for the new object and return successfully to the calling program.
-
 ==然后库可以为新对象分配空间并成功返回给调用程序。==
 
   
 
 Do note that the OS could reject the request, if no more physical memory is available, or if it decides that the calling process already has too much.
-
 ==请注意，如果没有更多可用的物理内存，或者如果操作系统判定调用进程已经占用了太多内存，它可以拒绝该请求。==
 
   
 
 The last, and perhaps most important, issue is managing free space in physical memory.
-
 ==最后一个，也许是最重要的问题，是管理物理内存中的空闲空间。==
 
   
 
 When a new address space is created, the OS has to be able to find space in physical memory for its segments.
-
 ==当创建一个新的地址空间时，操作系统必须能够为其段在物理内存中找到空间。==
 
   
 
 Previously, we assumed that each address space was the same size, and thus physical memory could be thought of as a bunch of slots where processes would fit in.
-
 ==以前，我们假设每个地址空间的大小相同，因此物理内存可以被视为一堆供进程放入的槽位。==
 
   
 
 Now, we have a number of segments per process, and each segment might be a different size.
-
 ==现在，每个进程有多个段，并且每个段的大小可能不同。==
 
   
 
 The general problem that arises is that physical memory quickly becomes full of little holes of free space, making it difficult to allocate new segments, or to grow existing ones.
-
 ==随之而来的一般问题是，物理内存很快就会充满小块的空闲空间，使得分配新段或增长现有段变得困难。==
 
   
 
 We call this problem external fragmentation [R69]; see Figure 16.6 (left).
-
 ==我们将此问题称为外部碎片 [R69]；见图 16.6（左）。==
 
   
 
 In the example, a process comes along and wishes to allocate a 20KB segment.
-
 ==在这个例子中，一个进程出现并希望分配一个 20KB 的段。==
 
   
 
 In that example, there is 24KB free, but not in one contiguous segment (rather, in three non-contiguous chunks).
-
 ==在该示例中，有 24KB 的空闲空间，但不是在一个连续的段中（而是分成三个不连续的块）。==
 
   
 
 Thus, the OS cannot satisfy the 20KB request.
-
 ==因此，操作系统无法满足 20KB 的请求。==
 
   
 
 Similar problems could occur when a request to grow a segment arrives.
-
 ==当增长段的请求到达时，也可能发生类似的问题。==
 
   
 
 If the next so many bytes of physical space are not available, the OS will have to reject the request, even though there may be free bytes available elsewhere in physical memory.
-
 ==如果接下来的若干字节物理空间不可用，操作系统将不得不拒绝该请求，即使物理内存的其他地方可能有可用的空闲字节。==
 
   
 
 One solution to this problem would be to compact physical memory by rearranging the existing segments.
-
 ==解决此问题的一种方案是通过重新排列现有段来压缩物理内存。==
 
   
 
 For example, the OS could stop whichever processes are running, copy their data to one contiguous region of memory, change their segment register values to point to the new physical locations, and thus have a large free extent of memory with which to work.
-
 ==例如，操作系统可以停止任何正在运行的进程，将其数据复制到一块连续的内存区域，更改其段寄存器值以指向新的物理位置，从而获得一大块空闲内存来进行工作。==
 
   
 
 By doing so, the OS enables the new allocation request to succeed.
-
 ==通过这样做，操作系统使新的分配请求得以成功。==
 
   
 
 However, compaction is expensive, as copying segments is memory-intensive and generally uses a fair amount of processor time; see Figure 16.6 (right) for a diagram of compacted physical memory.
-
 ==然而，压缩是昂贵的，因为复制段是内存密集型的，通常会占用大量的处理器时间；有关压缩后的物理内存图示，请参见图 16.6（右）。==
 
   
 
 Compaction also (ironically) makes requests to grow existing segments hard to serve, and may thus cause further rearrangement to accommodate such requests.
-
 ==压缩也（讽刺地）使得增长现有段的请求难以被满足，因此可能导致进一步的重新排列以适应此类请求。==
 
   
 
 A simpler approach might instead be to use a free-list management algorithm that tries to keep large extents of memory available for allocation.
-
 ==一种更简单的方法可能是使用空闲列表管理算法，试图保留大块的内存以供分配。==
 
   
 
 There are literally hundreds of approaches that people have taken, including classic algorithms like best-fit (which keeps a list of free spaces and returns the one closest in size that satisfies the desired allocation to the requester), worst-fit, first-fit, and more complex schemes like the buddy algorithm [K68].
-
 ==人们实际上已经采取了数百种方法，包括经典算法如最佳适应（best-fit，它保留一个空闲空间列表，并返回大小最接近且满足所需分配的空间给请求者）、最差适应（worst-fit）、首次适应（first-fit），以及像伙伴算法（buddy algorithm）[K68] 这样更复杂的方案。==
 
   
 
 An excellent survey by Wilson et al. is a good place to start if you want to learn more about such algorithms  or you can wait until we cover some of the basics in a later chapter.
-
 ==如果你想了解更多关于此类算法的信息，Wilson 等人的出色调查是一个很好的起点 ，或者你可以等到我们在后面的章节中介绍一些基础知识。==
 
   
 
 Unfortunately, though, no matter how smart the algorithm, external fragmentation will still exist; a good algorithm attempts to minimize it.
-
 ==然而不幸的是，无论算法多么聪明，外部碎片仍然会存在；好的算法只是试图将其最小化。==
 
   
 
 TIP: IF 1000 SOLUTIONS EXIST, NO GREAT ONE DOES
-
 ==提示：如果存在 1000 种解决方案，那就没有一个是完美的==
 
   
 
 The fact that so many different algorithms exist to try to minimize external fragmentation is indicative of a stronger underlying truth: there is no one "best" way to solve the problem.
-
 ==存在这么多不同的算法试图最小化外部碎片，这一事实表明了一个更强烈的潜在真理：没有一种“最好”的方法来解决这个问题。==
 
   
 
 Thus, we settle for something reasonable and hope it is good enough.
-
 ==因此，我们满足于某种合理的方案，并希望它足够好。==
 
   
 
 The only real solution (as we will see in forthcoming chapters) is to avoid the problem altogether, by never allocating memory in variable-sized chunks.
-
 ==唯一的真正解决方案（正如我们将在后续章节中看到的）是完全避免这个问题，即永远不以可变大小的块来分配内存。==
 
   
 
 16.7 Summary
-
 ==16.7 小结==
 
   
 
 Segmentation solves a number of problems, and helps us build a more effective virtualization of memory.
-
 ==分段解决了许多问题，并帮助我们构建更有效的内存虚拟化。==
 
   
 
 Beyond just dynamic relocation, segmentation can better support sparse address spaces, by avoiding the huge potential waste of memory between logical segments of the address space.
-
 ==除了动态重定位之外，分段通过避免地址空间逻辑段之间巨大的潜在内存浪费，可以更好地支持稀疏地址空间。==
 
   
 
 It is also fast, as doing the arithmetic segmentation requires is easy and well-suited to hardware.
-
 ==它也很快，因为执行分段所需的算术运算很简单，非常适合硬件实现。==
 
   
 
 The overheads of translation are minimal.
-
 ==转换的开销极小。==
 
   
 
 A fringe benefit arises too: code sharing.
-
 ==还产生了一个附带的好处：代码共享。==
 
   
 
 If code is placed within a separate segment, such a segment could potentially be shared across multiple running programs.
-
 ==如果代码被放置在一个单独的段中，这样的段可能在多个正在运行的程序之间共享。==
 
   
 
 However, as we learned, allocating variable-sized segments in memory leads to some problems that we'd like to overcome.
-
 ==然而，正如我们所学到的，在内存中分配可变大小的段会导致一些我们希望克服的问题。==
 
   
 
 The first, as discussed above, is external fragmentation.
-
 ==第一个问题，如上所述，是外部碎片。==
 
   
 
 Because segments are variable-sized, free memory gets chopped up into odd-sized pieces, and thus satisfying a memory-allocation request can be difficult.
-
 ==因为段是可变大小的，空闲内存被切成大小不一的碎片，因此满足内存分配请求可能会很困难。==
 
   
 
 One can try to use smart algorithms [W+95] or periodically compact memory, but the problem is fundamental and hard to avoid.
-
 ==人们可以尝试使用智能算法 [W+95] 或定期压缩内存，但这个问题是根本性的，很难避免。==
 
   
 
 The second and perhaps more important problem is that segmentation still isn't flexible enough to support our fully generalized, sparse address space.
-
 ==第二个或许更重要的问题是，分段仍然不够灵活，无法支持我们需要完全通用的、稀疏的地址空间。==
 
   
 
 For example, if we have a large but sparsely-used heap all in one logical segment, the entire heap must still reside in memory in order to be accessed.
-
 ==例如，如果我们有一个很大但使用稀疏的堆都在一个逻辑段中，整个堆仍然必须驻留在内存中才能被访问。==
 
   
 
 In other words, if our model of how the address space is being used doesn't exactly match how the underlying segmentation has been designed to support it, segmentation doesn't work very well.
-
 ==换句话说，如果我们对地址空间使用方式的模型与底层分段设计所支持的方式不完全匹配，分段就不能很好地工作。==
 
   
 
 We thus need to find some new solutions. Ready to find them?
-
 ==因此我们需要寻找一些新的解决方案。准备好去发现它们了吗？==
 
   
 
 References
-
 ==参考文献==
 
   
@@ -11691,7 +10307,6 @@ References
   
 
 One of five papers presented on Multics at the Fall Joint Computer Conference; oh to be a fly on the wall in that room that day!
-
 ==在秋季联合计算机会议上发表的关于 Multics 的五篇论文之一；真希望那天能在那间屋子里旁听啊！==
 
   
@@ -11703,19 +10318,16 @@ One of five papers presented on Multics at the Fall Joint Computer Conference; o
   
 
 An early paper on how to perform dynamic linking in Multics, which was way ahead of its time.
-
 ==一篇关于如何在 Multics 中执行动态链接的早期论文，这在当时是遥遥领先的。==
 
   
 
 Dynamic linking finally found its way back into systems about 20 years later, as the large X-windows libraries demanded it.
-
 ==动态链接最终在大约 20 年后回到了系统中，因为庞大的 X-windows 库需要它。==
 
   
 
 Some say that these large X11 libraries were MIT's revenge for removing support for dynamic linking in early versions of UNIX!
-
 ==有人说，这些庞大的 X11 库是 MIT 对早期 UNIX 版本移除动态链接支持的报复！==
 
   
@@ -11727,7 +10339,6 @@ Some say that these large X11 libraries were MIT's revenge for removing support 
   
 
 Another early paper on segmentation; so early that it has no references to other work.
-
 ==另一篇关于分段的早期论文；太早了，以至于没有引用其他工作。==
 
   
@@ -11739,7 +10350,6 @@ Another early paper on segmentation; so early that it has no references to other
   
 
 An incredibly early and difficult to read paper about segmentation and some of its uses.
-
 ==一篇极其早期且难以阅读的关于分段及其用途的论文。==
 
   
@@ -11751,7 +10361,6 @@ An incredibly early and difficult to read paper about segmentation and some of i
   
 
 Try reading about segmentation in here (Chapter 3 in Volume 3a); it'll hurt your head, at least a little bit.
-
 ==试着在这里读读关于分段的内容（第 3a 卷第 3 章）；这会让你头疼，至少会有一点点。==
 
   
@@ -11763,13 +10372,11 @@ Try reading about segmentation in here (Chapter 3 in Volume 3a); it'll hurt your
   
 
 Knuth is famous not only for his early books on the Art of Computer Programming but for his typesetting system TeX which is still a powerhouse typesetting tool used by professionals today, and indeed to typeset this very book.
-
 ==Knuth 不仅因其早期的《计算机程序设计艺术》一书而闻名，还因其排版系统 TeX 而闻名，该系统至今仍是专业人士使用的强大排版工具，实际上也用于排版本书。==
 
   
 
 His tomes on algorithms are a great early reference to many of the algorithms that underlie computing systems today.
-
 ==他的算法巨著是当今计算系统基础的许多算法的绝佳早期参考。==
 
   
@@ -11781,13 +10388,11 @@ His tomes on algorithms are a great early reference to many of the algorithms th
   
 
 A treasure-trove of sage advice on how to build systems.
-
 ==关于如何构建系统的明智建议的宝库。==
 
   
 
 Hard to read in one sitting; take it in a little at a time, like a fine wine, or a reference manual.
-
 ==很难一次读完；像品尝美酒或查阅参考手册一样，一次读一点。==
 
   
@@ -11799,13 +10404,11 @@ Hard to read in one sitting; take it in a little at a time, like a fine wine, or
   
 
 A classic memory management system, with lots of common sense in its design.
-
 ==一个经典的内存管理系统，其设计中蕴含了许多常识。==
 
   
 
 We'll study it in more detail in a later chapter.
-
 ==我们将在后面的章节中更详细地研究它。==
 
   
@@ -11817,7 +10420,6 @@ We'll study it in more detail in a later chapter.
   
 
 A nice overview of the differences between paging and segmentation, with some historical discussion of various machines.
-
 ==一篇很好的概述，介绍了分页和分段的区别，并对各种机器进行了一些历史性讨论。==
 
   
@@ -11829,7 +10431,6 @@ A nice overview of the differences between paging and segmentation, with some hi
   
 
 One of the earliest papers to discuss fragmentation.
-
 ==最早讨论碎片的论文之一。==
 
   
@@ -11841,1848 +10442,1540 @@ One of the earliest papers to discuss fragmentation.
   
 
 A great survey paper on memory allocators.
-
 ==一篇关于内存分配器的精彩综述论文。==
 
   
 
 Homework (Simulation)
-
 ==作业（模拟）==
 
   
 
 This program allows you to see how address translations are performed in a system with segmentation.
-
 ==该程序允许你查看在具有分段的系统中是如何执行地址转换的。==
 
   
 
 See the README for details.
-
 ==详情请参阅 README。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. First let's use a tiny address space to translate some addresses.
-
 ==2. 首先，让我们使用一个微小的地址空间来转换一些地址。==
 
   
 
 Here's a simple set of parameters with a few different random seeds; can you translate the addresses?
-
 ==这里有一组简单的参数和几个不同的随机种子；你能转换这些地址吗？==
 
   
 
 2. Now, let's see if we understand this tiny address space we've constructed (using the parameters from the question above).
-
 ==3. 现在，让我们看看我们是否理解了我们构建的这个微小地址空间（使用上面问题中的参数）。==
 
   
 
 What is the highest legal virtual address in segment 0?
-
 ==段 0 中最高的合法虚拟地址是多少？==
 
   
 
 What about the lowest legal virtual address in segment 1?
-
 ==段 1 中最低的合法虚拟地址呢？==
 
   
 
 What are the lowest and highest illegal addresses in this entire address space?
-
 ==这整个地址空间中最低和最高的非法地址是多少？==
 
   
 
 Finally, how would you run segmentation.py with the -A flag to test if you are right?
-
 ==最后，你应该如何使用 -A 标志运行 segmentation.py 来测试你是否正确？==
 
   
 
 3. Let's say we have a tiny 16-byte address space in a 128-byte physical memory.
-
 ==4. 假设我们在 128 字节的物理内存中有一个 16 字节的微小地址空间。==
 
   
 
 What base and bounds would you set up so as to get the simulator to generate the following translation results for the specified address stream: valid, valid, violation, ..., violation, valid, valid?
-
 ==你会设置什么样的基址和界限，以便让模拟器为指定的地址流生成以下转换结果：有效、有效、违规、......、违规、有效、有效？==
 
   
 
 4. Assume we want to generate a problem where roughly 90% of the randomly-generated virtual addresses are valid (not segmentation violations).
-
 ==5. 假设我们想生成一个问题，其中大约 90% 的随机生成的虚拟地址是有效的（没有分段违规）。==
 
   
 
 How should you configure the simulator to do so?
-
 ==你应该如何配置模拟器来做到这一点？==
 
   
 
 Which parameters are important to getting this outcome?
-
 ==哪些参数对获得此结果很重要？==
 
   
 
 5. Can you run the simulator such that no virtual addresses are valid? How?
-
 ==6. 你能运行模拟器使得没有虚拟地址是有效的吗？如何做到？==
 
   
 
 Free-Space Management
-
 ==空闲空间管理==
 
   
 
 In this chapter, we take a small detour from our discussion of virtualizing memory to discuss a fundamental aspect of any memory management system, whether it be a malloc library (managing pages of a process's heap) or the OS itself (managing portions of the address space of a process).
-
 ==在本章中，我们在讨论虚拟化内存的过程中稍作偏离，转而讨论任何内存管理系统的一个基本方面，无论是 malloc 库（管理进程堆的页面）还是操作系统本身（管理进程地址空间的部分）。==
 
   
 
 Specifically, we will discuss the issues surrounding free-space management.
-
 ==具体来说，我们将讨论围绕空闲空间管理的问题。==
 
   
 
 Let us make the problem more specific.
-
 ==让我们把问题具体化。==
 
   
 
 Managing free space can certainly be easy, as we will see when we discuss the concept of paging.
-
 ==管理空闲空间当然可以很容易，正如我们在讨论分页概念时将看到的那样。==
 
   
 
 It is easy when the space you are managing is divided into fixed-sized units.
-
 ==当你管理的每个空间被划分为固定大小的单元时，这很容易。==
 
   
 
 In such a case, you just keep a list of these fixed-sized units; when a client requests one of them, return the first entry.
-
 ==在这种情况下，你只需要保留这些固定大小单元的列表；当客户端请求其中一个时，返回第一个条目。==
 
   
 
 Where free-space management becomes more difficult (and interesting) is when the free space you are managing consists of variable-sized units.
-
 ==当你要管理的空闲空间由可变大小的单元组成时，空闲空间管理就变得更加困难（也更有趣）。==
 
   
 
 This arises in a user-level memory-allocation library (as in malloc() and free()) and in an OS managing physical memory when using segmentation to implement virtual memory.
-
 ==这出现在用户级内存分配库（如 malloc() 和 free()）中，以及在使用分段实现虚拟内存时管理物理内存的操作系统中。==
 
   
 
 In either case, the problem that exists is known as external fragmentation: the free space gets chopped into little pieces of different sizes and is thus fragmented.
-
 ==在任何一种情况下，存在的问题被称为外部碎片：空闲空间被切成不同大小的小块，从而变得支离破碎。==
 
   
 
 Subsequent requests may fail because there is no single contiguous space that can satisfy the request, even though the total amount of free space exceeds the size of the request.
-
 ==随后的请求可能会失败，因为没有单个连续的空间可以满足请求，即使空闲空间的总量超过了请求的大小。==
 
   
 
 The figure shows an example of this problem.
-
 ==图示展示了这个问题的一个例子。==
 
   
 
 In this case, the total free space available is 20 bytes; unfortunately, it is fragmented into two chunks of size 10 each.
-
 ==在这种情况下，可用的总空闲空间是 20 字节；不幸的是，它被分割成两个各 10 字节的块。==
 
   
 
 As a result, a request for 15 bytes will fail even though there are 20 bytes free.
-
 ==结果，即使有 20 字节空闲，15 字节的请求也会失败。==
 
   
 
 And thus we arrive at the problem addressed in this chapter.
-
 ==因此，我们引出了本章要解决的问题。==
 
   
 
 CRUX: HOW TO MANAGE FREE SPACE
-
 ==关键问题：如何管理空闲空间==
 
   
 
 How should free space be managed, when satisfying variable-sized requests?
-
 ==在满足可变大小的请求时，应如何管理空闲空间？==
 
   
 
 What strategies can be used to minimize fragmentation?
-
 ==可以使用什么策略来最小化碎片？==
 
   
 
 What are the time and space overheads of alternate approaches?
-
 ==替代方案的时间和空间开销是多少？==
 
   
 
 17.1 Assumptions
-
 ==17.1 假设==
 
   
 
 Most of this discussion will focus on the great history of allocators found in user-level memory-allocation libraries.
-
 ==大部分讨论将集中在用户级内存分配库中发现的分配器的伟大历史上。==
 
   
 
 We draw on Wilson's excellent survey [W+95] but encourage interested readers to go to the source document itself for more details¹.
-
 ==我们借鉴了 Wilson 的精彩调查 [W+95]，但鼓励感兴趣的读者去查阅源文档以获取更多细节¹。==
 
   
 
 1 It is nearly 80 pages long; thus, you really have to be interested!
-
 ==脚注 1：它将近 80 页长；因此，你真的必须很感兴趣！==
 
   
 
 We assume a basic interface such as that provided by malloc() and free().
-
 ==我们假设有一个基本的接口，如 malloc() 和 free() 提供的接口。==
 
   
 
 Specifically, void malloc(size_t size) takes a single parameter, size, which is the number of bytes requested by the application.
-
 ==具体来说，void malloc(size_t size) 接受一个参数 size，即应用程序请求的字节数。==
 
   
 
 It hands back a pointer (of no particular type, or a void pointer in C lingo) to a region of that size (or greater).
-
 ==它返回一个指向该大小（或更大）区域的指针（没有特定类型，或者用 C 语言术语说是 void 指针）。==
 
   
 
 The complementary routine void free(void *ptr) takes a pointer and frees the corresponding chunk.
-
 ==互补的例程 void free(void *ptr) 接受一个指针并释放相应的块。==
 
   
 
 Note the implication of the interface: the user, when freeing the space, does not inform the library of its size.
-
 ==注意该接口的含义：用户在释放空间时，不通知库它的大小。==
 
   
 
 Thus, the library must be able to figure out how big a chunk of memory is when handed just a pointer to it.
-
 ==因此，库必须能够在其仅被传递一个指针时，弄清楚一块内存有多大。==
 
   
 
 We'll discuss how to do this a bit later on in the chapter.
-
 ==稍后我们将在本章讨论如何做到这一点。==
 
   
 
 The space that this library manages is known historically as the heap, and the generic data structure used to manage free space in the heap is some kind of free list.
-
 ==该库管理的空间在历史上被称为堆，用于管理堆中空闲空间的通用数据结构是某种空闲列表。==
 
   
 
 This structure contains references to all of the free chunks of space in the managed region of memory.
-
 ==该结构包含对受管内存区域中所有空闲空间块的引用。==
 
   
 
 Of course, this data structure need not be a list per se, but just some kind of data structure to track free space.
-
 ==当然，这个数据结构本身不必是一个列表，而只是某种用于跟踪空闲空间的数据结构。==
 
   
 
 We further assume that primarily we are concerned with external fragmentation, as described above.
-
 ==我们进一步假设，如上所述，我们主要关注外部碎片。==
 
   
 
 Allocators could of course also have the problem of internal fragmentation.
-
 ==分配器当然也可能存在内部碎片的问题。==
 
   
 
 If an allocator hands out chunks of memory bigger than that requested, any unasked for (and thus unused) space in such a chunk is considered internal fragmentation (because the waste occurs inside the allocated unit) and is another example of space waste.
-
 ==如果分配器分发的内存块大于请求的内存块，那么该块中任何未被请求（因此未被使用）的空间都被视为内部碎片（因为浪费发生在分配单元内部），这是空间浪费的另一个例子。==
 
   
 
 However, for the sake of simplicity, and because it is the more interesting of the two types of fragmentation, we'll mostly focus on external fragmentation.
-
 ==然而，为了简单起见，也因为它是两种碎片类型中更有趣的一种，我们将主要关注外部碎片。==
 
   
 
 We'll also assume that once memory is handed out to a client, it cannot be relocated to another location in memory.
-
 ==我们还假设，一旦内存被分发给客户端，它就不能被重定位到内存中的另一个位置。==
 
   
 
 For example, if a program calls malloc() and is given a pointer to some space within the heap, that memory region is essentially "owned" by the program (and cannot be moved by the library) until the program returns it via a corresponding call to free().
-
 ==例如，如果程序调用 malloc() 并获得指向堆内某个空间的指针，则该内存区域本质上由程序“拥有”（并且库不能移动它），直到程序通过相应的 free() 调用将其归还。==
 
   
 
 Thus, no compaction of free space is possible, which would be useful to combat fragmentation².
-
 ==因此，不可能对空闲空间进行压缩，而压缩本可用于对抗碎片²。==
 
   
 
 2 Once you hand a pointer to a chunk of memory to a C program, it is generally difficult to determine all references (pointers) to that region, which may be stored in other variables or even in registers at a given point in execution.
-
 ==脚注 2：一旦你将指向内存块的指针传递给 C 程序，通常很难确定对该区域的所有引用（指针），这些引用可能存储在其他变量中，甚至在执行的某个时刻存储在寄存器中。==
 
   
 
 This may not be the case in more strongly-typed, garbage-collected languages, which would thus enable compaction as a technique to combat fragmentation.
-
 ==在更强类型、有垃圾回收的语言中情况可能并非如此，这使得压缩成为一种对抗碎片的技术。==
 
   
 
 Compaction could, however, be used in the OS to deal with fragmentation when implementing segmentation (as discussed in said chapter on segmentation).
-
 ==然而，在实现分段时（如在分段一章中所讨论的），操作系统可以使用压缩来处理碎片。==
 
   
 
 Finally, we'll assume that the allocator manages a contiguous region of bytes.
-
 ==最后，我们假设分配器管理一个连续的字节区域。==
 
   
 
 In some cases, an allocator could ask for that region to grow.
-
 ==在某些情况下，分配器可以要求该区域增长。==
 
   
 
 For example, a user-level memory-allocation library might call into the kernel to grow the heap (via a system call such as sbrk) when it runs out of space.
-
 ==例如，当用户级内存分配库空间耗尽时，它可能会调用内核来增加堆（通过系统调用，如 sbrk）。==
 
   
 
 However, for simplicity, we'll just assume that the region is a single fixed size throughout its life.
-
 ==然而，为了简单起见，我们仅假设该区域在其整个生命周期中都是单一的固定大小。==
 
   
 
 17.2 Low-level Mechanisms
-
 ==17.2 低级机制==
 
   
 
 Before delving into some policy details, we'll first cover some common mechanisms used in most allocators.
-
 ==在深入研究一些策略细节之前，我们将首先介绍大多数分配器中使用的一些常见机制。==
 
   
 
 First, we'll discuss the basics of splitting and coalescing, common techniques in most any allocator.
-
 ==首先，我们将讨论分割和合并的基础知识，这是大多数分配器中的常用技术。==
 
   
 
 Second, we'll show how one can track the size of allocated regions quickly and with relative ease.
-
 ==其次，我们将展示如何快速且相对轻松地跟踪已分配区域的大小。==
 
   
 
 Finally, we'll discuss how to build a simple list inside the free space to keep track of what is free and what isn't.
-
 ==最后，我们将讨论如何在空闲空间内建立一个简单的列表，以跟踪哪些是空闲的，哪些不是。==
 
   
 
 Splitting and Coalescing
-
 ==分割与合并==
 
   
 
 A free list contains a set of elements that describe the free space still remaining in the heap.
-
 ==空闲列表包含一组描述堆中剩余空闲空间的元素。==
 
   
 
 Thus, assume the following 30-byte heap:
-
 ==因此，假设有以下 30 字节的堆：==
 
   
 
 The free list for this heap would have two elements on it.
-
 ==该堆的空闲列表将有两个元素。==
 
   
 
 One entry describes the first 10-byte free segment (bytes 0-9), and one entry describes the other free segment (bytes 20-29).
-
 ==一个条目描述第一个 10 字节的空闲段（字节 0-9），另一个条目描述另一个空闲段（字节 20-29）。==
 
   
 
 head -> addr:0 len:10 -> addr:20 len:10 -> NULL
-
 ==头 -> 地址:0 长度:10 -> 地址:20 长度:10 -> NULL==
 
   
 
 As described above, a request for anything greater than 10 bytes will fail (returning NULL); there just isn't a single contiguous chunk of memory of that size available.
-
 ==如上所述，任何大于 10 字节的请求都将失败（返回 NULL）；因为根本没有那么大的单个连续内存块可用。==
 
   
 
 A request for exactly that size (10 bytes) could be satisfied easily by either of the free chunks.
-
 ==正好该大小（10 字节）的请求可以很容易地由任一空闲块满足。==
 
   
 
 But what happens if the request is for something smaller than 10 bytes?
-
 ==但是如果请求小于 10 字节会发生什么？==
 
   
 
 Assume we have a request for just a single byte of memory.
-
 ==假设我们只请求一个字节的内存。==
 
   
 
 In this case, the allocator will perform an action known as splitting: it will find a free chunk of memory that can satisfy the request and split it into two.
-
 ==在这种情况下，分配器将执行一种称为分割的操作：它将找到一个可以满足请求的空闲内存块，并将其分成两部分。==
 
 
 FREE-SPACE MANAGEMENT
-
 ==空闲空间管理==
 
   
 
 a free chunk of memory that can satisfy the request and split it into two.
-
 ==一个能满足请求的空闲内存块，并将其分割为两部分。==
 
   
 
 The first chunk it will return to the caller; the second chunk will remain on the list.
-
 ==第一块将返回给调用者；第二块将保留在列表中。==
 
   
 
 Thus, in our example above, if a request for 1 byte were made, and the allocator decided to use the second of the two elements on the list to satisfy the request, the call to malloc() would return 20 (the address of the 1-byte allocated region) and the list would end up looking like this:
-
 ==因此，在上文的示例中，如果有一个 1 字节的请求，且分配器决定使用列表中的第二个元素来满足该请求，那么对 malloc() 的调用将返回 20（即 1 字节已分配区域的地址），列表最终将变成这样：==
 
   
 
 In the picture, you can see the list basically stays intact;
-
 ==在图中，你可以看到列表基本保持原样；==
 
   
 
 the only change is that the free region now starts at 21 instead of 20, and the length of that free region is now just 9.
-
 ==唯一的变化是，空闲区域现在从 21 开始，而不是 20，且该空闲区域的长度现在仅为 9。==
 
   
 
 Thus, the split is commonly used in allocators when requests are smaller than the size of any particular free chunk.
-
 ==因此，当请求的大小小于任何特定空闲块的大小时，分配器通常使用“分割”机制。==
 
   
 
 A corollary mechanism found in many allocators is known as coalescing of free space.
-
 ==许多分配器中存在的一个推论机制被称为空闲空间的合并。==
 
   
 
 Take our example from above once more (free 10 bytes, used 10 bytes, and another free 10 bytes).
-
 ==再次使用上面的例子（空闲 10 字节，已用 10 字节，以及另一个空闲 10 字节）。==
 
   
 
 Given this (tiny) heap, what happens when an application calls free(10), thus returning the space in the middle of the heap?
-
 ==给定这个（微小的）堆，当应用程序调用 free(10) 从而归还堆中间的空间时，会发生什么？==
 
   
 
 If we simply add this free space back into our list without too much thinking, we might end up with a list that looks like this:
-
 ==如果我们不假思索地简单将此空闲空间加回列表，我们可能会得到一个如下所示的列表：==
 
   
 
 Note the problem: while the entire heap is now free, it is seemingly divided into three chunks of 10 bytes each.
-
 ==注意这个问题：虽然整个堆现在都是空闲的，但它似乎被分割成了三个各为 10 字节的块。==
 
   
 
 Thus, if a user requests 20 bytes, a simple list traversal will not find such a free chunk, and return failure.
-
 ==因此，如果用户请求 20 字节，简单的列表遍历将找不到这样的空闲块，并返回失败。==
 
   
 
 What allocators do in order to avoid this problem is coalesce free space when a chunk of memory is freed.
-
 ==为了避免这个问题，分配器所做的是在释放内存块时合并空闲空间。==
 
   
 
 The idea is simple: when returning a free chunk in memory, look carefully at the addresses of the chunk you are returning as well as the nearby chunks of free space;
-
 ==思路很简单：当归还内存中的一个空闲块时，仔细查看你正在归还的块的地址以及附近的空闲空间块；==
 
   
 
 if the newly-freed space sits right next to one (or two, as in this example) existing free chunks, merge them into a single larger free chunk.
-
 ==如果新释放的空间紧邻一个（或两个，如本例所示）现有的空闲块，则将它们合并为一个更大的空闲块。==
 
   
 
 Thus, with coalescing, our final list should look like this:
-
 ==因此，经过合并，我们最终的列表应该如下所示：==
 
   
 
 Indeed, this is what the heap list looked like at first, before any allocations were made.
-
 ==确实，这正是堆列表起初的样子，在进行任何分配之前。==
 
   
 
 With coalescing, an allocator can better ensure that large free extents are available for the application.
-
 ==通过合并，分配器可以更好地确保应用程序有可用的连续大块空闲空间。==
 
   
 
 This discussion assumes that there are no headers, an unrealistic but simplifying assumption we make for now.
-
 ==此讨论假设没有头部信息（headers），这是一个不切实际但为了简化我们目前讨论的假设。==
 
   
 
 Tracking The Size Of Allocated Regions
-
 ==跟踪已分配区域的大小==
 
   
 
 You might have noticed that the interface to free (void *ptr) does not take a size parameter;
-
 ==你可能已经注意到，free (void *ptr) 接口不接受大小参数；==
 
   
 
 thus it is assumed that given a pointer, the malloc library can quickly determine the size of the region of memory being freed and thus incorporate the space back into the free list.
-
 ==因此可以假设，给定一个指针，malloc 库可以快速确定正在释放的内存区域的大小，从而将该空间并回空闲列表。==
 
   
 
 To accomplish this task, most allocators store a little bit of extra information in a header block which is kept in memory, usually just before the handed-out chunk of memory.
-
 ==为了完成这项任务，大多数分配器在内存中保留的头部块（header block）里存储少量额外信息，该头部块通常刚好位于分发出的内存块之前。==
 
   
 
 Let's look at an example again.
-
 ==让我们再看一个例子。==
 
   
 
 In this example, we are examining an allocated block of size 20 bytes, pointed to by ptr;
-
 ==在这个例子中，我们要检查一个由 ptr 指向的大小为 20 字节的已分配块；==
 
   
 
 imagine the user called malloc() and stored the results in ptr, e.g., ptr = malloc(20);.
-
 ==想象一下用户调用了 malloc() 并将结果存储在 ptr 中，例如 ptr = malloc(20);。==
 
   
 
 The header minimally contains the size of the allocated region (in this case, 20);
-
 ==头部至少包含已分配区域的大小（在本例中为 20）；==
 
   
 
 it may also contain additional pointers to speed up deallocation, a magic number to provide additional integrity checking, and other information.
-
 ==它还可能包含用于加速释放过程的额外指针、用于提供额外完整性检查的幻数（magic number）以及其他信息。==
 
   
 
 Let's assume a simple header which contains the size of the region and a magic number, like this:
-
 ==让我们假设一个简单的头部，它包含区域的大小和一个幻数，如下所示：==
 
   
 
 When the user calls free (ptr), the library then uses simple pointer arithmetic to figure out where the header begins:
-
 ==当用户调用 free (ptr) 时，库便使用简单的指针算术运算来计算头部的起始位置：==
 
   
 
 After obtaining such a pointer to the header, the library can easily determine whether the magic number matches the expected value as a sanity check (assert (hptr->magic == 1234567)) and calculate the total size of the newly-freed region via simple math (i.e., adding the size of the header to size of the region).
-
 ==在获得指向头部的指针后，库可以轻松地确定幻数是否与预期值匹配以作为完整性检查（assert (hptr->magic == 1234567)），并通过简单的数学运算（即，将头部的大小加上区域的大小）计算新释放区域的总大小。==
 
   
 
 Note the small but critical detail in the last sentence: the size of the free region is the size of the header plus the size of the space allocated to the user.
-
 ==注意最后一句中微小但关键的细节：空闲区域的大小是头部的大小加上分配给用户的空间大小。==
 
   
 
 Thus, when a user requests N bytes of memory, the library does not search for a free chunk of size N;
-
 ==因此，当用户请求 N 字节的内存时，库不会搜索大小为 N 的空闲块；==
 
   
 
 rather, it searches for a free chunk of size N plus the size of the header.
-
 ==相反，它搜索的是大小为 N 加上头部大小的空闲块。==
 
   
 
 Embedding A Free List
-
 ==嵌入空闲列表==
 
   
 
 Thus far we have treated our simple free list as a conceptual entity;
-
 ==到目前为止，我们将简单的空闲列表视为一个概念实体；==
 
   
 
 it is just a list describing the free chunks of memory in the heap.
-
 ==它只是一个描述堆中空闲内存块的列表。==
 
   
 
 But how do we build such a list inside the free space itself?
-
 ==但是，我们如何在空闲空间本身内部构建这样一个列表呢？==
 
   
 
 In a more typical list, when allocating a new node, you would just call malloc() when you need space for the node.
-
 ==在一个更典型的列表中，当分配一个新节点时，你会在需要节点空间时直接调用 malloc()。==
 
   
 
 Unfortunately, within the memory-allocation library, you can't do this!
-
 ==不幸的是，在内存分配库内部，你不能这样做！==
 
   
 
 Instead, you need to build the list inside the free space itself.
-
 ==相反，你需要在空闲空间内部构建该列表。==
 
   
 
 Don't worry if this sounds a little weird; it is, but not so weird that you can't do it!
-
 ==如果这听起来有点奇怪，别担心；它确实有点怪，但还没怪到让你无法做到的地步！==
 
   
 
 Assume we have a 4096-byte chunk of memory to manage (i.e., the heap is 4KB).
-
 ==假设我们要管理一个 4096 字节的内存块（即堆大小为 4KB）。==
 
   
 
 To manage this as a free list, we first have to initialize said list;
-
 ==为了将其作为空闲列表进行管理，我们首先必须初始化该列表；==
 
   
 
 initially, the list should have one entry, of size 4096 (minus the header size).
-
 ==最初，列表中应该有一个条目，大小为 4096（减去头部大小）。==
 
   
 
 Now let's look at some code that initializes the heap and puts the first element of the free list inside that space.
-
 ==现在让我们看一些代码，这些代码用于初始化堆并将空闲列表的第一个元素放入该空间内。==
 
   
 
 We are assuming that the heap is built within some free space acquired via a call to the system call mmap();
-
 ==我们假设堆是建立在通过调用系统调用 mmap() 获取的空闲空间内的；==
 
   
 
 this is not the only way to build such a heap but serves us well in this example.
-
 ==这不是构建此类堆的唯一方法，但在本例中很适用。==
 
   
 
 After running this code, the status of the list is that it has a single entry, of size 4088.
-
 ==运行此代码后，列表的状态是它只有一个条目，大小为 4088。==
 
   
 
 Yes, this is a tiny heap, but it serves as a fine example for us here.
-
 ==是的，这是一个微小的堆，但它在这里作为一个很好的例子为我们服务。==
 
   
 
 The head pointer contains the beginning address of this range;
-
 ==头指针包含此范围的起始地址；==
 
   
 
 let's assume it is 16KB (though any virtual address would be fine).
-
 ==让我们假设它是 16KB（尽管任何虚拟地址都可以）。==
 
   
 
 Visually, the heap thus looks like what you see in Figure 17.3.
-
 ==直观地说，堆看起来如图 17.3 所示。==
 
   
 
 Now, let's imagine that a chunk of memory is requested, say of size 100 bytes.
-
 ==现在，让我们想象有一个内存块请求，比如大小为 100 字节。==
 
   
 
 To service this request, the library will first find a chunk that is large enough to accommodate the request;
-
 ==为了满足此请求，库将首先找到一个足以容纳该请求的块；==
 
   
 
 because there is only one free chunk (size: 4088), this chunk will be chosen.
-
 ==因为只有一个空闲块（大小：4088），所以将选择该块。==
 
   
 
 Then, the chunk will be split into two: one chunk big enough to service the request (and header, as described above), and the remaining free chunk.
-
 ==然后，该块将被分成两部分：一块大到足以满足请求（以及头部，如上所述），以及剩余的空闲块。==
 
   
 
 Assuming an 8-byte header (an integer size and an integer magic number), the space in the heap now looks like what you see in Figure 17.4.
-
 ==假设有一个 8 字节的头部（一个整数大小和一个整数幻数），堆中的空间现在看起来如图 17.4 所示。==
 
   
 
 Thus, upon the request for 100 bytes, the library allocated 108 bytes out of the existing one free chunk, returns a pointer (marked ptr in the figure above) to it, stashes the header information immediately before the allocated space for later use upon free (), and shrinks the one free node in the list to 3980 bytes (4088 minus 108).
-
 ==因此，在请求 100 字节时，库从现有的一个空闲块中分配了 108 字节，返回指向它的指针（在上图中标记为 ptr），将头部信息存储在已分配空间之前以便稍后在 free() 时使用，并将列表中的那个空闲节点缩小为 3980 字节（4088 减去 108）。==
 
   
 
 Now let's look at the heap when there are three allocated regions, each of 100 bytes (or 108 including the header).
-
 ==现在让我们看看当有三个已分配区域时的堆，每个区域为 100 字节（或包含头部为 108 字节）。==
 
   
 
 A visualization of this heap is shown in Figure 17.5.
-
 ==此堆的可视化如图 17.5 所示。==
 
   
 
 As you can see therein, the first 324 bytes of the heap are now allocated, and thus we see three headers in that space as well as three 100-byte regions being used by the calling program.
-
 ==正如你在其中看到的，堆的前 324 个字节现在已分配，因此我们在该空间中看到了三个头部，以及正在被调用程序使用的三个 100 字节区域。==
 
   
 
 The free list remains uninteresting: just a single node (pointed to by head), but now only 3764 bytes in size after the three splits.
-
 ==空闲列表仍然没什么特别：只有一个节点（由 head 指向），但在三次分割后大小仅为 3764 字节。==
 
   
 
 But what happens when the calling program returns some memory via free ()?
-
 ==但是当调用程序通过 free() 归还一些内存时会发生什么？==
 
   
 
 In this example, the application returns the middle chunk of allocated memory, by calling free (16500) (the value 16500 is arrived upon by adding the start of the memory region, 16384, to the 108 of the previous chunk and the 8 bytes of the header for this chunk).
-
 ==在此示例中，应用程序通过调用 free(16500) 归还已分配内存的中间块（值 16500 是通过将内存区域的起始位置 16384 加上前一个块的 108 和此块的 8 字节头部得出的）。==
 
   
 
 The library immediately figures out the size of the free region, and then adds the free chunk back onto the free list.
-
 ==库立即计算出空闲区域的大小，然后将空闲块加回空闲列表。==
 
   
 
 Assuming we insert at the head of the free list, the space now looks like this (Figure 17.6).
-
 ==假设我们在空闲列表的头部插入，空间现在看起来像这样（图 17.6）。==
 
   
 
 Now we have a list that starts with a small free chunk (100 bytes, pointed to by the head of the list) and a large free chunk (3764 bytes).
-
 ==现在我们有了一个列表，它以一个小空闲块（100 字节，由列表的 head 指向）开始，后面跟着一个大空闲块（3764 字节）。==
 
   
 
 Our list finally has more than one element on it!
-
 ==我们的列表终于包含不止一个元素了！==
 
   
 
 And yes, the free space is fragmented, an unfortunate but common occurrence.
-
 ==是的，空闲空间被碎片化了，这是一种不幸但常见的情况。==
 
   
 
 One last example: let's assume now that the last two in-use chunks are freed.
-
 ==最后一个例子：让我们假设现在最后两个使用中的块被释放了。==
 
   
 
 Without coalescing, you end up with fragmentation (Figure 17.7).
-
 ==如果不进行合并，你最终会得到碎片（图 17.7）。==
 
   
 
 As you can see from the figure, we now have a big mess!
-
 ==从图中可以看出，我们现在遇到大麻烦了！==
 
   
 
 Why?
-
 ==为什么？==
 
   
 
 Simple, we forgot to coalesce the list.
-
 ==很简单，我们忘记合并列表了。==
 
   
 
 Although all of the memory is free, it is chopped up into pieces, thus appearing as a fragmented memory despite not being one.
-
 ==虽然所有的内存都是空闲的，但它被切成了碎片，因此尽管它本质上不是碎片化的，但表现得像是碎片化内存。==
 
   
 
 The solution is simple: go through the list and merge neighboring chunks;
-
 ==解决方案很简单：遍历列表并合并相邻的块；==
 
   
 
 when finished, the heap will be whole again.
-
 ==完成后，堆将再次变回一个整体。==
 
   
 
 Growing The Heap
-
 ==扩展堆==
 
   
 
 We should discuss one last mechanism found within many allocation libraries.
-
 ==我们应该讨论许多分配库中存在的最后一个机制。==
 
   
 
 Specifically, what should you do if the heap runs out of space?
-
 ==具体来说，如果堆空间耗尽，你应该怎么做？==
 
   
 
 The simplest approach is just to fail.
-
 ==最简单的方法就是直接失败。==
 
   
 
 In some cases this is the only option, and thus returning NULL is an honorable approach.
-
 ==在某些情况下，这是唯一的选择，因此返回 NULL 是一个可敬的做法。==
 
   
 
 Don't feel bad!
-
 ==别难过！==
 
   
 
 You tried, and though you failed, you fought the good fight.
-
 ==你尝试了，虽然失败了，但你已经尽力了。==
 
   
 
 Most traditional allocators start with a small-sized heap and then request more memory from the OS when they run out.
-
 ==大多数传统的分配器从一个小规模的堆开始，然后在耗尽时向操作系统请求更多内存。==
 
   
 
 Typically, this means they make some kind of system call (e.g., sbrk in most UNIX systems) to grow the heap, and then allocate the new chunks from there.
-
 ==通常，这意味着它们进行某种系统调用（例如大多数 UNIX 系统中的 sbrk）来扩展堆，然后从那里分配新的块。==
 
   
 
 To service the sbrk request, the OS finds free physical pages, maps them into the address space of the requesting process, and then returns the value of the end of the new heap;
-
 ==为了服务 sbrk 请求，操作系统找到空闲的物理页面，将它们映射到请求进程的地址空间中，然后返回新堆的末尾值；==
 
   
 
 at that point, a larger heap is available, and the request can be successfully serviced.
-
 ==此时，一个更大的堆可用了，请求可以被成功满足。==
 
   
 
 17.3 Basic Strategies
-
 ==17.3 基本策略==
 
   
 
 Now that we have some machinery under our belt, let's go over some basic strategies for managing free space.
-
 ==现在我们已经掌握了一些机制，让我们复习一些管理空闲空间的基本策略。==
 
   
 
 These approaches are mostly based on pretty simple policies that you could think up yourself;
-
 ==这些方法大多基于你自己就能想出来的非常简单的策略；==
 
   
 
 try it before reading and see if you come up with all of the alternatives (or maybe some new ones!).
-
 ==在阅读之前试一试，看看你是否能想出所有的替代方案（或者也许是一些新的方案！）。==
 
   
 
 The ideal allocator is both fast and minimizes fragmentation.
-
 ==理想的分配器既快速又能最大限度地减少碎片。==
 
   
 
 Unfortunately, because the stream of allocation and free requests can be arbitrary (after all, they are determined by the programmer), any particular strategy can do quite badly given the wrong set of inputs.
-
 ==不幸的是，由于分配和释放请求流可能是任意的（毕竟，它们是由程序员决定的），任何特定的策略在错误的输入集下都可能表现得很差。==
 
   
 
 Thus, we will not describe a "best" approach, but rather talk about some basics and discuss their pros and cons.
-
 ==因此，我们将不描述“最佳”方法，而是谈论一些基础知识并讨论它们的优缺点。==
 
   
 
 Best Fit
-
 ==最佳适应 (Best Fit)==
 
   
 
 The best fit strategy is quite simple: first, search through the free list and find chunks of free memory that are as big or bigger than the requested size.
-
 ==最佳适应策略非常简单：首先，搜索空闲列表并找到大小等于或大于请求大小的空闲内存块。==
 
   
 
 Then, return the one that is the smallest in that group of candidates;
-
 ==然后，返回该候选组中最小的一个；==
 
   
 
 this is the so called best-fit chunk (it could be called smallest fit too).
-
 ==这就是所谓的最佳适应块（也可以称为最小适应）。==
 
   
 
 One pass through the free list is enough to find the correct block to return.
-
 ==遍历一遍空闲列表就足以找到要返回的正确块。==
 
   
 
 The intuition behind best fit is simple: by returning a block that is close to what the user asks, best fit tries to reduce wasted space.
-
 ==最佳适应背后的直觉很简单：通过返回接近用户要求的块，最佳适应试图减少浪费的空间。==
 
   
 
 However, there is a cost; naive implementations pay a heavy performance penalty when performing an exhaustive search for the correct free block.
-
 ==然而，这是有代价的；朴素的实现在执行穷举搜索以寻找正确空闲块时会付出沉重的性能代价。==
 
   
 
 Worst Fit
-
 ==最差适应 (Worst Fit)==
 
   
 
 The worst fit approach is the opposite of best fit; find the largest chunk and return the requested amount;
-
 ==最差适应方法与最佳适应相反；找到最大的块并返回请求的数量；==
 
   
 
 keep the remaining (large) chunk on the free list.
-
 ==将剩余的（大）块保留在空闲列表中。==
 
   
 
 Worst fit tries to thus leave big chunks free instead of lots of small chunks that can arise from a best-fit approach.
-
 ==最差适应试图以此保留大的空闲块，而不是像最佳适应方法那样产生许多小块。==
 
   
 
 Once again, however, a full search of free space is required, and thus this approach can be costly.
-
 ==然而，这再一次需要对空闲空间进行全面搜索，因此这种方法的代价可能很高。==
 
   
 
 Worse, most studies show that it performs badly, leading to excess fragmentation while still having high overheads.
-
 ==更糟糕的是，大多数研究表明它表现不佳，导致过多的碎片，同时仍具有很高的开销。==
 
   
 
 First Fit
-
 ==首次适应 (First Fit)==
 
   
 
 The first fit method simply finds the first block that is big enough and returns the requested amount to the user.
-
 ==首次适应方法只是简单地找到第一个足够大的块，并将请求的数量返回给用户。==
 
   
 
 As before, the remaining free space is kept free for subsequent requests.
-
 ==如前所述，剩余的空闲空间保留为空闲状态以供后续请求使用。==
 
   
 
 First fit has the advantage of speed no exhaustive search of all the free spaces are necessary - but sometimes pollutes the beginning of the free list with small objects.
-
 ==首次适应具有速度优势——不需要对所有空闲空间进行详尽搜索——但有时会用小对象污染空闲列表的开头。==
 
   
 
 Thus, how the allocator manages the free list's order becomes an issue.
-
 ==因此，分配器如何管理空闲列表的顺序成为一个问题。==
 
   
 
 One approach is to use address-based ordering;
-
 ==一种方法是使用基于地址的排序；==
 
   
 
 by keeping the list ordered by the address of the free space, coalescing becomes easier, and fragmentation tends to be reduced.
-
 ==通过保持列表按空闲空间的地址排序，合并变得更容易，碎片化也倾向于减少。==
 
   
 
 Next Fit
-
 ==下次适应 (Next Fit)==
 
   
 
 Instead of always beginning the first-fit search at the beginning of the list, the next fit algorithm keeps an extra pointer to the location within the list where one was looking last.
-
 ==下次适应算法不总是从列表的开头开始首次适应搜索，而是保留一个额外的指针，指向上次查找结束的列表位置。==
 
   
 
 The idea is to spread the searches for free space throughout the list more uniformly, thus avoiding splintering of the beginning of the list.
-
 ==其想法是将对空闲空间的搜索更均匀地分布在整个列表中，从而避免列表开头的碎片化。==
 
   
 
 The performance of such an approach is quite similar to first fit, as an exhaustive search is once again avoided.
-
 ==这种方法的性能与首次适应非常相似，因为再次避免了穷举搜索。==
 
   
 
 Examples
-
 ==示例==
 
   
 
 Here are a few examples of the above strategies.
-
 ==以下是上述策略的几个示例。==
 
   
 
 Envision a free list with three elements on it, of sizes 10, 30, and 20 (we'll ignore headers and other details here, instead just focusing on how strategies operate):
-
 ==设想一个空闲列表，上面有三个元素，大小分别为 10、30 和 20（我们这里忽略头部和其他细节，仅关注策略如何运作）：==
 
   
 
 Assume an allocation request of size 15.
-
 ==假设有一个大小为 15 的分配请求。==
 
   
 
 A best-fit approach would search the entire list and find that 20 was the best fit, as it is the smallest free space that can accommodate the request.
-
 ==最佳适应方法将搜索整个列表，并发现 20 是最佳匹配，因为它是能容纳请求的最小空闲空间。==
 
   
 
 As happens in this example, and often happens with a best-fit approach, a small free chunk is now left over.
-
 ==正如在这个例子中发生的，以及在最佳适应方法中经常发生的那样，现在留下了一个小的空闲块。==
 
   
 
 A worst-fit approach is similar but instead finds the largest chunk, in this example 30.
-
 ==最差适应方法类似，但它是寻找最大的块，在本例中为 30。==
 
   
 
 The first-fit strategy, in this example, does the same thing as worst-fit, also finding the first free block that can satisfy the request.
-
 ==在此示例中，首次适应策略与最差适应做同样的事情，也是找到第一个能满足请求的空闲块。==
 
   
 
 The difference is in the search cost; both best-fit and worst-fit look through the entire list;
-
 ==区别在于搜索成本；最佳适应和最差适应都要浏览整个列表；==
 
   
 
 first-fit only examines free chunks until it finds one that fits, thus reducing search cost.
-
 ==首次适应仅检查空闲块直到找到一个合适的块，从而降低了搜索成本。==
 
   
 
 These examples just scratch the surface of allocation policies.
-
 ==这些例子仅仅触及了分配策略的皮毛。==
 
   
 
 More detailed analysis with real workloads and more complex allocator behaviors (e.g., coalescing) are required for a deeper understanding.
-
 ==需要对真实工作负载和更复杂的分配器行为（例如合并）进行更详细的分析，才能有更深入的理解。==
 
   
 
 17.4 Other Approaches
-
 ==17.4 其他方法==
 
   
 
 Beyond the basic approaches described above, there have been a host of suggested techniques and algorithms to improve memory allocation in some way.
-
 ==除了上述基本方法外，还有许多建议的技术和算法可以在某些方面改进内存分配。==
 
   
 
 We list a few of them here for your consideration (i.e., to make you think about a little more than just best-fit allocation).
-
 ==我们在这里列出其中一些供你参考（即，让你不仅仅思考最佳适应分配）。==
 
   
 
 Segregated Lists
-
 ==分离空闲列表 (Segregated Lists)==
 
   
 
 One interesting approach that has been around for some time is the use of segregated lists.
-
 ==一个已经存在一段时间的有趣方法是使用分离空闲列表。==
 
   
 
 The basic idea is simple: if a particular application has one (or a few) popular-sized request that it makes, keep a separate list just to manage objects of that size;
-
 ==基本思想很简单：如果特定应用程序有一个（或几个）它经常请求的特定大小，就保留一个单独的列表来专门管理该大小的对象；==
 
   
 
 all other requests are forwarded to a more general memory allocator.
-
 ==所有其他请求都转发给更通用的内存分配器。==
 
   
 
 The benefits of such an approach are obvious.
-
 ==这种方法的好处是显而易见的。==
 
   
 
 By having a chunk of memory dedicated for one particular size of requests, fragmentation is much less of a concern;
-
 ==通过拥有一块专用于特定大小请求的内存，碎片化就不再是一个大问题；==
 
   
 
 moreover, allocation and free requests can be served quite quickly when they are of the right size, as no complicated search of a list is required.
-
 ==此外，当分配和释放请求的大小合适时，可以非常快速地提供服务，因为不需要对列表进行复杂的搜索。==
 
   
 
 Just like any good idea, this approach introduces new complications into a system as well.
-
 ==就像任何好主意一样，这种方法也给系统引入了新的复杂性。==
 
   
 
 For example, how much memory should one dedicate to the pool of memory that serves specialized requests of a given size, as opposed to the general pool?
-
 ==例如，应该将多少内存专门用于服务给定大小的特殊请求的内存池，而不是通用池？==
 
   
 
 One particular allocator, the slab allocator by uber-engineer Jeff Bonwick (which was designed for use in the Solaris kernel), handles this issue in a rather nice way.
-
 ==由超级工程师 Jeff Bonwick 开发的一种特定分配器——Slab 分配器（专为在 Solaris 内核中使用而设计），以一种相当不错的方式处理了这个问题。==
 
   
 
 Specifically, when the kernel boots up, it allocates a number of object caches for kernel objects that are likely to be requested frequently (such as locks, file-system inodes, etc.);
-
 ==具体来说，当内核启动时，它为可能被频繁请求的内核对象（如锁、文件系统 inode 等）分配许多对象缓存；==
 
   
 
 the object caches thus are each segregated free lists of a given size and serve memory allocation and free requests quickly.
-
 ==这些对象缓存因此是各自特定大小的分离空闲列表，并能快速服务内存分配和释放请求。==
 
   
 
 When a given cache is running low on free space, it requests some slabs of memory from a more general memory allocator (the total amount requested being a multiple of the page size and the object in question).
-
 ==当给定的缓存空闲空间不足时，它会向更通用的内存分配器请求一些内存 slab（请求的总量是页面大小和相关对象的倍数）。==
 
   
 
 Conversely, when the reference counts of the objects within a given slab all go to zero, the general allocator can reclaim them from the specialized allocator, which is often done when the VM system needs more memory.
-
 ==相反，当给定 slab 内对象的引用计数全都变为零时，通用分配器可以从专用分配器回收它们，这通常在虚拟机系统需要更多内存时进行。==
 
   
 
 The slab allocator also goes beyond most segregated list approaches by keeping free objects on the lists in a pre-initialized state.
-
 ==Slab 分配器还超越了大多数分离列表方法，因为它将列表上的空闲对象保持在预初始化状态。==
 
   
 
 Bonwick shows that initialization and destruction of data structures is costly;
-
 ==Bonwick 表明，数据结构的初始化和销毁是昂贵的；==
 
   
 
 by keeping freed objects in a particular list in their initialized state, the slab allocator thus avoids frequent initialization and destruction cycles per object and thus lowers overheads noticeably.
-
 ==通过将已释放的对象保持在特定列表中的初始化状态，Slab 分配器从而避免了每个对象的频繁初始化和销毁周期，从而显著降低了开销。==
 
   
 
 Buddy Allocation
-
 ==伙伴分配 (Buddy Allocation)==
 
   
 
 Because coalescing is critical for an allocator, some approaches have been designed around making coalescing simple.
-
 ==由于合并对于分配器至关重要，因此一些方法被设计为使合并变得简单。==
 
   
 
 One good example is found in the binary buddy allocator.
-
 ==二进制伙伴分配器就是一个很好的例子。==
 
   
 
 In such a system, free memory is first conceptually thought of as one big space of size .
-
 ==在这样的系统中，空闲内存首先在概念上被视为一个大小为  的大空间。==
 
   
 
 When a request for memory is made, the search for free space recursively divides free space by two until a block that is big enough to accommodate the request is found (and a further split into two would result in a space that is too small).
-
 ==当发出内存请求时，对空闲空间的搜索会递归地将空闲空间一分为二，直到找到一个大到足以容纳请求的块（并且进一步一分为二会导致空间太小）。==
 
   
 
 At this point, the requested block is returned to the user.
-
 ==此时，请求的块被返回给用户。==
 
   
 
 Here is an example of a 64KB free space getting divided in the search for a 7KB block (Figure 17.8, page 15).
-
 ==这是一个 64KB 空闲空间在搜索 7KB 块时被分割的示例（图 17.8，第 15 页）。==
 
   
 
 In the example, the leftmost 8KB block is allocated (as indicated by the darker shade of gray) and returned to the user;
-
 ==在示例中，最左边的 8KB 块被分配（如较深的灰色所示）并返回给用户；==
 
   
 
 note that this scheme can suffer from internal fragmentation, as you are only allowed to give out power-of-two-sized blocks.
-
 ==请注意，此方案可能会遭受内部碎片的影响，因为你只被允许分发 2 的幂次大小的块。==
 
   
 
 The beauty of buddy allocation is found in what happens when that block is freed.
-
 ==伙伴分配的妙处在于当该块被释放时发生的事情。==
 
   
 
 When returning the 8KB block to the free list, the allocator checks whether the "buddy" 8KB is free;
-
 ==当将 8KB 块归还给空闲列表时，分配器会检查“伙伴” 8KB 块是否空闲；==
 
   
 
 if so, it coalesces the two blocks into a 16KB block.
-
 ==如果是，它将这两个块合并为一个 16KB 块。==
 
   
 
 The allocator then checks if the buddy of the 16KB block is still free;
-
 ==然后分配器检查 16KB 块的伙伴是否仍然空闲；==
 
   
 
 if so, it coalesces those two blocks.
-
 ==如果是，它将这两个块合并。==
 
   
 
 This recursive coalescing process continues up the tree, either restoring the entire free space or stopping when a buddy is found to be in use.
-
 ==这个递归合并过程继续沿树向上进行，要么恢复整个空闲空间，要么在发现伙伴正在使用时停止。==
 
   
 
 The reason buddy allocation works so well is that it is simple to determine the buddy of a particular block.
-
 ==伙伴分配之所以如此有效，是因为确定特定块的伙伴很简单。==
 
   
 
 How, you ask? Think about the addresses of the blocks in the free space above.
-
 ==你可能会问，怎么做到的？想想上面空闲空间中块的地址。==
 
   
 
 If you think carefully enough, you'll see that the address of each buddy pair only differs by a single bit;
-
 ==如果你仔细思考，你会发现每对伙伴的地址仅相差一位；==
 
   
 
 which bit is determined by the level in the buddy tree.
-
 ==具体是哪一位由伙伴树中的层级决定。==
 
   
 
 And thus you have a basic idea of how binary buddy allocation schemes work.
-
 ==因此，你已经基本了解了二进制伙伴分配方案是如何工作的。==
 
   
 
 Other Ideas
-
 ==其他想法==
 
   
 
 One major problem with many of the approaches described above is their lack of scaling.
-
 ==上述许多方法的一个主要问题是它们缺乏扩展性。==
 
   
 
 Specifically, searching lists can be quite slow.
-
 ==具体来说，搜索列表可能非常慢。==
 
   
 
 Thus, advanced allocators use more complex data structures to address these costs, trading simplicity for performance.
-
 ==因此，高级分配器使用更复杂的数据结构来解决这些成本问题，以牺牲简单性换取性能。==
 
   
 
 Examples include balanced binary trees, splay trees, or partially-ordered trees.
-
 ==例子包括平衡二叉树、伸展树或偏序树。==
 
   
 
 Given that modern systems often have multiple processors and run multi-threaded workloads (something you'll learn about in great detail in the section of the book on Concurrency), it is not surprising that a lot of effort has been spent making allocators work well on multiprocessor-based systems.
-
 ==鉴于现代系统通常拥有多个处理器并运行多线程工作负载（你将在本书关于并发的部分详细了解这一点），人们花费大量精力使分配器在基于多处理器的系统上良好运行也就不足为奇了。==
 
   
 
 These are but two of the thousands of ideas people have had over time about memory allocators;
-
 ==这只是人们随着时间的推移关于内存分配器的数千个想法中的两个；==
 
   
 
 read on your own if you are curious.
-
 ==如果你好奇，可以自己阅读。==
 
   
 
 Failing that, read about how the glibc allocator works, to give you a sense of what the real world is like.
-
 ==如果不想读那些，可以读读 glibc 分配器是如何工作的，以便对现实世界的情况有所了解。==
 
   
 
 17.5 Summary
-
 ==17.5 总结==
 
   
 
 In this chapter, we've discussed the most rudimentary forms of memory allocators.
-
 ==在本章中，我们讨论了最基本的内存分配器形式。==
 
   
 
 Such allocators exist everywhere, linked into every C program you write, as well as in the underlying OS which is managing memory for its own data structures.
-
 ==此类分配器无处不在，链接到你编写的每个 C 程序中，以及存在于为自身数据结构管理内存的底层操作系统中。==
 
   
 
 As with many systems, there are many trade-offs to be made in building such a system, and the more you know about the exact workload presented to an allocator, the more you could do to tune it to work better for that workload.
-
 ==与许多系统一样，在构建此类系统时需要进行许多权衡，而且你对呈现给分配器的确切工作负载了解得越多，你就越能调整它以更好地在该工作负载下工作。==
 
   
 
 Making a fast, space-efficient, scalable allocator that works well for a broad range of workloads remains an on-going challenge in modern computer systems.
-
 ==制作一个快速、节省空间、可扩展且能很好地适用于广泛工作负载的分配器，仍然是现代计算机系统中一个持续存在的挑战。==
 
   
 
 Paging: Introduction
-
 ==分页：介绍==
 
   
 
 It is sometimes said that the operating system takes one of two approaches when solving most any space-management problem.
-
 ==有时人们会说，操作系统在解决几乎所有空间管理问题时都会采取两种方法之一。==
 
   
 
 The first approach is to chop things up into variable-sized pieces, as we saw with segmentation in virtual memory.
-
 ==第一种方法是将事物切分成大小可变的块，就像我们在虚拟内存的分段中看到的那样。==
 
   
 
 Unfortunately, this solution has inherent difficulties.
-
 ==不幸的是，这种解决方案有其固有的困难。==
 
   
 
 In particular, when dividing a space into different-size chunks, the space itself can become fragmented, and thus allocation becomes more challenging over time.
-
 ==特别是，当将空间划分为不同大小的块时，空间本身可能会变得碎片化，因此随着时间的推移，分配变得更具挑战性。==
 
   
 
 Thus, it may be worth considering the second approach: to chop up space into fixed-sized pieces.
-
 ==因此，值得考虑第二种方法：将空间切分成固定大小的块。==
 
   
 
 In virtual memory, we call this idea paging, and it goes back to an early and important system, the Atlas.
-
 ==在虚拟内存中，我们将这种想法称为分页，它追溯到一个早期且重要的系统——Atlas。==
 
   
 
 Instead of splitting up a process's address space into some number of variable-sized logical segments (e.g., code, heap, stack), we divide it into fixed-sized units, each of which we call a page.
-
 ==我们不再将进程的地址空间分割成若干个大小可变的逻辑段（例如代码、堆、栈），而是将其划分为固定大小的单元，每个单元我们称为一个页（page）。==
 
   
 
 Correspondingly, we view physical memory as an array of fixed-sized slots called page frames;
-
 ==相应地，我们将物理内存视为固定大小槽位的数组，称为页帧（page frames）；==
 
   
 
 each of these frames can contain a single virtual-memory page.
-
 ==这些帧中的每一个都可以包含一个虚拟内存页。==
 
   
 
 Our challenge:
-
 ==我们的挑战：==
 
   
 
 THE CRUX: HOW TO VIRTUALIZE MEMORY WITH PAGES
-
 ==关键问题：如何用页来虚拟化内存==
 
   
 
 How can we virtualize memory with pages, so as to avoid the problems of segmentation?
-
 ==我们要如何利用页来虚拟化内存，从而避免分段的问题？==
 
   
 
 What are the basic techniques?
-
 ==基本技术有哪些？==
 
   
 
 How do we make those techniques work well, with minimal space and time overheads?
-
 ==我们如何使这些技术良好运作，并将空间和时间开销降至最低？==
 
   
 
 18.1 A Simple Example And Overview
-
 ==18.1 一个简单的例子和概述==
 
   
 
 To help make this approach more clear, let's illustrate it with a simple example.
-
 ==为了帮助理清这种方法，让我们用一个简单的例子来说明。==
 
   
 
 Figure 18.1 (page 2) presents an example of a tiny address space, only 64 bytes total in size, with four 16-byte pages (virtual pages 0, 1, 2, and 3).
-
 ==图 18.1（第 2 页）展示了一个微小地址空间的例子，总大小仅为 64 字节，包含四个 16 字节的页（虚拟页 0、1、2 和 3）。==
 
   
 
 Real address spaces are much bigger, of course, commonly 32 bits and thus 4-GB of address space, or even .
-
 ==当然，真实的地址空间要大得多，通常是 32 位，因此有 4GB 的地址空间，甚至是 64 位。==
 
   
 
 In the book, we'll often use tiny examples to make them easier to digest.
-
 ==在本书中，我们将经常使用微小的例子以便于消化。==
 
   
 
 A 64-bit address space is hard to imagine, it is so amazingly large.
-
 ==64 位地址空间很难想象，它大得惊人。==
 
   
 
 An analogy might help: if you think of a 32-bit address space as the size of a tennis court, a 64-bit address space is about the size of Europe(!).
-
 ==打个比方可能会有帮助：如果你将 32 位地址空间想象成网球场的大小，那么 64 位地址空间大约有欧洲那么大（！）。==
 
   
 
 Physical memory, as shown in Figure 18.2, also consists of a number of fixed-sized slots, in this case eight page frames (making for a 128-byte physical memory, also ridiculously small).
-
 ==如图 18.2 所示，物理内存也由许多固定大小的槽位组成，在这个例子中是 8 个页帧（构成 128 字节的物理内存，同样小得可笑）。==
 
   
 
 As you can see in the diagram, the pages of the virtual address space have been placed at different locations throughout physical memory;
-
 ==正如你在图中所见，虚拟地址空间的页被放置在物理内存的不同位置；==
 
   
 
 the diagram also shows the OS using some of physical memory for itself.
-
 ==该图还显示操作系统将部分物理内存用于其自身。==
 
   
 
 Paging, as we will see, has a number of advantages over our previous approaches.
-
 ==正如我们将看到的，分页比我们之前的方法具有许多优势。==
 
   
 
 Probably the most important improvement will be flexibility: with a fully-developed paging approach, the system will be able to support the abstraction of an address space effectively, regardless of how a process uses the address space;
-
 ==最重要的改进可能是灵活性：通过完善的分页方法，系统将能够有效地支持地址空间的抽象，无论进程如何使用地址空间；==
 
   
 
 we won't, for example, make assumptions about the direction the heap and stack grow and how they are used.
-
 ==例如，我们不会假设堆和栈的增长方向以及它们的使用方式。==
 
   
 
 Another advantage is the simplicity of free-space management that paging affords.
-
 ==另一个优点是分页提供的空闲空间管理的简单性。==
 
   
 
 For example, when the OS wishes to place our tiny 64-byte address space into our eight-page physical memory, it simply finds four free pages;
-
 ==例如，当操作系统希望将我们微小的 64 字节地址空间放入八个页面的物理内存中时，它只需找到四个空闲页面；==
 
   
 
 perhaps the OS keeps a free list of all free pages for this, and just grabs the first four free pages off of this list.
-
 ==也许操作系统为此保留了一个所有空闲页面的空闲列表，并直接从该列表中抓取前四个空闲页面。==
 
   
 
 In the example, the OS has placed virtual page 0 of the address space (AS) in physical frame 3, virtual page 1 of the AS in physical frame 7, page 2 in frame 5, and page 3 in frame 2.
-
 ==在示例中，操作系统将地址空间（AS）的虚拟页 0 放置在物理帧 3 中，AS 的虚拟页 1 放置在物理帧 7 中，页 2 在帧 5 中，页 3 在帧 2 中。==
 
   
 
 Page frames 1, 4, and 6 are currently free.
-
 ==页帧 1、4 和 6 目前是空闲的。==
 
   
 
 To record where each virtual page of the address space is placed in physical memory, the operating system usually keeps a per-process data structure known as a page table.
-
 ==为了记录地址空间的每个虚拟页放置在物理内存的哪个位置，操作系统通常保留一个称为页表的每个进程独有的数据结构。==
 
   
 
 The major role of the page table is to store address translations for each of the virtual pages of the address space, thus letting us know where in physical memory each page resides.
-
 ==页表的主要作用是存储地址空间中每个虚拟页的地址转换，从而让我们知道每个页驻留在物理内存的何处。==
 
   
 
 For our simple example (Figure 18.2, page 2), the page table would thus have the following four entries: (Virtual Page 0 -> Physical Frame 3), (VP 1 -> PF 7), (VP 2 -> PF 5), and (VP 3 -> PF 2).
-
 ==对于我们的简单示例（图 18.2，第 2 页），页表将因此具有以下四个条目：（虚拟页 0 -> 物理帧 3），（VP 1 -> PF 7），（VP 2 -> PF 5），和（VP 3 -> PF 2）。==
 
   
 
 It is important to remember that this page table is a per-process data structure (most page table structures we discuss are per-process structures; an exception we'll touch on is the inverted page table).
-
 ==重要的是要记住，这个页表是一个每个进程独有的数据结构（我们讨论的大多数页表结构都是每个进程的结构；我们将触及的一个例外是反向页表）。==
 
   
 
 If another process were to run in our example above, the OS would have to manage a different page table for it, as its virtual pages obviously map to different physical pages (modulo any sharing going on).
-
 ==如果在我们上面的例子中运行另一个进程，操作系统将不得不为它管理一个不同的页表，因为它的虚拟页显然映射到不同的物理页（排除任何正在进行的共享）。==
 
   
 
 Now, we know enough to perform an address-translation example.
-
 ==现在，我们已经了解足够多的知识来执行一个地址转换示例。==
 
   
 
 Let's imagine the process with that tiny address space (64 bytes) is performing a memory access:
-
 ==让我们想象那个拥有微小地址空间（64 字节）的进程正在执行一次内存访问：==
 
   
@@ -13694,79 +11987,66 @@ movl <virtual address>, %eax
   
 
 Specifically, let's pay attention to the explicit load of the data from address <virtual address> into the register eax (and thus ignore the instruction fetch that must have happened prior).
-
 ==具体来说，让我们关注从地址 <virtual address> 将数据显式加载到寄存器 eax 的过程（从而忽略之前必然发生的指令获取）。==
 
   
 
 To translate this virtual address that the process generated, we have to first split it into two components: the virtual page number (VPN), and the offset within the page.
-
 ==为了转换进程生成的这个虚拟地址，我们必须首先将其拆分为两个部分：虚拟页号 (VPN) 和页内偏移量。==
 
   
 
 For this example, because the virtual address space of the process is 64 bytes, we need 6 bits total for our virtual address ().
-
 ==对于这个例子，因为进程的虚拟地址空间是 64 字节，我们的虚拟地址总共需要 6 位（）。==
 
   
 
 Thus, our virtual address can be conceptualized as follows:
-
 ==因此，我们的虚拟地址可以概念化如下：==
 
   
 
 In this diagram, Va5 is the highest-order bit of the virtual address, and Va0 the lowest-order bit.
-
 ==在此图中，Va5 是虚拟地址的最高位，Va0 是最低位。==
 
   
 
 Because we know the page size (16 bytes), we can further divide the virtual address as follows:
-
 ==因为我们知道页面大小（16 字节），我们可以进一步划分虚拟地址如下：==
 
   
 
 The page size is 16 bytes in a 64-byte address space;
-
 ==在 64 字节的地址空间中，页面大小为 16 字节；==
 
   
 
 thus we need to be able to select 4 pages, and the top 2 bits of the address do just that.
-
 ==因此我们需要能够选择 4 个页面，而地址的高 2 位正好可以做到这一点。==
 
   
 
 Thus, we have a 2-bit virtual page number (VPN).
-
 ==因此，我们有一个 2 位的虚拟页号（VPN）。==
 
   
 
 The remaining bits tell us which byte of the page we are interested in, 4 bits in this case;
-
 ==剩余的位告诉我们要访问页面中的哪个字节，在本例中为 4 位；==
 
   
 
 we call this the offset.
-
 ==我们称之为偏移量。==
 
   
 
 When a process generates a virtual address, the OS and hardware must combine to translate it into a meaningful physical address.
-
 ==当进程生成虚拟地址时，操作系统和硬件必须结合起来将其转换为有意义的物理地址。==
 
   
 
 For example, let us assume the load above was to virtual address 21:
-
 ==例如，让我们假设上面的加载是针对虚拟地址 21：==
 
   
@@ -13778,647 +12058,539 @@ movl 21, %eax
   
 
 Turning "21" into binary form, we get "010101", and thus we can examine this virtual address and see how it breaks down into a virtual page number (VPN) and offset:
-
 ==将“21”转换为二进制形式，我们得到“010101”，因此我们可以检查这个虚拟地址，看看它是如何分解为虚拟页号 (VPN) 和偏移量的：==
 
   
 
 Thus, the virtual address "21" is on the 5th ("0101"th) byte of virtual page "01" (or 1).
-
 ==因此，虚拟地址“21”位于虚拟页“01”（或 1）的第 5 个（“0101”）字节。==
 
   
 
 With our virtual page number, we can now index our page table and find which physical frame virtual page 1 resides within.
-
 ==有了虚拟页号，我们现在可以索引页表，找到虚拟页 1 驻留在哪个物理帧中。==
 
   
 
 In the page table above the physical frame number (PFN) (also sometimes called the physical page number or PPN) is 7 (binary 111).
-
 ==在上方的页表中，物理帧号 (PFN)（有时也称为物理页号或 PPN）为 7（二进制 111）。==
 
   
 
 Thus, we can translate this virtual address by replacing the VPN with the PFN and then issue the load to physical memory (Figure 18.3).
-
 ==因此，我们可以通过用 PFN 替换 VPN 来转换此虚拟地址，然后向物理内存发出加载指令（图 18.3）。==
 
   
 
 Note the offset stays the same (i.e., it is not translated), because the offset just tells us which byte within the page we want.
-
 ==注意偏移量保持不变（即，它不被转换），因为偏移量只是告诉我们想要页面内的哪个字节。==
 
   
 
 Our final physical address is 1110101 (117 in decimal), and is exactly where we want our load to fetch data from (Figure 18.2, page 2).
-
 ==我们要的最终物理地址是 1110101（十进制为 117），这正是我们希望加载指令从中获取数据的位置（图 18.2，第 2 页）。==
 
   
 
 With this basic overview in mind, we can now ask (and hopefully, answer) a few basic questions you may have about paging.
-
 ==牢记这一基本概述，我们现在可以提出（并希望能回答）一些你可能对分页有的基本问题。==
 
   
 
 For example, where are these page tables stored?
-
 ==例如，这些页表存储在哪里？==
 
   
 
 What are the typical contents of the page table, and how big are the tables?
-
 ==页表的典型内容是什么，表有多大？==
 
   
 
 Does paging make the system (too) slow?
-
 ==分页会让系统（太）慢吗？==
 
   
 
 These and other beguiling questions are answered, at least in part, in the text below.
-
 ==这些以及其他令人着迷的问题将在下面的文本中得到部分回答。==
 
   
 
 Read on!
-
 ==继续阅读！==
 
   
 
 18.2 Where Are Page Tables Stored?
-
 ==18.2 页表存在哪里？==
 
   
 
 Page tables can get terribly large, much bigger than the small segment table or base/bounds pair we have discussed previously.
-
 ==页表可能会变得非常大，比我们之前讨论的小段表或基址/界限对大得多。==
 
   
 
 For example, imagine a typical 32-bit address space, with 4KB pages.
-
 ==例如，想象一个典型的 32 位地址空间，拥有 4KB 的页面。==
 
   
 
 This virtual address splits into a 20-bit VPN and 12-bit offset (recall that 10 bits would be needed for a 1KB page size, and just add two more to get to 4KB).
-
 ==此虚拟地址分为 20 位 VPN 和 12 位偏移量（回想一下，1KB 页面大小需要 10 位，只需再加两位即可达到 4KB）。==
 
   
 
 A 20-bit VPN implies that there are  translations that the OS would have to manage for each process (that's roughly a million);
-
 ==20 位 VPN 意味着操作系统必须为每个进程管理  个转换（大约一百万个）；==
 
   
 
 assuming we need 4 bytes per page table entry (PTE) to hold the physical translation plus any other useful stuff, we get an immense 4MB of memory needed for each page table!
-
 ==假设我们需要每个页表项 (PTE) 4 个字节来保存物理转换以及任何其他有用的东西，那么每个页表就需要巨大的 4MB 内存！==
 
   
 
 That is pretty large.
-
 ==这相当大。==
 
   
 
 Now imagine there are 100 processes running: this means the OS would need 400MB of memory just for all those address translations!
-
 ==现在想象有 100 个进程在运行：这意味着操作系统仅为了所有这些地址转换就需要 400MB 的内存！==
 
   
 
 Even in the modern era, where...
-
 ==即使在现代，...==
 
 PAGING: INTRODUCTION
-
 ==分页：介绍==
 
   
 
 ASIDE: DATA STRUCTURE - THE PAGE TABLE
-
 ==补充说明：数据结构——页表==
 
   
 
 One of the most important data structures in the memory management subsystem of a modern OS is the page table.
-
 ==现代操作系统内存管理子系统中最重要的数据结构之一就是页表。==
 
   
 
 In general, a page table stores virtual-to-physical address translations, thus letting the system know where each page of an address space actually resides in physical memory.
-
 ==通常，页表存储虚拟地址到物理地址的转换，从而让系统知道地址空间的每一页实际驻留在物理内存的何处。==
 
   
 
 Because each address space requires such translations, in general there is one page table per process in the system.
-
 ==因为每个地址空间都需要这种转换，所以通常系统中每个进程都有一个页表。==
 
   
 
 The exact structure of the page table is either determined by the hardware (older systems) or can be more flexibly managed by the OS (modern systems).
-
 ==页表的具体结构要么由硬件决定（旧系统），要么可以由操作系统更灵活地管理（现代系统）。==
 
   
 
 To map a typical 32-bit address space (4GB) with 4KB pages, we would need a large number of translations.
-
 ==为了映射一个典型的 32 位地址空间（4GB）并使用 4KB 的页大小，我们需要大量的转换条目。==
 
   
 
 Even if machines have gigabytes of memory, it seems a little crazy to use a large chunk of it just for translations, no?
-
 ==即使机器有千兆字节的内存，用这么大一块内存仅仅来做地址转换似乎有点疯狂，不是吗？==
 
   
 
 And we won't even think about how big such a page table would be for a 64-bit address space.
-
 ==我们甚至不敢想象对于 64 位地址空间，这样的页表会有多大。==
 
   
 
 That would be too gruesome and perhaps scare you off entirely.
-
 ==那太可怕了，可能会把你彻底吓跑。==
 
   
 
 Because page tables are so big, we don't keep any special on-chip hardware in the MMU to store the page table of the currently-running process.
-
 ==因为页表太大，我们在 MMU（内存管理单元）中不保留任何特殊的片上硬件来存储当前运行进程的页表。==
 
   
 
 Instead, we store the page table for each process in memory somewhere.
-
 ==相反，我们将每个进程的页表存储在内存的某个地方。==
 
   
 
 Let's assume for now that the page tables live in physical memory that the OS manages.
-
 ==我们暂时假设页表驻留在操作系统管理的物理内存中。==
 
   
 
 Later we'll see that much of OS memory itself can be virtualized, and thus page tables can be stored in OS virtual memory (and even swapped to disk), but that is too confusing right now, so we'll ignore it.
-
 ==稍后我们会看到，操作系统的大部分内存本身也可以被虚拟化，因此页表可以存储在操作系统的虚拟内存中（甚至可以交换到磁盘），但现在这太令人困惑了，所以我们先忽略它。==
 
   
 
 In Figure 18.4 is a picture of a page table in OS memory; see the tiny set of translations in there?
-
 ==图 18.4 展示了操作系统内存中的页表；看到里面那一小组转换条目了吗？==
 
   
 
 18.3 What's Actually In The Page Table?
-
 ==18.3 页表里实际上有什么？==
 
   
 
 Let's talk a little about page table organization.
-
 ==让我们稍微谈谈页表的组织结构。==
 
   
 
 The page table is just a data structure that is used to map virtual addresses (or really, virtual page numbers) to physical addresses (physical frame numbers).
-
 ==页表只是一个数据结构，用于将虚拟地址（或者确切地说是虚拟页号）映射到物理地址（物理帧号）。==
 
   
 
 Thus, any data structure could work.
-
 ==因此，任何数据结构都可以。==
 
   
 
 The simplest form is called a linear page table, which is just an array.
-
 ==最简单的形式称为线性页表，它就是一个数组。==
 
   
 
 The OS indexes the array by the virtual page number (VPN), and looks up the page-table entry (PTE) at that index in order to find the desired physical frame number (PFN).
-
 ==操作系统通过虚拟页号 (VPN) 索引数组，并在该索引处查找页表项 (PTE)，以找到所需的物理帧号 (PFN)。==
 
   
 
 For now, we will assume this simple linear structure; in later chapters, we will make use of more advanced data structures to help solve some problems with paging.
-
 ==现在，我们将假设这种简单的线性结构；在后面的章节中，我们将利用更高级的数据结构来帮助解决分页的一些问题。==
 
   
 
 As for the contents of each PTE, we have a number of different bits in there worth understanding at some level.
-
 ==至于每个 PTE 的内容，里面有许多不同的位值得在一定程度上理解。==
 
   
 
 A valid bit is common to indicate whether the particular translation is valid.
-
 ==有效位 (Valid Bit) 很常见，用于指示特定的转换是否有效。==
 
   
 
 For example, when a program starts running, it will have code and heap at one end of its address space, and the stack at the other.
-
 ==例如，当程序开始运行时，它的代码和堆位于地址空间的一端，而栈位于另一端。==
 
   
 
 All the unused space in-between will be marked invalid, and if the process tries to access such memory, it will generate a trap to the OS which will likely terminate the process.
-
 ==中间所有未使用的空间都将被标记为无效，如果进程尝试访问此类内存，它将生成一个陷阱 (Trap) 给操作系统，这通常会导致进程终止。==
 
   
 
 Thus, the valid bit is crucial for supporting a sparse address space.
-
 ==因此，有效位对于支持稀疏地址空间至关重要。==
 
   
 
 By simply marking all the unused pages in the address space invalid, we remove the need to allocate physical frames for those pages and thus save a great deal of memory.
-
 ==通过简单地将地址空间中所有未使用的页面标记为无效，我们消除了为这些页面分配物理帧的需要，从而节省了大量内存。==
 
   
 
 Figure 18.5: An x86 Page Table Entry (PTE)
-
 ==图 18.5：x86 页表项 (PTE)==
 
   
 
 We also might have protection bits, indicating whether the page could be read from, written to, or executed from.
-
 ==我们可能还有保护位 (Protection Bits)，指示该页面是否可读、可写或可执行。==
 
   
 
 Again, accessing a page in a way not allowed by these bits will generate a trap to the OS.
-
 ==同样，以这些位不允许的方式访问页面将生成给操作系统的陷阱。==
 
   
 
 There are a couple of other bits that are important but we won't talk about much for now.
-
 ==还有其他几个重要的位，但我们将暂时不作详细讨论。==
 
   
 
 A present bit indicates whether this page is in physical memory or on disk (i.e., it has been swapped out).
-
 ==存在位 (Present Bit) 指示此页面是在物理内存中还是在磁盘上（即，它已被换出）。==
 
   
 
 We will understand this machinery further when we study how to swap parts of the address space to disk to support address spaces that are larger than physical memory.
-
 ==当我们研究如何将部分地址空间交换到磁盘以支持大于物理内存的地址空间时，我们将进一步理解这一机制。==
 
   
 
 Swapping allows the OS to free up physical memory by moving rarely-used pages to disk.
-
 ==交换技术允许操作系统通过将很少使用的页面移动到磁盘来释放物理内存。==
 
   
 
 A dirty bit is also common, indicating whether the page has been modified since it was brought into memory.
-
 ==脏位 (Dirty Bit) 也很常见，指示页面自调入内存以来是否已被修改。==
 
   
 
 A reference bit (a.k.a. accessed bit) is sometimes used to track whether a page has been accessed, and is useful in determining which pages are popular and thus should be kept in memory.
-
 ==引用位 (Reference Bit)（也称为访问位）有时用于跟踪页面是否已被访问，这在确定哪些页面是常用的并因此应保留在内存中时非常有用。==
 
   
 
 Such knowledge is critical during page replacement, a topic we will study in great detail in subsequent chapters.
-
 ==这些知识在页面置换期间至关重要，这是我们将在后续章节中详细研究的主题。==
 
   
 
 Figure 18.5 shows an example page table entry from the x86 architecture.
-
 ==图 18.5 显示了 x86 架构中的一个页表项示例。==
 
   
 
 It contains a present bit (P); a read/write bit (R/W) which determines if writes are allowed to this page; a user/supervisor bit (U/S) which determines if user-mode processes can access the page.
-
 ==它包含一个存在位 (P)；一个决定是否允许写入该页面的读/写位 (R/W)；一个决定用户模式进程是否可以访问该页面的用户/超级用户位 (U/S)。==
 
   
 
 It also contains a few bits (PWT, PCD, PAT, and G) that determine how hardware caching works for these pages; an accessed bit (A) and a dirty bit (D); and finally, the page frame number (PFN) itself.
-
 ==它还包含几个决定这些页面的硬件缓存如何工作的位（PWT、PCD、PAT 和 G）；一个访问位 (A) 和一个脏位 (D)；最后是页帧号 (PFN) 本身。==
 
   
 
 Read the Intel Architecture Manuals for more details on x86 paging support.
-
 ==请阅读英特尔架构手册以了解有关 x86 分页支持的更多详细信息。==
 
   
 
 Be forewarned, however; reading manuals such as these, while quite informative (and certainly necessary for those who write code to use such page tables in the OS), can be challenging at first.
-
 ==但请注意；阅读此类手册虽然信息量很大（对于编写代码以在操作系统中使用此类页表的人来说当然是必要的），但起初可能会很有挑战性。==
 
   
 
 A little patience, and a lot of desire, is required.
-
 ==这需要一点耐心和大量的求知欲。==
 
   
 
 ASIDE: WHY NO VALID BIT?
-
 ==补充说明：为什么没有有效位？==
 
   
 
 You may notice that in the Intel example, there are no separate valid and present bits, but rather just a present bit (P).
-
 ==您可能注意到在英特尔的示例中，没有单独的有效位和存在位，而只有一个存在位 (P)。==
 
   
 
 If that bit is set (P=1) it means the page is both present and valid.
-
 ==如果该位被置位 (P=1)，则意味着该页面既存在又有效。==
 
   
 
 If not (P=0), it means that the page may not be present in memory (but is valid), or may not be valid.
-
 ==如果未置位 (P=0)，则意味着该页面可能不存在于内存中（但是有效的），或者可能根本无效。==
 
   
 
 An access to a page with P=0 will trigger a trap to the OS.
-
 ==访问 P=0 的页面将触发给操作系统的陷阱。==
 
   
 
 The OS must then use additional structures it keeps to determine whether the page is valid (and thus perhaps should be swapped back in) or not (and thus the program is attempting to access memory illegally).
-
 ==然后，操作系统必须使用它保留的额外结构来确定页面是否有效（因此可能应该换回），或者无效（因此程序正在尝试非法访问内存）。==
 
   
 
 This sort of judiciousness is common in hardware, which often just provide the minimal set of features upon which the OS can build a full service.
-
 ==这种审慎设计在硬件中很常见，硬件通常只提供最小的功能集，操作系统可在此基础上构建完整的服务。==
 
   
 
 18.4 Paging: Also Too Slow
-
 ==18.4 分页：还是太慢==
 
   
 
 With page tables in memory, we already know that they might be too big.
-
 ==既然页表存放在内存中，我们已经知道它们可能太大了。==
 
   
 
 As it turns out, they can slow things down too.
-
 ==事实证明，它们也会拖慢运行速度。==
 
   
 
 For example, take our simple instruction: `movl 21, %eax`.
-
 ==例如，看看我们这个简单的指令：`movl 21, %eax`。==
 
   
 
 Again, let's just examine the explicit reference to address 21 and not worry about the instruction fetch.
-
 ==同样，让我们只检查对地址 21 的显式引用，而不必担心指令的获取。==
 
   
 
 In this example, we'll assume the hardware performs the translation for us.
-
 ==在这个例子中，我们将假设硬件为我们执行转换。==
 
   
 
 To fetch the desired data, the system must first translate the virtual address (21) into the correct physical address (117).
-
 ==为了获取所需的数据，系统必须首先将虚拟地址 (21) 转换为正确的物理地址 (117)。==
 
   
 
 Thus, before fetching the data from address 117, the system must first fetch the proper page table entry from the process's page table, perform the translation, and then load the data from physical memory.
-
 ==因此，在从地址 117 获取数据之前，系统必须首先从进程的页表中获取适当的页表项，执行转换，然后从物理内存加载数据。==
 
   
 
 To do so, the hardware must know where the page table is for the currently-running process.
-
 ==为此，硬件必须知道当前运行进程的页表在哪里。==
 
   
 
 Let's assume for now that a single page-table base register contains the physical address of the starting location of the page table.
-
 ==我们暂且假设有一个单独的页表基址寄存器，其中包含页表起始位置的物理地址。==
 
   
 
 To find the location of the desired PTE, the hardware will thus perform the following functions:
-
 ==为了找到所需 PTE 的位置，硬件将执行以下功能：==
 
   
 
 VPN = (VirtualAddress & VPN_MASK) >> SHIFT
-
 ==VPN = (虚拟地址 & VPN_MASK) >> SHIFT==
 
   
 
 PTEAddr = PageTableBaseRegister + (VPN * sizeof(PTE))
-
 ==PTE地址 = 页表基址寄存器 + (VPN * PTE大小)==
 
   
 
 In our example, VPN_MASK would be set to 0x30 (hex 30, or binary 110000) which picks out the VPN bits from the full virtual address.
-
 ==在我们的例子中，VPN_MASK 将被设置为 0x30（十六进制 30，或二进制 110000），它从完整的虚拟地址中选取 VPN 位。==
 
   
 
 SHIFT is set to 4 (the number of bits in the offset), such that we move the VPN bits down to form the correct integer virtual page number.
-
 ==SHIFT 设置为 4（偏移量中的位数），这样我们将 VPN 位下移以形成正确的整数虚拟页号。==
 
   
 
 For example, with virtual address 21 (010101), and masking turns this value into 010000.
-
 ==例如，对于虚拟地址 21 (010101)，掩码操作将其变为 010000。==
 
   
 
 The shift turns it into 01, or virtual page 1, as desired.
-
 ==移位操作将其变为 01，即虚拟页 1，正如我们所愿。==
 
   
 
 We then use this value as an index into the array of PTEs pointed to by the page table base register.
-
 ==然后，我们使用此值作为页表基址寄存器指向的 PTE 数组的索引。==
 
   
 
 Once this physical address is known, the hardware can fetch the PTE from memory, extract the PFN, and concatenate it with the offset from the virtual address to form the desired physical address.
-
 ==一旦知道了这个物理地址，硬件就可以从内存中获取 PTE，提取 PFN，并将其与虚拟地址的偏移量拼接，以形成所需的物理地址。==
 
   
 
 Specifically, you can think of the PFN being left-shifted by SHIFT, and then bitwise OR'd with the offset to form the final address as follows:
-
 ==具体来说，你可以认为 PFN 被左移了 SHIFT 位，然后与偏移量进行按位或运算，从而形成最终地址，如下所示：==
 
   
 
 offset = VirtualAddress & OFFSET_MASK
-
 ==offset = 虚拟地址 & OFFSET_MASK==
 
   
 
 PhysAddr = (PFN << SHIFT) | offset
-
 ==物理地址 = (PFN << SHIFT) | offset==
 
   
 
 Finally, the hardware can fetch the desired data from memory and put it into register eax.
-
 ==最后，硬件可以从内存中获取所需的数据并将其放入寄存器 eax 中。==
 
   
 
 The program has now succeeded at loading a value from memory!
-
 ==程序现在已成功从内存加载了一个值！==
 
   
 
 To summarize, we now describe the initial protocol for what happens on each memory reference.
-
 ==总而言之，我们现在描述每次内存引用时发生的初始协议。==
 
   
 
 Figure 18.6 shows the approach.
-
 ==图 18.6 展示了这种方法。==
 
   
 
 For every memory reference (whether an instruction fetch or an explicit load or store), paging requires us to perform one extra memory reference in order to first fetch the translation from the page table.
-
 ==对于每一次内存引用（无论是指令获取还是显式的加载或存储），分页都要求我们执行一次额外的内存引用，以便首先从页表中获取转换信息。==
 
   
 
 That is a lot of work!
-
 ==这是很大的工作量！==
 
   
 
 Extra memory references are costly, and in this case will likely slow down the process by a factor of two or more.
-
 ==额外的内存引用代价高昂，在这种情况下，可能会使进程速度减慢两倍或更多。==
 
   
 
 And now you can hopefully see that there are two real problems that we must solve.
-
 ==现在你可以看到，有两个必须解决的实际问题。==
 
   
 
 Without careful design of both hardware and software, page tables will cause the system to run too slowly, as well as take up too much memory.
-
 ==如果不对硬件和软件进行精心设计，页表将导致系统运行过慢，并占用过多内存。==
 
   
 
 While seemingly a great solution for our memory virtualization needs, these two crucial problems must first be overcome.
-
 ==虽然这看似是我们内存虚拟化需求的一个极佳解决方案，但必须首先克服这两个关键问题。==
 
   
 
 18.5 A Memory Trace
-
 ==18.5 内存追踪==
 
   
 
 Before closing, we now trace through a simple memory access example to demonstrate all of the resulting memory accesses that occur when using paging.
-
 ==在结束之前，我们要追踪一个简单的内存访问示例，以演示使用分页时产生的所有内存访问。==
 
   
 
 The code snippet (in C, in a file called array.c) that we are interested in is as follows:
-
 ==我们要关注的代码片段（C 语言，在一个名为 array.c 的文件中）如下：==
 
   
@@ -14436,7 +12608,6 @@ The code snippet (in C, in a file called array.c) that we are interested in is a
   
 
 We compile array.c and run it with the following commands:
-
 ==我们编译 array.c 并使用以下命令运行它：==
 
   
@@ -14454,19 +12625,16 @@ We compile array.c and run it with the following commands:
   
 
 Of course, to truly understand what memory accesses this code snippet (which simply initializes an array) will make, we'll have to know (or assume) a few more things.
-
 ==当然，要真正理解这个代码片段（仅仅是初始化一个数组）将进行哪些内存访问，我们必须知道（或假设）更多的事情。==
 
   
 
 First, we'll have to disassemble the resulting binary (using objdump on Linux, or otool on a Mac) to see what assembly instructions are used to initialize the array in a loop.
-
 ==首先，我们必须反汇编生成的二进制文件（在 Linux 上使用 objdump，或在 Mac 上使用 otool），以查看循环中初始化数组使用了哪些汇编指令。==
 
   
 
 Here is the resulting assembly code:
-
 ==以下是生成的汇编代码：==
 
   
@@ -14496,547 +12664,456 @@ Here is the resulting assembly code:
   
 
 The code, if you know a little x86, is actually quite easy to understand.
-
 ==如果你懂一点 x86，这段代码其实很容易理解。==
 
   
 
 The first instruction moves the value zero (shown as $0x0) into the virtual memory address of the location of the array.
-
 ==第一条指令将值 0（显示为 $0x0）移入数组位置的虚拟内存地址。==
 
   
 
 This address is computed by taking the contents of %edi and adding %eax multiplied by four to it.
-
 ==该地址是通过取 %edi 的内容并加上 %eax 乘以 4 计算得出的。==
 
   
 
 Thus, %edi holds the base address of the array, whereas %eax holds the array index (i).
-
 ==因此，%edi 保存数组的基地址，而 %eax 保存数组索引 (i)。==
 
   
 
 We multiply by four because the array is an array of integers, each of size four bytes.
-
 ==我们乘以 4 是因为该数组是整数数组，每个整数大小为 4 字节。==
 
   
 
 The second instruction increments the array index held in %eax, and the third instruction compares the contents of that register to the hex value 0x03e8, or decimal 1000.
-
 ==第二条指令递增 %eax 中保存的数组索引，第三条指令将该寄存器的内容与十六进制值 0x03e8（即十进制 1000）进行比较。==
 
   
 
 If the comparison shows that two values are not yet equal (which is what the jne instruction tests), the fourth instruction jumps back to the top of the loop.
-
 ==如果比较表明两个值尚未相等（这正是 jne 指令测试的内容），则第四条指令跳回循环顶部。==
 
   
 
 To understand which memory accesses this instruction sequence makes (at both the virtual and physical levels), we'll have to assume something about where in virtual memory the code snippet and array are found, as well as the contents and location of the page table.
-
 ==为了理解该指令序列进行了哪些内存访问（在虚拟和物理级别），我们必须假设代码片段和数组在虚拟内存中的位置，以及页表的内容和位置。==
 
   
 
 For this example, we assume a virtual address space of size 64KB (unrealistically small).
-
 ==在这个例子中，我们假设虚拟地址空间大小为 64KB（不切实际地小）。==
 
   
 
 We also assume a page size of 1KB.
-
 ==我们还假设页大小为 1KB。==
 
   
 
 All we need to know now are the contents of the page table, and its location in physical memory.
-
 ==我们要知道的只是页表的内容及其在物理内存中的位置。==
 
   
 
 Let's assume we have a linear (array-based) page table and that it is located at physical address 1KB (1024).
-
 ==让我们假设有一个线性（基于数组的）页表，且位于物理地址 1KB (1024) 处。==
 
   
 
 As for its contents, there are just a few virtual pages we need to worry about having mapped for this example.
-
 ==至于它的内容，在这个例子中我们只需要关心少数几个已映射的虚拟页面。==
 
   
 
 First, there is the virtual page the code lives on.
-
 ==首先是代码所在的虚拟页面。==
 
   
 
 Because the page size is 1KB, virtual address 1024 resides on the second page of the virtual address space (VPN=1, as VPN=0 is the first page).
-
 ==因为页大小是 1KB，虚拟地址 1024 位于虚拟地址空间的第二页（VPN=1，因为 VPN=0 是第一页）。==
 
   
 
 Let's assume this virtual page maps to physical frame 4 (VPN 1 -> PFN 4).
-
 ==让我们假设这个虚拟页映射到物理帧 4 (VPN 1 -> PFN 4)。==
 
   
 
 Next, there is the array itself.
-
 ==接下来是数组本身。==
 
   
 
 Its size is 4000 bytes (1000 integers), and we assume that it resides at virtual addresses 40000 through 44000 (not including the last byte).
-
 ==它的大小为 4000 字节（1000 个整数），我们假设它位于虚拟地址 40000 到 44000（不包括最后一个字节）。==
 
   
 
 The virtual pages for this decimal range are VPN=39 ... VPN=42.
-
 ==这个十进制范围对应的虚拟页是 VPN=39 ... VPN=42。==
 
   
 
 Thus, we need mappings for these pages.
-
 ==因此，我们需要这些页面的映射。==
 
   
 
 Let's assume these virtual-to-physical mappings for the example: (VPN 39 -> PFN 7), (VPN 40 -> PFN 8), (VPN 41 -> PFN 9), (VPN 42 -> PFN 10).
-
 ==让我们为这个例子假设如下虚拟到物理的映射：(VPN 39 -> PFN 7), (VPN 40 -> PFN 8), (VPN 41 -> PFN 9), (VPN 42 -> PFN 10)。==
 
   
 
 We are now ready to trace the memory references of the program.
-
 ==我们现在准备好追踪程序的内存引用了。==
 
   
 
 When it runs, each instruction fetch will generate two memory references: one to the page table to find the physical frame that the instruction resides within, and one to the instruction itself to fetch it to the CPU for processing.
-
 ==当它运行时，每次指令获取都会产生两次内存引用：一次访问页表以查找指令所在的物理帧，另一次访问指令本身以将其获取到 CPU 进行处理。==
 
   
 
 In addition, there is one explicit memory reference in the form of the mov instruction.
-
 ==此外，mov 指令还会产生一次显式的内存引用。==
 
   
 
 This adds another page table access first (to translate the array virtual address to the correct physical one) and then the array access itself.
-
 ==这会先增加另一次页表访问（将数组虚拟地址转换为正确的物理地址），然后再访问数组本身。==
 
   
 
 The entire process, for the first five loop iterations, is depicted in Figure 18.7.
-
 ==图 18.7 描绘了前五次循环迭代的整个过程。==
 
   
 
 The bottom most graph shows the instruction memory references on the y-axis in black (with virtual addresses on the left, and the actual physical addresses on the right).
-
 ==最底部的图表在 y 轴上用黑色显示了指令内存引用（左侧是虚拟地址，右侧是实际物理地址）。==
 
   
 
 The middle graph shows array accesses in dark gray (again with virtual on left and physical on right).
-
 ==中间的图表用深灰色显示了数组访问（同样左侧是虚拟，右侧是物理）。==
 
   
 
 Finally, the topmost graph shows page table memory accesses in light gray (just physical, as the page table in this example resides in physical memory).
-
 ==最后，最顶部的图表用浅灰色显示了页表内存访问（只有物理地址，因为本例中的页表驻留在物理内存中）。==
 
   
 
 The x-axis, for the entire trace, shows memory accesses across the first five iterations of the loop.
-
 ==整个追踪图的 x 轴显示了循环前五次迭代中的内存访问。==
 
   
 
 There are 10 memory accesses per loop, which includes four instruction fetches, one explicit update of memory, and five page table accesses to translate those four fetches and one explicit update.
-
 ==每次循环有 10 次内存访问，其中包括 4 次指令获取，1 次显式内存更新，以及 5 次用于转换这 4 次获取和 1 次显式更新的页表访问。==
 
   
 
 Figure 18.7: A Virtual (And Physical) Memory Trace
-
 ==图 18.7：虚拟（和物理）内存追踪==
 
   
 
 See if you can make sense of the patterns that show up in this visualization.
-
 ==看看你能否理解这个可视化中出现的模式。==
 
   
 
 In particular, what will change as the loop continues to run beyond these first five iterations?
-
 ==特别是，随着循环继续运行超过这前五次迭代，会发生什么变化？==
 
   
 
 Which new memory locations will be accessed?
-
 ==将访问哪些新的内存位置？==
 
   
 
 Can you figure it out?
-
 ==你能算出来吗？==
 
   
 
 This has just been the simplest of examples (only a few lines of C code), and yet you might already be able to sense the complexity of understanding the actual memory behavior of real applications.
-
 ==这只是最简单的例子（只有几行 C 代码），但你可能已经能感觉到理解实际应用程序的真实内存行为有多复杂。==
 
   
 
 Don't worry: it definitely gets worse, because the mechanisms we are about to introduce only complicate this already complex machinery.
-
 ==别担心：情况肯定会变得更糟，因为我们将要介绍的机制只会让这个本已复杂的机制变得更加复杂。==
 
   
 
 Sorry!
-
 ==抱歉！==
 
   
 
 18.6 Summary
-
 ==18.6 总结==
 
   
 
 We have introduced the concept of paging as a solution to our challenge of virtualizing memory.
-
 ==我们介绍了分页的概念，作为解决内存虚拟化挑战的方案。==
 
   
 
 Paging has many advantages over previous approaches (such as segmentation).
-
 ==分页相比以前的方法（如分段）有许多优势。==
 
   
 
 First, it does not lead to external fragmentation, as paging (by design) divides memory into fixed-sized units.
-
 ==首先，它不会导致外部碎片，因为分页（在设计上）将内存划分为固定大小的单元。==
 
   
 
 Second, it is quite flexible, enabling the sparse use of virtual address spaces.
-
 ==其次，它非常灵活，能够支持虚拟地址空间的稀疏使用。==
 
   
 
 However, implementing paging support without care will lead to a slower machine (with many extra memory accesses to access the page table) as well as memory waste (with memory filled with page tables instead of useful application data).
-
 ==然而，如果不小心实现分页支持，将导致机器变慢（因为访问页表需要许多额外的内存访问），以及内存浪费（内存中充满了页表而不是有用的应用程序数据）。==
 
   
 
 We'll thus have to think a little harder to come up with a paging system that not only works, but works well.
-
 ==因此，我们将不得不更加深入地思考，以提出一个不仅有效，而且高效的分页系统。==
 
   
 
 The next two chapters, fortunately, will show us how to do so.
-
 ==幸运的是，接下来的两章将向我们展示如何做到这一点。==
 
   
 
 We're not really sorry.
-
 ==我们其实并不是真的感到抱歉。==
 
   
 
 But, we are sorry about not being sorry, if that makes sense.
-
 ==但是，如果这能说得通的话，我们对不感到抱歉这件事感到抱歉。==
 
   
 
 Paging: Faster Translations (TLBs)
-
 ==分页：更快的转换 (TLB)==
 
   
 
 Using paging as the core mechanism to support virtual memory can lead to high performance overheads.
-
 ==使用分页作为支持虚拟内存的核心机制可能会导致高昂的性能开销。==
 
   
 
 By chopping the address space into small, fixed-sized units (i.e., pages), paging requires a large amount of mapping information.
-
 ==通过将地址空间切分成小的、固定大小的单元（即页面），分页需要大量的映射信息。==
 
   
 
 Because that mapping information is generally stored in physical memory, paging logically requires an extra memory lookup for each virtual address generated by the program.
-
 ==因为这些映射信息通常存储在物理内存中，所以从逻辑上讲，分页要求程序生成的每个虚拟地址都要进行一次额外的内存查找。==
 
   
 
 Going to memory for translation information before every instruction fetch or explicit load or store is prohibitively slow.
-
 ==在每次指令获取或显式加载、存储之前都要去内存获取转换信息，这实在是太慢了。==
 
   
 
 And thus our problem:
-
 ==这就是我们的问题：==
 
   
 
 THE CRUX: HOW TO SPEED UP ADDRESS TRANSLATION
-
 ==关键问题：如何加速地址转换==
 
   
 
 How can we speed up address translation, and generally avoid the extra memory reference that paging seems to require?
-
 ==我们如何加速地址转换，并总体上避免分页似乎需要的额外内存引用？==
 
   
 
 What hardware support is required?
-
 ==需要什么硬件支持？==
 
   
 
 What OS involvement is needed?
-
 ==需要操作系统如何参与？==
 
   
 
 When we want to make things fast, the OS usually needs some help.
-
 ==当我们想让事情变快时，操作系统通常需要一些帮助。==
 
   
 
 And help often comes from the OS's old friend: the hardware.
-
 ==而帮助通常来自操作系统的老朋友：硬件。==
 
   
 
 To speed address translation, we are going to add what is called (for historical reasons) a translation-lookaside buffer, or TLB.
-
 ==为了加速地址转换，我们要增加一种称为（由于历史原因）旁路转换缓冲，或简称 TLB 的东西。==
 
   
 
 A TLB is part of the chip's memory-management unit (MMU), and is simply a hardware cache of popular virtual-to-physical address translations; thus, a better name would be an address-translation cache.
-
 ==TLB 是芯片内存管理单元 (MMU) 的一部分，它只是热门虚拟地址到物理地址转换的硬件缓存；因此，一个更好的名字应该是地址转换缓存。==
 
   
 
 Upon each virtual memory reference, the hardware first checks the TLB to see if the desired translation is held therein.
-
 ==对于每次虚拟内存引用，硬件首先检查 TLB 以查看其中是否包含所需的转换。==
 
   
 
 If so, the translation is performed (quickly) without having to consult the page table (which has all translations).
-
 ==如果是，则（快速）执行转换，而无需查询页表（页表包含所有转换）。==
 
   
 
 Because of their tremendous performance impact, TLBs in a real sense make virtual memory possible.
-
 ==由于其巨大的性能影响，TLB 在真正意义上使虚拟内存成为可能。==
 
   
 
 Figure 19.1: TLB Control Flow Algorithm
-
 ==图 19.1：TLB 控制流算法==
 
   
 
 19.1 TLB Basic Algorithm
-
 ==19.1 TLB 基本算法==
 
   
 
 Figure 19.1 shows a rough sketch of how hardware might handle a virtual address translation, assuming a simple linear page table (i.e., the page table is an array) and a hardware-managed TLB.
-
 ==图 19.1 大致勾勒了硬件如何处理虚拟地址转换，假设使用简单的线性页表（即页表是一个数组）和硬件管理的 TLB。==
 
   
 
 The algorithm the hardware follows works like this: first, extract the virtual page number (VPN) from the virtual address (Line 1 in Figure 19.1), and check if the TLB holds the translation for this VPN (Line 2).
-
 ==硬件遵循的算法如下：首先，从虚拟地址中提取虚拟页号 (VPN)（图 19.1 中的第 1 行），并检查 TLB 是否保存了此 VPN 的转换（第 2 行）。==
 
   
 
 If it does, we have a TLB hit, which means the TLB holds the translation. Success!
-
 ==如果有，我们就有了 TLB 命中，这意味着 TLB 保存了该转换。成功！==
 
   
 
 We can now extract the page frame number (PFN) from the relevant TLB entry, concatenate that onto the offset from the original virtual address, and form the desired physical address (PA), and access memory (Lines 5-7), assuming protection checks do not fail (Line 4).
-
 ==我们要现在可以从相关的 TLB 条目中提取页帧号 (PFN)，将其拼接到原始虚拟地址的偏移量上，形成所需的物理地址 (PA)，并访问内存（第 5-7 行），假设保护检查没有失败（第 4 行）。==
 
   
 
 If the CPU does not find the translation in the TLB (a TLB miss), we have some more work to do.
-
 ==如果 CPU 在 TLB 中没有找到转换（TLB 未命中），我们还有更多工作要做。==
 
   
 
 In this example, the hardware accesses the page table to find the translation (Lines 11-12), and, assuming that the virtual memory reference generated by the process is valid and accessible (Lines 13, 15), updates the TLB with the translation (Line 18).
-
 ==在这个例子中，硬件访问页表以查找转换（第 11-12 行），并假设进程生成的虚拟内存引用是有效且可访问的（第 13、15 行），用该转换更新 TLB（第 18 行）。==
 
   
 
 These set of actions are costly, primarily because of the extra memory reference needed to access the page table (Line 12).
-
 ==这一系列操作代价高昂，主要是因为需要额外的内存引用来访问页表（第 12 行）。==
 
   
 
 Finally, once the TLB is updated, the hardware retries the instruction; this time, the translation is found in the TLB, and the memory reference is processed quickly.
-
 ==最后，一旦 TLB 更新完毕，硬件会重试指令；这一次，转换在 TLB 中被找到，内存引用被快速处理。==
 
   
 
 The TLB, like all caches, is built on the premise that in the common case, translations are found in the cache (i.e., are hits).
-
 ==TLB 像所有缓存一样，建立在这样的前提下：在常见情况下，转换可以在缓存中找到（即命中）。==
 
   
 
 If so, little overhead is added, as the TLB is found near the processing core and is designed to be quite fast.
-
 ==如果是这样，增加的开销很小，因为 TLB 位于处理核心附近，并且设计得非常快。==
 
   
 
 When a miss occurs, the high cost of paging is incurred; the page table must be accessed to find the translation, and an extra memory reference (or more, with more complex page tables) results.
-
 ==当未命中发生时，就会产生高昂的分页成本；必须访问页表来查找转换，从而导致额外的内存引用（如果是更复杂的页表，则更多）。==
 
   
 
 If this happens often, the program will likely run noticeably more slowly; memory accesses, relative to most CPU instructions, are quite costly, and TLB misses lead to more memory accesses.
-
 ==如果这种情况经常发生，程序的运行速度可能会明显变慢；相对于大多数 CPU 指令，内存访问相当昂贵，而 TLB 未命中会导致更多的内存访问。==
 
   
 
 Thus, it is our hope to avoid TLB misses as much as we can.
-
 ==因此，我们要希望尽可能避免 TLB 未命中。==
 
   
 
 19.2 Example: Accessing An Array
-
 ==19.2 示例：访问数组==
 
   
 
 To make clear the operation of a TLB, let's examine a simple virtual address trace and see how a TLB can improve its performance.
-
 ==为了清楚说明 TLB 的操作，让我们检查一个简单的虚拟地址追踪，看看 TLB 如何提高其性能。==
 
   
 
 In this example, let's assume we have an array of 10 4-byte integers in memory, starting at virtual address 100.
-
 ==在这个例子中，让我们假设内存中有一个包含 10 个 4 字节整数的数组，起始于虚拟地址 100。==
 
   
 
 Assume further that we have a small 8-bit virtual address space, with 16-byte pages.
-
 ==进一步假设我们有一个小的 8 位虚拟地址空间，页大小为 16 字节。==
 
   
 
 Thus, a virtual address breaks down into a 4-bit VPN (there are 16 virtual pages) and a 4-bit offset (there are 16 bytes on each of those pages).
-
 ==因此，虚拟地址分解为 4 位 VPN（有 16 个虚拟页）和 4 位偏移量（每页有 16 个字节）。==
 
   
 
 Figure 19.2 shows the array laid out on the 16 16-byte pages of the system.
-
 ==图 19.2 显示了分布在系统 16 个 16 字节页面上的数组。==
 
   
 
 As you can see, the array's first entry (a[0]) begins on (VPN=06, offset=04); only three 4-byte integers fit onto that page.
-
 ==如你所见，数组的第一个条目 (a[0]) 开始于 (VPN=06, offset=04)；该页面只能容纳三个 4 字节整数。==
 
   
 
 The array continues onto the next page (VPN=07), where the next four entries (a[3] ... a[6]) are found.
-
 ==数组延续到下一页 (VPN=07)，那里有接下来的四个条目 (a[3] ... a[6])。==
 
   
 
 Finally, the last three entries of the 10-entry array (a[7] ... a[9]) are located on the next page of the address space (VPN=08).
-
 ==最后，这个 10 条目数组的最后三个条目 (a[7] ... a[9]) 位于地址空间的下一页 (VPN=08)。==
 
   
 
 Now let's consider a simple loop that accesses each array element, something that would look like this in C:
-
 ==现在让我们考虑一个访问每个数组元素的简单循环，在 C 语言中如下所示：==
 
   
@@ -15054,2195 +13131,1829 @@ Now let's consider a simple loop that accesses each array element, something tha
   
 
 For the sake of simplicity, we will pretend that the only memory accesses the loop generates are to the array (ignoring the variables i and sum, as well as the instructions themselves).
-
 ==为简单起见，我们将假装循环产生的唯一内存访问是对数组的访问（忽略变量 i 和 sum，以及指令本身）。==
 
   
 
 When the first array element (a[0]) is accessed, the CPU will see a load to virtual address 100.
-
 ==当访问第一个数组元素 (a[0]) 时，CPU 将看到对虚拟地址 100 的加载。==
 
   
 
 The hardware extracts the VPN from this (VPN=06), and uses that to check the TLB for a valid translation.
-
 ==硬件从中提取 VPN (VPN=06)，并使用它来检查 TLB 是否有有效的转换。==
 
   
 
 Assuming this is the first time the program accesses the array, the result will be a TLB miss.
-
 ==假设这是程序第一次访问数组，结果将是 TLB 未命中。==
 
   
 
 The next access is to a[1], and there is some good news here: a TLB hit!
-
 ==下一次访问是 a[1]，这里有好消息：TLB 命中！==
 
   
 
 Because the second element of the array is packed next to the first, it lives on the same page.
-
 ==因为数组的第二个元素紧挨着第一个元素，它位于同一页面上。==
 
   
 
 Because we've already accessed this page when accessing the first element of the array, the translation is already loaded into the TLB.
-
 ==因为我们在访问数组的第一个元素时已经访问过该页面，所以转换已经加载到 TLB 中。==
 
   
 
 And hence the reason for our success.
-
 ==这就是我们成功的原因。==
 
   
 
 Access to a[2] encounters similar success (another hit), because it too lives on the same page as a[0] and a[1].
-
 ==访问 a[2] 也会遇到类似的成功（再次命中），因为它也与 a[0] 和 a[1] 位于同一页面上。==
 
   
 
 Unfortunately, when the program accesses a[3], we encounter another TLB miss.
-
 ==不幸的是，当程序访问 a[3] 时，我们遇到另一次 TLB 未命中。==
 
   
 
 However, once again, the next entries (a[4] ... a[6]) will hit in the TLB, as they all reside on the same page in memory.
-
 ==但是，接下来的条目 (a[4] ... a[6]) 再次在 TLB 中命中，因为它们都驻留在内存中的同一页面上。==
 
   
 
 Finally, access to a[7] causes one last TLB miss.
-
 ==最后，访问 a[7] 导致最后一次 TLB 未命中。==
 
   
 
 The hardware once again consults the page table to figure out the location of this virtual page in physical memory, and updates the TLB accordingly.
-
 ==硬件再次查询页表以找出该虚拟页面在物理内存中的位置，并相应地更新 TLB。==
 
   
 
 The final two accesses (a[8] and a[9]) receive the benefits of this TLB update; when the hardware looks in the TLB for their translations, two more hits result.
-
 ==最后两次访问（a[8] 和 a[9]）受益于此 TLB 更新；当硬件在 TLB 中查找它们的转换时，又产生了两次命中。==
 
   
 
 Let us summarize TLB activity during our ten accesses to the array: miss, hit, hit, miss, hit, hit, hit, miss, hit, hit.
-
 ==让我们总结一下访问数组十次期间的 TLB 活动：未命中、命中、命中、未命中、命中、命中、命中、未命中、命中、命中。==
 
   
 
 Thus, our TLB hit rate, which is the number of hits divided by the total number of accesses, is 70%.
-
 ==因此，我们的 TLB 命中率（即命中次数除以总访问次数）为 70%。==
 
   
 
 Although this is not too high (indeed, we desire hit rates that approach 100%), it is non-zero, which may be a surprise.
-
 ==虽然这个比例不是太高（实际上，我们希望命中率接近 100%），但它是非零的，这可能令人惊讶。==
 
   
 
 Even though this is the first time the program accesses the array, the TLB improves performance due to spatial locality.
-
 ==即使这是程序第一次访问数组，TLB 也因为空间局部性而提高了性能。==
 
   
 
 The elements of the array are packed tightly into pages (i.e., they are close to one another in space), and thus only the first access to an element on a page yields a TLB miss.
-
 ==数组元素被紧密地打包到页面中（即，它们在空间上彼此靠近），因此只有对页面上元素的第一次访问才会产生 TLB 未命中。==
 
   
 
 Also note the role that page size plays in this example.
-
 ==还要注意页大小在此示例中扮演的角色。==
 
   
 
 If the page size had simply been twice as big (32 bytes, not 16), the array access would suffer even fewer misses.
-
 ==如果页大小大一倍（32 字节，而不是 16 字节），数组访问遭遇的未命中次数会更少。==
 
   
 
 As typical page sizes are more like 4KB, these types of dense, array-based accesses achieve excellent TLB performance, encountering only a single miss per page of accesses.
-
 ==由于典型的页大小更像是 4KB，这些类型的密集、基于数组的访问可以实现极佳的 TLB 性能，每页访问只会遇到一次未命中。==
 
   
 
 One last point about TLB performance: if the program, soon after this loop completes, accesses the array again, we'd likely see an even better result, assuming that we have a big enough TLB to cache the needed translations: hit, hit, hit, hit, hit, hit, hit, hit, hit, hit.
-
 ==关于 TLB 性能的最后一点：如果程序在该循环完成后不久再次访问数组，我们可能会看到更好的结果，假设我们有足够大的 TLB 来缓存所需的转换：命中、命中、命中……（全部命中）。==
 
   
 
 In this case, the TLB hit rate would be high because of temporal locality, i.e., the quick re-referencing of memory items in time.
-
 ==在这种情况下，TLB 命中率会很高，因为时间局部性，即在时间上快速重新引用内存项。==
 
   
 
 Like any cache, TLBs rely upon both spatial and temporal locality for success, which are program properties.
-
 ==像任何缓存一样，TLB 依靠空间局部性和时间局部性来获得成功，这是程序的属性。==
 
   
 
 If the program of interest exhibits such locality (and many programs do), the TLB hit rate will likely be high.
-
 ==如果感兴趣的程序表现出这种局部性（许多程序都是如此），TLB 命中率可能会很高。==
 
   
 
 TIP: USE CACHING WHEN POSSIBLE
-
 ==提示：尽可能使用缓存==
 
   
 
 Caching is one of the most fundamental performance techniques in computer systems, one that is used again and again to make the "common case fast".
-
 ==缓存是计算机系统中最基本的性能技术之一，它被反复用于使“常见情况变快”。==
 
   
 
 The idea behind hardware caches is to take advantage of locality in instruction and data references.
-
 ==硬件缓存背后的思想是利用指令和数据引用中的局部性。==
 
   
 
 There are usually two types of locality: temporal locality and spatial locality.
-
 ==通常有两种类型的局部性：时间局部性和空间局部性。==
 
   
 
 With temporal locality, the idea is that an instruction or data item that has been recently accessed will likely be re-accessed soon in the future.
-
 ==对于时间局部性，其思想是最近访问过的指令或数据项很可能在不久的将来被再次访问。==
 
   
 
 Think of loop variables or instructions in a loop; they are accessed repeatedly over time.
-
 ==想想循环变量或循环中的指令；它们随着时间的推移被反复访问。==
 
   
 
 With spatial locality, the idea is that if a program accesses memory at address x, it will likely soon access memory near x.
-
 ==对于空间局部性，其思想是如果程序访问地址 x 处的内存，它很可能很快就会访问 x 附近的内存。==
 
   
 
 Imagine here streaming through an array of some kind, accessing one element and then the next.
-
 ==想象一下流式处理某种数组，访问一个元素然后访问下一个。==
 
   
 
 Of course, these properties depend on the exact nature of the program, and thus are not hard-and-fast laws but more like rules of thumb.
-
 ==当然，这些属性取决于程序的具体性质，因此不是硬性定律，而更像是经验法则。==
 
   
 
 Hardware caches, whether for instructions, data, or address translations (as in our TLB) take advantage of locality by keeping copies of memory in small, fast on-chip memory.
-
 ==硬件缓存，无论是用于指令、数据还是地址转换（如我们的 TLB），都利用局部性，将内存副本保存在小型、快速的片上内存中。==
 
   
 
 Instead of having to go to a (slow) memory to satisfy a request, the processor can first check if a nearby copy exists in a cache.
-
 ==处理器不必去（慢速）内存满足请求，而是可以首先检查缓存中是否存在附近的副本。==
 
   
 
 If it does, the processor can access it quickly (i.e., in a few CPU cycles) and avoid spending the costly time it takes to access memory (many nanoseconds).
-
 ==如果有，处理器可以快速访问它（即在几个 CPU 周期内），并避免花费昂贵的时间去访问内存（许多纳秒）。==
 
   
 
 You might be wondering: if caches (like the TLB) are so great, why don't we just make bigger caches and keep all of our data in them?
-
 ==你可能想知道：如果缓存（如 TLB）如此之好，为什么我们不把缓存做得更大，把所有数据都放在里面呢？==
 
   
 
 Unfortunately, this is where we run into more fundamental laws like those of physics.
-
 ==不幸的是，这是我们遇到更基本的定律（如物理定律）的地方。==
 
   
 
 If you want a fast cache, it has to be small, as issues like the speed-of-light and other physical constraints become relevant.
-
 ==如果你想要一个快速的缓存，它必须很小，因为光速和其他物理限制等问题变得相关。==
 
   
 
 Any large cache by definition is slow, and thus defeats the purpose.
-
 ==任何大型缓存根据定义都是慢的，因此违背了初衷。==
 
   
 
 Thus, we are stuck with small, fast caches; the question that remains is how to best use them to improve performance.
-
 ==因此，我们只能使用小型、快速的缓存；剩下的问题是如何最好地利用它们来提高性能。==
 
   
 
 19.3 Who Handles The TLB Miss?
-
 ==19.3 谁来处理 TLB 未命中？==
 
   
 
 One question that we must answer: who handles a TLB miss?
-
 ==我们必须回答的一个问题是：谁来处理 TLB 未命中？==
 
   
 
 Two answers are possible: the hardware, or the software (OS).
-
 ==有两种可能的答案：硬件或软件（操作系统）。==
 
   
 
 In the olden days, the hardware had complex instruction sets (sometimes called CISC, for complex-instruction set computers) and the people who built the hardware didn't much trust those sneaky OS people.
-
 ==在过去，硬件具有复杂的指令集（有时称为 CISC，即复杂指令集计算机），制造硬件的人不太信任那些鬼鬼祟祟的操作系统人员。==
 
   
 
 Thus, the hardware would handle the TLB miss entirely.
-
 ==因此，硬件将完全处理 TLB 未命中。==
 
   
 
 To do this, the hardware has to know exactly where the page tables are located in memory (via a page-table base register), as well as their exact format.
-
 ==为此，硬件必须确切知道页表在内存中的位置（通过页表基址寄存器），以及它们的确切格式。==
 
   
 
 On a miss, the hardware would "walk" the page table, find the correct page-table entry and extract the desired translation, update the TLB with the translation, and retry the instruction.
-
 ==在未命中时，硬件会“遍历”页表，找到正确的页表项并提取所需的转换，用该转换更新 TLB，并重试指令。==
 
   
 
 An example of an "older" architecture that has hardware-managed TLBs is the Intel x86 architecture, which uses a fixed multi-level page table.
-
 ==具有硬件管理 TLB 的“较旧”架构的一个例子是 Intel x86 架构，它使用固定的多级页表。==
 
   
 
 The current page table is pointed to by the CR3 register.
-
 ==当前页表由 CR3 寄存器指向。==
 
   
 
 More modern architectures (e.g., MIPS R10k or Sun's SPARC v9, both RISC or reduced-instruction set computers) have what is known as a software-managed TLB.
-
 ==更现代的架构（例如 MIPS R10k 或 Sun 的 SPARC v9，均为 RISC 或精简指令集计算机）具有所谓的软件管理 TLB。==
 
   
 
 On a TLB miss, the hardware simply raises an exception, which pauses the current instruction stream, raises the privilege level to kernel mode, and jumps to a trap handler.
-
 ==在 TLB 未命中时，硬件只是引发一个异常，暂停当前指令流，将特权级别提升为内核模式，并跳转到陷阱处理程序。==
 
   
 
 As you might guess, this trap handler is code within the OS that is written with the express purpose of handling TLB misses.
-
 ==正如你可能猜到的那样，这个陷阱处理程序是操作系统内的代码，其编写目的是为了处理 TLB 未命中。==
 
   
 
 When run, the code will lookup the translation in the page table, use special "privileged" instructions to update the TLB, and return from the trap.
-
 ==运行时，代码将在页表中查找转换，使用特殊的“特权”指令更新 TLB，并从陷阱返回。==
 
   
 
 At this point, the hardware retries the instruction (resulting in a TLB hit).
-
 ==此时，硬件重试指令（导致 TLB 命中）。==
 
   
 
 Let's discuss a couple of important details.
-
 ==让我们讨论几个重要的细节。==
 
   
 
 First, the return-from-trap instruction needs to be a little different than the return-from-trap we saw before when servicing a system call.
-
 ==首先，从陷阱返回的指令需要与我们之前在处理系统调用时看到的从陷阱返回指令略有不同。==
 
   
 
 In the latter case, the return-from-trap should resume execution at the instruction after the trap into the OS, just as a return from a procedure call returns to the instruction immediately following the call into the procedure.
-
 ==在后一种情况下（系统调用），从陷阱返回应在进入操作系统的陷阱之后的指令处恢复执行，就像过程调用返回时回到过程调用之后的指令一样。==
 
   
 
 In the former case, when returning from a TLB miss-handling trap, the hardware must resume execution at the instruction that caused the trap.
-
 ==在前一种情况下，当从 TLB 未命中处理陷阱返回时，硬件必须在导致陷阱的指令处恢复执行。==
 
   
 
 This retry thus lets the instruction run again, this time resulting in a TLB hit.
-
 ==这种重试让指令再次运行，这次会产生 TLB 命中。==
 
   
 
 Thus, depending on how a trap or exception was caused, the hardware must save a different PC when trapping into the OS, in order to resume properly when the time to do so arrives.
-
 ==因此，根据导致陷阱或异常的原因，硬件必须在陷入操作系统时保存不同的 PC（程序计数器），以便在需要时正确恢复。==
 
   
 
 Second, when running the TLB miss-handling code, the OS needs to be extra careful not to cause an infinite chain of TLB misses to occur.
-
 ==其次，在运行 TLB 未命中处理代码时，操作系统需要格外小心，以免导致 TLB 未命中的无限循环。==
 
   
 
 Many solutions exist; for example, you could keep TLB miss handlers in physical memory (where they are unmapped and not subject to address translation).
-
 ==存在许多解决方案；例如，你可以将 TLB 未命中处理程序保留在物理内存中（那里未映射且不受地址转换的影响）。==
 
   
 
 Or reserve some entries in the TLB for permanently-valid translations and use some of those permanent translation slots for the handler code itself.
-
 ==或者在 TLB 中保留一些条目用于永久有效的转换，并将其中一些永久转换槽用于处理程序代码本身。==
 
   
 
 These wired translations always hit in the TLB.
-
 ==这些固定的转换总是会在 TLB 中命中。==
 
   
 
 The primary advantage of the software-managed approach is flexibility: the OS can use any data structure it wants to implement the page table, without necessitating hardware change.
-
 ==软件管理方法的主要优点是灵活性：操作系统可以使用它想要的任何数据结构来实现页表，而无需更改硬件。==
 
   
 
 Another advantage is simplicity, as seen in the TLB control flow.
-
 ==另一个优点是简单性，如 TLB 控制流所示。==
 
   
 
 The hardware doesn't do much on a miss: just raise an exception and let the OS TLB miss handler do the rest.
-
 ==硬件在未命中时做不了多少事：只是引发异常并让操作系统 TLB 未命中处理程序完成其余工作。==
 
   
 
 ASIDE: RISC vs. CISC
-
 ==补充说明：RISC 与 CISC==
 
   
 
 In the 1980's, a great battle took place in the computer architecture community.
-
 ==在 20 世纪 80 年代，计算机架构界发生了一场大战。==
 
   
 
 On one side was the CISC camp, which stood for Complex Instruction Set Computing; on the other side was RISC, for Reduced Instruction Set Computing.
-
 ==一方是 CISC 阵营，代表复杂指令集计算；另一方是 RISC，代表精简指令集计算。==
 
   
 
 The RISC side was spear-headed by David Patterson at Berkeley and John Hennessy at Stanford (who are also co-authors of some famous books).
-
 ==RISC 方面由伯克利的 David Patterson 和斯坦福的 John Hennessy 领头（他们也是一些著名书籍的合著者）。==
 
   
 
 CISC instruction sets tend to have a lot of instructions in them, and each instruction is relatively powerful.
-
 ==CISC 指令集往往包含大量指令，每条指令都相对强大。==
 
   
 
 For example, you might see a string copy, which takes two pointers and a length and copies bytes from source to destination.
-
 ==例如，你可能会看到字符串复制指令，它接受两个指针和一个长度，并将字节从源复制到目标。==
 
   
 
 The idea behind CISC was that instructions should be high-level primitives, to make the assembly language itself easier to use, and to make code more compact.
-
 ==CISC 背后的理念是指令应该是高级原语，以使汇编语言本身更易于使用，并使代码更紧凑。==
 
   
 
 RISC instruction sets are exactly the opposite.
-
 ==RISC 指令集恰恰相反。==
 
   
 
 A key observation behind RISC is that instruction sets are really compiler targets, and all compilers really want are a few simple primitives that they can use to generate high-performance code.
-
 ==RISC 背后是一个关键观察结果：指令集实际上是编译器的目标，所有编译器真正想要的只是几个简单的原语，以便用来生成高性能代码。==
 
   
 
 Thus, RISC proponents argued, let's rip out as much from the hardware as possible (especially the microcode), and make what's left simple, uniform, and fast.
-
 ==因此，RISC 支持者主张，让我们尽可能从硬件中剥离内容（特别是微代码），并使剩下的部分简单、统一且快速。==
 
   
 
 In the early days, RISC chips made a huge impact, as they were noticeably faster.
-
 ==在早期，RISC 芯片产生了巨大的影响，因为它们明显更快。==
 
   
 
 However, as time progressed, CISC manufacturers such as Intel incorporated many RISC techniques into the core of their processors.
-
 ==然而，随着时间的推移，像 Intel 这样的 CISC 制造商将许多 RISC 技术融入了其处理器核心。==
 
   
 
 For example by adding early pipeline stages that transformed complex instructions into micro-instructions which could then be processed in a RISC-like manner.
-
 ==例如，通过添加早期流水线阶段，将复杂指令转换为微指令，然后可以以类似 RISC 的方式进行处理。==
 
   
 
 These innovations, plus a growing number of transistors on each chip, allowed CISC to remain competitive.
-
 ==这些创新加上每个芯片上晶体管数量的增加，使得 CISC 能够保持竞争力。==
 
   
 
 The end result is that the debate died down, and today both types of processors can be made to run fast.
-
 ==最终结果是争论平息了，今天这两种类型的处理器都可以运行得很快。==
 
   
 
 19.4 TLB Contents: What's In There?
-
 ==19.4 TLB 内容：里面有什么？==
 
   
 
 Let's look at the contents of the hardware TLB in more detail.
-
 ==让我们更详细地查看硬件 TLB 的内容。==
 
   
 
 A typical TLB might have 32, 64, or 128 entries and be what is called fully associative.
-
 ==典型的 TLB 可能有 32、64 或 128 个条目，并且被称为全相联的。==
 
   
 
 Basically, this just means that any given translation can be anywhere in the TLB, and that the hardware will search the entire TLB in parallel to find the desired translation.
-
 ==基本上，这只是意味着任何给定的转换都可以位于 TLB 中的任何位置，并且硬件将并行搜索整个 TLB 以查找所需的转换。==
 
   
 
 A TLB entry might look like this: VPN | PFN | other bits.
-
 ==TLB 条目可能如下所示：VPN | PFN | 其他位。==
 
   
 
 Note that both the VPN and PFN are present in each entry, as a translation could end up in any of these locations (in hardware terms, the TLB is known as a fully-associative cache).
-
 ==请注意，VPN 和 PFN 都存在于每个条目中，因为转换可能最终出现在这些位置中的任何一个（在硬件术语中，TLB 被称为全相联缓存）。==
 
   
 
 The hardware searches the entries in parallel to see if there is a match.
-
 ==硬件并行搜索条目以查看是否有匹配项。==
 
   
 
 More interesting are the "other bits".
-
 ==更有趣的是“其他位”。==
 
   
 
 For example, the TLB commonly has a valid bit, which says whether the entry has a valid translation or not.
-
 ==例如，TLB 通常有一个有效位，用于说明该条目是否具有有效的转换。==
 
   
 
 Also common are protection bits, which determine how a page can be accessed (as in the page table).
-
 ==同样常见的是保护位，它决定了如何访问页面（如在页表中一样）。==
 
   
 
 For example, code pages might be marked read and execute, whereas heap pages might be marked read and write.
-
 ==例如，代码页可能被标记为读取和执行，而堆页可能被标记为读取和写入。==
 
   
 
 There may also be a few other fields, including an address-space identifier, a dirty bit, and so forth.
-
 ==可能还有其他几个字段，包括地址空间标识符、脏位等。==
 
   
 
 ASIDE: TLB VALID BIT != PAGE TABLE VALID BIT
-
 ==补充说明：TLB 有效位 != 页表有效位==
 
   
 
 A common mistake is to confuse the valid bits found in a TLB with those found in a page table.
-
 ==一个常见的错误是将 TLB 中的有效位与页表中的有效位混淆。==
 
   
 
 In a page table, when a page-table entry (PTE) is marked invalid, it means that the page has not been allocated by the process, and should not be accessed by a correctly-working program.
-
 ==在页表中，当页表项 (PTE) 被标记为无效时，意味着该页面尚未由进程分配，并且不应由正常工作的程序访问。==
 
   
 
 The usual response when an invalid page is accessed is to trap to the OS, which will respond by killing the process.
-
 ==当访问无效页面时，通常的反应是陷入操作系统，操作系统将通过终止进程来响应。==
 
   
 
 A TLB valid bit, in contrast, simply refers to whether a TLB entry has a valid translation within it.
-
 ==相比之下，TLB 有效位仅指 TLB 条目中是否包含有效的转换。==
 
   
 
 When a system boots, for example, a common initial state for each TLB entry is to be set to invalid, because no address translations are yet cached there.
-
 ==例如，当系统启动时，每个 TLB 条目的常见初始状态是设置为无效，因为那里尚未缓存任何地址转换。==
 
   
 
 Once virtual memory is enabled, and once programs start running and accessing their virtual address spaces, the TLB is slowly populated, and thus valid entries soon fill the TLB.
-
 ==一旦启用了虚拟内存，并且程序开始运行并访问其虚拟地址空间，TLB 就会慢慢填充，因此有效条目很快就会填满 TLB。==
 
   
 
 The TLB valid bit is quite useful when performing a context switch too, as we'll discuss further below.
-
 ==在执行上下文切换时，TLB 有效位也非常有用，我们将要在下面进一步讨论。==
 
   
 
 By setting all TLB entries to invalid, the system can ensure that the about-to-be-run process does not accidentally use a virtual-to-physical translation from a previous process.
-
 ==通过将所有 TLB 条目设置为无效，系统可以确保即将运行的进程不会意外使用来自先前进程的虚拟到物理转换。==
 
   
 
 19.5 TLB Issue: Context Switches
-
 ==19.5 TLB 问题：上下文切换==
 
   
 
 With TLBs, new issues arise when switching between processes (and hence address spaces).
-
 ==使用 TLB 后，在进程（以及地址空间）之间切换时会出现新问题。==
 
   
 
 Specifically, the TLB contains virtual-to-physical translations that are only valid for the currently running process; these translations are not meaningful for other processes.
-
 ==具体来说，TLB 包含仅对当前运行的进程有效的虚拟到物理转换；这些转换对其他进程没有意义。==
 
   
 
 As a result, when switching from one process to another, the hardware or OS (or both) must be careful to ensure that the about-to-be-run process does not accidentally use translations from some previously run process.
-
 ==结果，当从一个进程切换到另一个进程时，硬件或操作系统（或两者）必须小心，以确保即将运行的进程不会意外使用来自先前运行进程的转换。==
 
   
 
 To understand this situation better, let's look at an example.
-
 ==为了更好地理解这种情况，让我们看一个例子。==
 
   
 
 When one process (P1) is running, it assumes the TLB might be caching translations that are valid for it, i.e., that come from P1's page table.
-
 ==当一个进程 (P1) 运行时，它假设 TLB 可能缓存了对它有效的转换，即来自 P1 页表的转换。==
 
   
 
 Assume, for this example, that the 10th virtual page of P1 is mapped to physical frame 100.
-
 ==假设在这个例子中，P1 的第 10 个虚拟页映射到物理帧 100。==
 
   
 
 In this example, assume another process (P2) exists, and the OS soon might decide to perform a context switch and run it.
-
 ==在这个例子中，假设存在另一个进程 (P2)，并且操作系统很快可能决定执行上下文切换并运行它。==
 
   
 
 Assume here that the 10th virtual page of P2 is mapped to physical frame 170.
-
 ==这里假设 P2 的第 10 个虚拟页映射到物理帧 170。==
 
   
 
 If entries for both processes were in the TLB, the contents of the TLB would be:
-
 ==如果两个进程的条目都在 TLB 中，则 TLB 的内容将是：==
 
   
 
 (VPN 10, PFN 100, Valid 1, Prot rwx)
-
 ==(VPN 10, PFN 100, 有效 1, 保护 rwx)==
 
   
 
 (VPN 10, PFN 170, Valid 1, Prot rwx)
-
 ==(VPN 10, PFN 170, 有效 1, 保护 rwx)==
 
   
 
 In the TLB above, we clearly have a problem: VPN 10 translates to either PFN 100 (P1) or PFN 170 (P2), but the hardware can't distinguish which entry is meant for which process.
-
 ==在上面的 TLB 中，我们显然有一个问题：VPN 10 转换为 PFN 100 (P1) 或 PFN 170 (P2)，但硬件无法区分哪个条目对应哪个进程。==
 
   
 
 Thus, we need to do some more work in order for the TLB to correctly and efficiently support virtualization across multiple processes.
-
 ==因此，我们需要做更多工作，以便 TLB 能够正确有效地支持跨多个进程的虚拟化。==
 
   
 
 THE CRUX: HOW TO MANAGE TLB CONTENTS ON A CONTEXT SWITCH
-
 ==关键问题：如何在上下文切换时管理 TLB 内容==
 
   
 
 When context-switching between processes, the translations in the TLB for the last process are not meaningful to the about-to-be-run process.
-
 ==当在进程之间进行上下文切换时，TLB 中上一个进程的转换对即将运行的进程没有意义。==
 
   
 
 What should the hardware or OS do in order to solve this problem?
-
 ==为了解决这个问题，硬件或操作系统应该做什么？==
 
   
 
 There are a number of possible solutions to this problem.
-
 ==针对这个问题有多种可能的解决方案。==
 
   
 
 One approach is to simply flush the TLB on context switches, thus emptying it before running the next process.
-
 ==一种方法是在上下文切换时简单地刷新 TLB，从而在运行下一个进程之前将其清空。==
 
   
 
 On a software-based system, this can be accomplished with an explicit (and privileged) hardware instruction.
-
 ==在基于软件的系统上，这可以通过显式的（特权）硬件指令来完成。==
 
   
 
 With a hardware-managed TLB, the flush could be enacted when the page-table base register is changed (note the OS must change the PTBR on a context switch anyhow).
-
 ==对于硬件管理的 TLB，可以在更改页表基址寄存器时执行刷新（注意，操作系统无论如何都必须在上下文切换时更改 PTBR）。==
 
   
 
 In either case, the flush operation simply sets all valid bits to 0, essentially clearing the contents of the TLB.
-
 ==在任何一种情况下，刷新操作只是将所有有效位设置为 0，本质上清除了 TLB 的内容。==
 
   
 
 By flushing the TLB on each context switch, we now have a working solution, as a process will never accidentally encounter the wrong translations in the TLB.
-
 ==通过在每次上下文切换时刷新 TLB，我们现在有了一个可行的解决方案，因为进程永远不会在 TLB 中意外遇到错误的转换。==
 
   
 
 However, there is a cost: each time a process runs, it must incur TLB misses as it touches its data and code pages.
-
 ==但是，这是有代价的：每次进程运行时，当它触及数据和代码页时，必然会引发 TLB 未命中。==
 
   
 
 If the OS switches between processes frequently, this cost may be high.
-
 ==如果操作系统频繁地在进程之间切换，这个代价可能会很高。==
 
   
 
 To reduce this overhead, some systems add hardware support to enable sharing of the TLB across context switches.
-
 ==为了减少这种开销，一些系统添加了硬件支持，以实现跨上下文切换共享 TLB。==
 
   
 
 In particular, some hardware systems provide an address space identifier (ASID) field in the TLB.
-
 ==特别是，一些硬件系统在 TLB 中提供了地址空间标识符 (ASID) 字段。==
 
   
 
 You can think of the ASID as a process identifier (PID), but usually it has fewer bits (e.g., 8 bits for the ASID versus 32 bits for a PID).
-
 ==你可以将 ASID 视为进程标识符 (PID)，但通常它的位数较少（例如，ASID 为 8 位，而 PID 为 32 位）。==
 
   
 
 If we take our example TLB from above and add ASIDs, it is clear processes can readily share the TLB: only the ASID field is needed to differentiate otherwise identical translations.
-
 ==如果我们采用上面的 TLB 示例并添加 ASID，很明显进程可以随时共享 TLB：只需要 ASID 字段来区分原本相同的转换。==
 
   
 
 Thus, with address-space identifiers, the TLB can hold translations from different processes at the same time without any confusion.
-
 ==因此，有了地址空间标识符，TLB 可以同时保存来自不同进程的转换，而不会产生任何混淆。==
 
   
 
 Of course, the hardware also needs to know which process is currently running in order to perform translations, and thus the OS must, on a context switch, set some privileged register to the ASID of the current process.
-
 ==当然，硬件还需要知道当前正在运行哪个进程以执行转换，因此操作系统必须在上下文切换时将某个特权寄存器设置为当前进程的 ASID。==
 
   
 
 As an aside, you may also have thought of another case where two entries of the TLB are remarkably similar.
-
 ==顺便说一句，你可能还想到了另一种情况，即 TLB 的两个条目非常相似。==
 
   
 
 In this example, there are two entries for two different processes with two different VPNs that point to the same physical page.
-
 ==在这个例子中，有两个不同进程的两个条目，它们具有两个指向同一物理页面的不同 VPN。==
 
   
 
 This situation might arise, for example, when two processes share a page (a code page, for example).
-
 ==这种情况可能会出现，例如当两个进程共享一个页面（例如代码页）时。==
 
   
 
 In the example above, Process 1 is sharing physical page 101 with Process 2; P1 maps this page into the 10th page of its address space, whereas P2 maps it to the 50th page of its address space.
-
 ==在上面的例子中，进程 1 与进程 2 共享物理页 101；P1 将此页面映射到其地址空间的第 10 页，而 P2 将其映射到其地址空间的第 50 页。==
 
   
 
 Sharing of code pages (in binaries, or shared libraries) is useful as it reduces the number of physical pages in use, thus reducing memory overheads.
-
 ==共享代码页（在二进制文件或共享库中）很有用，因为它减少了使用的物理页面数量，从而减少了内存开销。==
 
 PAGING: FASTER TRANSLATIONS (TLBS)
-
 ==分页：更快的地址转换 (TLB)==
 
   
 
 19.6 Issue: Replacement Policy
-
 ==19.6 问题：替换策略==
 
   
 
 As with any cache, and thus also with the TLB, one more issue that we must consider is cache replacement.
-
 ==正如任何缓存一样，TLB 也是如此，我们需要考虑的另一个问题是缓存替换。==
 
   
 
 Specifically, when we are installing a new entry in the TLB, we have to replace an old one, and thus the question: which one to replace?
-
 ==具体来说，当我们在 TLB 中安装一个新条目时，我们必须替换一个旧条目，因此问题来了：应该替换哪一个？==
 
   
 
 THE CRUX: HOW TO DESIGN TLB REPLACEMENT POLICY
-
 ==关键问题：如何设计 TLB 替换策略==
 
   
 
 Which TLB entry should be replaced when we add a new TLB entry?
-
 ==当我们要添加一个新的 TLB 条目时，应该替换哪一个 TLB 条目？==
 
   
 
 The goal, of course, being to minimize the miss rate (or increase hit rate) and thus improve performance.
-
 ==当然，目标是最小化未命中率（或提高命中率），从而提高性能。==
 
   
 
 We will study such policies in some detail when we tackle the problem of swapping pages to disk;
-
 ==当我们解决将页面交换到磁盘的问题时，我们将详细研究这些策略；==
 
   
 
 here we'll just highlight a few typical policies.
-
 ==在这里，我们只强调几种典型的策略。==
 
   
 
 One common approach is to evict the least-recently-used or LRU entry.
-
 ==一种常见的方法是驱逐最近最少使用（LRU）的条目。==
 
   
 
 LRU tries to take advantage of locality in the memory-reference stream, assuming it is likely that an entry that has not recently been used is a good candidate for eviction.
-
 ==LRU 试图利用内存引用流中的局部性，假设最近未被使用的条目很可能是被驱逐的好人选。==
 
   
 
 Another typical approach is to use a random policy, which evicts a TLB mapping at random.
-
 ==另一种典型的方法是使用随机策略，即随机驱逐一个 TLB 映射。==
 
   
 
 Such a policy is useful due to its simplicity and ability to avoid corner-case behaviors;
-
 ==这种策略因其简单性和避免极端情况行为的能力而非常有用；==
 
   
 
 for example, a "reasonable" policy such as LRU behaves quite unreasonably when a program loops over  pages with a TLB of size n;
-
 ==例如，当一个程序在 TLB 大小为 n 的情况下循环访问  个页面时，像 LRU 这样“合理”的策略表现得相当不合理；==
 
   
 
 in this case, LRU misses upon every access, whereas random does much better.
-
 ==在这种情况下，LRU 每次访问都会未命中，而随机策略则表现得好得多。==
 
   
 
 19.7 A Real TLB Entry
-
 ==19.7 一个真实的 TLB 条目==
 
   
 
 Finally, let's briefly look at a real TLB.
-
 ==最后，让我们简要地看一个真实的 TLB。==
 
   
 
 This example is from the MIPS R4000 [H93], a modern system that uses software-managed TLBs;
-
 ==这个例子来自 MIPS R4000 [H93]，这是一个使用软件管理 TLB 的现代系统；==
 
   
 
 a slightly simplified MIPS TLB entry can be seen in Figure 19.4.
-
 ==图 19.4 展示了一个稍微简化的 MIPS TLB 条目。==
 
   
 
 The MIPS R4000 supports a 32-bit address space with 4KB pages.
-
 ==MIPS R4000 支持具有 4KB 页面的 32 位地址空间。==
 
   
 
 Thus, we would expect a 20-bit VPN and 12-bit offset in our typical virtual address.
-
 ==因此，我们在典型的虚拟地址中期望有一个 20 位的 VPN 和 12 位的偏移量。==
 
   
 
 However, as you can see in the TLB, there are only 19 bits for the VPN;
-
 ==然而，正如你在 TLB 中看到的，VPN 只有 19 位；==
 
   
 
 as it turns out, user addresses will only come from half the address space (the rest reserved for the kernel) and hence only 19 bits of VPN are needed.
-
 ==事实证明，用户地址只来自地址空间的一半（其余部分保留给内核），因此只需要 19 位的 VPN。==
 
   
 
 The VPN translates to up to a 24-bit physical frame number (PFN), and hence can support systems with up to 64GB of (physical) main memory ( 4KB pages).
-
 ==VPN 转换为高达 24 位的物理帧号（PFN），因此可以支持高达 64GB 的（物理）主内存（ 个 4KB 页面）。==
 
   
 
 There are a few other interesting bits in the MIPS TLB.
-
 ==MIPS TLB 中还有其他几个有趣的位。==
 
   
 
 We see a global bit (G), which is used for pages that are globally-shared among processes.
-
 ==我们看到一个全局位（G），用于在进程之间全局共享的页面。==
 
   
 
 Thus, if the global bit is set, the ASID is ignored.
-
 ==因此，如果设置了全局位，则忽略 ASID。==
 
   
 
 We also see the 8-bit ASID, which the OS can use to distinguish between address spaces (as described above).
-
 ==我们还看到了 8 位的 ASID，操作系统可以使用它来区分地址空间（如上所述）。==
 
   
 
 One question for you: what should the OS do if there are more than 256 () processes running at a time?
-
 ==问你一个问题：如果同时运行的进程超过 256 () 个，操作系统应该怎么做？==
 
   
 
 Finally, we see 3 Coherence (C) bits, which determine how a page is cached by the hardware (a bit beyond the scope of these notes);
-
 ==最后，我们看到 3 个一致性（C）位，它们决定了硬件如何缓存页面（这有点超出了本笔记的范围）；==
 
   
 
 a dirty bit which is marked when the page has been written to (we'll see the use of this later);
-
 ==一个脏位（dirty bit），当页面被写入时会被标记（我们稍后会看到它的用途）；==
 
   
 
 a valid bit which tells the hardware if there is a valid translation present in the entry.
-
 ==以及一个有效位（valid bit），告诉硬件该条目中是否存在有效的转换。==
 
   
 
 There is also a page mask field (not shown), which supports multiple page sizes;
-
 ==还有一个页面掩码字段（未显示），它支持多种页面大小；==
 
   
 
 we'll see later why having larger pages might be useful.
-
 ==我们稍后会看到为什么拥有更大的页面可能很有用。==
 
   
 
 Figure 19.4: A MIPS TLB Entry
-
 ==图 19.4：一个 MIPS TLB 条目==
 
   
 
 TIP: RAM ISN'T ALWAYS RAM (CULLER'S LAW)
-
 ==提示：RAM 并不总是 RAM（库勒定律）==
 
   
 
 The term random-access memory, or RAM, implies that you can access any part of RAM just as quickly as another.
-
 ==术语随机存取存储器（RAM）意味着你可以像访问其他部分一样快地访问 RAM 的任何部分。==
 
   
 
 While it is generally good to think of RAM in this way, because of hardware/OS features such as the TLB, accessing a particular page of memory may be costly, particularly if that page isn't currently mapped by your TLB.
-
 ==虽然这样看待 RAM 通常是好的，但由于 TLB 等硬件/操作系统特性的存在，访问内存的特定页面可能代价高昂，特别是如果该页面当前未被 TLB 映射。==
 
   
 
 Thus, it is always good to remember the implementation tip: RAM isn't always RAM.
-
 ==因此，最好始终记住这个实现提示：RAM 并不总是 RAM。==
 
   
 
 Sometimes randomly accessing your address space, particularly if the number of pages accessed exceeds the TLB coverage, can lead to severe performance penalties.
-
 ==有时，随机访问你的地址空间，特别是当访问的页面数量超过 TLB 覆盖范围时，会导致严重的性能损失。==
 
   
 
 Because one of our advisors, David Culler, used to always point to the TLB as the source of many performance problems, we name this law in his honor: Culler's Law.
-
 ==因为我们的导师之一 David Culler 过去总是指出 TLB 是许多性能问题的根源，我们以他的名字命名这条定律：库勒定律。==
 
   
 
 MIPS TLBs usually have 32 or 64 of these entries, most of which are used by user processes as they run.
-
 ==MIPS TLB 通常有 32 或 64 个这样的条目，其中大多数由用户进程在运行时使用。==
 
   
 
 However, a few are reserved for the OS.
-
 ==然而，有几个是为操作系统保留的。==
 
   
 
 A wired register can be set by the OS to tell the hardware how many slots of the TLB to reserve for the OS;
-
 ==操作系统可以设置一个固定寄存器（wired register），告诉硬件为操作系统保留多少个 TLB 插槽；==
 
   
 
 the OS uses these reserved mappings for code and data that it wants to access during critical times, where a TLB miss would be problematic (e.g., in the TLB miss handler).
-
 ==操作系统将这些保留的映射用于它希望在关键时刻访问的代码和数据，在这些时刻 TLB 未命中将会造成问题（例如，在 TLB 未命中处理程序中）。==
 
   
 
 Because the MIPS TLB is software managed, there needs to be instructions to update the TLB.
-
 ==由于 MIPS TLB 是软件管理的，因此需要有指令来更新 TLB。==
 
   
 
 The MIPS provides four such instructions:
-
 ==MIPS 提供了四条这样的指令：==
 
   
 
 TLBP, which probes the TLB to see if a particular translation is in there;
-
 ==TLBP，用于探测 TLB 以查看其中是否存在特定的转换；==
 
   
 
 TLBR, which reads the contents of a TLB entry into registers;
-
 ==TLBR，用于将 TLB 条目的内容读取到寄存器中；==
 
   
 
 TLBWI, which replaces a specific TLB entry;
-
 ==TLBWI，用于替换特定的 TLB 条目；==
 
   
 
 and TLBWR, which replaces a random TLB entry.
-
 ==以及 TLBWR，用于替换随机的 TLB 条目。==
 
   
 
 The OS uses these instructions to manage the TLB's contents.
-
 ==操作系统使用这些指令来管理 TLB 的内容。==
 
   
 
 It is of course critical that these instructions are privileged;
-
 ==当然，至关重要的是这些指令必须是特权指令；==
 
   
 
 imagine what a user process could do if it could modify the contents of the TLB (hint: just about anything, including take over the machine, run its own malicious "OS", or even make the Sun disappear).
-
 ==想象一下，如果用户进程可以修改 TLB 的内容，它能做什么（提示：几乎任何事情，包括接管机器、运行自己的恶意“操作系统”，甚至让太阳消失）。==
 
   
 
 19.8 Summary
-
 ==19.8 总结==
 
   
 
 We have seen how hardware can help us make address translation faster.
-
 ==我们已经看到了硬件如何帮助我们加快地址转换。==
 
   
 
 By providing a small, dedicated on-chip TLB as an address-translation cache, most memory references will hopefully be handled without having to access the page table in main memory.
-
 ==通过提供一个小型的、专用的片上 TLB 作为地址转换缓存，大多数内存引用有望在无需访问主内存中页表的情况下得到处理。==
 
   
 
 Thus, in the common case, the performance of the program will be almost as if memory isn't being virtualized at all, an excellent achievement for an operating system, and certainly essential to the use of paging in modern systems.
-
 ==因此，在通常情况下，程序的性能几乎就像内存根本没有被虚拟化一样，这对操作系统来说是一个卓越的成就，当然也是现代系统中使用分页必不可少的。==
 
   
 
 However, TLBs do not make the world rosy for every program that exists.
-
 ==然而，TLB 并没有让每个现存程序的世界都变得美好。==
 
   
 
 In particular, if the number of pages a program accesses in a short period of time exceeds the number of pages that fit into the TLB, the program will generate a large number of TLB misses, and thus run quite a bit more slowly.
-
 ==特别是，如果一个程序在短时间内访问的页面数量超过了 TLB 能够容纳的页面数量，该程序将产生大量的 TLB 未命中，从而运行得相当缓慢。==
 
   
 
 We refer to this phenomenon as exceeding the TLB coverage, and it can be quite a problem for certain programs.
-
 ==我们将这种现象称为超出 TLB 覆盖范围，对于某些程序来说，这可能是一个相当大的问题。==
 
   
 
 One solution, as we'll discuss in the next chapter, is to include support for larger page sizes;
-
 ==正如我们将在下一章讨论的那样，一种解决方案是增加对更大页面大小的支持；==
 
   
 
 by mapping key data structures into regions of the program's address space that are mapped by larger pages, the effective coverage of the TLB can be increased.
-
 ==通过将关键数据结构映射到由更大页面映射的程序地址空间区域，可以增加 TLB 的有效覆盖范围。==
 
   
 
 Support for large pages is often exploited by programs such as a database management system (a DBMS), which have certain data structures that are both large and randomly-accessed.
-
 ==对大页面的支持通常被数据库管理系统（DBMS）等程序所利用，这些程序拥有既庞大又被随机访问的特定数据结构。==
 
   
 
 One other TLB issue worth mentioning: TLB access can easily become a bottleneck in the CPU pipeline, in particular with what is called a physically-indexed cache.
-
 ==另一个值得一提的 TLB 问题是：TLB 访问很容易成为 CPU 流水线中的瓶颈，特别是对于所谓的物理索引缓存。==
 
   
 
 With such a cache, address translation has to take place before the cache is accessed, which can slow things down quite a bit.
-
 ==对于这种缓存，地址转换必须在访问缓存之前发生，这可能会使速度变慢不少。==
 
   
 
 Because of this potential problem, people have looked into all sorts of clever ways to access caches with virtual addresses, thus avoiding the expensive step of translation in the case of a cache hit.
-
 ==由于这个潜在的问题，人们已经研究了各种巧妙的方法来使用虚拟地址访问缓存，从而在缓存命中的情况下避免昂贵的转换步骤。==
 
   
 
 Such a virtually-indexed cache solves some performance problems, but introduces new issues into hardware design as well.
-
 ==这种虚拟索引缓存解决了一些性能问题，但也给硬件设计带来了新的问题。==
 
   
 
 Homework (Measurement)
-
 ==家庭作业（测量）==
 
   
 
 In this homework, you are to measure the size and cost of accessing a TLB.
-
 ==在这个作业中，你要测量 TLB 的大小和访问成本。==
 
   
 
 The idea is based on work by Saavedra-Barrera [SB92], who developed a simple but beautiful method to measure numerous aspects of cache hierarchies, all with a very simple user-level program.
-
 ==这个想法基于 Saavedra-Barrera [SB92] 的工作，他开发了一种简单而优美的方法来测量缓存层次结构的许多方面，所有这些都只需要一个非常简单的用户级程序。==
 
   
 
 The basic idea is to access some number of pages within a large data structure (e.g., an array) and to time those accesses.
-
 ==基本的想法是访问大型数据结构（例如数组）中的一定数量的页面，并对这些访问进行计时。==
 
   
 
 For example, let's say the TLB size of a machine happens to be 4 (which would be very small, but useful for the purposes of this discussion).
-
 ==例如，假设一台机器的 TLB 大小恰好是 4（这非常小，但对于本次讨论很有用）。==
 
   
 
 If you write a program that touches 4 or fewer pages, each access should be a TLB hit, and thus relatively fast.
-
 ==如果你编写一个程序访问 4 个或更少的页面，每次访问都应该是 TLB 命中，因此相对较快。==
 
   
 
 However, once you touch 5 pages or more, repeatedly in a loop, each access will suddenly jump in cost, to that of a TLB miss.
-
 ==然而，一旦你在循环中重复访问 5 个或更多的页面，每次访问的成本将突然跳升至 TLB 未命中的成本。==
 
   
 
 Figure 19.5: Discovering TLB Sizes and Miss Costs
-
 ==图 19.5：发现 TLB 大小和未命中成本==
 
   
 
 Figure 19.5 (page 15) shows the average time per access as the number of pages accessed in the loop is increased.
-
 ==图 19.5（第 15 页）显示了随着循环中访问页面数量的增加，每次访问的平均时间。==
 
   
 
 As you can see in the graph, when just a few pages are accessed (8 or fewer), the average access time is roughly 5 nanoseconds.
-
 ==正如你在图表中看到的，当只访问少数几个页面（8 个或更少）时，平均访问时间大约是 5 纳秒。==
 
   
 
 When 16 or more pages are accessed, there is a sudden jump to about 20 nanoseconds per access.
-
 ==当访问 16 个或更多页面时，每次访问的时间突然跳升至约 20 纳秒。==
 
   
 
 A final jump in cost occurs at around 1024 pages, at which point each access takes around 70 nanoseconds.
-
 ==成本的最后一次跳跃发生在约 1024 个页面时，此时每次访问大约需要 70 纳秒。==
 
   
 
 From this data, we can conclude that there is a two-level TLB hierarchy;
-
 ==从这些数据中，我们可以得出结论，存在一个两级 TLB 层次结构；==
 
   
 
 the first is quite small (probably holding between 8 and 16 entries);
-
 ==第一级相当小（可能包含 8 到 16 个条目）；==
 
   
 
 the second is larger but slower (holding roughly 512 entries).
-
 ==第二级较大但较慢（大约包含 512 个条目）。==
 
   
 
 The overall difference between hits in the first-level TLB and misses is quite large, roughly a factor of fourteen.
-
 ==一级 TLB 命中与未命中之间的总体差异相当大，大约是十四倍。==
 
   
 
 TLB performance matters!
-
 ==TLB 性能很重要！==
 
   
 
 Paging: Smaller Tables
-
 ==分页：更小的表==
 
   
 
 We now tackle the second problem that paging introduces: page tables are too big and thus consume too much memory.
-
 ==我们现在解决分页引入的第二个问题：页表太大，因此消耗太多内存。==
 
   
 
 Let's start out with a linear page table.
-
 ==让我们从线性页表开始。==
 
   
 
 As you might recall, linear page tables get pretty big.
-
 ==正如你可能记得的那样，线性页表变得非常大。==
 
   
 
 Assume again a 32-bit address space ( bytes), with 4KB ( byte) pages and a 4-byte page-table entry.
-
 ==再次假设一个 32 位地址空间（ 字节），具有 4KB（ 字节）页面和 4 字节的页表项。==
 
   
 
 An address space thus has roughly one million virtual pages in it ;
-
 ==因此，一个地址空间中大约有一百万个虚拟页面 ；==
 
   
 
 multiply by the page-table entry size and you see that our page table is 4MB in size.
-
 ==乘以页表项的大小，你会看到我们的页表大小为 4MB。==
 
   
 
 Recall also: we usually have one page table for every process in the system!
-
 ==还请回想一下：我们通常为系统中的每个进程都有一个页表！==
 
   
 
 With a hundred active processes (not uncommon on a modern system), we will be allocating hundreds of megabytes of memory just for page tables!
-
 ==如果有一百个活动进程（在现代系统中并不罕见），我们将仅为页表分配数亿字节的内存！==
 
   
 
 As a result, we are in search of some techniques to reduce this heavy burden.
-
 ==因此，我们正在寻找一些技术来减轻这一沉重负担。==
 
   
 
 CRUX: HOW TO MAKE PAGE TABLES SMALLER?
-
 ==关键问题：如何让页表变小？==
 
   
 
 Simple array-based page tables (usually called linear page tables) are too big, taking up far too much memory on typical systems.
-
 ==简单的基于数组的页表（通常称为线性页表）太大，在典型系统上占用了太多内存。==
 
   
 
 How can we make page tables smaller?
-
 ==我们要如何让页表变小？==
 
   
 
 What are the key ideas?
-
 ==关键思路是什么？==
 
   
 
 What inefficiencies arise as a result of these new data structures?
-
 ==这些新数据结构会导致什么效率低下的问题？==
 
   
 
 20.1 Simple Solution: Bigger Pages
-
 ==20.1 简单的解决方案：更大的页面==
 
   
 
 We could reduce the size of the page table in one simple way: use bigger pages.
-
 ==我们可以用一种简单的方法来减小页表的大小：使用更大的页面。==
 
   
 
 Take our 32-bit address space again, but this time assume 16KB pages.
-
 ==再次以我们的 32 位地址空间为例，但这次假设页面大小为 16KB。==
 
   
 
 We would thus have an 18-bit VPN plus a 14-bit offset.
-
 ==因此我们将拥有一个 18 位的 VPN 加上一个 14 位的偏移量。==
 
   
 
 Assuming the same size for each PTE (4 bytes), we now have  entries in our linear page table and thus a total size of 1MB per page table, a factor of four reduction in size of the page table (not surprisingly, the reduction exactly mirrors the factor of four increase in page size).
-
 ==假设每个 PTE 的大小相同（4 字节），我们的线性页表中现在有  个条目，因此每个页表的总大小为 1MB，页表大小减少了四倍（不足为奇的是，这种减少完全反映了页面大小增加的四倍）。==
 
   
 
 The major problem with this approach, however, is that big pages lead to waste within each page, a problem known as internal fragmentation (as the waste is internal to the unit of allocation).
-
 ==然而，这种主要方法的问题在于，大页面会导致每个页面内部的浪费，这个问题被称为内部碎片（因为浪费发生在分配单元的内部）。==
 
   
 
 Applications thus end up allocating pages but only using little bits and pieces of each, and memory quickly fills up with these overly-large pages.
-
 ==因此，应用程序最终分配了页面，但只使用了每个页面的一小部分，内存很快就被这些过大的页面填满了。==
 
   
 
 Thus, most systems use relatively small page sizes in the common case: 4KB (as in x86) or 8KB (as in SPARCv9).
-
 ==因此，大多数系统在通常情况下使用相对较小的页面大小：4KB（如 x86）或 8KB（如 SPARCv9）。==
 
   
 
 ASIDE: MULTIPLE PAGE SIZES
-
 ==旁白：多种页面大小==
 
   
 
 As an aside, do note that many architectures (e.g., MIPS, SPARC, x86-64) now support multiple page sizes.
-
 ==顺便提一下，请注意许多架构（例如 MIPS、SPARC、x86-64）现在支持多种页面大小。==
 
   
 
 Usually, a small (4KB or 8KB) page size is used.
-
 ==通常使用较小的（4KB 或 8KB）页面大小。==
 
   
 
 However, if a "smart" application requests it, a single large page (e.g., of size 4MB) can be used for a specific portion of the address space, enabling such applications to place a frequently-used (and large) data structure in such a space while consuming only a single TLB entry.
-
 ==然而，如果一个“智能”应用程序请求，可以为地址空间的特定部分使用单个大页面（例如，大小为 4MB），使此类应用程序能够将常用（且大型）的数据结构放置在这样的空间中，同时仅消耗一个 TLB 条目。==
 
   
 
 This type of large page usage is common in database management systems and other high-end commercial applications.
-
 ==这种大页面的使用在数据库管理系统和其他高端商业应用中很常见。==
 
   
 
 The main reason for multiple page sizes is not to save page table space, however;
-
 ==然而，多种页面大小的主要原因并不是为了节省页表空间；==
 
   
 
 it is to reduce pressure on the TLB, enabling a program to access more of its address space without suffering from too many TLB misses.
-
 ==而是为了减轻 TLB 的压力，使程序能够访问更多的地址空间，而不会遭遇太多的 TLB 未命中。==
 
   
 
 20.2 Hybrid Approach: Paging and Segments
-
 ==20.2 混合方法：分页和分段==
 
   
 
 Whenever you have two reasonable but different approaches to something in life, you should always examine the combination of the two to see if you can obtain the best of both worlds.
-
 ==无论何时，如果你对生活中的某件事有两种合理但不同的方法，你都应该检查这两者的结合，看看是否能两全其美。==
 
   
 
 We call such a combination a hybrid.
-
 ==我们称这种组合为混合体。==
 
   
 
 Years ago, the creators of Multics (in particular Jack Dennis) chanced upon such an idea in the construction of the Multics virtual memory system [M07].
-
 ==多年前，Multics 的创造者（特别是 Jack Dennis）在构建 Multics 虚拟内存系统时偶然发现了这样一个想法 [M07]。==
 
   
 
 Specifically, Dennis had the idea of combining paging and segmentation in order to reduce the memory overhead of page tables.
-
 ==具体来说，Dennis 提出了结合分页和分段的想法，以减少页表的内存开销。==
 
   
 
 We can see why this might work by examining a typical linear page table in more detail.
-
 ==我们可以通过更详细地检查典型的线性页表来了解为什么这可能行得通。==
 
   
 
 Assume we have an address space in which the used portions of the heap and stack are small.
-
 ==假设我们要处理一个地址空间，其中堆和栈的已使用部分很小。==
 
   
 
 For the example, we use a tiny 16KB address space with 1KB pages (Figure 20.1);
-
 ==在这个例子中，我们使用一个具有 1KB 页面的微型 16KB 地址空间（图 20.1）；==
 
   
 
 the page table for this address space is in Figure 20.2.
-
 ==该地址空间的页表如图 20.2 所示。==
 
   
 
 Figure 20.1: A 16KB Address Space With 1KB Pages
-
 ==图 20.1：具有 1KB 页面的 16KB 地址空间==
 
   
 
 Figure 20.2: A Page Table For 16KB Address Space
-
 ==图 20.2：16KB 地址空间的页表==
 
   
 
 This example assumes the single code page (VPN 0) is mapped to physical page 10, the single heap page (VPN 4) to physical page 23, and the two stack pages at the other end of the address space (VPNs 14 and 15) are mapped to physical pages 28 and 4, respectively.
-
 ==该示例假设单个代码页（VPN 0）映射到物理页 10，单个堆页（VPN 4）映射到物理页 23，地址空间另一端的两个栈页（VPN 14 和 15）分别映射到物理页 28 和 4。==
 
   
 
 As you can see from the picture, most of the page table is unused, full of invalid entries.
-
 ==从图中可以看出，页表的大部分未被使用，充满了无效条目。==
 
   
 
 What a waste!
-
 ==真是浪费！==
 
   
 
 And this is for a tiny 16KB address space.
-
 ==这还是针对一个微小的 16KB 地址空间。==
 
   
 
 Imagine the page table of a 32-bit address space and all the potential wasted space in there!
-
 ==想象一下 32 位地址空间的页表以及其中所有潜在的浪费空间！==
 
   
 
 Thus, our hybrid approach: instead of having a single page table for the entire address space of the process, why not have one per logical segment?
-
 ==因此，我们的混合方法是：与其为进程的整个地址空间保留单个页表，为什么不为每个逻辑段保留一个页表呢？==
 
   
 
 In this example, we might thus have three page tables, one for the code, heap, and stack parts of the address space.
-
 ==在这个例子中，我们因此可能有三个页表，分别用于地址空间的代码、堆和栈部分。==
 
   
 
 Now, remember with segmentation, we had a base register that told us where each segment lived in physical memory, and a bound or limit register that told us the size of said segment.
-
 ==现在，请记住在分段中，我们有一个基址寄存器告诉我们每个段在物理内存中的位置，还有一个界限或限制寄存器告诉我们该段的大小。==
 
   
 
 In our hybrid, we still have those structures in the MMU;
-
 ==在我们的混合方案中，我们在 MMU 中仍然有这些结构；==
 
   
 
 here, we use the base not to point to the segment itself but rather to hold the physical address of the page table of that segment.
-
 ==在这里，我们使用基址不是指向段本身，而是保存该段页表的物理地址。==
 
   
 
 The bounds register is used to indicate the end of the page table (i.e., how many valid pages it has).
-
 ==界限寄存器用于指示页表的结束（即它有多少个有效页面）。==
 
   
 
 Let's do a simple example to clarify.
-
 ==让我们做一个简单的例子来阐明。==
 
   
 
 Assume a 32-bit virtual address space with 4KB pages, and an address space split into four segments.
-
 ==假设一个具有 4KB 页面的 32 位虚拟地址空间，并且地址空间被分成四个段。==
 
   
 
 We'll only use three segments for this example: one for code, one for heap, and one for stack.
-
 ==在这个例子中我们只使用三个段：一个用于代码，一个用于堆，一个用于栈。==
 
   
 
 To determine which segment an address refers to, we'll use the top two bits of the address space.
-
 ==为了确定一个地址指的是哪个段，我们将使用地址空间的前两位。==
 
   
 
 Let's assume 00 is the unused segment, with 01 for code, 10 for the heap, and 11 for the stack.
-
 ==假设 00 是未使用段，01 是代码段，10 是堆段，11 是栈段。==
 
   
 
 Thus, a virtual address looks like this: Seg | VPN | Offset
-
 ==因此，虚拟地址看起来像这样：段号 | VPN | 偏移量==
 
   
 
 In the hardware, assume that there are thus three base/bounds pairs, one each for code, heap, and stack.
-
 ==在硬件中，假设因此有三对基址/界限寄存器，分别用于代码、堆和栈。==
 
   
 
 When a process is running, the base register for each of these segments contains the physical address of a linear page table for that segment;
-
 ==当进程运行时，这些段的每个基址寄存器都包含该段线性页表的物理地址；==
 
   
 
 thus, each process in the system now has three page tables associated with it.
-
 ==因此，系统中的每个进程现在都有三个与其关联的页表。==
 
   
 
 On a context switch, these registers must be changed to reflect the location of the page tables of the newly-running process.
-
 ==在上下文切换时，必须更改这些寄存器以反映新运行进程的页表位置。==
 
   
 
 On a TLB miss (assuming a hardware-managed TLB, i.e., where the hardware is responsible for handling TLB misses), the hardware uses the segment bits (SN) to determine which base and bounds pair to use.
-
 ==在 TLB 未命中时（假设是硬件管理的 TLB，即硬件负责处理 TLB 未命中），硬件使用段位（SN）来确定使用哪一对基址和界限。==
 
   
 
 TIP: USE HYBRIDS
-
 ==提示：使用混合体==
 
   
 
 When you have two good and seemingly opposing ideas, you should always see if you can combine them into a hybrid that manages to achieve the best of both worlds.
-
 ==当你有两个好的且看似对立的想法时，你应该总是看看是否可以将它们结合成一个混合体，从而设法两全其美。==
 
   
 
 The critical difference in our hybrid scheme is the presence of a bounds register per segment;
-
 ==我们要混合方案的关键区别在于每个段都有一个界限寄存器；==
 
   
 
 each bounds register holds the value of the maximum valid page in the segment.
-
 ==每个界限寄存器保存段中最大有效页面的值。==
 
   
 
 For example, if the code segment is using its first three pages (0, 1, and 2), the code segment page table will only have three entries allocated to it and the bounds register will be set to 3;
-
 ==例如，如果代码段使用其前三个页面（0、1 和 2），则代码段页表将只为其分配三个条目，并且界限寄存器将被设置为 3；==
 
   
 
 memory accesses beyond the end of the segment will generate an exception and likely lead to the termination of the process.
-
 ==超出段末尾的内存访问将产生异常，并可能导致进程终止。==
 
   
 
 In this manner, our hybrid approach realizes a significant memory savings compared to the linear page table;
-
 ==通过这种方式，与线性页表相比，我们的混合方法实现了显著的内存节省；==
 
   
 
 unallocated pages between the stack and the heap no longer take up space in a page table (just to mark them as not valid).
-
 ==堆栈和堆之间的未分配页面不再在页表中占用空间（仅仅为了将它们标记为无效）。==
 
   
 
 However, as you might notice, this approach is not without problems.
-
 ==然而，你可能已经注意到，这种方法并非没有问题。==
 
   
 
 First, it still requires us to use segmentation;
-
 ==首先，它仍然要求我们使用分段；==
 
   
 
 as we discussed before, segmentation is not quite as flexible as we would like, as it assumes a certain usage pattern of the address space;
-
 ==正如我们要之前讨论的那样，分段并不像我们希望的那样灵活，因为它假设了地址空间的某种使用模式；==
 
   
 
 if we have a large but sparsely-used heap, for example, we can still end up with a lot of page table waste.
-
 ==例如，如果我们有一个很大但使用稀疏的堆，我们仍然可能最终造成大量的页表浪费。==
 
   
 
 Second, this hybrid causes external fragmentation to arise again.
-
 ==其次，这种混合方法会导致外部碎片再次出现。==
 
   
 
 While most of memory is managed in page-sized units, page tables now can be of arbitrary size (in multiples of PTEs).
-
 ==虽然大多数内存是以页面大小为单位进行管理的，但页表现在可以是任意大小（PTE 的倍数）。==
 
   
 
 Thus, finding free space for them in memory is more complicated.
-
 ==因此，在内存中为它们寻找空闲空间变得更加复杂。==
 
   
 
 For these reasons, people continued to look for better ways to implement smaller page tables.
-
 ==由于这些原因，人们继续寻找实现更小页表的更好方法。==
 
   
 
 20.3 Multi-level Page Tables
-
 ==20.3 多级页表==
 
   
 
 A different approach doesn't rely on segmentation but attacks the same problem: how to get rid of all those invalid regions in the page table instead of keeping them all in memory?
-
 ==另一种不同的方法不依赖于分段，而是解决同样的问题：如何去掉页表中所有那些无效区域，而不是将它们全部保留在内存中？==
 
   
 
 We call this approach a multi-level page table, as it turns the linear page table into something like a tree.
-
 ==我们将这种方法称为多级页表，因为它将线性页表变成了类似树的结构。==
 
   
 
 This approach is so effective that many modern systems employ it (e.g., x86 [BOH10]).
-
 ==这种方法非常有效，以至于许多现代系统都采用它（例如，x86 [BOH10]）。==
 
   
 
 We now describe this approach in detail.
-
 ==我们现在详细描述这种方法。==
 
   
 
 The basic idea behind a multi-level page table is simple.
-
 ==多级页表背后的基本思想很简单。==
 
   
 
 First, chop up the page table into page-sized units;
-
 ==首先，将页表切分成页面大小的单元；==
 
   
 
 then, if an entire page of page-table entries (PTEs) is invalid, don't allocate that page of the page table at all.
-
 ==然后，如果整页的页表项（PTE）都是无效的，就根本不分配该页的页表。==
 
   
 
 To track whether a page of the page table is valid (and if valid, where it is in memory), use a new structure, called the page directory.
-
 ==为了跟踪页表的一个页面是否有效（如果有效，它在内存中的位置），使用一种新的结构，称为页目录。==
 
   
 
 The page directory thus either can be used to tell you where a page of the page table is, or that the entire page of the page table contains no valid pages.
-
 ==因此，页目录要么可以用来告诉你页表的一个页面在哪里，要么告诉你页表的整个页面都不包含有效页面。==
 
   
 
 Figure 20.3: Linear (Left) And Multi-Level (Right) Page Tables
-
 ==图 20.3：线性（左）和多级（右）页表==
 
   
 
 Figure 20.3 shows an example.
-
 ==图 20.3 展示了一个例子。==
 
   
 
 On the left of the figure is the classic linear page table;
-
 ==图的左边是经典的线性页表；==
 
   
 
 even though most of the middle regions of the address space are not valid, we still require page-table space allocated for those regions (i.e., the middle two pages of the page table).
-
 ==即使地址空间的大部分中间区域是无效的，我们仍然需要为这些区域分配页表空间（即页表的中间两页）。==
 
   
 
 On the right is a multi-level page table.
-
 ==右边是一个多级页表。==
 
   
 
 The page directory marks just two pages of the page table as valid (the first and last);
-
 ==页目录仅将页表的两个页面标记为有效（第一个和最后一个）；==
 
   
 
 thus, just those two pages of the page table reside in memory.
-
 ==因此，只有页表的这两个页面驻留在内存中。==
 
   
 
 And thus you can see one way to visualize what a multi-level table is doing: it just makes parts of the linear page table disappear (freeing those frames for other uses), and tracks which pages of the page table are allocated with the page directory.
-
 ==因此，你可以看到一种可视化多级页表作用的方法：它只是让线性页表的一部分消失（释放这些帧供其他用途），并使用页目录跟踪分配了哪些页表的页面。==
 
   
 
 The page directory, in a simple two-level table, contains one entry per page of the page table.
-
 ==在一个简单的二级表中，页目录包含对应于页表每一页的一个条目。==
 
   
 
 It consists of a number of page directory entries (PDE).
-
 ==它由许多页目录项（PDE）组成。==
 
   
 
 A PDE (minimally) has a valid bit and a page frame number (PFN), similar to a PTE.
-
 ==一个 PDE（最小限度地）拥有一个有效位和一个物理帧号（PFN），类似于 PTE。==
 
   
 
 However, as hinted at above, the meaning of this valid bit is slightly different:
-
 ==然而，如上文暗示的那样，这个有效位的含义略有不同：==
 
   
 
 if the PDE is valid, it means that at least one of the pages of the page table that the entry points to (via the PFN) is valid, i.e., in at least one PTE on that page pointed to by this PDE, the valid bit in that PTE is set to one.
-
 ==如果 PDE 是有效的，这意味着该条目（通过 PFN）指向的页表页面中至少有一个是有效的，即在该 PDE 指向的页面上的至少一个 PTE 中，该 PTE 的有效位被设置为 1。==
 
   
 
 If the PDE is not valid (i.e., equal to zero), the rest of the PDE is not defined.
-
 ==如果 PDE 无效（即等于零），则 PDE 的其余部分未定义。==
 
   
 
 Multi-level page tables have some obvious advantages over approaches we've seen thus far.
-
 ==多级页表比我们目前看到的方法具有一些明显的优势。==
 
   
 
 First, and perhaps most obviously, the multi-level table only allocates page-table space in proportion to the amount of address space you are using;
-
 ==首先，也许最明显的是，多级表仅根据你使用的地址空间量来分配页表空间；==
 
   
 
 thus it is generally compact and supports sparse address spaces.
-
 ==因此它通常很紧凑，并支持稀疏的地址空间。==
 
   
 
 Second, if carefully constructed, each portion of the page table fits neatly within a page, making it easier to manage memory;
-
 ==其次，如果构建得当，页表的每一部分都可以整齐地放入一个页面中，从而更容易管理内存；==
 
   
 
 the OS can simply grab the next free page when it needs to allocate or grow a page table.
-
 ==当操作系统需要分配或增长页表时，它可以简单地抓取下一个空闲页面。==
 
   
 
 Contrast this to a simple (non-paged) linear page table, which is just an array of PTEs indexed by VPN;
-
 ==将其与简单的（非分页）线性页表进行对比，后者只是一个由 VPN 索引的 PTE 数组；==
 
   
 
 with such a structure, the entire linear page table must reside contiguously in physical memory.
-
 ==对于这种结构，整个线性页表必须连续地驻留在物理内存中。==
 
   
 
 For a large page table (say 4MB), finding such a large chunk of unused contiguous free physical memory can be quite a challenge.
-
 ==对于一个大型页表（例如 4MB），找到如此大块未使用的连续空闲物理内存可能是一个相当大的挑战。==
 
   
 
 With a multi-level structure, we add a level of indirection through use of the page directory, which points to pieces of the page table;
-
 ==通过多级结构，我们通过使用指向页表片段的页目录增加了一级间接性；==
 
   
 
 that indirection allows us to place page-table pages wherever we would like in physical memory.
-
 ==这种间接性允许我们将页表页面放置在物理内存中我们想要的任何位置。==
 
   
 
 It should be noted that there is a cost to multi-level tables;
-
 ==应该注意的是，多级表是有代价的；==
 
   
 
 on a TLB miss, two loads from memory will be required to get the right translation information from the page table (one for the page directory, and one for the PTE itself), in contrast to just one load with a linear page table.
-
 ==在 TLB 未命中时，需要从内存中加载两次才能从页表中获取正确的转换信息（一次用于页目录，一次用于 PTE 本身），而线性页表只需要加载一次。==
 
   
 
 Thus, the multi-level table is a small example of a time-space trade-off.
-
 ==因此，多级表是时间-空间权衡的一个小例子。==
 
   
 
 We wanted smaller tables (and got them), but not for free;
-
 ==我们想要更小的表（并且得到了），但不是免费的；==
 
   
 
 although in the common case (TLB hit), performance is obviously identical, a TLB miss suffers from a higher cost with this smaller table.
-
 ==虽然在通常情况下（TLB 命中），性能显然是相同的，但使用这种较小的表，TLB 未命中的成本更高。==
 
   
 
 Another obvious negative is complexity.
-
 ==另一个明显的缺点是复杂性。==
 
   
 
 Whether it is the hardware or OS handling the page-table lookup (on a TLB miss), doing so is undoubtedly more involved than a simple linear page-table lookup.
-
 ==无论是硬件还是操作系统处理页表查找（在 TLB 未命中时），这样做无疑比简单的线性页表查找更复杂。==
 
   
 
 A Detailed Multi-Level Example
-
 ==一个详细的多级示例==
 
   
 
 To understand the idea behind multi-level page tables better, let's do an example.
-
 ==为了更好地理解多级页表背后的思想，让我们做一个示例。==
 
   
 
 Imagine a small address space of size 16KB, with 64-byte pages.
-
 ==想象一个大小为 16KB、页面大小为 64 字节的小型地址空间。==
 
   
 
 Thus, we have a 14-bit virtual address space, with 8 bits for the VPN and 6 bits for the offset.
-
 ==因此，我们有一个 14 位的虚拟地址空间，其中 8 位用于 VPN，6 位用于偏移量。==
 
   
 
 A linear page table would have  (256) entries, even if only a small portion of the address space is in use.
-
 ==线性页表将有  (256) 个条目，即使只有一小部分地址空间被使用。==
 
   
 
 Figure 20.4: A 16KB Address Space With 64-byte Pages
-
 ==图 20.4：具有 64 字节页面的 16KB 地址空间==
 
   
 
 To build a two-level page table for this address space, we start with our full linear page table and break it up into page-sized units.
-
 ==为了为此地址空间构建二级页表，我们从完整的线性页表开始，并将其分解为页面大小的单元。==
 
   
 
 Recall our full table (in this example) has 256 entries;
-
 ==回想一下我们的完整表（在这个例子中）有 256 个条目；==
 
   
 
 assume each PTE is 4 bytes in size.
-
 ==假设每个 PTE 的大小为 4 字节。==
 
   
 
 Thus, our page table is 1KB ( bytes) in size.
-
 ==因此，我们的页表大小为 1KB ( 字节)。==
 
   
 
 Given that we have 64-byte pages, the 1KB page table can be divided into 16 64-byte pages;
-
 ==鉴于我们有 64 字节的页面，1KB 的页表可以分为 16 个 64 字节的页面；==
 
   
 
 each page can hold 16 PTEs.
-
 ==每个页面可以容纳 16 个 PTE。==
 
   
 
 What we need to understand now is how to take a VPN and use it to index first into the page directory and then into the page of the page table.
-
 ==我们现在需要理解的是如何获取 VPN 并使用它首先索引到页目录，然后索引到页表的页面。==
 
   
 
 Remember that each is an array of entries; thus, all we need to figure out is how to construct the index for each from pieces of the VPN.
-
 ==请记住，每个都是条目数组；因此，我们只需要弄清楚如何从 VPN 的片段中为每个构建索引。==
 
   
 
 Let's first index into the page directory.
-
 ==让我们首先索引到页目录。==
 
   
 
 Our page table in this example is small: 256 entries, spread across 16 pages.
-
 ==我们在这个例子中的页表很小：256 个条目，分布在 16 个页面上。==
 
   
 
 The page directory needs one entry per page of the page table; thus, it has 16 entries.
-
 ==页目录需要页表的每一页有一个条目；因此，它有 16 个条目。==
 
   
 
 As a result, we need four bits of the VPN to index into the directory;
-
 ==结果，我们需要 VPN 的 4 位来索引目录；==
 
   
 
 we use the top four bits of the VPN, as follows:
-
 ==我们使用 VPN 的前四位，如下所示：==
 
   
@@ -17254,49 +14965,41 @@ VPN: 13 12 11 10 | 9 8 7 6 5 4 | 3 2 1 0
   
 
 Page Directory Index: 3 2 1 0
-
 ==页目录索引：3 2 1 0==
 
   
 
 Once we extract the page-directory index (PDIndex for short) from the VPN, we can use it to find the address of the page-directory entry (PDE) with a simple calculation: .
-
 ==一旦我们从 VPN 中提取了页目录索引（简称 PDIndex），我们可以通过一个简单的计算来找到页目录项（PDE）的地址：。==
 
   
 
 This results in our page directory, which we now examine to make further progress in our translation.
-
 ==这产生了我们的页目录，我们现在检查它以便在转换中取得进一步进展。==
 
   
 
 If the page-directory entry is marked invalid, we know that the access is invalid, and thus raise an exception.
-
 ==如果页目录项被标记为无效，我们就知道访问是无效的，因此引发异常。==
 
   
 
 If, however, the PDE is valid, we have more work to do.
-
 ==然而，如果 PDE 是有效的，我们要有更多的工作要做。==
 
   
 
 Specifically, we now have to fetch the page-table entry (PTE) from the page of the page table pointed to by this page-directory entry.
-
 ==具体来说，我们现在必须从该页目录项指向的页表页面中获取页表项（PTE）。==
 
   
 
 To find this PTE, we have to index into the portion of the page table using the remaining bits of the VPN:
-
 ==为了找到这个 PTE，我们必须使用 VPN 的剩余位索引到页表的那一部分：==
 
   
 
 This page-table index (PTIndex for short) can then be used to index into the page table itself, giving us the address of our PTE:
-
 ==这个页表索引（简称 PTIndex）然后可以用来索引到页表本身，给我们提供 PTE 的地址：==
 
   
@@ -17305,1347 +15008,1122 @@ This page-table index (PTIndex for short) can then be used to index into the pag
   
 
 Note that the page-frame number obtained from the page-directory entry must be left-shifted into place before combining it with the page-table index to form the address of the PTE.
-
 ==请注意，从页目录项获取的页帧号必须左移到位，然后才能与页表索引组合以形成 PTE 的地址。==
 
 PAGING: SMALLER TABLES
-
 ==分页：较小的页表==
 
   
 
 Homework (Simulation)
-
 ==作业（模拟）==
 
   
 
 This fun little homework tests if you understand how a multi-level page table works.
-
 ==这个有趣的小作业是为了测试你是否理解多级页表是如何工作的。==
 
   
 
 And yes, there is some debate over the use of the term "fun" in the previous sentence.
-
 ==当然，对于上一句话中“有趣”这个词的使用，确实存在一些争议。==
 
   
 
 The program is called, perhaps unsurprisingly: paging-multilevel-translate.py; see the README for details.
-
 ==该程序的名字或许并不令人意外：paging-multilevel-translate.py；详情请参阅 README 文件。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. With a linear page table, you need a single register to locate the page table, assuming that hardware does the lookup upon a TLB miss.
-
 ==2. 对于线性页表，假设硬件在 TLB 未命中时执行查找，你需要一个寄存器来定位页表。==
 
   
 
 How many registers do you need to locate a two-level page table? A three-level table?
-
 ==定位一个二级页表需要多少个寄存器？三级页表呢？==
 
   
 
 2. Use the simulator to perform translations given random seeds 0, 1, and 2, and check your answers using the -c flag.
-
 ==3. 使用模拟器对随机种子 0、1 和 2 执行地址转换，并使用 -c 标志检查你的答案。==
 
   
 
 How many memory references are needed to perform each lookup?
-
 ==每次查找需要多少次内存引用？==
 
   
 
 3. Given your understanding of how cache memory works, how do you think memory references to the page table will behave in the cache?
-
 ==4. 基于你对缓存（cache）工作原理的理解，你认为对页表的内存引用在缓存中会表现如何？==
 
   
 
 Will they lead to lots of cache hits (and thus fast accesses?) Or lots of misses (and thus slow accesses)?
-
 ==它们会导致大量的缓存命中（从而实现快速访问）吗？还是会有大量的未命中（从而导致访问缓慢）？==
 
   
 
 Beyond Physical Memory: Mechanisms
-
 ==超越物理内存：机制==
 
   
 
 Thus far, we've assumed that an address space is unrealistically small and fits into physical memory.
-
 ==到目前为止，我们假设地址空间非常小，并且能够放入物理内存中，这在现实中是不切实际的。==
 
   
 
 In fact, we've been assuming that every address space of every running process fits into memory.
-
 ==事实上，我们一直假设每个运行进程的每个地址空间都能装入内存。==
 
   
 
 We will now relax these big assumptions, and assume that we wish to support many concurrently-running large address spaces.
-
 ==现在我们将放宽这些主要的假设，假设我们希望支持许多并发运行的大型地址空间。==
 
   
 
 To do so, we require an additional level in the memory hierarchy.
-
 ==为此，我们需要在内存层次结构中增加一个层级。==
 
   
 
 Thus far, we have assumed that all pages reside in physical memory.
-
 ==到目前为止，我们一直假设所有页面都驻留在物理内存中。==
 
   
 
 However, to support large address spaces, the OS will need a place to stash away portions of address spaces that currently aren't in great demand.
-
 ==然而，为了支持大型地址空间，操作系统需要一个地方来存放当前需求不大的部分地址空间。==
 
   
 
 In general, the characteristics of such a location are that it should have more capacity than memory;
-
 ==一般来说，这个位置的特征是它应该比内存拥有更大的容量；==
 
   
 
 as a result, it is generally slower (if it were faster, we would just use it as memory, no?).
-
 ==因此，它通常速度较慢（如果它更快，我们就直接把它当作内存用了，不是吗？）。==
 
   
 
 In modern systems, this role is usually served by a hard disk drive.
-
 ==在现代系统中，这个角色通常由硬盘驱动器来承担。==
 
   
 
 Thus, in our memory hierarchy, big and slow hard drives sit at the bottom, with memory just above.
-
 ==因此，在我们的内存层次结构中，大而慢的硬盘位于底部，内存就在其上方。==
 
   
 
 And thus we arrive at the crux of the problem:
-
 ==因此，我们来到了问题的关键：==
 
   
 
 **THE CRUX: HOW TO GO BEYOND PHYSICAL MEMORY**
-
 ==**关键问题：如何超越物理内存**==
 
   
 
 How can the OS make use of a larger, slower device to transparently provide the illusion of a large virtual address space?
-
 ==操作系统如何利用一个更大、更慢的设备来透明地提供巨大虚拟地址空间的假象？==
 
   
 
 One question you might have: why do we want to support a single large address space for a process?
-
 ==你可能会有一个问题：为什么我们要为一个进程支持单个巨大的地址空间？==
 
   
 
 Once again, the answer is convenience and ease of use.
-
 ==再一次，答案是为了方便和易用性。==
 
   
 
 With a large address space, you don't have to worry about if there is enough room in memory for your program's data structures;
-
 ==有了巨大的地址空间，你不必担心内存中是否有足够的空间来容纳程序的数据结构；==
 
   
 
 rather, you just write the program naturally, allocating memory as needed.
-
 ==相反，你只需自然地编写程序，根据需要分配内存。==
 
   
 
 It is a powerful illusion that the OS provides, and makes your life vastly simpler.
-
 ==这是操作系统提供的一种强大的假象，它让你的生活变得简单多了。==
 
   
 
 You're welcome!
-
 ==不客气！==
 
   
 
 A contrast is found in older systems that used memory overlays, which required programmers to manually move pieces of code or data in and out of memory as they were needed [D97].
-
 ==与之形成对比的是使用内存覆盖（overlays）的旧系统，它要求程序员在需要时手动将代码或数据片段移入和移出内存 [D97]。==
 
   
 
 Try imagining what this would be like: before calling a function or accessing some data, you need to first arrange for the code or data to be in memory;
-
 ==试着想象一下这会是什么样子：在调用函数或访问某些数据之前，你需要先安排将代码或数据放入内存中；==
 
   
 
 yuck!
-
 ==糟透了！==
 
   
 
 **ASIDE: STORAGE TECHNOLOGIES**
-
 ==**旁注：存储技术**==
 
   
 
 We'll delve much more deeply into how I/O devices actually work later (see the chapter on I/O devices).
-
 ==我们稍后将深入探讨 I/O 设备实际上是如何工作的（请参阅 I/O 设备一章）。==
 
   
 
 So be patient!
-
 ==所以请耐心等待！==
 
   
 
 And of course the slower device need not be a hard disk, but could be something more modern such as a Flash-based SSD.
-
 ==当然，较慢的设备不一定非得是硬盘，也可以是更现代的设备，比如基于闪存的 SSD。==
 
   
 
 We'll talk about those things too.
-
 ==我们也会讨论这些东西。==
 
   
 
 For now, just assume we have a big and relatively-slow device which we can use to help us build the illusion of a very large virtual memory, even bigger than physical memory itself.
-
 ==现在，只需假设我们要利用一个相对较慢的大型设备，来帮助构建一个比物理内存本身还要大的虚拟内存假象。==
 
   
 
 Beyond just a single process, the addition of swap space allows the OS to support the illusion of a large virtual memory for multiple concurrently-running processes.
-
 ==除了支持单个进程外，增加交换空间还允许操作系统为多个并发运行的进程提供大容量虚拟内存的假象。==
 
   
 
 The invention of multiprogramming (running multiple programs "at once", to better utilize the machine) almost demanded the ability to swap out some pages, as early machines clearly could not hold all the pages needed by all processes at once.
-
 ==多道程序设计（“同时”运行多个程序，以更好地利用机器）的发明几乎强制要求具备换出某些页面的能力，因为早期的机器显然无法同时容纳所有进程所需的所有页面。==
 
   
 
 Thus, the combination of multiprogramming and ease-of-use leads us to want to support using more memory than is physically available.
-
 ==因此，多道程序设计和易用性的结合，促使我们要支持使用超出物理可用范围的内存。==
 
   
 
 It is something that all modern VM systems do; it is now something we will learn more about.
-
 ==这是所有现代虚拟内存系统都会做的事情；这也是我们现在要进一步学习的内容。==
 
   
 
 **21.1 Swap Space**
-
 ==**21.1 交换空间**==
 
   
 
 The first thing we will need to do is to reserve some space on the disk for moving pages back and forth.
-
 ==我们需要做的第一件事是在磁盘上预留一些空间，以便来回移动页面。==
 
   
 
 In operating systems, we generally refer to such space as swap space, because we swap pages out of memory to it and swap pages into memory from it.
-
 ==在操作系统中，我们通常将这种空间称为交换空间（swap space），因为我们将页面从内存交换到其中，并将页面从其中交换回内存。==
 
   
 
 Thus, we will simply assume that the OS can read from and write to the swap space, in page-sized units.
-
 ==因此，我们简单地假设操作系统可以按页面大小为单位对交换空间进行读写。==
 
   
 
 To do so, the OS will need to remember the disk address of a given page.
-
 ==为此，操作系统需要记住给定页面的磁盘地址。==
 
   
 
 The size of the swap space is important, as ultimately it determines the maximum number of memory pages that can be in use by a system at a given time.
-
 ==交换空间的大小很重要，因为它最终决定了系统在给定时间内可以使用的最大内存页面数量。==
 
   
 
 Let us assume for simplicity that it is very large for now.
-
 ==为了简单起见，我们暂时假设它非常大。==
 
   
 
 In the tiny example (Figure 21.1), you can see a little example of a 4-page physical memory and an 8-page swap space.
-
 ==在这个微小的例子（图 21.1）中，你可以看到一个拥有 4 页物理内存和 8 页交换空间的示例。==
 
   
 
 In the example, three processes (Proc 0, Proc 1, and Proc 2) are actively sharing physical memory;
-
 ==在该示例中，三个进程（进程 0、进程 1 和进程 2）正在主动共享物理内存；==
 
   
 
 each of the three, however, only have some of their valid pages in memory, with the rest located in swap space on disk.
-
 ==然而，这三个进程中每一个都只有部分有效页面在内存中，其余的则位于磁盘上的交换空间中。==
 
   
 
 A fourth process (Proc 3) has all of its pages swapped out to disk, and thus clearly isn't currently running.
-
 ==第四个进程（进程 3）的所有页面都已换出到磁盘，因此显然当前没有运行。==
 
   
 
 One block of swap remains free.
-
 ==交换空间中保留了一个空闲块。==
 
   
 
 Even from this tiny example, hopefully you can see how using swap space allows the system to pretend that memory is larger than it actually is.
-
 ==即使从这个微小的例子中，希望你也能看出使用交换空间是如何让系统假装内存比实际要大的。==
 
   
 
 We should note that swap space is not the only on-disk location for swapping traffic.
-
 ==我们需要注意的是，交换空间并不是交换流量在磁盘上的唯一位置。==
 
   
 
 For example, assume you are running a program binary (e.g., ls, or your own compiled main program).
-
 ==例如，假设你正在运行一个程序二进制文件（例如 ls，或者你自己编译的主程序）。==
 
   
 
 The code pages from this binary are initially found on disk, and when the program runs, they are loaded into memory (either all at once when the program starts execution, or, as in modern systems, one page at a time when needed).
-
 ==这个二进制文件的代码页最初位于磁盘上，当程序运行时，它们被加载到内存中（要么在程序开始执行时一次性全部加载，要么像现代系统那样，在需要时一次加载一页）。==
 
   
 
 However, if the system needs to make room in physical memory for other needs, it can safely re-use the memory space for these code pages, knowing that it can later swap them in again from the on-disk binary in the file system.
-
 ==但是，如果系统需要腾出物理内存空间以满足其他需求，它可以安全地重用这些代码页占用的内存空间，因为它知道稍后可以从文件系统中的磁盘二进制文件再次将它们交换进来。==
 
   
 
 **21.2 The Present Bit**
-
 ==**21.2 存在位**==
 
   
 
 Now that we have some space on the disk, we need to add some machinery higher up in the system in order to support swapping pages to and from the disk.
-
 ==既然我们在磁盘上有了一些空间，我们需要在系统更高层添加一些机制，以支持将页面交换到磁盘或从磁盘换出。==
 
   
 
 Let us assume, for simplicity, that we have a system with a hardware-managed TLB.
-
 ==为了简单起见，让我们假设我们要处理一个拥有硬件管理 TLB 的系统。==
 
   
 
 Recall first what happens on a memory reference.
-
 ==首先回顾一下内存引用时会发生什么。==
 
   
 
 The running process generates virtual memory references (for instruction fetches, or data accesses), and, in this case, the hardware translates them into physical addresses before fetching the desired data from memory.
-
 ==运行中的进程生成虚拟内存引用（用于指令获取或数据访问），在这种情况下，硬件在从内存中获取所需数据之前，将其转换为物理地址。==
 
   
 
 Remember that the hardware first extracts the VPN from the virtual address, checks the TLB for a match (a TLB hit), and if a hit, produces the resulting physical address and fetches it from memory.
-
 ==请记住，硬件首先从虚拟地址中提取 VPN（虚拟页号），检查 TLB 是否匹配（TLB 命中），如果命中，则生成相应的物理地址并从内存中获取数据。==
 
   
 
 This is hopefully the common case, as it is fast (requiring no additional memory accesses).
-
 ==这通常是常见的情况，因为它很快（不需要额外的内存访问）。==
 
   
 
 If the VPN is not found in the TLB (i.e., a TLB miss), the hardware locates the page table in memory (using the page table base register) and looks up the page table entry (PTE) for this page using the VPN as an index.
-
 ==如果 VPN 未在 TLB 中找到（即 TLB 未命中），硬件会（使用页表基址寄存器）在内存中定位页表，并使用 VPN 作为索引查找该页的页表项（PTE）。==
 
   
 
 If the page is valid and present in physical memory, the hardware extracts the PFN from the PTE, installs it in the TLB, and retries the instruction, this time generating a TLB hit;
-
 ==如果页面有效且存在于物理内存中，硬件会从 PTE 中提取 PFN（物理帧号），将其安装到 TLB 中，并重试该指令，这次会产生 TLB 命中；==
 
   
 
 so far, so good.
-
 ==到目前为止，一切顺利。==
 
   
 
 If we wish to allow pages to be swapped to disk, however, we must add even more machinery.
-
 ==然而，如果我们希望允许页面被交换到磁盘，我们必须添加更多的机制。==
 
   
 
 Specifically, when the hardware looks in the PTE, it may find that the page is not present in physical memory.
-
 ==具体来说，当硬件查看 PTE 时，它可能会发现该页面不存在于物理内存中。==
 
   
 
 The way the hardware (or the OS, in a software-managed TLB approach) determines this is through a new piece of information in each page-table entry, known as the present bit.
-
 ==硬件（或者在软件管理 TLB 方法中的操作系统）确定这一点的方式是通过每个页表项中的一条新信息，称为存在位（present bit）。==
 
   
 
 If the present bit is set to one, it means the page is present in physical memory and everything proceeds as above;
-
 ==如果存在位设置为 1，则表示该页面存在于物理内存中，一切照常进行；==
 
   
 
 if it is set to zero, the page is not in memory but rather on disk somewhere.
-
 ==如果它设置为 0，则该页面不在内存中，而是在磁盘的某个地方。==
 
   
 
 **ASIDE: SWAPPING TERMINOLOGY AND OTHER THINGS**
-
 ==**旁注：交换术语及其他事项**==
 
   
 
 Terminology in virtual memory systems can be a little confusing and variable across machines and operating systems.
-
 ==虚拟内存系统中的术语可能有点令人困惑，并且在不同的机器和操作系统之间会有所变化。==
 
   
 
 For example, a page fault more generally could refer to any reference to a page table that generates a fault of some kind: this could include the type of fault we are discussing here, i.e., a page-not-present fault, but sometimes can refer to illegal memory accesses.
-
 ==例如，页错误（page fault）通常可以指代任何产生某种错误的页表引用：这可能包括我们这里讨论的错误类型，即“页面不存在”错误，但有时也可以指非法内存访问。==
 
   
 
 Indeed, it is odd that we call what is definitely a legal access (to a page mapped into the virtual address space of a process, but simply not in physical memory at the time) a "fault" at all;
-
 ==确实，将一个绝对合法的访问（访问映射到进程虚拟地址空间但当时仅是不在物理内存中的页面）称为“错误（fault）”是很奇怪的；==
 
   
 
 really, it should be called a page miss.
-
 ==实际上，它应该被称为页面未命中（page miss）。==
 
   
 
 But often, when people say a program is "page faulting", they mean that it is accessing parts of its virtual address space that the OS has swapped out to disk.
-
 ==但通常情况下，当人们说程序正在发生“页错误”时，他们的意思是它正在访问操作系统已换出到磁盘的那部分虚拟地址空间。==
 
   
 
 We suspect the reason that this behavior became known as a "fault" relates to the machinery in the operating system to handle it.
-
 ==我们怀疑这种行为被称为“错误”的原因与操作系统处理它的机制有关。==
 
   
 
 When something unusual happens, i.e., when something the hardware doesn't know how to handle occurs, the hardware simply transfers control to the OS, hoping it can make things better.
-
 ==当发生异常情况时，即当发生硬件不知道如何处理的事情时，硬件只是将控制权转移给操作系统，希望它能改善状况。==
 
   
 
 In this case, a page that a process wants to access is missing from memory;
-
 ==在这种情况下，进程想要访问的页面从内存中丢失了；==
 
   
 
 the hardware does the only thing it can, which is raise an exception, and the OS takes over from there.
-
 ==硬件做了它唯一能做的事情，即引发一个异常，然后由操作系统接管。==
 
   
 
 As this is identical to what happens when a process does something illegal, it is perhaps not surprising that we term the activity a "fault."
-
 ==由于这与进程执行非法操作时发生的情况完全相同，因此我们将此活动称为“错误”也许并不令人惊讶。==
 
   
 
 The act of accessing a page that is not in physical memory is commonly referred to as a page fault.
-
 ==访问不在物理内存中的页面的行为通常被称为页错误（page fault）。==
 
   
 
 Upon a page fault, the OS is invoked to service the page fault.
-
 ==发生页错误时，操作系统会被调用来处理该页错误。==
 
   
 
 A particular piece of code, known as a page-fault handler, runs, and must service the page fault, as we now describe.
-
 ==一段特定的代码，称为页错误处理程序（page-fault handler），会运行并必须处理该页错误，正如我们要描述的那样。==
 
   
 
 **21.3 The Page Fault**
-
 ==**21.3 页错误**==
 
   
 
 Recall that with TLB misses, we have two types of systems: hardware-managed TLBs (where the hardware looks in the page table to find the desired translation) and software-managed TLBs (where the OS does).
-
 ==回想一下，对于 TLB 未命中，我们有两种类型的系统：硬件管理的 TLB（硬件在页表中查找所需的转换）和软件管理的 TLB（操作系统进行查找）。==
 
   
 
 In either type of system, if a page is not present, the OS is put in charge to handle the page fault.
-
 ==在这两种类型的系统中，如果页面不存在，操作系统都负责处理页错误。==
 
   
 
 The appropriately-named OS page-fault handler runs to determine what to do.
-
 ==名称恰当的操作系统页错误处理程序会运行以决定做什么。==
 
   
 
 Virtually all systems handle page faults in software;
-
 ==几乎所有的系统都在软件中处理页错误；==
 
   
 
 even with a hardware-managed TLB, the hardware trusts the OS to manage this important duty.
-
 ==即使是硬件管理的 TLB，硬件也信任操作系统来管理这一重要职责。==
 
   
 
 If a page is not present and has been swapped to disk, the OS will need to swap the page into memory in order to service the page fault.
-
 ==如果页面不存在且已被交换到磁盘，操作系统将需要把该页面交换到内存中以处理页错误。==
 
   
 
 Thus, a question arises: how will the OS know where to find the desired page?
-
 ==因此，出现了一个问题：操作系统如何知道在哪里可以找到所需的页面？==
 
   
 
 In many systems, the page table is a natural place to store such information.
-
 ==在许多系统中，页表是存储此类信息的天然场所。==
 
   
 
 Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address.
-
 ==因此，操作系统可以使用 PTE 中通常用于存储页面 PFN 等数据的位来存储磁盘地址。==
 
   
 
 When the OS receives a page fault for a page, it looks in the PTE to find the address, and issues the request to disk to fetch the page into memory.
-
 ==当操作系统收到某个页面的页错误时，它会查看 PTE 以找到该地址，并向磁盘发出请求以将该页面获取到内存中。==
 
 Figure 22.6: The No-Locality Workload
-
 ==图 22.6：无局部性负载==
 
   
 
 Figure 22.6 plots the results of the experiment for optimal, LRU, Random, and FIFO.
-
 ==图 22.6 绘制了最佳（Optimal）、LRU、随机（Random）和 FIFO 策略的实验结果。==
 
   
 
 The y-axis of the figure shows the hit rate that each policy achieves;
-
 ==图的 y 轴显示了每种策略实现的命中率；==
 
   
 
 the x-axis varies the cache size as described above.
-
 ==x 轴如上所述改变缓存大小。==
 
   
 
 We can draw a number of conclusions from the graph.
-
 ==我们可以从图中得出许多结论。==
 
   
 
 First, when there is no locality in the workload, it doesn't matter much which realistic policy you are using;
-
 ==首先，当工作负载中没有局部性时，使用哪种现实策略并不重要；==
 
   
 
 LRU, FIFO, and Random all perform the same, with the hit rate exactly determined by the size of the cache.
-
 ==LRU、FIFO 和随机策略的表现都相同，命中率完全由缓存的大小决定。==
 
   
 
 Second, when the cache is large enough to fit the entire workload, it also doesn't matter which policy you use;
-
 ==其次，当缓存大到足以容纳整个工作负载时，使用哪种策略也不重要；==
 
   
 
 all policies (even Random) converge to a 100% hit rate when all the referenced blocks fit in cache.
-
 ==当所有被引用的块都放入缓存时，所有策略（甚至是随机策略）都会收敛到 100% 的命中率。==
 
   
 
 Finally, you can see that optimal performs noticeably better than the realistic policies;
-
 ==最后，你可以看到最佳策略的表现明显优于现实策略；==
 
   
 
 peeking into the future, if it were possible, does a much better job of replacement.
-
 ==如果可能的话，窥探未来在替换方面能做得更好。==
 
   
 
 The next workload we examine is called the "80-20" workload, which exhibits locality: 80% of the references are made to 20% of the pages (the "hot" pages);
-
 ==我们要检查的下一个负载称为“80-20”负载，它表现出局部性：80% 的引用是指向 20% 的页面（即“热”页）；==
 
   
 
 the remaining 20% of the references are made to the remaining 80% of the pages (the "cold" pages).
-
 ==剩余 20% 的引用是指向剩余 80% 的页面（即“冷”页）。==
 
   
 
 In our workload, there are a total 100 unique pages again;
-
 ==在我们的负载中，总共有 100 个唯一的页面；==
 
   
 
 thus, "hot" pages are referred to most of the time, and "cold" pages the remainder.
-
 ==因此，“热”页在大部分时间被引用，“冷”页在其余时间被引用。==
 
   
 
 Figure 22.7 shows how the policies perform with this workload.
-
 ==图 22.7 显示了各策略在该负载下的表现。==
 
   
 
 As you can see from the figure, while both random and FIFO do reasonably well, LRU does better, as it is more likely to hold onto the hot pages;
-
 ==正如你从图中看到的，虽然随机和 FIFO 表现尚可，但 LRU 表现更好，因为它更有可能保留热页；==
 
   
 
 as those pages have been referred to frequently in the past, they are likely to be referred to again in the near future.
-
 ==由于这些页面在过去被频繁引用，它们很可能在不久的将来再次被引用。==
 
   
 
 Optimal once again does better, showing that LRU's historical information is not perfect.
-
 ==最佳策略再次表现更好，这表明 LRU 的历史信息并不完美。==
 
   
 
 Figure 22.7: The 80-20 Workload
-
 ==图 22.7：80-20 负载==
 
   
 
 You might now be wondering: is LRU's improvement over Random and FIFO really that big of a deal?
-
 ==你现在可能想知道：LRU 对比随机和 FIFO 的改进真的那么重要吗？==
 
   
 
 The answer, as usual, is "it depends."
-
 ==答案通常是“视情况而定”。==
 
   
 
 If each miss is very costly (not uncommon), then even a small increase in hit rate (reduction in miss rate) can make a huge difference on performance.
-
 ==如果每次未命中的代价都很高（这并不罕见），那么即使是命中率的小幅增加（未命中率的降低）也能对性能产生巨大影响。==
 
   
 
 If misses are not so costly, then of course the benefits possible with LRU are not nearly as important.
-
 ==如果未命中的代价不高，那么 LRU 可能带来的好处当然就不那么重要了。==
 
   
 
 Let's look at one final workload.
-
 ==让我们看看最后一个负载。==
 
   
 
 We call this one the "looping sequential" workload, as in it, we refer to 50 pages in sequence, starting at 0, then 1, ..., up to page 49, and then we loop, repeating those accesses, for a total of 10,000 accesses to 50 unique pages.
-
 ==我们将此称为“循环顺序”负载，因为在其中，我们要按顺序引用 50 个页面，从 0 开始，然后是 1，……，直到第 49 页，然后我们循环，重复这些访问，总共对 50 个唯一页面进行 10,000 次访问。==
 
   
 
 The last graph in Figure 22.8 shows the behavior of the policies under this workload.
-
 ==图 22.8 中的最后一张图表显示了在该负载下各策略的行为。==
 
   
 
 This workload, common in many applications (including important commercial applications such as databases), represents a worst-case for both LRU and FIFO.
-
 ==这种在许多应用程序（包括重要的商业应用程序，如数据库）中常见的负载，代表了 LRU 和 FIFO 的最坏情况。==
 
   
 
 These algorithms, under a looping-sequential workload, kick out older pages;
-
 ==在循环顺序负载下，这些算法会踢出较旧的页面；==
 
   
 
 unfortunately, due to the looping nature of the workload, these older pages are going to be accessed sooner than the pages that the policies prefer to keep in cache.
-
 ==不幸的是，由于负载的循环特性，这些较旧的页面将比策略倾向于保留在缓存中的页面更早被访问。==
 
   
 
 Indeed, even with a cache of size 49, a looping-sequential workload of 50 pages results in a 0% hit rate.
-
 ==确实，即使缓存大小为 49，50 个页面的循环顺序负载也会导致 0% 的命中率。==
 
   
 
 Interestingly, Random fares notably better, not quite approaching optimal, but at least achieving a non-zero hit rate.
-
 ==有趣的是，随机策略的表现明显更好，虽然没有接近最佳策略，但至少实现了非零的命中率。==
 
   
 
 Turns out that random has some nice properties; one such property is not having weird corner-case behaviors.
-
 ==事实证明，随机策略具有一些不错的属性；其中一个属性就是没有奇怪的极端情况行为。==
 
   
 
 Figure 22.8: The Looping Workload
-
 ==图 22.8：循环负载==
 
   
 
 22.7 Implementing Historical Algorithms
-
 ==22.7 实现历史算法==
 
   
 
 As you can see, an algorithm such as LRU can generally do a better job than simpler policies like FIFO or Random, which may throw out important pages.
-
 ==正如你所看到的，像 LRU 这样的算法通常比 FIFO 或随机等更简单的策略表现更好，后者可能会丢弃重要的页面。==
 
   
 
 Unfortunately, historical policies present us with a new challenge: how do we implement them?
-
 ==不幸的是，基于历史的策略给我们带来了新的挑战：我们该如何实现它们？==
 
   
 
 Let's take, for example, LRU.
-
 ==以 LRU 为例。==
 
   
 
 To implement it perfectly, we need to do a lot of work.
-
 ==为了完美地实现它，我们需要做很多工作。==
 
   
 
 Specifically, upon each page access (i.e., each memory access, whether an instruction fetch or a load or store), we must update some data structure to move this page to the front of the list (i.e., the MRU side).
-
 ==具体来说，在每次页面访问（即每次内存访问，无论是指令提取还是加载或存储）时，我们必须更新某个数据结构，将此页面移动到列表的前端（即最近最常使用的一端）。==
 
   
 
 Contrast this to FIFO, where the FIFO list of pages is only accessed when a page is evicted (by removing the first-in page) or when a new page is added to the list (to the last-in side).
-
 ==与之形成对比的是 FIFO，其中 FIFO 页面列表仅在页面被驱逐（通过移除最早进入的页面）或新页面添加到列表（添加到最后进入的一端）时才被访问。==
 
   
 
 To keep track of which pages have been least- and most-recently used, the system has to do some accounting work on every memory reference.
-
 ==为了跟踪哪些页面是最近最少使用和最近最常使用的，系统必须在每次内存引用时做一些记账工作。==
 
   
 
 Clearly, without great care, such accounting could greatly reduce performance.
-
 ==显然，如果不小心处理，这种记账工作可能会大大降低性能。==
 
   
 
 One method that could help speed this up is to add a little bit of hardware support.
-
 ==一种有助于加速此过程的方法是增加少量的硬件支持。==
 
   
 
 For example, a machine could update, on each page access, a time field in memory (for example, this could be in the per-process page table, or just in some separate array in memory, with one entry per physical page of the system).
-
 ==例如，机器可以在每次页面访问时更新内存中的时间字段（例如，这可以在每个进程的页表中，或者就在内存中的某个单独数组中，系统的每个物理页面对应一个条目）。==
 
   
 
 Thus, when a page is accessed, the time field would be set, by hardware, to the current time.
-
 ==因此，当访问页面时，硬件会将时间字段设置为当前时间。==
 
   
 
 Then, when replacing a page, the OS could simply scan all the time fields in the system to find the least-recently-used page.
-
 ==然后，在替换页面时，操作系统只需扫描系统中的所有时间字段，即可找到最近最少使用的页面。==
 
   
 
 Unfortunately, as the number of pages in a system grows, scanning a huge array of times just to find the absolute least-recently-used page is prohibitively expensive.
-
 ==不幸的是，随着系统中页面数量的增加，仅仅为了找到绝对的最近最少使用页面而扫描巨大的时间数组，其代价高得令人望而却步。==
 
   
 
 Imagine a modern machine with 4GB of memory, chopped into 4KB pages.
-
 ==想象一台拥有 4GB 内存的现代机器，被切分成 4KB 的页面。==
 
   
 
 This machine has 1 million pages, and thus finding the LRU page will take a long time, even at modern CPU speeds.
-
 ==这台机器有 100 万个页面，因此即使以现代 CPU 的速度，找到 LRU 页面也需要很长时间。==
 
   
 
 Which begs the question: do we really need to find the absolute oldest page to replace?
-
 ==这就引出了一个问题：我们要替换时真的需要找到绝对最老的页面吗？==
 
   
 
 Can we instead survive with an approximation?
-
 ==我们能否改用一种近似方法并仍能正常运行？==
 
   
 
 CRUX: HOW TO IMPLEMENT AN LRU REPLACEMENT POLICY
-
 ==关键问题：如何实现 LRU 替换策略==
 
   
 
 Given that it will be expensive to implement perfect LRU, can we approximate it in some way, and still obtain the desired behavior?
-
 ==鉴于实现完美的 LRU 代价昂贵，我们能否以某种方式近似它，并仍然获得期望的行为？==
 
   
 
 22.8 Approximating LRU
-
 ==22.8 近似 LRU==
 
   
 
 As it turns out, the answer is yes: approximating LRU is more feasible from a computational-overhead standpoint, and indeed it is what many modern systems do.
-
 ==事实证明，答案是肯定的：从计算开销的角度来看，近似 LRU 更可行，而且确实是许多现代系统所做的。==
 
   
 
 The idea requires some hardware support, in the form of a use bit (sometimes called the reference bit), the first of which was implemented in the first system with paging, the Atlas one-level store.
-
 ==这个想法需要一些硬件支持，形式是一个使用位（有时称为引用位），最早是在第一个具有分页功能的系统——Atlas 一级存储中实现的。==
 
   
 
 There is one use bit per page of the system, and the use bits live in memory somewhere (they could be in the per-process page tables, for example, or just in an array somewhere).
-
 ==系统的每个页面都有一个使用位，使用位存在于内存的某个地方（例如，它们可以在每个进程的页表中，或者只是在某处的数组中）。==
 
   
 
 Whenever a page is referenced (i.e., read or written), the use bit is set by hardware to 1.
-
 ==每当页面被引用（即读取或写入）时，硬件会将使用位设置为 1。==
 
   
 
 The hardware never clears the bit, though (i.e., sets it to 0);
-
 ==不过，硬件从不清除该位（即将其设置为 0）；==
 
   
 
 that is the responsibility of the OS.
-
 ==那是操作系统的责任。==
 
   
 
 How does the OS employ the use bit to approximate LRU?
-
 ==操作系统如何利用使用位来近似 LRU？==
 
   
 
 Well, there could be a lot of ways, but with the clock algorithm, one simple approach was suggested.
-
 ==嗯，可能有很多方法，但通过时钟算法，人们提出了一种简单的方法。==
 
   
 
 Imagine all the pages of the system arranged in a circular list.
-
 ==想象一下系统的所有页面被排列成一个循环列表。==
 
   
 
 A clock hand points to some particular page to begin with (it doesn't really matter which).
-
 ==时钟指针起初指向某个特定的页面（具体是哪个并不重要）。==
 
   
 
 When a replacement must occur, the OS checks if the currently-pointed to page P has a use bit of 1 or 0.
-
 ==当必须进行替换时，操作系统检查当前指向的页面 P 的使用位是 1 还是 0。==
 
   
 
 If 1, this implies that page P was recently used and thus is not a good candidate for replacement.
-
 ==如果是 1，这意味着页面 P 最近被使用过，因此不是替换的好候选者。==
 
   
 
 Thus, the use bit for P is set to 0 (cleared), and the clock hand is incremented to the next page (P + 1).
-
 ==因此，P 的使用位被设置为 0（清除），时钟指针增加到下一页 (P + 1)。==
 
   
 
 The algorithm continues until it finds a use bit that is set to 0, implying this page has not been recently used (or, in the worst case, that all pages have been and that we have now searched through the entire set of pages, clearing all the bits).
-
 ==该算法持续进行，直到找到一个设置为 0 的使用位，这意味着该页面最近没有被使用过（或者，在最坏的情况下，所有页面都被使用过，我们现在已经搜索了整个页面集，清除了所有的位）。==
 
   
 
 Note that this approach is not the only way to employ a use bit to approximate LRU.
-
 ==请注意，这种方法并不是利用使用位来近似 LRU 的唯一方法。==
 
   
 
 Indeed, any approach which periodically clears the use bits and then differentiates between which pages have use bits of 1 versus 0 to decide which to replace would be fine.
-
 ==事实上，任何定期清除使用位，然后区分哪些页面的使用位为 1 或 0 来决定替换哪些页面的方法都是可以的。==
 
   
 
 The clock algorithm of Corbato's was just one early approach which met with some success, and had the nice property of not repeatedly scanning through all of memory looking for an unused page.
-
 ==Corbato 的时钟算法只是早期取得一定成功的一种方法，它具有不必重复扫描整个内存来寻找未使用的页面的良好属性。==
 
   
 
 Figure 22.9: The 80-20 Workload With Clock
-
 ==图 22.9：使用时钟算法的 80-20 负载==
 
   
 
 The behavior of a clock algorithm variant is shown in Figure 22.9.
-
 ==图 22.9 显示了时钟算法变体的行为。==
 
   
 
 This variant randomly scans pages when doing a replacement;
-
 ==该变体在进行替换时随机扫描页面；==
 
   
 
 when it encounters a page with a reference bit set to 1, it clears the bit (i.e., sets it to 0);
-
 ==当它遇到引用位设置为 1 的页面时，它清除该位（即将其设置为 0）；==
 
   
 
 when it finds a page with the reference bit set to 0, it chooses it as its victim.
-
 ==当它找到引用位设置为 0 的页面时，它选择该页面作为受害者（被替换）。==
 
   
 
 As you can see, although it doesn't do quite as well as perfect LRU, it does better than approaches that don't consider history at all.
-
 ==正如你所看到的，虽然它的表现不如完美的 LRU，但它比根本不考虑历史的方法要好。==
 
   
 
 22.9 Considering Dirty Pages
-
 ==22.9 考虑脏页==
 
   
 
 One small modification to the clock algorithm (also originally suggested by Corbato) that is commonly made is the additional consideration of whether a page has been modified or not while in memory.
-
 ==对时钟算法常做的一个小修改（最初也是由 Corbato 建议的）是额外考虑页面在内存中是否被修改过。==
 
   
 
 The reason for this: if a page has been modified and is thus dirty, it must be written back to disk to evict it, which is expensive.
-
 ==这样做的原因是：如果一个页面被修改过，因此是“脏”的，那么为了驱逐它，必须将其写回磁盘，这很昂贵。==
 
   
 
 If it has not been modified (and is thus clean), the eviction is free;
-
 ==如果它没有被修改（因此是“干净”的），则驱逐是免费的；==
 
   
 
 the physical frame can simply be reused for other purposes without additional I/O.
-
 ==物理帧可以简单地重用于其他目的，而无需额外的 I/O。==
 
   
 
 Thus, some VM systems prefer to evict clean pages over dirty pages.
-
 ==因此，一些虚拟机系统更倾向于驱逐干净的页面，而不是脏页。==
 
   
 
 To support this behavior, the hardware should include a modified bit (a.k.a. dirty bit).
-
 ==为了支持这种行为，硬件应包含一个修改位（又名脏位）。==
 
   
 
 This bit is set any time a page is written, and thus can be incorporated into the page-replacement algorithm.
-
 ==任何时候写入页面时都会设置此位，因此可以将其纳入页面替换算法中。==
 
   
 
 The clock algorithm, for example, could be changed to scan for pages that are both unused and clean to evict first;
-
 ==例如，可以更改时钟算法，以优先扫描既未使用又干净的页面进行驱逐；==
 
   
 
 failing to find those, then for unused pages that are dirty, and so forth.
-
 ==如果找不到这些页面，则扫描未使用的脏页，依此类推。==
 
   
 
 22.10 Other VM Policies
-
 ==22.10 其他虚拟机策略==
 
   
 
 Page replacement is not the only policy the VM subsystem employs (though it may be the most important).
-
 ==页面替换并不是虚拟机子系统采用的唯一策略（尽管它可能是最重要的）。==
 
   
 
 For example, the OS also has to decide when to bring a page into memory.
-
 ==例如，操作系统还必须决定何时将页面带入内存。==
 
   
 
 This policy, sometimes called the page selection policy (as it was called by Denning), presents the OS with some different options.
-
 ==这种策略有时称为页面选择策略（正如 Denning 所称），它为操作系统提供了一些不同的选项。==
 
   
 
 For most pages, the OS simply uses demand paging, which means the OS brings the page into memory when it is accessed, "on demand" as it were.
-
 ==对于大多数页面，操作系统只是使用按需分页，这意味着操作系统在页面被访问时将其带入内存，即所谓的“按需”。==
 
   
 
 Of course, the OS could guess that a page is about to be used, and thus bring it in ahead of time;
-
 ==当然，操作系统可以猜测某个页面即将被使用，从而提前将其带入；==
 
   
 
 this behavior is known as prefetching and should only be done when there is reasonable chance of success.
-
 ==这种行为称为预取，只有在有合理的成功几率时才应该这样做。==
 
   
 
 For example, some systems will assume that if a code page P is brought into memory, that code page P + 1 will likely soon be accessed and thus should be brought into memory too.
-
 ==例如，一些系统会假设如果代码页 P 被带入内存，那么代码页 P + 1 很快也会被访问，因此也应该被带入内存。==
 
   
 
 Another policy determines how the OS writes pages out to disk.
-
 ==另一个策略决定操作系统如何将页面写出到磁盘。==
 
   
 
 Of course, they could simply be written out one at a time;
-
 ==当然，它们可以简单地一次写出一个；==
 
   
 
 however, many systems instead collect a number of pending writes together in memory and write them to disk in one (more efficient) write.
-
 ==然而，许多系统反而会在内存中收集许多待处理的写入，并在一次（更高效的）写入中将它们写入磁盘。==
 
   
 
 This behavior is usually called clustering or simply grouping of writes, and is effective because of the nature of disk drives, which perform a single large write more efficiently than many small ones.
-
 ==这种行为通常称为聚类或简称为写入分组，它之所以有效，是因为磁盘驱动器的特性，即执行单个大写入比许多小写入更有效。==
 
   
 
 22.11 Thrashing
-
 ==22.11 抖动==
 
   
 
 Before closing, we address one final question: what should the OS do when memory is simply oversubscribed, and the memory demands of the set of running processes simply exceeds the available physical memory?
-
 ==在结束之前，我们要解决最后一个问题：当内存完全超额认购，即运行进程集的内存需求完全超过可用的物理内存时，操作系统应该做什么？==
 
   
 
 In this case, the system will constantly be paging, a condition sometimes referred to as thrashing.
-
 ==在这种情况下，系统将不断地进行分页，这种状况有时被称为抖动。==
 
   
 
 Some earlier operating systems had a fairly sophisticated set of mechanisms to both detect and cope with thrashing when it took place.
-
 ==一些早期的操作系统有一套相当复杂的机制来检测和应对发生的抖动。==
 
   
 
 For example, given a set of processes, a system could decide not to run a subset of processes, with the hope that the reduced set of processes' working sets (the pages that they are using actively) fit in memory and thus can make progress.
-
 ==例如，给定一组进程，系统可以决定不运行其中的一个子集，希望剩余进程集的工作集（它们正在活跃使用的页面）能放入内存，从而能够取得进展。==
 
   
 
 This approach, generally known as admission control, states that it is sometimes better to do less work well than to try to do everything at once poorly, a situation we often encounter in real life as well as in modern computer systems (sadly).
-
 ==这种通常被称为准入控制的方法指出，有时少做但做好，比试图一次性糟糕地做完所有事情要好，这是一种我们在现实生活以及现代计算机系统中经常遇到的情况（可悲的是）。==
 
   
 
 Some current systems take more a draconian approach to memory overload.
-
 ==一些当前的系统对内存过载采取了更严厉的方法。==
 
   
 
 For example, some versions of Linux run an out-of-memory killer when memory is oversubscribed;
-
 ==例如，某些版本的 Linux 在内存超额认购时会运行一个“内存不足杀手”（OOM killer）；==
 
   
 
 this daemon chooses a memory-intensive process and kills it, thus reducing memory in a none-too-subtle manner.
-
 ==这个守护进程会选择一个内存密集型进程并将其杀死，从而以一种毫不微妙的方式减少内存占用。==
 
   
 
 While successful at reducing memory pressure, this approach can have problems, if, for example, it kills the X server and thus renders any applications requiring the display unusable.
-
 ==虽然这种方法在减轻内存压力方面是成功的，但它可能会带来问题，例如，如果它杀死了 X server（显示服务器），从而导致任何需要显示的应用程序无法使用。==
 
   
 
 22.12 Summary
-
 ==22.12 总结==
 
   
 
 We have seen the introduction of a number of page-replacement (and other) policies, which are part of the VM subsystem of all modern operating systems.
-
 ==我们已经看到了许多页面替换（及其他）策略的介绍，它们是所有现代操作系统虚拟机子系统的一部分。==
 
   
 
 Modern systems add some tweaks to straightforward LRU approximations like clock;
-
 ==现代系统对像时钟算法这样直截了当的 LRU 近似方法添加了一些调整；==
 
   
 
 for example, scan resistance is an important part of many modern algorithms, such as ARC.
-
 ==例如，扫描抗性是许多现代算法（如 ARC）的重要组成部分。==
 
   
 
 Scan-resistant algorithms are usually LRU-like but also try to avoid the worst-case behavior of LRU, which we saw with the looping-sequential workload.
-
 ==具有扫描抗性的算法通常类似于 LRU，但也试图避免 LRU 的最坏情况行为，即我们在循环顺序负载中看到的那样。==
 
   
 
 Thus, the evolution of page-replacement algorithms continues.
-
 ==因此，页面替换算法的演变仍在继续。==
 
   
 
 For many years, the importance of replacement algorithms had decreased, as the discrepancy between memory-access and disk-access times was so large.
-
 ==多年来，由于内存访问时间和磁盘访问时间之间的差异如此之大，替换算法的重要性已经下降。==
 
   
 
 Specifically, because paging to disk was so expensive, the cost of frequent paging was prohibitive;
-
 ==具体来说，因为分页到磁盘非常昂贵，频繁分页的成本高得令人望而却步；==
 
   
 
 simply put, no matter how good your replacement algorithm was, if you were performing frequent replacements, your system became unbearably slow.
-
 ==简单地说，无论你的替换算法有多好，如果你频繁进行替换，你的系统就会变得无法忍受的慢。==
 
   
 
 Thus, the best solution was a simple (if intellectually unsatisfying) one: buy more memory.
-
 ==因此，最好的解决方案是一个简单（尽管在智力上不能令人满意）的方案：购买更多内存。==
 
   
 
 However, recent innovations in much faster storage devices (e.g., Flash-based SSDs) have changed these performance ratios yet again, leading to a renaissance in page replacement algorithms.
-
 ==然而，最近速度更快的存储设备（例如基于闪存的 SSD）的创新再次改变了这些性能比率，导致了页面替换算法的复兴。==
 
   
 
 Complete Virtual Memory Systems
-
 ==完整的虚拟内存系统==
 
   
@@ -18657,1123 +16135,936 @@ Complete Virtual Memory Systems
   
 
 Before we end our study of virtualizing memory, let us take a closer look at how entire virtual memory systems are put together.
-
 ==在结束对虚拟化内存的研究之前，让我们仔细看看整个虚拟内存系统是如何组合在一起的。==
 
   
 
 We've seen key elements of such systems, including numerous page-table designs, interactions with the TLB (sometimes, even handled by the OS itself), and strategies for deciding which pages to keep in memory and which to kick out.
-
 ==我们已经看到了此类系统的关键要素，包括众多的页表设计、与 TLB 的交互（有时甚至由操作系统本身处理），以及决定哪些页面保留在内存中以及将哪些页面踢出的策略。==
 
   
 
 However, there are many other features that comprise a complete virtual memory system, including numerous features for performance, functionality, and security.
-
 ==然而，还有许多其他功能构成了一个完整的虚拟内存系统，包括许多用于性能、功能和安全性的特性。==
 
   
 
 And thus, our crux:
-
 ==因此，我们的关键问题是：==
 
   
 
 THE CRUX: How To BUILD A COMPLETE VM SYSTEM
-
 ==关键问题：如何构建一个完整的虚拟机系统==
 
   
 
 What features are needed to realize a complete virtual memory system?
-
 ==实现一个完整的虚拟内存系统需要哪些功能？==
 
   
 
 How do they improve performance, increase security, or otherwise improve the system?
-
 ==它们如何提高性能、增加安全性或以其他方式改进系统？==
 
   
 
 We'll do this by covering two systems.
-
 ==我们将通过介绍两个系统来做到这一点。==
 
   
 
 The first is one of the earliest examples of a "modern" virtual memory manager, that found in the VAX/VMS operating system, as developed in the 1970's and early 1980's;
-
 ==第一个是“现代”虚拟内存管理器最早的例子之一，即 20 世纪 70 年代和 80 年代初开发的 VAX/VMS 操作系统中的管理器；==
 
   
 
 a surprising number of techniques and approaches from this system survive to this day, and thus it is well worth studying.
-
 ==该系统中有惊人数量的技术和方法至今仍然存在，因此非常值得研究。==
 
   
 
 Some ideas, even those that are 50 years old, are still worth knowing, a thought that is well known to those in most other fields (e.g., Physics), but has to be stated in technology-driven disciplines (e.g., Computer Science).
-
 ==有些思想，即使已有 50 年历史，仍然值得了解，这在大多数其他领域（例如物理学）中是众所周知的，但在技术驱动的学科（例如计算机科学）中却必须被特别指出。==
 
   
 
 The second is that of Linux, for reasons that should be obvious.
-
 ==第二个是 Linux，原因应该是显而易见的。==
 
   
 
 Linux is a widely used system, and runs effectively on systems as small and underpowered as phones to the most scalable multicore systems found in modern datacenters.
-
 ==Linux 是一个广泛使用的系统，并且可以在小到手机这样性能有限的系统，大到现代数据中心中最具扩展性的多核系统上有效地运行。==
 
   
 
 Thus, its VM system must be flexible enough to run successfully in all of those scenarios.
-
 ==因此，它的虚拟机系统必须足够灵活，才能在所有这些场景中成功运行。==
 
   
 
 We will discuss each system to illustrate how concepts brought forth in earlier chapters come together in a complete memory manager.
-
 ==我们将讨论每个系统，以说明前面章节中提出的概念是如何在一个完整的内存管理器中结合在一起的。==
 
   
 
 23.1 VAX/VMS Virtual Memory
-
 ==23.1 VAX/VMS 虚拟内存==
 
   
 
 The VAX-11 minicomputer architecture was introduced in the late 1970's by Digital Equipment Corporation (DEC).
-
 ==VAX-11 小型计算机架构是由数字设备公司 (DEC) 在 20 世纪 70 年代末推出的。==
 
   
 
 DEC was a massive player in the computer industry during the era of the mini-computer;
-
 ==DEC 是小型计算机时代计算机行业的巨头；==
 
   
 
 unfortunately, a series of bad decisions and the advent of the PC slowly (but surely) led to their demise.
-
 ==不幸的是，一系列错误的决定和个人电脑的出现缓慢（但肯定）地导致了他们的灭亡。==
 
   
 
 The architecture was realized in a number of implementations, including the VAX-11/780 and the less powerful VAX-11/750.
-
 ==该架构在许多实现中得以体现，包括 VAX-11/780 和功能较弱的 VAX-11/750。==
 
   
 
 The OS for the system was known as VAX/VMS (or just plain VMS), one of whose primary architects was Dave Cutler, who later led the effort to develop Microsoft's Windows NT.
-
 ==该系统的操作系统被称为 VAX/VMS（或简称 VMS），其主要架构师之一是 Dave Cutler，他后来领导了微软 Windows NT 的开发工作。==
 
   
 
 VMS had the general problem that it would be run on a broad range of machines, including very inexpensive VAXen (yes, that is the proper plural) to extremely high-end and powerful machines in the same architecture family.
-
 ==VMS 面临的一个普遍问题是，它需要在各种机器上运行，包括同一架构家族中非常便宜的 VAXen（是的，这是正确的复数形式）到极其高端和强大的机器。==
 
   
 
 Thus, the OS had to have mechanisms and policies that worked (and worked well) across this huge range of systems.
-
 ==因此，操作系统必须拥有能在如此巨大的系统范围内工作（并且工作良好）的机制和策略。==
 
   
 
 As an additional issue, VMS is an excellent example of software innovations used to hide some of the inherent flaws of the architecture.
-
 ==作为一个额外的问题，VMS 是利用软件创新来掩盖架构本身缺陷的一个极好例子。==
 
   
 
 Although the OS often relies on the hardware to build efficient abstractions and illusions, sometimes the hardware designers don't quite get everything right;
-
 ==尽管操作系统通常依赖硬件来构建高效的抽象和幻觉，但有时硬件设计者并不能把所有事情都做对；==
 
   
 
 in the VAX hardware, we'll see a few examples of this, and what the VMS operating system does to build an effective, working system despite these hardware flaws.
-
 ==在 VAX 硬件中，我们将看到这方面的一些例子，以及 VMS 操作系统如何在这个硬件缺陷的情况下构建一个有效的、可工作的系统。==
 
   
 
 Memory Management Hardware
-
 ==内存管理硬件==
 
   
 
 The VAX-11 provided a 32-bit virtual address space per process, divided into 512-byte pages.
-
 ==VAX-11 为每个进程提供了一个 32 位的虚拟地址空间，分为 512 字节的页面。==
 
   
 
 Thus, a virtual address consisted of a 23-bit VPN and a 9-bit offset.
-
 ==因此，虚拟地址由 23 位 VPN 和 9 位偏移量组成。==
 
   
 
 Further, the upper two bits of the VPN were used to differentiate which segment the page resided within;
-
 ==此外，VPN 的高两位用于区分页面所在的段；==
 
   
 
 thus, the system was a hybrid of paging and segmentation, as we saw previously.
-
 ==因此，正如我们之前看到的，该系统是分页和分段的混合体。==
 
   
 
 The lower-half of the address space was known as "process space" and is unique to each process.
-
 ==地址空间的下半部分被称为“进程空间”，对每个进程来说是唯一的。==
 
   
 
 In the first half of process space (known as P0), the user program is found, as well as a heap which grows downward.
-
 ==在进程空间的前半部分（称为 P0），可以找到用户程序，以及一个向下增长的堆。==
 
   
 
 In the second half of process space (P1), we find the stack, which grows upwards.
-
 ==在进程空间的后半部分（P1），我们找到了向上增长的栈。==
 
   
 
 The upper-half of the address space is known as system space (S), although only half of it is used.
-
 ==地址空间的上半部分被称为系统空间 (S)，尽管只使用了其中的一半。==
 
   
 
 Protected OS code and data reside here, and the OS is in this way shared across processes.
-
 ==受保护的操作系统代码和数据驻留在那里，操作系统以这种方式在进程间共享。==
 
   
 
 One major concern of the VMS designers was the incredibly small size of pages in the VAX hardware (512 bytes).
-
 ==VMS 设计者主要关心的一个问题是 VAX 硬件中极小的页面大小（512 字节）。==
 
   
 
 This size, chosen for historical reasons, has the fundamental problem of making simple linear page tables excessively large.
-
 ==这个出于历史原因选择的大小，有一个根本问题，即使得简单的线性页表变得过大。==
 
   
 
 Thus, one of the first goals of the VMS designers was to ensure that VMS would not overwhelm memory with page tables.
-
 ==因此，VMS 设计者的首要目标之一是确保 VMS 不会让页表淹没内存。==
 
   
 
 The system reduced the pressure page tables place on memory in two ways.
-
 ==该系统通过两种方式减少了页表对内存的压力。==
 
   
 
 First, by segmenting the user address space into two, the VAX-11 provides a page table for each of these regions (P0 and P1) per process;
-
 ==首先，通过将用户地址空间分成两部分，VAX-11 为每个进程的这些区域（P0 和 P1）分别提供了一个页表；==
 
   
 
 thus, no page-table space is needed for the unused portion of the address space between the stack and the heap.
-
 ==因此，栈和堆之间未使用的地址空间部分不需要页表空间。==
 
   
 
 The base and bounds registers are used as you would expect;
-
 ==基址和界限寄存器的使用正如你所预期的那样；==
 
   
 
 a base register holds the address of the page table for that segment, and the bounds holds its size (i.e., number of page-table entries).
-
 ==基址寄存器保存该段页表的地址，界限寄存器保存其大小（即页表条目的数量）。==
 
   
 
 Second, the OS reduces memory pressure even further by placing user page tables (for P0 and P1, thus two per process) in kernel virtual memory.
-
 ==其次，操作系统通过将用户页表（针对 P0 和 P1，因此每个进程两个）放置在内核虚拟内存中，进一步降低了内存压力。==
 
   
 
 Thus, when allocating or growing a page table, the kernel allocates space out of its own virtual memory, in segment S.
-
 ==因此，当分配或增加页表时，内核会从其自己的虚拟内存（在段 S 中）中分配空间。==
 
   
 
 If memory comes under severe pressure, the kernel can swap pages of these page tables out to disk, thus making physical memory available for other uses.
-
 ==如果内存面临严重压力，内核可以将这些页表的页面交换到磁盘，从而腾出物理内存用于其他用途。==
 
   
 
 Putting page tables in kernel virtual memory means that address translation is even further complicated.
-
 ==将页表放在内核虚拟内存中意味着地址转换变得更加复杂。==
 
   
 
 For example, to translate a virtual address in P0 or P1, the hardware has to first try to look up the page-table entry for that page in its page table (the P0 or P1 page table for that process);
-
 ==例如，为了转换 P0 或 P1 中的虚拟地址，硬件必须首先尝试在其页表（该进程的 P0 或 P1 页表）中查找该页面的页表条目；==
 
   
 
 in doing so, however, the hardware may first have to consult the system page table (which lives in physical memory);
-
 ==然而，在这样做时，硬件可能首先必须查询系统页表（它驻留在物理内存中）；==
 
   
 
 with that translation complete, the hardware can learn the address of the page of the page table, and then finally learn the address of the desired memory access.
-
 ==完成该转换后，硬件可以获知页表页面的地址，然后最终获知所需内存访问的地址。==
 
   
 
 All of this, fortunately, is made faster by the VAX's hardware-managed TLBs, which usually (hopefully) circumvent this laborious lookup.
-
 ==幸运的是，VAX 的硬件管理 TLB 加快了所有这些过程，它通常（希望如此）可以规避这种费力的查找。==
 
   
 
 A Real Address Space
-
 ==一个真实的地址空间==
 
   
 
 One neat aspect of studying VMS is that we can see how a real address space is constructed (Figure 23.1).
-
 ==研究 VMS 的一个极好方面是我们可以看到一个真实的地址空间是如何构建的（图 23.1）。==
 
   
 
 Thus far, we have assumed a simple address space of just user code, user data, and user heap, but as we can see above, a real address space is notably more complex.
-
 ==到目前为止，我们假设了一个只有用户代码、用户数据和用户堆的简单地址空间，但正如我们在上面看到的，真实的地址空间明显更复杂。==
 
   
 
 For example, the code segment never begins at page 0.
-
 ==例如，代码段从不从第 0 页开始。==
 
   
 
 This page, instead, is marked inaccessible, in order to provide some support for detecting null-pointer accesses.
-
 ==相反，该页面被标记为不可访问，以便为检测空指针访问提供一些支持。==
 
   
 
 Thus, one concern when designing an address space is support for debugging, which the inaccessible zero page provides here in some form.
-
 ==因此，设计地址空间时的一个考虑因素是支持调试，而不可访问的零页在这里以某种形式提供了这种支持。==
 
   
 
 Perhaps more importantly, the kernel virtual address space (i.e., its data structures and code) is a part of each user address space.
-
 ==也许更重要的是，内核虚拟地址空间（即其数据结构和代码）是每个用户地址空间的一部分。==
 
   
 
 Figure 23.1: The VAX/VMS Address Space
-
 ==图 23.1：VAX/VMS 地址空间==
 
   
 
 On a context switch, the OS changes the P0 and P1 registers to point to the appropriate page tables of the soon-to-be-run process;
-
 ==在上下文切换时，操作系统更改 P0 和 P1 寄存器以指向即将运行的进程的相应页表；==
 
   
 
 however, it does not change the S base and bound registers, and as a result the "same" kernel structures are mapped into each user address space.
-
 ==然而，它不会更改 S 基址和界限寄存器，结果是“相同的”内核结构被映射到每个用户地址空间。==
 
   
 
 The kernel is mapped into each address space for a number of reasons.
-
 ==内核被映射到每个地址空间有许多原因。==
 
   
 
 This construction makes life easier for the kernel; when, for example, the OS is handed a pointer from a user program (e.g., on a write() system call), it is easy to copy data from that pointer to its own structures.
-
 ==这种结构使内核的生活更轻松；例如，当操作系统从用户程序收到一个指针时（例如，在 write() 系统调用中），很容易将数据从该指针复制到它自己的结构中。==
 
   
 
 The OS is naturally written and compiled, without worry of where the data it is accessing comes from.
-
 ==操作系统的编写和编译都很自然，不用担心它访问的数据来自哪里。==
 
   
 
 If in contrast the kernel were located entirely in physical memory, it would be quite hard to do things like swap pages of the page table to disk;
-
 ==相比之下，如果内核完全位于物理内存中，那么像将页表的页面交换到磁盘这样的事情就会很难做；==
 
   
 
 if the kernel were given its own address space, moving data between user applications and the kernel would again be complicated and painful.
-
 ==如果给内核自己的地址空间，在用户应用程序和内核之间移动数据又会变得复杂和痛苦。==
 
   
 
 With this construction (now used widely), the kernel appears almost as a library to applications, albeit a protected one.
-
 ==通过这种结构（现在被广泛使用），内核几乎就像应用程序的一个库，尽管是一个受保护的库。==
 
   
 
 One last point about this address space relates to protection.
-
 ==关于这个地址空间的最后一点与保护有关。==
 
   
 
 Clearly, the OS does not want user applications reading or writing OS data or code.
-
 ==显然，操作系统不希望用户应用程序读取或写入操作系统的数据或代码。==
 
   
 
 Thus, the hardware must support different protection levels for pages to enable this.
-
 ==因此，硬件必须支持页面的不同保护级别才能实现这一点。==
 
   
 
 The VAX did so by specifying, in protection bits in the page table, what privilege level the CPU must be at in order to access a particular page.
-
 ==VAX 通过在页表中的保护位中指定 CPU 必须处于什么特权级别才能访问特定页面来做到这一点。==
 
   
 
 Thus, system data and code are set to a higher level of protection than user data and code;
-
 ==因此，系统数据和代码被设置为比用户数据和代码更高的保护级别；==
 
   
 
 an attempted access to such information from user code will generate a trap into the OS, and (you guessed it) the likely termination of the offending process.
-
 ==试图从用户代码访问此类信息将产生一个进入操作系统的陷阱，并且（你猜对了）可能会终止违规进程。==
 
   
 
 Page Replacement
-
 ==页面替换==
 
   
 
 The page table entry (PTE) in VAX contains the following bits: a valid bit, a protection field (4 bits), a modify (or dirty) bit, a field reserved for OS use (5 bits), and finally a physical frame number (PFN) to store the location of the page in physical memory.
-
 ==VAX 中的页表条目 (PTE) 包含以下位：一个有效位、一个保护字段（4 位）、一个修改（或脏）位、一个为操作系统使用保留的字段（5 位），最后是一个物理帧号 (PFN) 以存储页面在物理内存中的位置。==
 
   
 
 The astute reader might note: no reference bit!
-
 ==敏锐的读者可能会注意到：没有引用位！==
 
   
 
 Thus, the VMS replacement algorithm must make do without hardware support for determining which pages are active.
-
 ==因此，VMS 替换算法必须在没有硬件支持的情况下确定哪些页面是活跃的。==
 
   
 
 The developers were also concerned about memory hogs, programs that use a lot of memory and make it hard for other programs to run.
-
 ==开发人员还担心内存独占程序，即那些使用大量内存并使其他程序难以运行的程序。==
 
   
 
 Most of the policies we have looked at thus far are susceptible to such hogging;
-
 ==我们目前看到的大多数策略都容易受到这种独占的影响；==
 
   
 
 for example, LRU is a global policy that doesn't share memory fairly among processes.
-
 ==例如，LRU 是一种全局策略，它不能在进程之间公平地共享内存。==
 
   
 
 ASIDE: EMULATING REFERENCE BITS
-
 ==旁白：模拟引用位==
 
   
 
 As it turns out, you don't need a hardware reference bit in order to get some notion of which pages are in use in a system.
-
 ==事实证明，你不需要硬件引用位就能获得系统中哪些页面正在使用的一些概念。==
 
   
 
 In fact, in the early 1980's, Babaoglu and Joy showed that protection bits on the VAX can be used to emulate reference bits.
-
 ==事实上，在 20 世纪 80 年代初，Babaoglu 和 Joy 展示了 VAX 上的保护位可以用来模拟引用位。==
 
   
 
 The basic idea: if you want to gain some understanding of which pages are actively being used in a system, mark all of the pages in the page table as inaccessible (but keep around the information as to which pages are really accessible by the process, perhaps in the "reserved OS field" portion of the page table entry).
-
 ==基本思路是：如果你想了解系统中哪些页面正在被积极使用，就将页表中的所有页面标记为不可访问（但保留关于哪些页面实际上可被进程访问的信息，也许在页表条目的“保留操作系统字段”部分）。==
 
   
 
 When a process accesses a page, it will generate a trap into the OS;
-
 ==当进程访问一个页面时，它会生成一个进入操作系统的陷阱；==
 
   
 
 the OS will then check if the page really should be accessible, and if so, revert the page to its normal protections (e.g., read-only, or read-write).
-
 ==然后操作系统会检查该页面是否真的应该可访问，如果是，则将该页面恢复为其正常的保护（例如，只读或读写）。==
 
   
 
 At the time of a replacement, the OS can check which pages remain marked inaccessible, and thus get an idea of which pages have not been recently used.
-
 ==在替换时，操作系统可以检查哪些页面仍然被标记为不可访问，从而了解哪些页面最近没有被使用。==
 
   
 
 The key to this "emulation" of reference bits is reducing overhead while still obtaining a good idea of page usage.
-
 ==这种引用位“模拟”的关键是在降低开销的同时，仍然获得良好的页面使用概念。==
 
   
 
 The OS must not be too aggressive in marking pages inaccessible, or overhead would be too high.
-
 ==操作系统在标记页面不可访问时不能太激进，否则开销会太高。==
 
   
 
 The OS also must not be too passive in such marking, or all pages will end up referenced;
-
 ==操作系统在标记时也不能太被动，否则所有页面最终都会被引用；==
 
   
 
 the OS will again have no good idea which page to evict.
-
 ==操作系统将再次不知道该驱逐哪个页面。==
 
   
 
 To address these two problems, the developers came up with the segmented FIFO replacement policy.
-
 ==为了解决这两个问题，开发人员提出了分段 FIFO 替换策略。==
 
   
 
 The idea is simple: each process has a maximum number of pages it can keep in memory, known as its resident set size (RSS).
-
 ==这个想法很简单：每个进程都有一个它可以保留在内存中的最大页面数，称为其驻留集大小 (RSS)。==
 
   
 
 Each of these pages is kept on a FIFO list;
-
 ==这些页面中的每一个都保存在一个 FIFO 列表中；==
 
   
 
 when a process exceeds its RSS, the "first-in" page is evicted.
-
 ==当一个进程超过其 RSS 时，“最早进入”的页面将被驱逐。==
 
   
 
 FIFO clearly does not need any support from the hardware, and is thus easy to implement.
-
 ==FIFO 显然不需要硬件的任何支持，因此易于实现。==
 
   
 
 Of course, pure FIFO does not perform particularly well, as we saw earlier.
-
 ==当然，纯 FIFO 的表现并不是特别好，正如我们之前所见。==
 
   
 
 To improve FIFO's performance, VMS introduced two second-chance lists where pages are placed before getting evicted from memory, specifically a global clean-page free list and dirty-page list.
-
 ==为了提高 FIFO 的性能，VMS 引入了两个二次机会列表，页面在从内存中被驱逐之前会被放置在这里，具体来说是一个全局干净页空闲列表和脏页列表。==
 
   
 
 When a process P exceeds its RSS, a page is removed from its per-process FIFO;
-
 ==当进程 P 超过其 RSS 时，一个页面将从其每进程 FIFO 中移除；==
 
   
 
 if clean (not modified), it is placed on the end of the clean-page list;
-
 ==如果是干净的（未修改），它被放置在干净页列表的末尾；==
 
   
 
 if dirty (modified), it is placed on the end of the dirty-page list.
-
 ==如果是脏的（已修改），它被放置在脏页列表的末尾。==
 
   
 
 If another process Q needs a free page, it takes the first free page off of the global clean list.
-
 ==如果另一个进程 Q 需要一个空闲页面，它会从全局干净列表中取出第一个空闲页面。==
 
   
 
 However, if the original process P faults on that page before it is reclaimed, P reclaims it from the free (or dirty) list, thus avoiding a costly disk access.
-
 ==然而，如果原始进程 P 在该页面被回收之前对其发生缺页错误，P 会从空闲（或脏）列表中收回它，从而避免昂贵的磁盘访问。==
 
   
 
 The bigger these global second-chance lists are, the closer the segmented FIFO algorithm performs to LRU.
-
 ==这些全局二次机会列表越大，分段 FIFO 算法的表现就越接近 LRU。==
 
   
 
 Another optimization used in VMS also helps overcome the small page size in VMS.
-
 ==VMS 中使用的另一个优化也有助于克服 VMS 中较小的页面大小问题。==
 
   
 
 Specifically, with such small pages, disk I/O during swapping could be highly inefficient, as disks do better with large transfers.
-
 ==具体来说，由于页面如此之小，交换期间的磁盘 I/O 可能会非常低效，因为磁盘在处理大传输时表现更好。==
 
   
 
 To make swapping I/O more efficient, VMS adds a number of optimizations, but most important is clustering.
-
 ==为了使交换 I/O 更高效，VMS 添加了许多优化，但最重要的是聚类。==
 
   
 
 With clustering, VMS groups large batches of pages together from the global dirty list, and writes them to disk in one fell swoop (thus making them clean).
-
 ==通过聚类，VMS 将全局脏列表中的大量页面分组在一起，并一下子将它们写入磁盘（从而使它们变干净）。==
 
   
 
 Clustering is used in most modern systems, as the freedom to place pages anywhere within swap space lets the OS group pages, perform fewer and bigger writes, and thus improve performance.
-
 ==聚类在大多数现代系统中都有使用，因为可以将页面放置在交换空间内任何位置的自由度允许操作系统对页面进行分组，执行更少但更大的写入，从而提高性能。==
 
   
 
 Other Neat Tricks
-
 ==其他巧妙的技巧==
 
   
 
 VMS had two other now-standard tricks: demand zeroing and copy-on-write.
-
 ==VMS 还有另外两个现在已成为标准的技巧：按需零化和写时复制。==
 
   
 
 We now describe these lazy optimizations.
-
 ==我们要描述这些懒惰优化。==
 
   
 
 One form of laziness in VMS (and most modern systems) is demand zeroing of pages.
-
 ==VMS（以及大多数现代系统）中懒惰的一种形式是页面的按需零化。==
 
   
 
 To understand this better, let's consider the example of adding a page to your address space, say in your heap.
-
 ==为了更好地理解这一点，让我们考虑一个将页面添加到地址空间的例子，比如在你的堆中。==
 
   
 
 In a naive implementation, the OS responds to a request to add a page to your heap by finding a page in physical memory, zeroing it (required for security; otherwise you'd be able to see what was on the page from when some other process used it!), and then mapping it into your address space (i.e., setting up the page table to refer to that physical page as desired).
-
 ==在一个简单的实现中，操作系统响应向堆添加页面的请求的方式是：在物理内存中找到一个页面，将其归零（这是安全所需的；否则你就能看到其他进程使用该页面时留下的内容！），然后将其映射到你的地址空间（即设置页表以根据需要引用该物理页面）。==
 
   
 
 But the naive implementation can be costly, particularly if the page does not get used by the process.
-
 ==但是，这种简单的实现可能代价高昂，特别是如果该页面没有被进程使用的话。==
 
   
 
 With demand zeroing, the OS instead does very little work when the page is added to your address space;
-
 ==通过按需零化，当页面添加到你的地址空间时，操作系统反而只做很少的工作；==
 
   
 
 it puts an entry in the page table that marks the page inaccessible.
-
 ==它在页表中放入一个条目，将该页面标记为不可访问。==
 
   
 
 If the process then reads or writes the page, a trap into the OS takes place.
-
 ==如果进程随后读取或写入该页面，就会发生进入操作系统的陷阱。==
 
   
 
 When handling the trap, the OS notices (usually through some bits marked in the "reserved for OS" portion of the page table entry) that this is actually a demand-zero page;
-
 ==在处理陷阱时，操作系统注意到（通常通过页表条目中“为操作系统保留”部分标记的一些位）这实际上是一个按需零化页面；==
 
   
 
 at this point, the OS does the needed work of finding a physical page, zeroing it, and mapping it into the process's address space.
-
 ==此时，操作系统执行所需的工作：找到一个物理页面，将其归零，并将其映射到进程的地址空间中。==
 
   
 
 If the process never accesses the page, all such work is avoided, and thus the virtue of demand zeroing.
-
 ==如果进程从未访问该页面，则避免了所有此类工作，这就是按需零化的优点。==
 
   
 
 Another cool optimization found in VMS (and again, in virtually every modern OS) is copy-on-write (COW for short).
-
 ==VMS（同样，实际上在每个现代操作系统中）中发现的另一个很酷的优化是写时复制（简称 COW）。==
 
   
 
 The idea, which goes at least back to the TENEX operating system, is simple: when the OS needs to copy a page from one address space to another, instead of copying it, it can map it into the target address space and mark it read-only in both address spaces.
-
 ==这个至少可以追溯到 TENEX 操作系统的想法很简单：当操作系统需要将页面从一个地址空间复制到另一个地址空间时，它可以将其映射到目标地址空间并在两个地址空间中将其标记为只读，而不是复制它。==
 
   
 
 If both address spaces only read the page, no further action is taken, and thus the OS has realized a fast copy without actually moving any data.
-
 ==如果两个地址空间都只读取该页面，则不采取进一步行动，因此操作系统实现了一个快速复制，而实际上没有移动任何数据。==
 
   
 
 If, however, one of the address spaces does indeed try to write to the page, it will trap into the OS.
-
 ==然而，如果其中一个地址空间确实试图写入该页面，它将陷入操作系统。==
 
   
 
 The OS will then notice that the page is a COW page, and thus (lazily) allocate a new page, fill it with the data, and map this new page into the address space of the faulting process.
-
 ==操作系统随后会注意到该页面是一个 COW 页面，因此（懒惰地）分配一个新页面，用数据填充它，并将这个新页面映射到发生错误的进程的地址空间中。==
 
   
 
 The process then continues and now has its own private copy of the page.
-
 ==然后进程继续运行，现在它拥有该页面的私有副本。==
 
   
 
 COW is useful for a number of reasons.
-
 ==COW 有用有许多原因。==
 
   
 
 Certainly any sort of shared library can be mapped copy-on-write into the address spaces of many processes, saving valuable memory space.
-
 ==当然，任何类型的共享库都可以通过写时复制映射到许多进程的地址空间中，从而节省宝贵的内存空间。==
 
   
 
 In UNIX systems, COW is even more critical, due to the semantics of fork() and exec().
-
 ==在 UNIX 系统中，由于 fork() 和 exec() 的语义，COW 甚至更为关键。==
 
   
 
 As you might recall, fork() creates an exact copy of the address space of the caller;
-
 ==你可能还记得，fork() 创建调用者地址空间的精确副本；==
 
   
 
 with a large address space, making such a copy is slow and data intensive.
-
 ==对于大型地址空间，制作这样的副本既慢又需要大量数据。==
 
   
 
 Even worse, most of the address space is immediately over-written by a subsequent call to exec(), which overlays the calling process's address space with that of the soon-to-be-exec'd program.
-
 ==更糟糕的是，大部分地址空间会立即被随后的 exec() 调用覆盖，该调用用即将执行的程序的地址空间覆盖调用进程的地址空间。==
 
   
 
 By instead performing a copy-on-write fork(), the OS avoids much of the needless copying and thus retains the correct semantics while improving performance.
-
 ==通过执行写时复制 fork()，操作系统避免了大部分不必要的复制，从而在保持正确语义的同时提高了性能。==
 
   
 
 23.2 The Linux Virtual Memory System
-
 ==23.2 Linux 虚拟内存系统==
 
   
 
 We'll now discuss some of the more interesting aspects of the Linux VM system.
-
 ==我们现在将讨论 Linux 虚拟机系统的一些更有趣的方面。==
 
   
 
 Linux development has been driven forward by real engineers solving real problems encountered in production, and thus a large number of features have slowly been incorporated into what is now a fully functional, feature-filled virtual memory system.
-
 ==Linux 的开发一直由解决生产中遇到的实际问题的真正工程师推动，因此大量功能已慢慢整合到现在功能齐全、特性丰富的虚拟内存系统中。==
 
   
 
 While we won't be able to discuss every aspect of Linux VM, we'll touch on the most important ones, especially where it has gone beyond what is found in classic VM systems such as VAX/VMS.
-
 ==虽然我们无法讨论 Linux 虚拟机的方方面面，但我们将触及最重要的方面，特别是它超越了经典虚拟机系统（如 VAX/VMS）的地方。==
 
   
 
 We'll also try to highlight commonalities between Linux and older systems.
-
 ==我们还将尝试强调 Linux 与旧系统之间的共性。==
 
   
 
 For this discussion, we'll focus on Linux for Intel x86.
-
 ==为了便于讨论，我们将重点关注基于 Intel x86 的 Linux。==
 
   
 
 While Linux can and does run on many different processor architectures, Linux on x86 is its most dominant and important deployment, and thus the focus of our attention.
-
 ==虽然 Linux 可以并且确实在许多不同的处理器架构上运行，但 x86 上的 Linux 是其最主导和最重要的部署，因此是我们关注的焦点。==
 
   
 
 The Linux Address Space
-
 ==Linux 地址空间==
 
   
 
 Much like other modern operating systems, and also like VAX/VMS, a Linux virtual address space consists of a user portion (where user program code, stack, heap, and other parts reside) and a kernel portion (where kernel code, stacks, heap, and other parts reside).
-
 ==这就跟其他现代操作系统一样，也像 VAX/VMS 一样，Linux 虚拟地址空间由用户部分（用户程序代码、栈、堆和其他部分驻留在此）和内核部分（内核代码、栈、堆和其他部分驻留在此）组成。==
 
   
 
 Like those other systems, upon a context switch, the user portion of the currently-running address space changes;
-
 ==像其他系统一样，在上下文切换时，当前运行的地址空间的用户部分会发生变化；==
 
   
 
 the kernel portion is the same across processes.
-
 ==内核部分在进程间是相同的。==
 
   
 
 Like those other systems, a program running in user mode cannot access kernel virtual pages;
-
 ==像其他系统一样，在用户模式下运行的程序无法访问内核虚拟页面；==
 
   
 
 only by trapping into the kernel and transitioning to privileged mode can such memory be accessed.
-
 ==只有通过陷入内核并转换为特权模式，才能访问此类内存。==
 
   
 
 In classic 32-bit Linux (i.e., Linux with a 32-bit virtual address space), the split between user and kernel portions of the address space takes place at address 0xC0000000, or three-quarters of the way through the address space.
-
 ==在经典的 32 位 Linux（即具有 32 位虚拟地址空间的 Linux）中，地址空间的用户部分和内核部分之间的分割发生在地址 0xC0000000 处，即地址空间的四分之三处。==
 
   
 
 Thus, virtual addresses through 0xBFFFFFFF are user virtual addresses; the remaining virtual addresses (0xC0000000 through 0xFFFFFFFF) are in the kernel's virtual address space.
-
 ==因此，直到 0xBFFFFFFF 的虚拟地址是用户虚拟地址；剩余的虚拟地址（0xC0000000 到 0xFFFFFFFF）位于内核的虚拟地址空间中。==
 
   
 
 64-bit Linux has a similar split but at slightly different points.
-
 ==64 位 Linux 有类似的分割，但在稍微不同的点上。==
 
   
 
 Figure 23.2 shows a depiction of a typical (simplified) address space.
-
 ==图 23.2 显示了一个典型（简化）地址空间的描绘。==
 
   
 
 One slightly interesting aspect of Linux is that it contains two types of kernel virtual addresses.
-
 ==Linux 一个稍微有趣的方面是它包含两种类型的内核虚拟地址。==
 
   
 
 The first are known as kernel logical addresses.
-
 ==第一种称为内核逻辑地址。==
 
   
 
 This is what you would consider the normal virtual address space of the kernel;
-
 ==这就是你会认为是内核的正常虚拟地址空间；==
 
   
 
 to get more memory of this type, kernel code merely needs to call kmalloc.
-
 ==要获得更多这种类型的内存，内核代码只需调用 kmalloc。==
 
   
 
 Most kernel data structures live here, such as page tables, per-process kernel stacks, and so forth.
-
 ==大多数内核数据结构都驻留在这里，例如页表、每进程内核栈等。==
 
   
 
 Unlike most other memory in the system, kernel logical memory cannot be swapped to disk.
-
 ==与系统中的大多数其他内存不同，内核逻辑内存不能交换到磁盘。==
 
   
 
 Figure 23.2: The Linux Address Space
-
 ==图 23.2：Linux 地址空间==
 
   
 
 The most interesting aspect of kernel logical addresses is their connection to physical memory.
-
 ==内核逻辑地址最有趣的方面是它们与物理内存的连接。==
 
   
 
 Specifically, there is a direct mapping between kernel logical addresses and the first portion of physical memory.
-
 ==具体来说，内核逻辑地址与物理内存的第一部分之间存在直接映射。==
 
   
 
 Thus, kernel logical address 0xC0000000 translates to physical address 0x00000000, 0xC0000FFF to 0x00000FFF, and so forth.
-
 ==因此，内核逻辑地址 0xC0000000 转换为物理地址 0x00000000，0xC0000FFF 转换为 0x00000FFF，依此类推。==
 
   
 
 This direct mapping has two implications.
-
 ==这种直接映射有两个含义。==
 
   
 
 The first is that it is simple to translate back and forth between kernel logical addresses and physical addresses;
-
 ==首先，在内核逻辑地址和物理地址之间来回转换很简单；==
 
   
 
 as a result, these addresses are often treated as if they are indeed physical.
-
 ==结果，这些地址通常被视为它们确实是物理地址。==
 
   
 
 The second is that if a chunk of memory is contiguous in kernel logical address space, it is also contiguous in physical memory.
-
 ==其次，如果一块内存在内核逻辑地址空间中是连续的，那么它在物理内存中也是连续的。==
 
   
 
 This makes memory allocated in this part of the kernel's address space suitable for operations which need contiguous physical memory to work correctly, such as I/O transfers to and from devices via direct memory access (DMA).
-
 ==这使得在内核地址空间的这一部分分配的内存适合需要连续物理内存才能正常工作的操作，例如通过直接内存访问 (DMA) 与设备进行的 I/O 传输。==
 
   
 
 The other type of kernel address is a kernel virtual address.
-
 ==另一种类型的内核地址是内核虚拟地址。==
 
   
 
 To get memory of this type, kernel code calls a different allocator, vmalloc, which returns a pointer to a virtually contiguous region of the desired size.
-
 ==要获得这种类型的内存，内核代码调用不同的分配器 vmalloc，它返回指向所需大小的虚拟连续区域的指针。==
 
   
 
 Unlike kernel logical memory, kernel virtual memory is usually not contiguous;
-
 ==与内核逻辑内存不同，内核虚拟内存通常不是连续的；==
 
   
 
 each kernel virtual page may map to non-contiguous physical pages (and is thus not suitable for DMA).
-
 ==每个内核虚拟页面可能映射到非连续的物理页面（因此不适合 DMA）。==
 
   
 
 However, such memory is easier to allocate as a result, and thus used for large buffers where finding a contiguous large chunk of physical memory would be challenging.
-
 ==然而，这种内存因此更容易分配，因此用于大型缓冲区，在这种情况下，找到连续的大块物理内存将具有挑战性。==
 
   
 
 In 32-bit Linux, one other reason for the existence of kernel virtual addresses is that they enable the kernel to address more than (roughly) 1 GB of memory.
-
 ==在 32 位 Linux 中，存在内核虚拟地址的另一个原因是它们使内核能够寻址超过（大约）1 GB 的内存。==
 
   
 
 Years ago, machines had much less memory than this, and enabling access to more than 1 GB was not an issue.
-
 ==几年前，机器的内存比这少得多，启用对超过 1 GB 的访问不是问题。==
 
   
 
 However, technology progressed, and soon there was a need to enable the kernel to use larger amounts of memory.
-
 ==然而，技术进步了，很快就需要让内核使用更大量的内存。==
 
   
 
 Kernel virtual addresses, and their disconnection from a strict one-to-one mapping to physical memory, make this possible.
-
 ==内核虚拟地址及其与物理内存严格一对一映射的脱节，使得这成为可能。==
 
   
 
 However, with the move to 64-bit Linux, the need is less urgent, because the kernel is not confined to only the last 1 GB of the virtual address space.
-
 ==然而，随着向 64 位 Linux 的迁移，这种需求不再那么紧迫，因为内核不再局限于虚拟地址空间的最后 1 GB。==
 
   
 
 Page Table Structure
-
 ==页表结构==
 
   
 
 Because we are focused on Linux for x86, our discussion will center on the type of page-table structure provided by x86, as it determines what Linux can and cannot do.
-
 ==因为我们专注于 x86 的 Linux，所以我们的讨论将集中在 x86 提供的页表结构类型上，因为它决定了 Linux 能做什么和不能做什么。==
 
   
 
 As mentioned before, x86 provides a hardware-managed, multi-level page table structure, with one page table per process;
-
 ==如前所述，x86 提供了一种硬件管理的多级页表结构，每个进程一个页表；==
 
   
 
 the OS simply sets up mappings in its memory, points a privileged register at the start of the page directory, and the hardware handles the rest.
-
 ==操作系统只需在其内存中设置映射，将特权寄存器指向页目录的开始，硬件就会处理剩下的工作。==
 
   
 
 The OS gets involved, as expected, at process creation, deletion, and upon context switches, making sure in each case that the correct page table is being used by the hardware MMU to perform translations.
-
 ==正如预期的那样，操作系统会在进程创建、删除和上下文切换时介入，确保在每种情况下硬件 MMU 都使用正确的页表来执行转换。==
 
   
 
 Probably the biggest change in recent years is the move from 32-bit x86 to 64-bit x86, as briefly mentioned above.
-
 ==近年来最大的变化可能是从 32 位 x86 向 64 位 x86 的迁移，如上所述。==
 
   
 
 As seen in the VAX/VMS system, 32-bit address spaces have been around for a long time, and as technology changed, they were finally starting to become a real limit for programs.
-
 ==正如在 VAX/VMS 系统中看到的那样，32 位地址空间已经存在了很长时间，随着技术的变化，它们终于开始成为程序的真正限制。==
 
   
 
 Virtual memory makes it easy to program systems, but with modern systems containing many GB of memory, 32 bits were no longer enough to refer to each of them.
-
 ==虚拟内存使系统编程变得容易，但随着现代系统包含数 GB 的内存，32 位不再足以引用其中的每一个。==
 
   
 
 Thus, the next leap became necessary.
-
 ==因此，下一次飞跃变得必要。==
 
 COMPLETE VIRTUAL MEMORY SYSTEMS
@@ -20092,7 +17383,6 @@ int some_function(char *input) {
 }
 
 ```
-
 ==（代码片段）==
 
 In many cases, such an overflow is not catastrophic, e.g., bad input innocently given to a user program or even the OS will probably cause it to crash, but no worse.
@@ -20169,7 +17459,6 @@ int main(int argc, char *argv[]) {
 }
 
 ```
-
 ==（代码片段）==
 
 This code just prints out the (virtual) address of a variable on the stack.
@@ -20190,7 +17479,6 @@ prompt> ./random
 0x7ffe45522e94
 
 ```
-
 ==（命令行输出）==
 
 ASLR is such a useful defense for user-level programs that it has also been incorporated into the kernel, in a feature unimaginatively called kernel address space layout randomization (KASLR).
@@ -20899,7 +18187,6 @@ B: done
 main: done with both (counter = 20000000)
 
 ```
-
 ==（命令行输出）==
 
 Unfortunately, when we run this code, even on a single processor, we don't necessarily get the desired result.
@@ -20912,7 +18199,6 @@ Sometimes, we get:
 main: done with both (counter = 19345221)
 
 ```
-
 ==（部分输出）==
 
 Let's try it one more time, just to see if we've gone crazy.
@@ -20928,7 +18214,6 @@ Perhaps your professors have been lying to you? (gasp)
 main: done with both (counter = 19221041)
 
 ```
-
 ==（部分输出）==
 
 Not only is each run wrong, but also yields a different result!
@@ -20982,7 +18267,6 @@ add $0x1, %eax
 mov %eax, 0x8049a1c
 
 ```
-
 ==（汇编代码）==
 
 This example assumes that the variable counter is located at address 0x8049a1c.
@@ -21127,7 +18411,6 @@ For example, what if we had a super instruction that looked like this:
 memory-add 0x8049a1c, $0x1
 
 ```
-
 ==（伪代码）==
 
 Assume this instruction adds a value to a memory location, and the hardware guarantees that it executes atomically.
@@ -22916,2464 +20199,2053 @@ Let's look at the code in Figure 28.9 to understand one possible use of such pri
 ==让我们看看图 28.9 中的代码，以了解此类原语的一种可能用法。==
 
 LOCKS
-
 ==锁==
 
   
 
 ASIDE: MORE REASON TO AVOID SPINNING: PRIORITY INVERSION
-
 ==旁注：避免自旋的更多理由：优先级反转==
 
   
 
 One good reason to avoid spin locks is performance: as described in the main text, if a thread is interrupted while holding a lock, other threads that use spin locks will spend a large amount of CPU time just waiting for the lock to become available.
-
 ==避免使用自旋锁的一个很好的理由是性能：正如正文中所述，如果一个线程在持有锁时被中断，其他使用自旋锁的线程将花费大量的 CPU 时间仅仅为了等待锁变得可用。==
 
   
 
 However, it turns out there is another interesting reason to avoid spin locks on some systems: correctness.
-
 ==然而，事实证明，在某些系统上避免使用自旋锁还有另一个有趣的原因：正确性。==
 
   
 
 The problem to be wary of is known as priority inversion, which unfortunately is an intergalactic scourge, occurring on Earth [M15] and Mars [R97]!
-
 ==需要警惕的问题被称为优先级反转，不幸的是，这是一个星际祸害，在地球 [M15] 和火星 [R97] 上都发生过！==
 
   
 
 Let's assume there are two threads in a system.
-
 ==让我们假设系统中有两个线程。==
 
   
 
 Thread 2 (T2) has a high scheduling priority, and Thread 1 (T1) has lower priority.
-
 ==线程 2 (T2) 具有较高的调度优先级，而线程 1 (T1) 具有较低的优先级。==
 
   
 
 In this example, let's assume that the CPU scheduler will always run T2 over T1, if indeed both are runnable.
-
 ==在这个例子中，让我们假设如果两个线程都可以运行，CPU 调度器总是会优先运行 T2 而不是 T1。==
 
   
 
 T1 only runs when T2 is not able to do so (e.g., when T2 is blocked on I/O).
-
 ==只有当 T2 无法运行时（例如，当 T2 因 I/O 而阻塞时），T1 才会运行。==
 
   
 
 Now, the problem.
-
 ==现在，问题来了。==
 
   
 
 Assume T2 is blocked for some reason.
-
 ==假设 T2 因为某种原因被阻塞了。==
 
   
 
 So T1 runs, grabs a spin lock, and enters a critical section.
-
 ==于是 T1 运行，获取了一个自旋锁，并进入了临界区。==
 
   
 
 T2 now becomes unblocked (perhaps because an I/O completed), and the CPU scheduler immediately schedules it (thus descheduling T1).
-
 ==现在 T2 解除阻塞（可能是因为 I/O 完成了），CPU 调度器立即调度它（从而取消了 T1 的调度）。==
 
   
 
 T2 now tries to acquire the lock, and because it can't (T1 holds the lock), it just keeps spinning.
-
 ==T2 现在尝试获取锁，但因为无法获取（T1 持有该锁），它只能一直自旋。==
 
   
 
 Because the lock is a spin lock, T2 spins forever, and the system is hung.
-
 ==因为该锁是自旋锁，T2 会永远自旋下去，导致系统挂起。==
 
   
 
 Just avoiding the use of spin locks, unfortunately, does not avoid the problem of inversion (alas).
-
 ==遗憾的是，仅仅避免使用自旋锁并不能避免反转问题（唉）。==
 
   
 
 Imagine three threads, T1, T2, and T3, with T3 at the highest priority, and T1 the lowest.
-
 ==想象有三个线程，T1、T2 和 T3，其中 T3 优先级最高，T1 最低。==
 
   
 
 Imagine now that T1 grabs a lock.
-
 ==现在想象 T1 获取了一个锁。==
 
   
 
 T3 then starts, and because it is higher priority than T1, runs immediately (preempting T1).
-
 ==然后 T3 启动，因为它的优先级高于 T1，所以立即运行（抢占了 T1）。==
 
   
 
 T3 tries to acquire the lock that T1 holds, but gets stuck waiting, because T1 still holds it.
-
 ==T3 试图获取 T1 持有的锁，但因 T1 仍然持有该锁而被卡住等待。==
 
   
 
 If T2 starts to run, it will have higher priority than T1, and thus it will run.
-
 ==如果 T2 开始运行，它的优先级高于 T1，因此它会运行。==
 
   
 
 T3, which is higher priority than T2, is stuck waiting for T1, which may never run now that T2 is running.
-
 ==T3 的优先级虽然高于 T2，但它被卡住等待 T1，而由于 T2 正在运行，T1 可能永远无法运行。==
 
   
 
 Isn't it sad that the mighty T3 can't run, while lowly T2 controls the CPU?
-
 ==强大的 T3 无法运行，而低微的 T2 却控制着 CPU，这难道不令人悲哀吗？==
 
   
 
 Having high priority just ain't what it used to be.
-
 ==拥有高优先级已经今非昔比了。==
 
   
 
 You can address the priority inversion problem in a number of ways.
-
 ==你可以通过多种方式解决优先级反转问题。==
 
   
 
 In the specific case where spin locks cause the problem, you can avoid using spin locks (described more below).
-
 ==在自旋锁导致该问题的特定情况下，你可以避免使用自旋锁（下文将详细介绍）。==
 
   
 
 More generally, a higher-priority thread waiting for a lower-priority thread can temporarily boost the lower thread's priority, thus enabling it to run and overcoming the inversion, a technique known as priority inheritance.
-
 ==更一般地说，等待低优先级线程的高优先级线程可以暂时提升低优先级线程的优先级，从而使其能够运行并克服反转，这种技术被称为优先级继承。==
 
   
 
 A last solution is simplest: ensure all threads have the same priority.
-
 ==最后一个解决方案是最简单的：确保所有线程具有相同的优先级。==
 
   
 
 We do a couple of interesting things in this example.
-
 ==在这个例子中，我们做了一些有趣的事情。==
 
   
 
 First, we combine the old test-and-set idea with an explicit queue of lock waiters to make a more efficient lock.
-
 ==首先，我们将旧的测试并设置（test-and-set）思想与显式的锁等待队列相结合，以制作一个更高效的锁。==
 
   
 
 Second, we use a queue to help control who gets the lock next and thus avoid starvation.
-
 ==其次，我们使用队列来帮助控制谁下一个获得锁，从而避免饥饿。==
 
   
 
 You might notice how the guard is used (Figure 28.9, page 16), basically as a spin-lock around the flag and queue manipulations the lock is using.
-
 ==你可能会注意到 guard 是如何使用的（第 16 页图 28.9），它基本上是作为围绕锁所使用的标志和队列操作的自旋锁。==
 
   
 
 This approach thus doesn't avoid spin-waiting entirely; a thread might be interrupted while acquiring or releasing the lock, and thus cause other threads to spin-wait for this one to run again.
-
 ==因此，这种方法并没有完全避免自旋等待；一个线程可能在获取或释放锁时被中断，从而导致其他线程自旋等待该线程再次运行。==
 
   
 
 However, the time spent spinning is quite limited (just a few instructions inside the lock and unlock code, instead of the user-defined critical section), and thus this approach may be reasonable.
-
 ==然而，自旋花费的时间非常有限（只是锁和解锁代码中的几条指令，而不是用户定义的临界区），因此这种方法可能是合理的。==
 
   
 
 You might also observe that in lock(), when a thread can not acquire the lock (it is already held), we are careful to add ourselves to a queue (by calling the gettid() function to get the thread ID of the current thread), set guard to 0, and yield the CPU.
-
 ==你可能还会观察到，在 lock() 中，当一个线程无法获取锁（锁已被持有）时，我们会小心地将自己添加到队列中（通过调用 gettid() 函数获取当前线程的 ID），将 guard 设置为 0，并让出 CPU。==
 
   
 
 A question for the reader: What would happen if the release of the guard lock came after the park(), and not before?
-
 ==给读者提个问题：如果 guard 锁的释放在 park() 之后而不是之前，会发生什么？==
 
   
 
 Hint: something bad.
-
 ==提示：会发生坏事。==
 
   
 
 You might further detect that the flag does not get set back to 0 when another thread gets woken up.
-
 ==你可能进一步发现，当另一个线程被唤醒时，标志并没有被重新设置为 0。==
 
   
 
 Why is this?
-
 ==这是为什么呢？==
 
   
 
 Well, it is not an error, but rather a necessity!
-
 ==嗯，这不是错误，而是必须的！==
 
   
 
 When a thread is woken up, it will be as if it is returning from park(); however, it does not hold the guard at that point in the code and thus cannot even try to set the flag to 1.
-
 ==当一个线程被唤醒时，它就像是从 park() 返回一样；然而，在代码的那个点它并不持有 guard，因此甚至不能尝试将标志设置为 1。==
 
   
 
 Thus, we just pass the lock directly from the thread releasing the lock to the next thread acquiring it; flag is not set to 0 in-between.
-
 ==因此，我们要么直接将锁从释放锁的线程传递给下一个获取它的线程；在此期间 flag 不会被设置为 0。==
 
   
 
 Finally, you might notice the perceived race condition in the solution, just before the call to park().
-
 ==最后，你可能会注意到解决方案中存在的感知竞态条件，就在调用 park() 之前。==
 
   
 
 With just the wrong timing, a thread will be about to park, assuming that it should sleep until the lock is no longer held.
-
 ==如果时机恰好不对，一个线程将准备 park（停泊），因为它假设自己应该休眠直到锁不再被持有。==
 
   
 
 A switch at that time to another thread (say, a thread holding the lock) could lead to trouble, for example, if that thread then released the lock.
-
 ==如果在那个时间切换到另一个线程（比如，持有锁的线程），可能会导致麻烦，例如，如果那个线程随后释放了锁。==
 
   
 
 The subsequent park by the first thread would then sleep forever (potentially), a problem sometimes called the wakeup/waiting race.
-
 ==第一个线程随后的 park 操作将导致它永远休眠（可能），这个问题有时被称为唤醒/等待竞争。==
 
   
 
 Solaris solves this problem by adding a third system call: setpark().
-
 ==Solaris 通过添加第三个系统调用来解决这个问题：setpark()。==
 
   
 
 By calling this routine, a thread can indicate it is about to park.
-
 ==通过调用这个例程，线程可以表明它即将 park。==
 
   
 
 If it then happens to be interrupted and another thread calls unpark before park is actually called, the subsequent park returns immediately instead of sleeping.
-
 ==如果它随后恰好被中断，并且另一个线程在 park 实际被调用之前调用了 unpark，那么随后的 park 将立即返回而不是休眠。==
 
   
 
 The code modification, inside of lock(), is quite small.
-
 ==lock() 内部的代码修改非常小。==
 
   
 
 A different solution could pass the guard into the kernel.
-
 ==另一种解决方案是将 guard 传递给内核。==
 
   
 
 In that case, the kernel could take precautions to atomically release the lock and dequeue the running thread.
-
 ==在这种情况下，内核可以采取预防措施来原子地释放锁并将运行线程出队。==
 
   
 
 28.15 Different OS, Different Support
-
 ==28.15 不同的操作系统，不同的支持==
 
   
 
 We have thus far seen one type of support that an OS can provide in order to build a more efficient lock in a thread library.
-
 ==到目前为止，我们已经看到了一种操作系统可以提供的支持，以便在线程库中构建更高效的锁。==
 
   
 
 Other OS's provide similar support; the details vary.
-
 ==其他操作系统提供类似的支持；细节各不相同。==
 
   
 
 For example, Linux provides a futex which is similar to the Solaris interface but provides more in-kernel functionality.
-
 ==例如，Linux 提供了 futex，它类似于 Solaris 接口，但提供了更多的内核功能。==
 
   
 
 Specifically, each futex has associated with it a specific physical memory location, as well as a per-futex in-kernel queue.
-
 ==具体来说，每个 futex 都有一个特定的物理内存位置与之关联，以及一个每个 futex 独有的内核队列。==
 
   
 
 Callers can use futex calls (described below) to sleep and wake as need be.
-
 ==调用者可以使用 futex 调用（如下所述）根据需要进行休眠和唤醒。==
 
   
 
 Specifically, two calls are available.
-
 ==具体来说，有两个调用可用。==
 
   
 
 The call to futex_wait(address, expected) puts the calling thread to sleep, assuming the value at the address address is equal to expected.
-
 ==调用 futex_wait(address, expected) 会使调用线程休眠，前提是地址 address 处的值等于 expected。==
 
   
 
 If it is not equal, the call returns immediately.
-
 ==如果不相等，调用将立即返回。==
 
   
 
 The call to the routine futex_wake(address) wakes one thread that is waiting on the queue.
-
 ==调用例程 futex_wake(address) 会唤醒队列中等待的一个线程。==
 
   
 
 The usage of these calls in a Linux mutex is shown in Figure 28.10 (page 19).
-
 ==图 28.10（第 19 页）展示了 Linux 互斥锁中这些调用的用法。==
 
   
 
 This code snippet from lowlevellock.h in the nptl library (part of the gnu libc library) [L09] is interesting for a few reasons.
-
 ==这段来自 nptl 库（gnu libc 库的一部分）[L09] 中 lowlevellock.h 的代码片段之所以有趣，有几个原因。==
 
   
 
 First, it uses a single integer to track both whether the lock is held or not (the high bit of the integer) and the number of waiters on the lock (all the other bits).
-
 ==首先，它使用一个整数来同时跟踪锁是否被持有（整数的高位）以及锁上的等待者数量（所有其他位）。==
 
   
 
 Thus, if the lock is negative, it is held (because the high bit is set and that bit determines the sign of the integer).
-
 ==因此，如果锁是负数，则表示它被持有（因为高位被设置，而该位决定了整数的符号）。==
 
   
 
 Second, the code snippet shows how to optimize for the common case, specifically when there is no contention for the lock; with only one thread acquiring and releasing a lock, very little work is done (the atomic bit test-and-set to lock and an atomic add to release the lock).
-
 ==其次，该代码片段展示了如何针对常见情况进行优化，特别是在没有锁争用的情况下；当只有一个线程获取和释放锁时，所做的工作非常少（用于加锁的原子位测试并设置，以及用于释放锁的原子加法）。==
 
   
 
 See if you can puzzle through the rest of this "real-world" lock to understand how it works.
-
 ==看看你能不能弄清楚这个“现实世界”锁的其余部分，以理解它是如何工作的。==
 
   
 
 Do it and become a master of Linux locking, or at least somebody who listens when a book tells you to do something.
-
 ==去做吧，成为 Linux 锁的大师，或者至少成为一个听从书本建议的人。==
 
   
 
 28.16 Two-Phase Locks
-
 ==28.16 两阶段锁==
 
   
 
 One final note: the Linux approach has the flavor of an old approach that has been used on and off for years, going at least as far back to Dahm Locks in the early 1960's [M82], and is now referred to as a two-phase lock.
-
 ==最后一点：Linux 的方法具有一种古老方法的韵味，这种方法多年来一直被断断续续地使用，至少可以追溯到 20 世纪 60 年代初的 Dahm 锁 [M82]，现在被称为两阶段锁。==
 
   
 
 A two-phase lock realizes that spinning can be useful, particularly if the lock is about to be released.
-
 ==两阶段锁意识到自旋可能是有用的，特别是如果锁即将被释放。==
 
   
 
 So in the first phase, the lock spins for a while, hoping that it can acquire the lock.
-
 ==因此在第一阶段，锁会自旋一段时间，希望能够获取锁。==
 
   
 
 However, if the lock is not acquired during the first spin phase, a second phase is entered, where the caller is put to sleep, and only woken up when the lock becomes free later.
-
 ==然而，如果在第一个自旋阶段没有获取到锁，就会进入第二阶段，调用者被置于休眠状态，只有当锁稍后变为空闲时才会被唤醒。==
 
   
 
 The Linux lock above is a form of such a lock, but it only spins once; a generalization of this could spin in a loop for a fixed amount of time before using futex support to sleep.
-
 ==上面的 Linux 锁就是这种锁的一种形式，但它只自旋一次；对此的一般化做法可能是先在一个循环中自旋固定的时间，然后再使用 futex 支持进行休眠。==
 
   
 
 Two-phase locks are yet another instance of a hybrid approach, where combining two good ideas may indeed yield a better one.
-
 ==两阶段锁是混合方法的又一个实例，结合两个好主意确实可能会产生一个更好的主意。==
 
   
 
 Of course, whether it does depends strongly on many things, including the hardware environment, number of threads, and other workload details.
-
 ==当然，是否如此在很大程度上取决于许多事情，包括硬件环境、线程数量和其他工作负载细节。==
 
   
 
 As always, making a single general-purpose lock, good for all possible use cases, is quite a challenge.
-
 ==一如既往，制造一个适用于所有可能用例的单一通用锁是一个巨大的挑战。==
 
   
 
 28.17 Summary
-
 ==28.17 总结==
 
   
 
 The above approach shows how real locks are built these days: some hardware support (in the form of a more powerful instruction) plus some operating system support (e.g., in the form of park() and unpark() primitives on Solaris, or futex on Linux).
-
 ==上述方法展示了如今真正的锁是如何构建的：一些硬件支持（以更强大的指令形式）加上一些操作系统支持（例如，Solaris 上的 park() 和 unpark() 原语，或 Linux 上的 futex）。==
 
   
 
 Of course, the details differ, and the exact code to perform such locking is usually highly tuned.
-
 ==当然，细节各不相同，执行这种锁定的具体代码通常经过高度调优。==
 
   
 
 Check out the Solaris or Linux code bases if you want to see more details; they are a fascinating read [L09, S09].
-
 ==如果你想了解更多细节，请查看 Solaris 或 Linux 代码库；它们读起来非常有趣 [L09, S09]。==
 
   
 
 Also see David et al.'s excellent work for a comparison of locking strategies on modern multiprocessors [D+13].
-
 ==另外，请参阅 David 等人的出色工作，了解现代多处理器上锁定策略的比较 [D+13]。==
 
   
 
 Like buy a print copy of OSTEP!
-
 ==比如买一本 OSTEP 的纸质版！==
 
   
 
 Even though the book is available for free online, wouldn't you just love a hard cover for your desk?
-
 ==尽管这本书可以在线免费获取，难道你不想在桌上放一本精装书吗？==
 
   
 
 Or, better yet, ten copies to share with friends and family?
-
 ==或者，更好的是，买十本与朋友和家人分享？==
 
   
 
 And maybe one extra copy to throw at an enemy?
-
 ==也许还可以多买一本扔向敌人？==
 
   
 
 (the book is heavy, and thus chucking it is surprisingly effective)
-
 ==（这本书很重，所以扔起来效果出奇地好）==
 
   
 
 References
-
 ==参考文献==
 
   
 
 [D91] "Just Win, Baby: Al Davis and His Raiders" by Glenn Dickey. Harcourt, 1991.
-
 ==[D91] "Just Win, Baby: Al Davis and His Raiders" 作者 Glenn Dickey。Harcourt, 1991。==
 
   
 
 The book about Al Davis and his famous quote.
-
 ==关于 Al Davis 和他那句名言的书。==
 
   
 
 Or, we suppose, the book is more about Al Davis and the Raiders, and not so much the quote.
-
 ==或者，我们认为，这本书更多的是关于 Al Davis 和 Raiders 队，而不完全是关于那句名言。==
 
   
 
 To be clear: we are not recommending this book, we just needed a citation.
-
 ==澄清一下：我们并不推荐这本书，我们只是需要一个引文。==
 
   
 
 [D+13] "Everything You Always Wanted to Know about Synchronization but Were Afraid to Ask" by Tudor David, Rachid Guerraoui, Vasileios Trigonakis. SOSP '13.
-
 ==[D+13] "Everything You Always Wanted to Know about Synchronization but Were Afraid to Ask" 作者 Tudor David, Rachid Guerraoui, Vasileios Trigonakis。SOSP '13。==
 
   
 
 An excellent paper comparing many different ways to build locks using hardware primitives.
-
 ==一篇比较使用硬件原语构建锁的多种不同方法的优秀论文。==
 
   
 
 Great to see how many ideas work on modern hardware.
-
 ==很高兴看到有多少想法在现代硬件上行之有效。==
 
   
 
 [D68] "Cooperating sequential processes" by Edsger W. Dijkstra. 1968.
-
 ==[D68] "Cooperating sequential processes" 作者 Edsger W. Dijkstra。1968。==
 
   
 
 One of the early seminal papers.
-
 ==早期的开创性论文之一。==
 
   
 
 Discusses how Dijkstra posed the original concurrency problem, and Dekker's solution.
-
 ==讨论了 Dijkstra 如何提出最初的并发问题，以及 Dekker 的解决方案。==
 
   
 
 [H93] "MIPS R4000 Microprocessor User's Manual" by Joe Heinrich. Prentice-Hall, June 1993.
-
 ==[H93] "MIPS R4000 Microprocessor User's Manual" 作者 Joe Heinrich。Prentice-Hall, 1993 年 6 月。==
 
   
 
 The old MIPS user's manual.
-
 ==旧的 MIPS 用户手册。==
 
   
 
 Download it while it still exists.
-
 ==趁它还在的时候下载它。==
 
   
 
 [H91] "Wait-free Synchronization" by Maurice Herlihy. ACM TOPLAS, Volume 13: 1, January 1991.
-
 ==[H91] "Wait-free Synchronization" 作者 Maurice Herlihy。ACM TOPLAS, 第 13 卷：1, 1991 年 1 月。==
 
   
 
 A landmark paper introducing a different approach to building concurrent data structures.
-
 ==一篇介绍构建并发数据结构不同方法的里程碑式论文。==
 
   
 
 Because of the complexity involved, some of these ideas have been slow to gain acceptance in deployment.
-
 ==由于涉及的复杂性，其中一些想法在实际部署中被接受得很慢。==
 
   
 
 [L81] "Observations on the Development of an Operating System" by Hugh Lauer. SOSP '81.
-
 ==[L81] "Observations on the Development of an Operating System" 作者 Hugh Lauer。SOSP '81。==
 
   
 
 A must-read retrospective about the development of the Pilot OS, an early PC operating system.
-
 ==关于 Pilot OS（早期的 PC 操作系统）开发过程的必读回顾。==
 
   
 
 Fun and full of insights.
-
 ==有趣且充满见解。==
 
   
 
 [L09] "glibc 2.9 (include Linux pthreads implementation)" by Many authors.
-
 ==[L09] "glibc 2.9 (include Linux pthreads implementation)" 作者多位。==
 
   
 
 In particular, take a look at the nptl subdirectory where you will find most of the pthread support in Linux today.
-
 ==特别是，看看 nptl 子目录，你会发现当今 Linux 中大部分的 pthread 支持都在那里。==
 
   
 
 [M82] "The Architecture of the Burroughs B5000: 20 Years Later and Still Ahead of the Times?" by A. Mayer. 1982.
-
 ==[M82] "The Architecture of the Burroughs B5000: 20 Years Later and Still Ahead of the Times?" 作者 A. Mayer。1982。==
 
   
 
 "It (RDLK) is an indivisible operation which reads from and writes into a memory location."
-
 ==“它 (RDLK) 是一个不可分割的操作，它读取并写入一个内存位置。”==
 
   
 
 RDLK is thus test-and-set!
-
 ==RDLK 因此就是 test-and-set（测试并设置）！==
 
   
 
 Dave Dahm created spin locks ("Buzz Locks") and a two-phase lock called "Dahm Locks."
-
 ==Dave Dahm 创造了自旋锁（“Buzz Locks”）和一种称为“Dahm Locks”的两阶段锁。==
 
   
 
 [M15] "OSSpinLock Is Unsafe" by J. McCall.
-
 ==[M15] "OSSpinLock Is Unsafe" 作者 J. McCall。==
 
   
 
 Calling OSSpinLock on a Mac is unsafe when using threads of different priorities - you might spin forever!
-
 ==在 Mac 上使用不同优先级的线程时调用 OSSpinLock 是不安全的——你可能会永远自旋！==
 
   
 
 So be careful, Mac fanatics, even your mighty system can be less than perfect.
-
 ==所以要小心，Mac 的狂热粉丝们，即使是你们强大的系统也可能并不完美。==
 
   
 
 [MS91] "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors" by John M. Mellor-Crummey and M. L. Scott. ACM TOCS, 1991.
-
 ==[MS91] "Algorithms for Scalable Synchronization on Shared-Memory Multiprocessors" 作者 John M. Mellor-Crummey 和 M. L. Scott。ACM TOCS, 1991。==
 
   
 
 An excellent and thorough survey on different locking algorithms.
-
 ==关于不同锁定算法的优秀而彻底的调查。==
 
   
 
 However, no operating systems support is used, just fancy hardware instructions.
-
 ==然而，没有使用操作系统支持，只是使用了花哨的硬件指令。==
 
   
 
 [P81] "Myths About the Mutual Exclusion Problem" by G.L. Peterson. 1981.
-
 ==[P81] "Myths About the Mutual Exclusion Problem" 作者 G.L. Peterson。1981。==
 
   
 
 Peterson's algorithm introduced here.
-
 ==这里介绍了皮特森算法。==
 
   
 
 [R97] "What Really Happened on Mars?" by Glenn E. Reeves.
-
 ==[R97] "What Really Happened on Mars?" 作者 Glenn E. Reeves。==
 
   
 
 A description of priority inversion on Mars Pathfinder.
-
 ==关于火星探路者号上优先级反转的描述。==
 
   
 
 Concurrent code correctness matters, especially in space!
-
 ==并发代码的正确性很重要，尤其是在太空中！==
 
   
 
 [S05] "Guide to porting from Solaris to Linux on x86" by Ajay Sood, April 29, 2005.
-
 ==[S05] "Guide to porting from Solaris to Linux on x86" 作者 Ajay Sood，2005 年 4 月 29 日。==
 
   
 
 [S09] "OpenSolaris Thread Library" by Sun.
-
 ==[S09] "OpenSolaris Thread Library" 作者 Sun。==
 
   
 
 Pretty interesting, although who knows what will happen now that Oracle owns Sun.
-
 ==非常有趣，虽然谁知道现在 Oracle 拥有了 Sun 会发生什么。==
 
   
 
 Thanks to Mike Swift for the pointer.
-
 ==感谢 Mike Swift 的指点。==
 
   
 
 [W09] "Load-Link, Store-Conditional" by Many authors. Wikipedia.
-
 ==[W09] "Load-Link, Store-Conditional" 作者多位。维基百科。==
 
   
 
 Can you believe we referenced Wikipedia?
-
 ==你能相信我们引用了维基百科吗？==
 
   
 
 But, we found the information there and it felt wrong not to.
-
 ==但是，我们在那里找到了信息，如果不引用感觉不对。==
 
   
 
 Further, it was useful, listing the instructions for the different architectures.
-
 ==此外，它很有用，列出了不同架构的指令。==
 
   
 
 Actually Wikipedia is pretty amazing, so don't be so harsh, OK?
-
 ==实际上维基百科非常了不起，所以别那么苛刻，好吗？==
 
   
 
 [WG00] "The SPARC Architecture Manual: Version 9" by D. Weaver, T. Germond. SPARC International, 2000.
-
 ==[WG00] "The SPARC Architecture Manual: Version 9" 作者 D. Weaver, T. Germond。SPARC International, 2000。==
 
   
 
 Homework (Simulation)
-
 ==作业（模拟）==
 
   
 
 This program, x86.py, allows you to see how different thread interleavings either cause or avoid race conditions.
-
 ==这个程序，x86.py，允许你查看不同的线程交错是如何导致或避免竞态条件的。==
 
   
 
 See the README for details on how the program works and answer the questions below.
-
 ==请参阅 README 了解程序如何工作的详细信息，并回答以下问题。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. Examine flag.s.
-
 ==2. 检查 flag.s。==
 
   
 
 This code "implements" locking with a single memory flag.
-
 ==这段代码用单个内存标志“实现”了锁定。==
 
   
 
 Can you understand the assembly?
-
 ==你能看懂汇编代码吗？==
 
   
 
 2. When you run with the defaults, does flag.s work?
-
 ==3. 当你使用默认值运行时，flag.s 能工作吗？==
 
   
 
 Use the -M and -R flags to trace variables and registers (and turn on to see their values).
-
 ==使用 -M 和 -R 标志来跟踪变量和寄存器（并开启以查看它们的值）。==
 
   
 
 Can you predict what value will end up in flag?
-
 ==你能预测 flag 最终会是什么值吗？==
 
   
 
 3. Change the value of the register bx with the a flag (e.g., -a bx=2, bx=2 if you are running just two threads).
-
 ==4. 使用 a 标志更改寄存器 bx 的值（例如，如果你只运行两个线程，则 -a bx=2, bx=2）。==
 
   
 
 What does the code do?
-
 ==代码是做什么的？==
 
   
 
 How does it change your answer for the question above?
-
 ==它如何改变你对上述问题的回答？==
 
   
 
 4. Set bx to a high value for each thread, and then use the i flag to generate different interrupt frequencies; what values lead to a bad outcomes?
-
 ==5. 为每个线程将 bx 设置为一个高值，然后使用 i 标志生成不同的中断频率；什么值会导致糟糕的结果？==
 
   
 
 Which lead to good outcomes?
-
 ==哪些会导致好的结果？==
 
   
 
 5. Now let's look at the program test-and-set.s.
-
 ==6. 现在让我们看看程序 test-and-set.s。==
 
   
 
 First, try to understand the code, which uses the xchg instruction to build a simple locking primitive.
-
 ==首先，尝试理解代码，它使用 xchg 指令构建了一个简单的锁定原语。==
 
   
 
 How is the lock acquire written?
-
 ==获取锁是如何编写的？==
 
   
 
 How about lock release?
-
 ==释放锁呢？==
 
   
 
 6. Now run the code, changing the value of the interrupt interval (-i) again, and making sure to loop for a number of times.
-
 ==7. 现在运行代码，再次更改中断间隔 (-i) 的值，并确保循环多次。==
 
   
 
 Does the code always work as expected?
-
 ==代码总是按预期工作吗？==
 
   
 
 Does it sometimes lead to an inefficient use of the CPU?
-
 ==它有时会导致 CPU 使用效率低下吗？==
 
   
 
 How could you quantify that?
-
 ==你如何量化它？==
 
   
 
 7. Use the P flag to generate specific tests of the locking code.
-
 ==8. 使用 P 标志生成锁定代码的特定测试。==
 
   
 
 For example, run a schedule that grabs the lock in the first thread, but then tries to acquire it in the second.
-
 ==例如，运行一个调度，在第一个线程中获取锁，然后尝试在第二个线程中获取它。==
 
   
 
 Does the right thing happen?
-
 ==发生了正确的事情吗？==
 
   
 
 What else should you test?
-
 ==你还应该测试什么？==
 
   
 
 8. Now let's look at the code in peterson.s, which implements Peterson's algorithm (mentioned in a sidebar in the text).
-
 ==9. 现在让我们看看 peterson.s 中的代码，它实现了 Peterson 算法（在正文的侧边栏中提到）。==
 
   
 
 Study the code and see if you can make sense of it.
-
 ==研究代码，看看你是否能理解它。==
 
   
 
 9. Now run the code with different values of i.
-
 ==10. 现在使用不同的 i 值运行代码。==
 
   
 
 What kinds of different behavior do you see?
-
 ==你看到了什么样的不同行为？==
 
   
 
 Make sure to set the thread IDs appropriately (using -a bx=0, bx=1 for example) as the code assumes it.
-
 ==确保适当地设置线程 ID（例如使用 -a bx=0, bx=1），因为代码假设了这一点。==
 
   
 
 10. Can you control the scheduling (with the -P flag) to "prove" that the code works?
-
 ==11. 你能控制调度（使用 -P 标志）来“证明”代码有效吗？==
 
   
 
 What are the different cases you should show hold?
-
 ==你应该展示哪些不同的情况成立？==
 
   
 
 Think about mutual exclusion and deadlock avoidance.
-
 ==思考一下互斥和死锁避免。==
 
   
 
 11. Now study the code for the ticket lock in ticket.s.
-
 ==12. 现在研究 ticket.s 中票据锁（ticket lock）的代码。==
 
   
 
 Does it match the code in the chapter?
-
 ==它与本章中的代码匹配吗？==
 
   
 
 Then run with the following flags: -a bx=1000, bx=1000 (causing each thread to loop through the critical section 1000 times).
-
 ==然后使用以下标志运行：-a bx=1000, bx=1000（导致每个线程循环通过临界区 1000 次）。==
 
   
 
 Watch what happens; do the threads spend much time spin-waiting for the lock?
-
 ==观察发生了什么；线程是否花费大量时间自旋等待锁？==
 
   
 
 12. How does the code behave as you add more threads?
-
 ==13. 当你添加更多线程时，代码表现如何？==
 
 14. Now examine yield.s, in which a yield instruction enables one thread to yield control of the CPU (realistically, this would be an OS primitive, but for the simplicity, we assume an instruction does the task).
-
 ==15. 现在检查 yield.s，其中 yield 指令使一个线程能够让出 CPU 的控制权（实际上，这将是一个 OS 原语，但为了简单起见，我们假设一条指令完成该任务）。==
 
   
 
 Find a scenario where test-and-set.s wastes cycles spinning, but yield.s does not.
-
 ==找到一个场景，test-and-set.s 浪费周期进行自旋，但 yield.s 没有。==
 
   
 
 How many instructions are saved?
-
 ==节省了多少条指令？==
 
   
 
 In what scenarios do these savings arise?
-
 ==这些节省出现在什么场景中？==
 
   
 
 14. Finally, examine test-and-test-and-set.s.
-
 ==15. 最后，检查 test-and-test-and-set.s。==
 
   
 
 What does this lock do?
-
 ==这个锁是做什么的？==
 
   
 
 What kind of savings does it introduce as compared to test-and-set.s?
-
 ==与 test-and-set.s 相比，它引入了什么样的节省？==
 
   
 
 Lock-based Concurrent Data Structures
-
 ==基于锁的并发数据结构==
 
   
 
 Before moving beyond locks, we'll first describe how to use locks in some common data structures.
-
 ==在超越锁之前，我们将首先描述如何在一些常见数据结构中使用锁。==
 
   
 
 Adding locks to a data structure to make it usable by threads makes the structure thread safe.
-
 ==向数据结构添加锁以使其可被线程使用，会使该结构变得线程安全。==
 
   
 
 Of course, exactly how such locks are added determines both the correctness and performance of the data structure.
-
 ==当然，究竟如何添加这些锁决定了数据结构的正确性和性能。==
 
   
 
 And thus, our challenge:
-
 ==因此，我们的挑战是：==
 
   
 
 CRUX: HOW TO ADD LOCKS TO DATA STRUCTURES
-
 ==关键：如何向数据结构添加锁==
 
   
 
 When given a particular data structure, how should we add locks to it, in order to make it work correctly?
-
 ==当给定一个特定的数据结构时，我们应该如何向其添加锁，以使其正确工作？==
 
   
 
 Further, how do we add locks such that the data structure yields high performance, enabling many threads to access the structure at once, i.e., concurrently?
-
 ==此外，我们如何添加锁，使数据结构产生高性能，允许许多线程同时访问该结构，即并发访问？==
 
   
 
 Of course, we will be hard pressed to cover all data structures or all methods for adding concurrency, as this is a topic that has been studied for years, with (literally) thousands of research papers published about it.
-
 ==当然，我们很难涵盖所有数据结构或所有增加并发性的方法，因为这是一个已经被研究多年的主题，发表了（字面上）数千篇相关研究论文。==
 
   
 
 Thus, we hope to provide a sufficient introduction to the type of thinking required, and refer you to some good sources of material for further inquiry on your own.
-
 ==因此，我们希望对所需的思维方式提供充分的介绍，并为你推荐一些好的资料来源，以便你自己进行进一步的探究。==
 
   
 
 We found Moir and Shavit's survey to be a great source of information [MS04].
-
 ==我们发现 Moir 和 Shavit 的调查是一个很好的信息来源 [MS04]。==
 
   
 
 29.1 Concurrent Counters
-
 ==29.1 并发计数器==
 
   
 
 One of the simplest data structures is a counter.
-
 ==最简单的数据结构之一是计数器。==
 
   
 
 It is a structure that is commonly used and has a simple interface.
-
 ==它是一种常用的结构，并且具有简单的接口。==
 
   
 
 We define a simple non-concurrent counter in Figure 29.1.
-
 ==我们在图 29.1 中定义了一个简单的非并发计数器。==
 
   
 
 Simple But Not Scalable
-
 ==简单但不可扩展==
 
   
 
 As you can see, the non-synchronized counter is a trivial data structure, requiring a tiny amount of code to implement.
-
 ==正如你所见，非同步计数器是一个微不足道的数据结构，只需要极少量的代码即可实现。==
 
   
 
 We now have our next challenge: how can we make this code thread safe?
-
 ==我们现在面临下一个挑战：我们如何使这段代码线程安全？==
 
   
 
 Figure 29.2 shows how we do so.
-
 ==图 29.2 展示了我们是如何做到的。==
 
   
 
 LOCK-BASED CONCURRENT DATA STRUCTURES
-
 ==基于锁的并发数据结构==
 
   
 
 Figure 29.1: A Counter Without Locks
-
 ==图 29.1：一个无锁计数器==
 
   
 
 This concurrent counter is simple and works correctly.
-
 ==这个并发计数器很简单，并且工作正确。==
 
   
 
 In fact, it follows a design pattern common to the simplest and most basic concurrent data structures: it simply adds a single lock, which is acquired when calling a routine that manipulates the data structure, and is released when returning from the call.
-
 ==事实上，它遵循了最简单和最基本的并发数据结构常见的设计模式：它只是简单地添加了一个锁，当调用操作数据结构的例程时获取该锁，并在从调用返回时释放该锁。==
 
   
 
 In this manner, it is similar to a data structure built with monitors [BH73], where locks are acquired and released automatically as you call and return from object methods.
-
 ==这种方式类似于使用监视器（monitors）构建的数据结构 [BH73]，在监视器中，当你调用对象方法和从对象方法返回时，锁会自动获取和释放。==
 
   
 
 At this point, you have a working concurrent data structure.
-
 ==至此，你已经拥有了一个可工作的并发数据结构。==
 
   
 
 The problem you might have is performance.
-
 ==你可能遇到的问题是性能。==
 
   
 
 If your data structure is too slow, you'll have to do more than just add a single lock; such optimizations, if needed, are thus the topic of the rest of the chapter.
-
 ==如果你的数据结构太慢，你就不仅仅是添加一个锁那么简单了；因此，如果需要的话，此类优化将是本章其余部分的主题。==
 
   
 
 Note that if the data structure is not too slow, you are done!
-
 ==请注意，如果数据结构不太慢，你就大功告成了！==
 
   
 
 No need to do something fancy if something simple will work.
-
 ==如果简单的东西管用，就不需要做花哨的事情。==
 
   
 
 To understand the performance costs of the simple approach, we run a benchmark in which each thread updates a single shared counter a fixed number of times; we then vary the number of threads.
-
 ==为了理解简单方法的性能成本，我们运行一个基准测试，其中每个 thread 将单个共享计数器更新固定次数；然后我们改变线程的数量。==
 
   
 
 Figure 29.5 shows the total time taken, with one to four threads active; each thread updates the counter one million times.
-
 ==图 29.5 显示了总耗时，有 1 到 4 个活跃线程；每个线程将计数器更新 100 万次。==
 
   
 
 This experiment was run upon an iMac with four Intel 2.7 GHz i5 CPUs; with more CPUs active, we hope to get more total work done per unit time.
-
 ==这个实验是在一台配备四个 Intel 2.7 GHz i5 CPU 的 iMac 上运行的；随着更多 CPU 处于活动状态，我们希望单位时间内完成的总工作量更多。==
 
   
 
 From the top line in the figure (labeled 'Precise'), you can see that the performance of the synchronized counter scales poorly.
-
 ==从图中的顶线（标记为“Precise”，精确）可以看出，同步计数器的性能扩展性很差。==
 
   
 
 Whereas a single thread can complete the million counter updates in a tiny amount of time (roughly 0.03 seconds), having two threads each update the counter one million times concurrently leads to a massive slowdown (taking over 5 seconds!).
-
 ==虽然单个线程可以在极短的时间内（大约 0.03 秒）完成 100 万次计数器更新，但让两个线程并发地各更新计数器 100 万次会导致巨大的减速（耗时超过 5 秒！）。==
 
   
 
 It only gets worse with more threads.
-
 ==随着线程增多，情况只会变得更糟。==
 
   
 
 Figure 29.2: A Counter With Locks
-
 ==图 29.2：带锁的计数器==
 
   
 
 Ideally, you'd like to see the threads complete just as quickly on multiple processors as the single thread does on one.
-
 ==理想情况下，你希望看到线程在多处理器上完成任务的速度与单个线程在一个处理器上完成任务的速度一样快。==
 
   
 
 Achieving this end is called perfect scaling; even though more work is done, it is done in parallel, and hence the time taken to complete the task is not increased.
-
 ==达到这个目标被称为完美扩展（perfect scaling）；即使完成了更多的工作，但因为是并行完成的，所以完成任务所需的时间并没有增加。==
 
   
 
 Scalable Counting
-
 ==可扩展计数==
 
   
 
 Amazingly, researchers have studied how to build more scalable counters for years [MS04].
-
 ==令人惊讶的是，研究人员多年来一直在研究如何构建更可扩展的计数器 [MS04]。==
 
   
 
 Even more amazing is the fact that scalable counters matter, as recent work in operating system performance analysis has shown [B+10]; without scalable counting, some workloads running on Linux suffer from serious scalability problems on multicore machines.
-
 ==更令人惊讶的是，可扩展计数器确实很重要，正如最近在操作系统性能分析方面的工作所表明的那样 [B+10]；如果没有可扩展计数，Linux 上运行的某些工作负载在多核机器上会遭受严重的扩展性问题。==
 
   
 
 Many techniques have been developed to attack this problem.
-
 ==已经开发了许多技术来解决这个问题。==
 
   
 
 We'll describe one approach known as an approximate counter [C06].
-
 ==我们将描述一种称为近似计数器（approximate counter）的方法 [C06]。==
 
   
 
 The approximate counter works by representing a single logical counter via numerous local physical counters, one per CPU core, as well as a single global counter.
-
 ==近似计数器通过使用许多本地物理计数器（每个 CPU 核心一个）以及一个全局计数器来表示单个逻辑计数器。==
 
   
 
 Specifically, on a machine with four CPUs, there are four local counters and one global one.
-
 ==具体来说，在一台有四个 CPU 的机器上，有四个本地计数器和一个全局计数器。==
 
   
 
 In addition to these counters, there are also locks: one for each local counter, and one for the global counter.
-
 ==除了这些计数器外，还有锁：每个本地计数器一个，全局计数器一个。==
 
   
 
 The basic idea of approximate counting is as follows.
-
 ==近似计数的基本思想如下。==
 
   
 
 When a thread running on a given core wishes to increment the counter, it increments its local counter; access to this local counter is synchronized via the corresponding local lock.
-
 ==当运行在给定核心上的线程希望增加计数器时，它会增加其本地计数器；对该本地计数器的访问通过相应的本地锁进行同步。==
 
   
 
 Because each CPU has its own local counter, threads across CPUs can update local counters without contention, and thus updates to the counter are scalable.
-
 ==因为每个 CPU 都有自己的本地计数器，跨 CPU 的线程可以无争用地更新本地计数器，因此计数器的更新是可扩展的。==
 
   
 
 However, to keep the global counter up to date (in case a thread wishes to read its value), the local values are periodically transferred to the global counter, by acquiring the global lock and incrementing it by the local counter's value; the local counter is then reset to zero.
-
 ==然而，为了保持全局计数器最新（以防线程希望读取其值），本地值会定期传输到全局计数器，方法是获取全局锁并将其增加本地计数器的值；然后将本地计数器重置为零。==
 
   
 
 How often this local-to-global transfer occurs is determined by a threshold S.
-
 ==这种从本地到全局的传输发生的频率由阈值 S 决定。==
 
   
 
 The smaller S is, the more the counter behaves like the non-scalable counter above; the bigger S is, the more scalable the counter, but the further off the global value might be from the actual count.
-
 ==S 越小，计数器的行为就越像上面的不可扩展计数器；S 越大，计数器的扩展性越好，但全局值与实际计数的偏差可能就越大。==
 
   
 
 One could simply acquire all the local locks and the global lock (in a specified order, to avoid deadlock) to get an exact value, but that is not scalable.
-
 ==人们可以简单地获取所有本地锁和全局锁（按照指定顺序，以避免死锁）来获得精确值，但这不可扩展。==
 
   
 
 To make this clear, let's look at an example (Figure 29.3).
-
 ==为了清楚起见，让我们看一个例子（图 29.3）。==
 
   
 
 In this example, the threshold S is set to 5, and there are threads on each of four CPUs updating their local counters L1...L4.
-
 ==在这个例子中，阈值 S 设置为 5，并且在四个 CPU 的每一个上都有线程更新其本地计数器 L1...L4。==
 
   
 
 The global counter value (G) is also shown in the trace, with time increasing downward.
-
 ==全局计数器值 (G) 也显示在跟踪中，时间向下增加。==
 
   
 
 At each time step, a local counter may be incremented; if the local value reaches the threshold S, the local value is transferred to the global counter and the local counter is reset.
-
 ==在每个时间步，本地计数器可能会增加；如果本地值达到阈值 S，本地值将被传输到全局计数器，并且本地计数器被重置。==
 
   
 
 The lower line in Figure 29.5 (labeled 'Approximate', on page 6) shows the performance of approximate counters with a threshold S of 1024.
-
 ==图 29.5 中的下线（标记为“Approximate”，近似，在第 6 页）显示了阈值 S 为 1024 的近似计数器的性能。==
 
   
 
 Performance is excellent; the time taken to update the counter four million times on four processors is hardly higher than the time taken to update it one million times on one processor.
-
 ==性能非常出色；在四个处理器上更新计数器 400 万次所花费的时间几乎不高于在一个处理器上更新它 100 万次所花费的时间。==
 
   
 
 We need the local locks because we assume there may be more than one thread on each core.
-
 ==我们需要本地锁，因为我们假设每个核心上可能有多个线程。==
 
   
 
 If, instead, only one thread ran on each core, no local lock would be needed.
-
 ==如果每个核心上只有一个线程运行，则不需要本地锁。==
 
   
 
 Figure 29.4: Approximate Counter Implementation
-
 ==图 29.4：近似计数器实现==
 
   
 
 Figure 29.5: Performance of Traditional vs. Approximate Counters
-
 ==图 29.5：传统计数器与近似计数器的性能对比==
 
   
 
 Figure 29.6: Scaling Approximate Counters
-
 ==图 29.6：近似计数器的扩展性==
 
   
 
 Figure 29.6 shows the importance of the threshold value S, with four threads each incrementing the counter 1 million times on four CPUs.
-
 ==图 29.6 显示了阈值 S 的重要性，四个线程在四个 CPU 上各将计数器增加 100 万次。==
 
   
 
 If S is low, performance is poor (but the global count is always quite accurate); if S is high, performance is excellent, but the global count lags (by at most the number of CPUs multiplied by S).
-
 ==如果 S 较低，性能较差（但全局计数总是相当准确）；如果 S 较高，性能极佳，但全局计数会滞后（最多滞后 CPU 数量乘以 S）。==
 
   
 
 This accuracy/performance trade-off is what approximate counters enable.
-
 ==这种准确性与性能的权衡正是近似计数器所能实现的。==
 
   
 
 A rough version of an approximate counter is found in Figure 29.4 (page 5).
-
 ==近似计数器的一个粗略版本见图 29.4（第 5 页）。==
 
   
 
 Read it, or better yet, run it yourself in some experiments to better understand how it works.
-
 ==阅读它，或者更好的是，自己在一些实验中运行它，以更好地理解它是如何工作的。==
 
   
 
 TIP: MORE CONCURRENCY ISN'T NECESSARILY FASTER
-
 ==提示：更多的并发并不一定更快==
 
   
 
 If the scheme you design adds a lot of overhead (for example, by acquiring and releasing locks frequently, instead of once), the fact that it is more concurrent may not be important.
-
 ==如果你设计的方案增加了大量的开销（例如，通过频繁地获取和释放锁，而不是一次性完成），那么它更具并发性这一事实可能并不重要。==
 
   
 
 Simple schemes tend to work well, especially if they use costly routines rarely.
-
 ==简单的方案往往效果很好，特别是如果它们很少使用昂贵的例程。==
 
   
 
 Adding more locks and complexity can be your downfall.
-
 ==增加更多的锁和复杂性可能会导致你的失败。==
 
   
 
 All of that said, there is one way to really know: build both alternatives (simple but less concurrent, and complex but more concurrent) and measure how they do.
-
 ==综上所述，只有一种方法可以真正知道结果：构建两种方案（简单但并发性较低，以及复杂但并发性较高）并测量它们的表现。==
 
   
 
 In the end, you can't cheat on performance; your idea is either faster, or it isn't.
-
 ==归根结底，你无法在性能上作弊；你的想法要么更快，要么不快。==
 
   
 
 29.2 Concurrent Linked Lists
-
 ==29.2 并发链表==
 
   
 
 We next examine a more complicated structure, the linked list.
-
 ==接下来我们检查一个更复杂的结构，链表。==
 
   
 
 Let's start with a basic approach once again.
-
 ==让我们再次从基本方法开始。==
 
   
 
 For simplicity, we'll omit some of the obvious routines that such a list would have and just focus on concurrent insert and lookup; we'll leave it to the reader to think about delete, etc.
-
 ==为了简单起见，我们将省略此类列表可能具有的一些显而易见的例程，仅关注并发插入和查找；我们将删除等操作留给读者思考。==
 
   
 
 Figure 29.7 shows the code for this rudimentary data structure.
-
 ==图 29.7 显示了这个基本数据结构的代码。==
 
   
 
 As you can see in the code, the code simply acquires a lock in the insert routine upon entry, and releases it upon exit.
-
 ==正如你在代码中看到的，代码只是简单地在进入插入例程时获取锁，并在退出时释放它。==
 
   
 
 One small tricky issue arises if malloc() happens to fail (a rare case); in this case, the code must also release the lock before failing the insert.
-
 ==如果 malloc() 恰好失败（一种罕见情况），会出现一个小而棘手的问题；在这种情况下，代码还必须在插入失败之前释放锁。==
 
   
 
 This kind of exceptional control flow has been shown to be quite error prone; a recent study of Linux kernel patches found that a huge fraction of bugs (nearly 40%) are found on such rarely-taken code paths (indeed, this observation sparked some of our own research, in which we removed all memory-failing paths from a Linux file system, resulting in a more robust system [S+11]).
-
 ==这种异常控制流已被证明非常容易出错；最近对 Linux 内核补丁的一项研究发现，很大一部分错误（近 40%）是在这种很少执行的代码路径上发现的（确实，这一观察引发了我们自己的一些研究，我们在研究中从 Linux 文件系统中移除了所有内存失败路径，从而产生了一个更健壮的系统 [S+11]）。==
 
   
 
 Thus, a challenge: can we rewrite the insert and lookup routines to remain correct under concurrent insert but avoid the case where the failure path also requires us to add the call to unlock?
-
 ==因此，一个挑战是：我们能否重写插入和查找例程，以便在并发插入下保持正确，但避免失败路径也要求我们添加解锁调用的情况？==
 
   
 
 The answer, in this case, is yes.
-
 ==在这种情况下，答案是肯定的。==
 
   
 
 Specifically, we can rearrange the code a bit so that the lock and release only surround the actual critical section in the insert code, and that a common exit path is used in the lookup code.
-
 ==具体来说，我们可以稍微重新排列代码，使得锁和释放仅包围插入代码中的实际临界区，并且在查找代码中使用通用的退出路径。==
 
   
 
 The former works because part of the insert actually need not be locked; assuming that malloc() itself is thread-safe, each thread can call into it without worry of race conditions or other concurrency bugs.
-
 ==前者之所以有效，是因为插入的一部分实际上不需要锁定；假设 malloc() 本身是线程安全的，每个 thread 都可以调用它而无需担心竞态条件或其他并发错误。==
 
   
 
 Only when updating the shared list does a lock need to be held.
-
 ==只有在更新共享列表时才需要持有锁。==
 
   
 
 See Figure 29.8 for the details of these modifications.
-
 ==有关这些修改的详细信息，请参见图 29.8。==
 
   
 
 As for the lookup routine, it is a simple code transformation to jump out of the main search loop to a single return path.
-
 ==至于查找例程，它是一个简单的代码转换，从主搜索循环跳出到单个返回路径。==
 
   
 
 Doing so again reduces the number of lock acquire/release points in the code, and thus decreases the chances of accidentally introducing bugs (such as forgetting to unlock before returning) into the code.
-
 ==这样做再次减少了代码中锁获取/释放点的数量，从而降低了意外引入错误（例如在返回之前忘记解锁）到代码中的机会。==
 
   
 
 Figure 29.7: Concurrent Linked List
-
 ==图 29.7：并发链表==
 
   
 
 Figure 29.8: Concurrent Linked List: Rewritten
-
 ==图 29.8：并发链表：重写版==
 
   
 
 Scaling Linked Lists
-
 ==扩展链表==
 
   
 
 Though we again have a basic concurrent linked list, once again we are in a situation where it does not scale particularly well.
-
 ==虽然我们再次拥有了一个基本的并发链表，但我们再次处于扩展性不是特别好的境地。==
 
   
 
 One technique that researchers have explored to enable more concurrency within a list is something called hand-over-hand locking (a.k.a. lock coupling) [MS04].
-
 ==研究人员为在列表中启用更多并发性而探索的一种技术称为交替锁定（hand-over-hand locking，又名锁耦合）[MS04]。==
 
   
 
 The idea is pretty simple.
-
 ==这个想法很简单。==
 
   
 
 Instead of having a single lock for the entire list, you instead add a lock per node of the list.
-
 ==不再为整个列表设置单个锁，而是为列表的每个节点添加一个锁。==
 
   
 
 When traversing the list, the code first grabs the next node's lock and then releases the current node's lock (which inspires the name hand-over-hand).
-
 ==遍历列表时，代码首先获取下一个节点的锁，然后释放当前节点的锁（这激发了“交替”这个名字的灵感）。==
 
   
 
 TIP: BE WARY OF LOCKS AND CONTROL FLOW
-
 ==提示：警惕锁和控制流==
 
   
 
 A general design tip, which is useful in concurrent code as well as elsewhere, is to be wary of control flow changes that lead to function returns, exits, or other similar error conditions that halt the execution of a function.
-
 ==一个通用的设计提示（在并发代码以及其他地方都很有用）是警惕导致函数返回、退出或停止函数执行的其他类似错误条件的控制流更改。==
 
   
 
 Because many functions will begin by acquiring a lock, allocating some memory, or doing other similar stateful operations, when errors arise, the code has to undo all of the state before returning, which is error-prone.
-
 ==因为许多函数将以获取锁、分配一些内存或执行其他类似的有状态操作开始，所以当出现错误时，代码必须在返回之前撤消所有状态，这很容易出错。==
 
   
 
 Thus, it is best to structure code to minimize this pattern.
-
 ==因此，最好构建代码以最大限度地减少这种模式。==
 
   
 
 Conceptually, a hand-over-hand linked list makes some sense; it enables a high degree of concurrency in list operations.
-
 ==从概念上讲，交替锁定链表是有一定道理的；它在列表操作中实现了高度的并发性。==
 
   
 
 However, in practice, it is hard to make such a structure faster than the simple single lock approach, as the overheads of acquiring and releasing locks for each node of a list traversal is prohibitive.
-
 ==然而，在实践中，很难使这种结构比简单的单锁方法更快，因为为列表遍历的每个节点获取和释放锁的开销过高。==
 
   
 
 Even with very large lists, and a large number of threads, the concurrency enabled by allowing multiple ongoing traversals is unlikely to be faster than simply grabbing a single lock, performing an operation, and releasing it.
-
 ==即使对于非常大的列表和大量的线程，允许进行多个正在进行的遍历所带来的并发性也不太可能比简单地获取单个锁、执行操作并释放它更快。==
 
   
 
 Perhaps some kind of hybrid (where you grab a new lock every so many nodes) would be worth investigating.
-
 ==也许某种混合方法（每隔多少个节点获取一个新锁）值得研究。==
 
   
 
 29.3 Concurrent Queues
-
 ==29.3 并发队列==
 
   
 
 As you know by now, there is always a standard method to make a concurrent data structure: add a big lock.
-
 ==正如你现在所知道的，总有一种标准方法来制作并发数据结构：添加一个大锁。==
 
   
 
 For a queue, we'll skip that approach, assuming you can figure it out.
-
 ==对于队列，我们将跳过这种方法，假设你能弄明白。==
 
   
 
 Instead, we'll take a look at a slightly more concurrent queue designed by Michael and Scott [MS98].
-
 ==相反，我们将看一看由 Michael 和 Scott 设计的并发性稍高的队列 [MS98]。==
 
   
 
 The data structures and code used for this queue are found in Figure 29.9 (page 11).
-
 ==用于此队列的数据结构和代码见图 29.9（第 11 页）。==
 
   
 
 If you study this code carefully, you'll notice that there are two locks, one for the head of the queue, and one for the tail.
-
 ==如果你仔细研究这段代码，你会注意到有两个锁，一个用于队列头部，一个用于尾部。==
 
   
 
 The goal of these two locks is to enable concurrency of enqueue and dequeue operations.
-
 ==这两个锁的目标是实现入队和出队操作的并发。==
 
   
 
 In the common case, the enqueue routine will only access the tail lock, and dequeue only the head lock.
-
 ==在常见情况下，入队例程将只访问尾部锁，而出队只访问头部锁。==
 
   
 
 One trick used by Michael and Scott is to add a dummy node (allocated in the queue initialization code); this dummy enables the separation of head and tail operations.
-
 ==Michael 和 Scott 使用的一个技巧是添加一个虚拟节点（在队列初始化代码中分配）；这个虚拟节点实现了头尾操作的分离。==
 
   
 
 Study the code, or better yet, type it in, run it, and measure it, to understand how it works deeply.
-
 ==研究代码，或者更好的是，把它输入进去，运行它，并测量它，以深入了解它是如何工作的。==
 
   
 
 Queues are commonly used in multi-threaded applications.
-
 ==队列常用于多线程应用程序。==
 
   
 
 However, the type of queue used here (with just locks) often does not completely meet the needs of such programs.
-
 ==然而，这里使用的队列类型（仅带锁）通常不能完全满足此类程序的需求。==
 
   
 
 A more fully developed bounded queue, that enables a thread to wait if the queue is either empty or overly full, is the subject of our intense study in the next chapter on condition variables.
-
 ==一个更完善的有界队列（bounded queue），能够使线程在队列为空或过满时等待，是我们下一章关于条件变量的重点研究主题。==
 
   
 
 Watch for it!
-
 ==敬请期待！==
 
   
 
 Figure 29.9: Michael and Scott Concurrent Queue
-
 ==图 29.9：Michael 和 Scott 并发队列==
 
   
 
 Figure 29.10: A Concurrent Hash Table
-
 ==图 29.10：并发哈希表==
 
   
 
 29.4 Concurrent Hash Table
-
 ==29.4 并发哈希表==
 
   
 
 We end our discussion with a simple and widely applicable concurrent data structure, the hash table.
-
 ==我们以一个简单且广泛适用的并发数据结构——哈希表，来结束我们的讨论。==
 
   
 
 We'll focus on a simple hash table that does not resize; a little more work is required to handle resizing, which we leave as an exercise for the reader (sorry!).
-
 ==我们将专注于一个不调整大小的简单哈希表；处理调整大小需要更多的工作，我们将留给读者作为练习（抱歉！）。==
 
   
 
 This concurrent hash table (Figure 29.10) is straightforward, is built using the concurrent lists we developed earlier, and works incredibly well.
-
 ==这个并发哈希表（图 29.10）很简单，是使用我们之前开发的并发列表构建的，并且工作效果非常好。==
 
   
 
 The reason for its good performance is that instead of having a single lock for the entire structure, it uses a lock per hash bucket (each of which is represented by a list).
-
 ==其性能良好的原因在于，它没有为整个结构使用单个锁，而是每个哈希桶（每个桶由一个列表表示）使用一个锁。==
 
   
 
 Doing so enables many concurrent operations to take place.
-
 ==这样做可以进行许多并发操作。==
 
   
 
 Figure 29.11 (page 13) shows the performance of the hash table under concurrent updates (from 10,000 to 50,000 concurrent updates from each of four threads, on the same iMac with four CPUs).
-
 ==图 29.11（第 13 页）显示了哈希表在并发更新下的性能（四个线程中的每一个进行 10,000 到 50,000 次并发更新，在同一台配备四个 CPU 的 iMac 上）。==
 
   
 
 Also shown, for the sake of comparison, is the performance of a linked list (with a single lock).
-
 ==为了进行比较，还显示了链表（具有单个锁）的性能。==
 
   
 
 As you can see from the graph, this simple concurrent hash table scales magnificently; the linked list, in contrast, does not.
-
 ==正如你从图表中看到的那样，这个简单的并发哈希表扩展性极佳；相比之下，链表则不然。==
 
   
 
 29.5 Summary
-
 ==29.5 总结==
 
   
 
 We have introduced a sampling of concurrent data structures, from counters, to lists and queues, and finally to the ubiquitous and heavily-used hash table.
-
 ==我们介绍了一些并发数据结构的示例，从计数器到列表和队列，最后是无处不在且大量使用的哈希表。==
 
   
 
 We have learned a few important lessons along the way: to be careful with acquisition and release of locks around control flow changes; that enabling more concurrency does not necessarily increase performance; that performance problems should only be remedied once they exist.
-
 ==一路上我们学到了一些重要的教训：在控制流变化周围获取和释放锁时要小心；启用更多并发性并不一定会提高性能；性能问题只有在存在时才应予以补救。==
 
   
 
 This last point, of avoiding premature optimization, is central to any performance-minded developer; there is no value in making something faster if doing so will not improve the overall performance of the application.
-
 ==最后一点，避免过早优化，对于任何关注性能的开发人员来说都是核心；如果这样做不会提高应用程序的整体性能，那么让某些东西变得更快就没有价值。==
 
   
 
 Of course, we have just scratched the surface of high performance structures.
-
 ==当然，我们只是触及了高性能结构的表面。==
 
   
 
 See Moir and Shavit's excellent survey for more information, as well as links to other sources [MS04].
-
 ==有关更多信息以及其他来源的链接，请参阅 Moir 和 Shavit 的精彩调查 [MS04]。==
 
   
 
 In particular, you might be interested in other structures (such as B-trees); for this knowledge, a database class is your best bet.
-
 ==特别是，你可能对其他结构（如 B 树）感兴趣；对于这些知识，数据库课程是你最好的选择。==
 
   
 
 You also might be curious about techniques that don't use traditional locks at all; such non-blocking data structures are something we'll get a taste of in the chapter on common concurrency bugs, but frankly this topic is an entire area of knowledge requiring more study than is possible in this humble book.
-
 ==你也可能对完全不使用传统锁的技术感到好奇；这种非阻塞数据结构我们将在关于常见并发错误的一章中尝鲜，但坦率地说，这个话题是一个完整的知识领域，需要的研究比这本拙劣的书所能提供的要多得多。==
 
   
 
 Find out more on your own if you desire (as always!).
-
 ==如果你愿意，可以自己去了解更多（一如既往！）。==
 
   
 
 Figure 29.11: Scaling Hash Tables
-
 ==图 29.11：扩展哈希表==
 
   
 
 TIP: AVOID PREMATURE OPTIMIZATION (KNUTH'S LAW)
-
 ==提示：避免过早优化（高德纳定律）==
 
   
 
 When building a concurrent data structure, start with the most basic approach, which is to add a single big lock to provide synchronized access.
-
 ==构建并发数据结构时，从最基本的方法开始，即添加一个大锁以提供同步访问。==
 
   
 
 By doing so, you are likely to build a correct lock; if you then find that it suffers from performance problems, you can refine it, thus only making it fast if need be.
-
 ==这样做，你很可能会构建一个正确的锁；如果你随后发现它存在性能问题，你可以对其进行改进，从而仅在需要时使其变快。==
 
   
 
 As Knuth famously stated, "Premature optimization is the root of all evil."
-
 ==正如高德纳（Knuth）那句名言所说：“过早优化是万恶之源。”==
 
   
 
 Many operating systems utilized a single lock when first transitioning to multiprocessors, including Sun OS and Linux.
-
 ==许多操作系统在首次过渡到多处理器时都使用了单个锁，包括 Sun OS 和 Linux。==
 
   
 
 In the latter, this lock even had a name, the big kernel lock (BKL).
-
 ==在后者中，这个锁甚至有一个名字，大内核锁（Big Kernel Lock，BKL）。==
 
   
 
 For many years, this simple approach was a good one, but when multi-CPU systems became the norm, only allowing a single active thread in the kernel at a time became a performance bottleneck.
-
 ==多年来，这种简单的方法是很好的，但是当多 CPU 系统成为常态时，一次只允许一个活动线程进入内核就成了性能瓶颈。==
 
   
 
 Thus, it was finally time to add the optimization of improved concurrency to these systems.
-
 ==因此，终于到了向这些系统添加改进并发性的优化的时候了。==
 
   
 
 Within Linux, the more straightforward approach was taken: replace one lock with many.
-
 ==在 Linux 内部，采用了更直接的方法：用多个锁替换一个锁。==
 
   
 
 Within Sun, a more radical decision was made: build a brand new operating system, known as Solaris, that incorporates concurrency more fundamentally from day one.
-
 ==在 Sun 内部，做出了一个更激进的决定：构建一个名为 Solaris 的全新操作系统，从第一天起就更根本地整合了并发性。==
 
   
 
 Read the Linux and Solaris kernel books for more information about these fascinating systems [BC05, MM00].
-
 ==阅读 Linux 和 Solaris 内核书籍，了解有关这些迷人系统的更多信息 [BC05, MM00]。==
 
 
 LOCK-BASED CONCURRENT DATA STRUCTURES
-
 ==基于锁的并发数据结构==
 
   
 
 References
-
 ==参考文献==
 
   
 
 [B+10] "An Analysis of Linux Scalability to Many Cores" by Silas Boyd-Wickizer, Austin T. Clements, Yandong Mao, Aleksey Pesterev, M. Frans Kaashoek, Robert Morris, Nickolai Zeldovich.
-
 ==[B+10] 《Linux 在多核上的可扩展性分析》，作者 Silas Boyd-Wickizer, Austin T. Clements, Yandong Mao, Aleksey Pesterev, M. Frans Kaashoek, Robert Morris, Nickolai Zeldovich。==
 
   
 
 OSDI '10, Vancouver, Canada, October 2010.
-
 ==OSDI '10，加拿大温哥华，2010 年 10 月。==
 
   
 
 A great study of how Linux performs on multicore machines, as well as some simple solutions.
-
 ==这是一项关于 Linux 在多核机器上表现的精彩研究，同时也提供了一些简单的解决方案。==
 
   
 
 Includes a neat sloppy counter to solve one form of the scalable counting problem.
-
 ==其中包括一个巧妙的“懒惰计数器”（sloppy counter），用于解决一种形式的可扩展计数问题。==
 
   
 
 [BH73] "Operating System Principles" by Per Brinch Hansen.
-
 ==[BH73] 《操作系统原理》，作者 Per Brinch Hansen。==
 
   
 
 Prentice-Hall, 1973.
-
 ==Prentice-Hall 出版社，1973 年。==
 
   
 
 One of the first books on operating systems; certainly ahead of its time.
-
 ==这是最早的操作系统书籍之一；无疑是超前于时代的。==
 
   
 
 Introduced monitors as a concurrency primitive.
-
 ==书中引入了管程（monitors）作为一种并发原语。==
 
   
 
 [BC05] "Understanding the Linux Kernel (Third Edition)" by Daniel P. Bovet and Marco Cesati.
-
 ==[BC05] 《深入理解 Linux 内核（第三版）》，作者 Daniel P. Bovet 和 Marco Cesati。==
 
   
 
 O'Reilly Media, November 2005.
-
 ==O'Reilly Media 出版社，2005 年 11 月。==
 
   
 
 The classic book on the Linux kernel.
-
 ==这是一本关于 Linux 内核的经典著作。==
 
   
 
 You should read it.
-
 ==你应该读一读。==
 
   
 
 [C06] "The Search For Fast, Scalable Counters" by Jonathan Corbet.
-
 ==[C06] 《寻找快速、可扩展的计数器》，作者 Jonathan Corbet。==
 
   
 
 February 1, 2006.
-
 ==2006 年 2 月 1 日。==
 
   
 
 Available: [https://lwn.net/Articles/170003](https://lwn.net/Articles/170003).
-
 ==网址：[https://lwn.net/Articles/170003](https://lwn.net/Articles/170003)。==
 
   
 
 LWN has many wonderful articles about the latest in Linux.
-
 ==LWN 上有许多关于 Linux 最新动态的精彩文章。==
 
   
 
 This article is a short description of scalable approximate counting;
-
 ==本文简要介绍了可扩展的近似计数；==
 
   
 
 read it, and others, to learn more about the latest in Linux.
-
 ==阅读这篇文章以及其他文章，以了解更多关于 Linux 的最新信息。==
 
   
 
 [L+13] "A Study of Linux File System Evolution" by Lanyue Lu, Andrea C. Arpaci-Dusseau, Remzi H. Arpaci-Dusseau, Shan Lu.
-
 ==[L+13] 《Linux 文件系统演变研究》，作者 Lanyue Lu, Andrea C. Arpaci-Dusseau, Remzi H. Arpaci-Dusseau, Shan Lu。==
 
   
 
 FAST '13, San Jose, CA, February 2013.
-
 ==FAST '13，加利福尼亚州圣何塞，2013 年 2 月。==
 
   
 
 Our paper that studies every patch to Linux file systems over nearly a decade.
-
 ==这是我们的论文，研究了近十年来 Linux 文件系统的每一个补丁。==
 
   
 
 Lots of fun findings in there; read it to see!
-
 ==里面有很多有趣的发现；读读看吧！==
 
   
 
 The work was painful to do though;
-
 ==不过这项工作做起来很痛苦；==
 
   
 
 the poor graduate student, Lanyue Lu, had to look through every single patch by hand in order to understand what they did.
-
 ==可怜的研究生 Lanyue Lu 必须手工查看每一个补丁，以理解它们的作用。==
 
   
 
 [MS98] "Nonblocking Algorithms and Preemption-safe Locking on Multiprogrammed Shared-memory Multiprocessors" by M. Michael, M. Scott.
-
 ==[MS98] 《多道程序共享内存多处理器上的非阻塞算法与抢占安全锁》，作者 M. Michael, M. Scott。==
 
   
 
 Journal of Parallel and Distributed Computing, Vol. 51, No. 1, 1998.
-
 ==《并行与分布式计算期刊》，第 51 卷，第 1 期，1998 年。==
 
   
 
 Professor Scott and his students have been at the forefront of concurrent algorithms and data structures for many years;
-
 ==Scott 教授和他的学生多年来一直处于并发算法和数据结构领域的前沿；==
 
   
 
 check out his web page, numerous papers, or books to find out more.
-
 ==查看他的网页、大量论文或书籍以了解更多信息。==
 
   
 
 [MS04] "Concurrent Data Structures" by Mark Moir and Nir Shavit.
-
 ==[MS04] 《并发数据结构》，作者 Mark Moir 和 Nir Shavit。==
 
   
 
 In Handbook of Data Structures and Applications (Editors D. Metha and S.Sahni).
-
 ==收录于《数据结构与应用手册》（编辑 D. Metha 和 S.Sahni）。==
 
   
 
 Chapman and Hall/CRC Press, 2004.
-
 ==Chapman and Hall/CRC Press 出版社，2004 年。==
 
   
 
 A short but relatively comprehensive reference on concurrent data structures.
-
 ==这是一份关于并发数据结构的简短但相对全面的参考资料。==
 
   
 
 Though it is missing some of the latest works in the area (due to its age), it remains an incredibly useful reference.
-
 ==虽然由于年代久远，它缺少了该领域的一些最新成果，但它仍然是一份非常有用的参考资料。==
 
   
 
 [MM00] "Solaris Internals: Core Kernel Architecture" by Jim Mauro and Richard McDougall.
-
 ==[MM00] 《Solaris 内核结构》，作者 Jim Mauro 和 Richard McDougall。==
 
   
 
 Prentice Hall, October 2000.
-
 ==Prentice Hall 出版社，2000 年 10 月。==
 
   
 
 The Solaris book.
-
 ==这是关于 Solaris 的权威书籍。==
 
   
 
 You should also read this, if you want to learn about something other than Linux.
-
 ==如果你想学习 Linux 以外的知识，你也应该读读这本书。==
 
   
 
 [S+11] "Making the Common Case the Only Case with Anticipatory Memory Allocation" by Swaminathan Sundararaman, Yupu Zhang, Sriram Subramanian, Andrea C. Arpaci-Dusseau, Remzi H. Arpaci-Dusseau.
-
 ==[S+11] 《通过预期内存分配使常见情况成为唯一情况》，作者 Swaminathan Sundararaman 等。==
 
   
 
 FAST '11, San Jose, CA, February 2011.
-
 ==FAST '11，加利福尼亚州圣何塞，2011 年 2 月。==
 
   
 
 Our work on removing possibly-failing allocation calls from kernel code paths.
-
 ==我们关于从内核代码路径中移除可能失败的分配调用的工作。==
 
   
 
 By allocating all potentially needed memory before doing any work, we avoid failure deep down in the storage stack.
-
 ==通过在进行任何工作之前分配所有可能需要的内存，我们避免了存储栈深处的故障。==
 
   
 
 Homework (Code)
-
 ==作业（代码）==
 
   
 
 In this homework, you'll gain some experience with writing concurrent code and measuring its performance.
-
 ==在这个作业中，你将获得一些编写并发代码并测量其性能的经验。==
 
   
 
 Learning to build code that performs well is a critical skill and thus gaining a little experience here with it is quite worthwhile.
-
 ==学习构建性能良好的代码是一项关键技能，因此在这里获得一些相关经验是非常值得的。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. We'll start by redoing the measurements within this chapter.
-
 ==2. 我们将从重做本章中的测量开始。==
 
   
 
 Use the call gettimeofday() to measure time within your program.
-
 ==使用 `gettimeofday()` 调用来测量程序中的时间。==
 
   
 
 How accurate is this timer?
-
 ==这个计时器有多准确？==
 
   
 
 What is the smallest interval it can measure?
-
 ==它能测量的最小间隔是多少？==
 
   
 
 Gain confidence in its workings, as we will need it in all subsequent questions.
-
 ==对它的工作原理建立信心，因为我们在随后的所有问题中都需要用到它。==
 
   
 
 You can also look into other timers, such as the cycle counter available on x86 via the rdtsc instruction.
-
 ==你也可以研究一下其他计时器，例如 x86 上通过 `rdtsc` 指令可用的周期计数器。==
 
   
 
 2. Now, build a simple concurrent counter and measure how long it takes to increment the counter many times as the number of threads increases.
-
 ==3. 现在，构建一个简单的并发计数器，并测量随着线程数量的增加，多次递增计数器所需的时间。==
 
   
 
 How many CPUs are available on the system you are using?
-
 ==你使用的系统有多少个 CPU 可用？==
 
   
 
 Does this number impact your measurements at all?
-
 ==这个数字对你的测量结果有影响吗？==
 
   
 
 3. Next, build a version of the approximate counter.
-
 ==4. 接下来，构建一个近似计数器的版本。==
 
   
 
 Once again, measure its performance as the number of threads varies, as well as the threshold.
-
 ==再次测量其性能随线程数量以及阈值变化的情况。==
 
   
 
 Do the numbers match what you see in the chapter?
-
 ==这些数字与你在本章中看到的相符吗？==
 
   
 
 4. Build a version of a linked list that uses hand-over-hand locking [MS04], as cited in the chapter.
-
 ==5. 构建一个链表版本，使用本章引用的 [MS04] 中提到的交替锁（hand-over-hand locking）。==
 
   
 
 You should read the paper first to understand how it works, and then implement it.
-
 ==你应该先阅读论文以了解其工作原理，然后再实现它。==
 
   
 
 Measure its performance.
-
 ==测量它的性能。==
 
   
 
 When does a hand-over-hand list work better than a standard list as shown in the chapter?
-
 ==交替锁链表在什么情况下比本章展示的标准链表效果更好？==
 
   
 
 5. Pick your favorite data structure, such as a B-tree or other slightly more interesting structure.
-
 ==6. 挑选一个你最喜欢的数据结构，例如 B 树或其他稍微有趣一点的结构。==
 
   
 
 Implement it, and start with a simple locking strategy such as a single lock.
-
 ==实现它，并从一个简单的锁策略（如单一大锁）开始。==
 
   
 
 Measure its performance as the number of concurrent threads increases.
-
 ==测量随着并发线程数量增加，它的性能表现。==
 
   
 
 6. Finally, think of a more interesting locking strategy for this favorite data structure of yours.
-
 ==7. 最后，为你这个最喜欢的数据结构想一个更有趣的锁策略。==
 
   
 
 Implement it, and measure its performance.
-
 ==实现它，并测量其性能。==
 
   
 
 How does it compare to the straightforward locking approach?
-
 ==它与简单的锁方法相比如何？==
 
   
 
 Condition Variables
-
 ==条件变量==
 
   
 
 Thus far we have developed the notion of a lock and seen how one can be properly built with the right combination of hardware and OS support.
-
 ==到目前为止，我们已经建立了锁的概念，并看到了如何通过硬件和操作系统支持的正确结合来构建锁。==
 
   
 
 Unfortunately, locks are not the only primitives that are needed to build concurrent programs.
-
 ==不幸的是，锁并不是构建并发程序所需的唯一原语。==
 
   
 
 In particular, there are many cases where a thread wishes to check whether a condition is true before continuing its execution.
-
 ==特别是，在许多情况下，线程希望在继续执行之前检查某个条件是否为真。==
 
   
 
 For example, a parent thread might wish to check whether a child thread has completed before continuing (this is often called a join());
-
 ==例如，父线程可能希望在继续之前检查子线程是否已完成（这通常称为 `join()`）；==
 
   
 
 how should such a wait be implemented?
-
 ==这样的等待应该如何实现？==
 
   
 
 Let's look at Figure 30.1.
-
 ==让我们看看图 30.1。==
 
   
@@ -25411,23 +22283,17 @@ int main(int argc, char *argv[]) {
   
 
 ```
-
-  
-
 ==（代码图示 30.1）==
-
 ==（代码图示 30.1）==
 
   
 
 Figure 30.1: A Parent Waiting For Its Child
-
 ==图 30.1：父线程等待子线程==
 
   
 
 What we would like to see here is the following output:
-
 ==我们希望在这里看到以下输出：==
 
   
@@ -25451,13 +22317,11 @@ parent: end
   
 
 We could try using a shared variable, as you see in Figure 30.2.
-
 ==我们可以尝试使用共享变量，如图 30.2 所示。==
 
   
 
 This solution will generally work, but it is hugely inefficient as the parent spins and wastes CPU time.
-
 ==这种解决方案通常是可行的，但效率极低，因为父线程会自旋（spin）并浪费 CPU 时间。==
 
   
@@ -25501,113 +22365,92 @@ int main(int argc, char *argv[]) {
   
 
 ```
-
-  
-
 ==（代码图示 30.2）==
-
 ==（代码图示 30.2）==
 
   
 
 Figure 30.2: Parent Waiting For Child: Spin-based Approach
-
 ==图 30.2：父线程等待子线程：基于自旋的方法==
 
   
 
 What we would like here instead is some way to put the parent to sleep until the condition we are waiting for (e.g., the child is done executing) comes true.
-
 ==相反，我们希望有一种方法可以让父线程休眠，直到我们等待的条件（例如，子线程执行完毕）成真。==
 
   
 
 THE CRUX: HOW TO WAIT FOR A CONDITION
-
 ==关键问题：如何等待一个条件==
 
   
 
 In multi-threaded programs, it is often useful for a thread to wait for some condition to become true before proceeding.
-
 ==在多线程程序中，线程在继续之前等待某个条件变为真通常很有用。==
 
   
 
 The simple approach, of just spinning until the condition becomes true, is grossly inefficient and wastes CPU cycles, and in some cases, can be incorrect.
-
 ==简单的自旋直到条件变真的方法效率极低，浪费 CPU 周期，而且在某些情况下可能是不正确的。==
 
   
 
 Thus, how should a thread wait for a condition?
-
 ==那么，线程应该如何等待一个条件呢？==
 
   
 
 30.1 Definition and Routines
-
 ==30.1 定义与例程==
 
   
 
 To wait for a condition to become true, a thread can make use of what is known as a condition variable.
-
 ==为了等待条件变为真，线程可以使用所谓的条件变量（condition variable）。==
 
   
 
 A condition variable is an explicit queue that threads can put themselves on when some state of execution (i.e., some condition) is not as desired (by waiting on the condition);
-
 ==条件变量是一个显式的队列，当某些执行状态（即某些条件）不符合预期时，线程可以将自己放入该队列中（通过在条件上等待）；==
 
   
 
 some other thread, when it changes said state, can then wake one (or more) of those waiting threads and thus allow them to continue (by signaling on the condition).
-
 ==当另一个线程改变了上述状态时，它可以唤醒一个（或多个）正在等待的线程，从而允许它们继续执行（通过在条件上发送信号）。==
 
   
 
 The idea goes back to Dijkstra's use of "private semaphores" [D68];
-
 ==这个想法可以追溯到 Dijkstra 对“私有信号量”的使用 [D68]；==
 
   
 
 a similar idea was later named a "condition variable" by Hoare in his work on monitors [H74].
-
 ==类似的想法后来被 Hoare 在他关于管程的研究中命名为“条件变量” [H74]。==
 
   
 
 To declare such a condition variable, one simply writes something like this: pthread_cond_t c;, which declares c as a condition variable (note: proper initialization is also required).
-
 ==要声明这样一个条件变量，只需编写类似这样的代码：`pthread_cond_t c;`，这将声明 `c` 为一个条件变量（注意：还需要进行适当的初始化）。==
 
   
 
 A condition variable has two operations associated with it: wait() and signal().
-
 ==条件变量有两个相关的操作：`wait()` 和 `signal()`。==
 
   
 
 The wait() call is executed when a thread wishes to put itself to sleep;
-
 ==当线程希望让自己休眠时，执行 `wait()` 调用；==
 
   
 
 the signal() call is executed when a thread has changed something in the program and thus wants to wake a sleeping thread waiting on this condition.
-
 ==当线程改变了程序中的某些内容，从而想要唤醒在这个条件上等待的休眠线程时，执行 `signal()` 调用。==
 
   
 
 Specifically, the POSIX calls look like this:
-
 ==具体来说，POSIX 调用如下所示：==
 
   
@@ -25625,43 +22468,36 @@ Specifically, the POSIX calls look like this:
   
 
 We will often refer to these as wait() and signal() for simplicity.
-
 ==为了简单起见，我们通常将它们称为 `wait()` 和 `signal()`。==
 
   
 
 One thing you might notice about the wait() call is that it also takes a mutex as a parameter;
-
 ==关于 `wait()` 调用，你可能会注意到的一点是它还接受一个互斥锁（mutex）作为参数；==
 
   
 
 it assumes that this mutex is locked when wait() is called.
-
 ==它假设在调用 `wait()` 时该互斥锁已被锁定。==
 
   
 
 The responsibility of wait() is to release the lock and put the calling thread to sleep (atomically);
-
 ==`wait()` 的职责是释放锁并将调用线程置于休眠状态（原子地）；==
 
   
 
 when the thread wakes up (after some other thread has signaled it), it must re-acquire the lock before returning to the caller.
-
 ==当线程醒来时（在其他线程向其发送信号后），它必须在返回给调用者之前重新获取锁。==
 
   
 
 This complexity stems from the desire to prevent certain race conditions from occurring when a thread is trying to put itself to sleep.
-
 ==这种复杂性源于希望防止线程尝试进入休眠状态时发生某些竞态条件。==
 
   
 
 Let's take a look at the solution to the join problem (Figure 30.3) to understand this better.
-
 ==让我们看看 join 问题的解决方案（图 30.3）以更好地理解这一点。==
 
   
@@ -25735,95 +22571,77 @@ int main(int argc, char *argv[]) {
   
 
 ```
-
-  
-
 ==（代码图示 30.3）==
-
 ==（代码图示 30.3）==
 
   
 
 Figure 30.3: Parent Waiting For Child: Use A Condition Variable
-
 ==图 30.3：父线程等待子线程：使用条件变量==
 
   
 
 There are two cases to consider.
-
 ==有两种情况需要考虑。==
 
   
 
 In the first, the parent creates the child thread but continues running itself (assume we have only a single processor) and thus immediately calls into thr_join() to wait for the child thread to complete.
-
 ==在第一种情况下，父线程创建子线程但自己继续运行（假设我们只有一个处理器），因此立即调用 `thr_join()` 以等待子线程完成。==
 
   
 
 In this case, it will acquire the lock, check if the child is done (it is not), and put itself to sleep by calling wait() (hence releasing the lock).
-
 ==在这种情况下，它将获取锁，检查子线程是否完成（尚未完成），并通过调用 `wait()` 使自己进入休眠状态（从而释放锁）。==
 
   
 
 The child will eventually run, print the message "child", and call thr_exit() to wake the parent thread;
-
 ==子线程最终会运行，打印消息 "child"，并调用 `thr_exit()` 唤醒父线程；==
 
   
 
 this code just grabs the lock, sets the state variable done, and signals the parent thus waking it.
-
 ==这段代码只是获取锁，设置状态变量 `done`，并向父线程发送信号从而唤醒它。==
 
   
 
 Finally, the parent will run (returning from wait() with the lock held), unlock the lock, and print the final message "parent: end".
-
 ==最后，父线程将运行（持有锁从 `wait()` 返回），解锁，并打印最后一条消息 "parent: end"。==
 
   
 
 In the second case, the child runs immediately upon creation, sets done to 1, calls signal to wake a sleeping thread (but there is none, so it just returns), and is done.
-
 ==在第二种情况下，子线程在创建后立即运行，将 `done` 设置为 1，调用 `signal` 唤醒休眠线程（但没有线程在休眠，所以它直接返回），然后结束。==
 
   
 
 The parent then runs, calls thr_join(), sees that done is 1, and thus does not wait and returns.
-
 ==然后父线程运行，调用 `thr_join()`，看到 `done` 为 1，因此不等待并直接返回。==
 
   
 
 One last note: you might observe the parent uses a while loop instead of just an if statement when deciding whether to wait on the condition.
-
 ==最后一点说明：你可能会注意到，在决定是否等待条件时，父线程使用了 `while` 循环而不是简单的 `if` 语句。==
 
   
 
 While this does not seem strictly necessary per the logic of the program, it is always a good idea, as we will see below.
-
 ==虽然根据程序的逻辑这似乎不是绝对必要的，但这总是一个好主意，我们将在下面看到原因。==
 
   
 
 To make sure you understand the importance of each piece of the thr_exit() and thr_join() code, let's try a few alternate implementations.
-
 ==为了确保你理解 `thr_exit()` 和 `thr_join()` 代码每一部分的重要性，让我们尝试几种替代实现。==
 
   
 
 First, you might be wondering if we need the state variable done.
-
 ==首先，你可能想知道我们是否需要状态变量 `done`。==
 
   
 
 What if the code looked like the example below? (Figure 30.4)
-
 ==如果代码像下面的例子那样会怎样？（图 30.4）==
 
   
@@ -25855,59 +22673,47 @@ void thr_join() {
   
 
 ```
-
-  
-
 ==（代码图示 30.4）==
-
 ==（代码图示 30.4）==
 
   
 
 Figure 30.4: Parent Waiting: No State Variable
-
 ==图 30.4：父线程等待：无状态变量==
 
   
 
 Unfortunately this approach is broken.
-
 ==不幸的是，这种方法是错误的。==
 
   
 
 Imagine the case where the child runs immediately and calls thr_exit() immediately;
-
 ==设想一下子线程立即运行并立即调用 `thr_exit()` 的情况；==
 
   
 
 in this case, the child will signal, but there is no thread asleep on the condition.
-
 ==在这种情况下，子线程会发送信号，但没有线程在条件上休眠。==
 
   
 
 When the parent runs, it will simply call wait and be stuck; no thread will ever wake it.
-
 ==当父线程运行时，它只会调用 `wait` 并被卡住；没有任何线程会唤醒它。==
 
   
 
 From this example, you should appreciate the importance of the state variable done;
-
 ==通过这个例子，你应该意识到状态变量 `done` 的重要性；==
 
   
 
 it records the value the threads are interested in knowing.
-
 ==它记录了线程有兴趣知道的值。==
 
   
 
 The sleeping, waking, and locking all are built around it.
-
 ==休眠、唤醒和锁定都是围绕它构建的。==
 
   
@@ -25935,263 +22741,217 @@ void thr_join() {
   
 
 ```
-
-  
-
 ==（代码图示 30.5）==
-
 ==（代码图示 30.5）==
 
   
 
 Figure 30.5: Parent Waiting: No Lock
-
 ==图 30.5：父线程等待：无锁==
 
   
 
 Here (Figure 30.5) is another poor implementation.
-
 ==这里（图 30.5）是另一个糟糕的实现。==
 
   
 
 In this example, we imagine that one does not need to hold a lock in order to signal and wait.
-
 ==在这个例子中，我们设想不需要持有锁就可以发送信号和等待。==
 
   
 
 What problem could occur here? Think about it!
-
 ==这里会发生什么问题？思考一下！==
 
   
 
 The issue here is a subtle race condition.
-
 ==这里的问题是一个微妙的竞态条件。==
 
   
 
 Specifically, if the parent calls thr_join() and then checks the value of done, it will see that it is 0 and thus try to go to sleep.
-
 ==具体来说，如果父线程调用 `thr_join()` 然后检查 `done` 的值，它会看到它是 0，因此尝试进入休眠状态。==
 
   
 
 But just before it calls wait to go to sleep, the parent is interrupted, and the child runs.
-
 ==但就在它调用 `wait` 进入休眠之前，父线程被中断，子线程开始运行。==
 
   
 
 The child changes the state variable done to 1 and signals, but no thread is waiting and thus no thread is woken.
-
 ==子线程将状态变量 `done` 更改为 1 并发送信号，但没有线程在等待，因此没有线程被唤醒。==
 
   
 
 When the parent runs again, it sleeps forever, which is sad.
-
 ==当父线程再次运行时，它会永远休眠，这很可悲。==
 
   
 
 Hopefully, from this simple join example, you can see some of the basic requirements of using condition variables properly.
-
 ==希望通过这个简单的 join 示例，你能看到正确使用条件变量的一些基本要求。==
 
   
 
 To make sure you understand, we now go through a more complicated example: the producer/consumer or bounded-buffer problem.
-
 ==为了确保你理解，我们现在来看一个更复杂的例子：生产者/消费者或有界缓冲区问题。==
 
   
 
 TIP: ALWAYS HOLD THE LOCK WHILE SIGNALING
-
 ==提示：发送信号时始终持有锁==
 
   
 
 Although it is strictly not necessary in all cases, it is likely simplest and best to hold the lock while signaling when using condition variables.
-
 ==尽管在所有情况下这并非严格必要，但在使用条件变量发送信号时持有锁可能是最简单且最好的做法。==
 
   
 
 The example above shows a case where you must hold the lock for correctness;
-
 ==上面的例子展示了一个必须持有锁才能保证正确性的情况；==
 
   
 
 however, there are some other cases where it is likely OK not to, but probably is something you should avoid.
-
 ==然而，在其他一些情况下，不持有锁可能也没问题，但这可能是你应该避免的事情。==
 
   
 
 Thus, for simplicity, hold the lock when calling signal.
-
 ==因此，为了简单起见，调用 `signal` 时请持有锁。==
 
   
 
 The converse of this tip, i.e., hold the lock when calling wait, is not just a tip, but rather mandated by the semantics of wait, because wait always (a) assumes the lock is held when you call it, (b) releases said lock when putting the caller to sleep, and (c) re-acquires the lock just before returning.
-
 ==这个提示的反面，即“调用 `wait` 时持有锁”，不仅仅是一个提示，而是 `wait` 语义所强制要求的，因为 `wait` 总是 (a) 假设你在调用它时持有锁，(b) 在将调用者置于休眠状态时释放该锁，并且 (c) 在返回之前重新获取锁。==
 
   
 
 Thus, the generalization of this tip is correct: hold the lock when calling signal or wait, and you will always be in good shape.
-
 ==因此，这个提示的概括是正确的：调用 `signal` 或 `wait` 时持有锁，你的代码状态就会一直保持良好。==
 
   
 
 Note that this example is not "real" code, because the call to pthread_cond_wait() always requires a mutex as well as a condition variable;
-
 ==请注意，这个例子不是“真实”的代码，因为调用 `pthread_cond_wait()` 总是需要一个互斥锁和一个条件变量；==
 
   
 
 here, we just pretend that the interface does not do so for the sake of the negative example.
-
 ==在这里，为了反面示例的缘故，我们只是假装接口不这样做。==
 
   
 
 30.2 The Producer/Consumer (Bounded Buffer) Problem
-
 ==30.2 生产者/消费者（有界缓冲区）问题==
 
   
 
 The next synchronization problem we will confront in this chapter is known as the producer/consumer problem, or sometimes as the bounded buffer problem, which was first posed by Dijkstra [D72].
-
 ==我们在本章中面临的下一个同步问题被称为生产者/消费者问题，有时也称为有界缓冲区问题，它最初由 Dijkstra 提出 [D72]。==
 
   
 
 Indeed, it was this very producer/consumer problem that led Dijkstra and his co-workers to invent the generalized semaphore (which can be used as either a lock or a condition variable) [D01];
-
 ==事实上，正是这个生产者/消费者问题促使 Dijkstra 和他的同事们发明了通用信号量（既可用作锁，也可用作条件变量）[D01]；==
 
   
 
 we will learn more about semaphores later.
-
 ==我们稍后将学习更多关于信号量的知识。==
 
   
 
 Imagine one or more producer threads and one or more consumer threads.
-
 ==想象有一个或多个生产者线程以及一个或多个消费者线程。==
 
   
 
 Producers generate data items and place them in a buffer;
-
 ==生产者生成数据项并将它们放入缓冲区；==
 
   
 
 consumers grab said items from the buffer and consume them in some way.
-
 ==消费者从缓冲区中抓取这些数据项并以某种方式消费它们。==
 
   
 
 This arrangement occurs in many real systems.
-
 ==这种安排出现在许多实际系统中。==
 
   
 
 For example, in a multi-threaded web server, a producer puts HTTP requests into a work queue (i.e., the bounded buffer);
-
 ==例如，在多线程 Web 服务器中，生产者将 HTTP 请求放入工作队列（即有界缓冲区）；==
 
   
 
 consumer threads take requests out of this queue and process them.
-
 ==消费者线程从该队列中取出请求并进行处理。==
 
   
 
 A bounded buffer is also used when you pipe the output of one program into another, e.g., grep foo file.txt | wc -l.
-
 ==当你将一个程序的输出管道传输到另一个程序时，也会使用有界缓冲区，例如 `grep foo file.txt | wc -l`。==
 
   
 
 This example runs two processes concurrently;
-
 ==这个例子并发运行两个进程；==
 
   
 
 grep writes lines from file.txt with the string foo in them to what it thinks is standard output;
-
 ==`grep` 将 `file.txt` 中包含字符串 `foo` 的行写入它认为是标准输出的地方；==
 
   
 
 the UNIX shell redirects the output to what is called a UNIX pipe (created by the pipe system call).
-
 ==UNIX shell 将输出重定向到所谓的 UNIX 管道（由 `pipe` 系统调用创建）。==
 
   
 
 The other end of this pipe is connected to the standard input of the process wc, which simply counts the number of lines in the input stream and prints out the result.
-
 ==管道的另一端连接到进程 `wc` 的标准输入，该进程只是统计输入流中的行数并打印结果。==
 
   
 
 Thus, the grep process is the producer; the wc process is the consumer; between them is an in-kernel bounded buffer;
-
 ==因此，`grep` 进程是生产者；`wc` 进程是消费者；它们之间是一个内核内的有界缓冲区；==
 
   
 
 you, in this example, are just the happy user.
-
 ==而在这个例子中，你只是那个快乐的用户。==
 
   
 
 Because the bounded buffer is a shared resource, we must of course require synchronized access to it, lest a race condition arise.
-
 ==因为有界缓冲区是一个共享资源，我们当然必须要求对它的同步访问，以免出现竞态条件。==
 
   
 
 To begin to understand this problem better, let us examine some actual code.
-
 ==为了开始更好地理解这个问题，让我们检查一些实际的代码。==
 
   
 
 The first thing we need is a shared buffer, into which a producer puts data, and out of which a consumer takes data.
-
 ==我们需要的第一样东西是一个共享缓冲区，生产者将数据放入其中，消费者从中取出数据。==
 
   
 
 Let's just use a single integer for simplicity (you can certainly imagine placing a pointer to a data structure into this slot instead), and the two inner routines to put a value into the shared buffer, and to get a value out of the buffer.
-
 ==为了简单起见，我们只使用一个整数（你当然可以想象将指向数据结构的指针放入此槽中），以及两个内部例程，用于将值放入共享缓冲区和从缓冲区取出值。==
 
   
 
 See Figure 30.6 (page 6) for details.
-
 ==详情请见图 30.6（第 6 页）。==
 
   
@@ -26229,77 +22989,62 @@ int get() {
   
 
 ```
-
-  
-
 ==（代码图示 30.6）==
-
 ==（代码图示 30.6）==
 
   
 
 Figure 30.6: The Put And Get Routines (v1)
-
 ==图 30.6：Put 和 Get 例程 (v1)==
 
   
 
 Pretty simple, no?
-
 ==很简单，不是吗？==
 
   
 
 The put() routine assumes the buffer is empty (and checks this with an assertion), and then simply puts a value into the shared buffer and marks it full by setting count to 1.
-
 ==`put()` 例程假设缓冲区为空（并通过断言检查这一点），然后简单地将一个值放入共享缓冲区，并通过将 `count` 设置为 1 将其标记为满。==
 
   
 
 The get() routine does the opposite, setting the buffer to empty (i.e., setting count to 0) and returning the value.
-
 ==`get()` 例程执行相反的操作，将缓冲区设置为空（即，将 `count` 设置为 0）并返回值。==
 
   
 
 Don't worry that this shared buffer has just a single entry;
-
 ==不用担心这个共享缓冲区只有一个条目；==
 
   
 
 later, we'll generalize it to a queue that can hold multiple entries, which will be even more fun than it sounds.
-
 ==稍后，我们会将其推广到一个可以容纳多个条目的队列，这比听起来还要有趣。==
 
   
 
 Now we need to write some routines that know when it is OK to access the buffer to either put data into it or get data out of it.
-
 ==现在我们需要编写一些例程，这些例程知道何时可以访问缓冲区以放入数据或取出数据。==
 
   
 
 The conditions for this should be obvious: only put data into the buffer when count is zero (i.e., when the buffer is empty), and only get data from the buffer when count is one (i.e., when the buffer is full).
-
 ==条件应该是显而易见的：只有当 `count` 为零时（即缓冲区为空时）才将数据放入缓冲区，并且只有当 `count` 为 1 时（即缓冲区为满时）才从缓冲区获取数据。==
 
   
 
 If we write the synchronization code such that a producer puts data into a full buffer, or a consumer gets data from an empty one, we have done something wrong (and in this code, an assertion will fire).
-
 ==如果我们编写的同步代码导致生产者将数据放入已满的缓冲区，或者消费者从空缓冲区获取数据，那么我们就做错了（在这段代码中，断言会被触发）。==
 
   
 
 This work is going to be done by two types of threads, one set of which we'll call the producer threads, and the other set which we'll call consumer threads.
-
 ==这项工作将由两类线程完成，一组我们称为生产者线程，另一组我们称为消费者线程。==
 
   
 
 Figure 30.7 shows the code for a producer that puts an integer into the shared buffer loops number of times, and a consumer that gets the data out of that shared buffer (forever), each time printing out the data item it pulled from the shared buffer.
-
 ==图 30.7 显示了生产者和消费者的代码，生产者将整数放入共享缓冲区 `loops` 次，消费者（永远）从共享缓冲区中取出数据，每次都打印出它从共享缓冲区中取出的数据项。==
 
   
@@ -26337,53 +23082,42 @@ void *consumer(void *arg) {
   
 
 ```
-
-  
-
 ==（代码图示 30.7）==
-
 ==（代码图示 30.7）==
 
   
 
 Figure 30.7: Producer/Consumer Threads (v1)
-
 ==图 30.7：生产者/消费者线程 (v1)==
 
   
 
 A Broken Solution
-
 ==一个有问题的解决方案==
 
   
 
 Now imagine that we have just a single producer and a single consumer.
-
 ==现在想象一下我们只有一个生产者和一个消费者。==
 
   
 
 Obviously the put() and get() routines have critical sections within them, as put() updates the buffer, and get() reads from it.
-
 ==显然 `put()` 和 `get()` 例程内部有临界区，因为 `put()` 更新缓冲区，而 `get()` 从中读取。==
 
   
 
 However, putting a lock around the code doesn't work; we need something more.
-
 ==然而，在代码周围加锁是不起作用的；我们需要更多的东西。==
 
   
 
 Not surprisingly, that something more is some condition variables.
-
 ==不足为奇的是，这“更多的东西”就是条件变量。==
 
   
 
 In this (broken) first try (Figure 30.8), we have a single condition variable cond and associated lock mutex.
-
 ==在这个（有问题的）第一次尝试中（图 30.8），我们有一个条件变量 `cond` 和相关的锁 `mutex`。==
 
   
@@ -26449,251 +23183,207 @@ void *consumer(void *arg) {
   
 
 ```
-
-  
-
 ==（代码图示 30.8）==
-
 ==（代码图示 30.8）==
 
   
 
 Figure 30.8: Producer/Consumer: Single CV And If Statement
-
 ==图 30.8：生产者/消费者：单个条件变量和 If 语句==
 
   
 
 Let's examine the signaling logic between producers and consumers.
-
 ==让我们检查一下生产者和消费者之间的信号逻辑。==
 
   
 
 When a producer wants to fill the buffer, it waits for it to be empty (p1-p3).
-
 ==当生产者想要填充缓冲区时，它等待缓冲区为空（p1-p3）。==
 
   
 
 The consumer has the exact same logic, but waits for a different condition: fullness (c1-c3).
-
 ==消费者具有完全相同的逻辑，但等待不同的条件：满（c1-c3）。==
 
   
 
 With just a single producer and a single consumer, the code in Figure 30.8 works.
-
 ==仅使用一个生产者和一个消费者时，图 30.8 中的代码是有效的。==
 
   
 
 However, if we have more than one of these threads (e.g., two consumers), the solution has two critical problems.
-
 ==然而，如果我们有不止一个这样的线程（例如，两个消费者），该解决方案有两个关键问题。==
 
   
 
 What are they?
-
 ==它们是什么？==
 
   
 
 (pause here to think)...
-
 ==（在这里停下来思考一下）...==
 
   
 
 Let's understand the first problem, which has to do with the if statement before the wait.
-
 ==让我们了解第一个问题，它与等待之前的 `if` 语句有关。==
 
   
 
 Assume there are two consumers (Tc1 and Tc2) and one producer (Tp).
-
 ==假设有两个消费者（Tc1 和 Tc2）和一个生产者（Tp）。==
 
   
 
 First, a consumer (Tc1) runs;
-
 ==首先，一个消费者（Tc1）运行；==
 
   
 
 it acquires the lock (c1), checks if any buffers are ready for consumption (c2), and finding that none are, waits (c3) (which releases the lock).
-
 ==它获取锁（c1），检查是否有缓冲区可供消费（c2），发现没有，于是等待（c3）（这释放了锁）。==
 
   
 
 Then the producer (Tp) runs.
-
 ==然后生产者（Tp）运行。==
 
   
 
 It acquires the lock (p1), checks if all buffers are full (p2), and finding that not to be the case, goes ahead and fills the buffer (p4).
-
 ==它获取锁（p1），检查所有缓冲区是否已满（p2），发现未满，于是继续并填充缓冲区（p4）。==
 
   
 
 The producer then signals that a buffer has been filled (p5).
-
 ==然后生产者发出信号，表示缓冲区已被填充（p5）。==
 
   
 
 Critically, this moves the first consumer (Tc1) from sleeping on a condition variable to the ready queue;
-
 ==关键是，这将第一个消费者（Tc1）从在条件变量上休眠移动到就绪队列；==
 
   
 
 Tc1 is now able to run (but not yet running).
-
 ==Tc1 现在可以运行（但尚未运行）。==
 
   
 
 The producer then continues until realizing the buffer is full, at which point it sleeps (p6, p1-p3).
-
 ==然后生产者继续执行，直到意识到缓冲区已满，此时它休眠（p6, p1-p3）。==
 
   
 
 Here is where the problem occurs: another consumer (Tc2) sneaks in and consumes the one existing value in the buffer (c1, c2, c4, c5, c6, skipping the wait at c3 because the buffer is full).
-
 ==这就是问题发生的地方：另一个消费者（Tc2）潜入并消耗了缓冲区中现有的唯一值（c1, c2, c4, c5, c6，跳过了 c3 处的等待，因为缓冲区已满）。==
 
   
 
 Now assume Tc1 runs; just before returning from the wait, it re-acquires the lock and then returns.
-
 ==现在假设 Tc1 运行；就在从等待返回之前，它重新获取锁然后返回。==
 
   
 
 It then calls get() (c4), but there are no buffers to consume!
-
 ==然后它调用 `get()`（c4），但没有缓冲区可供消费！==
 
   
 
 An assertion triggers, and the code has not functioned as desired.
-
 ==断言触发，代码未按预期运行。==
 
   
 
 Clearly, we should have somehow prevented Tc1 from trying to consume because Tc2 snuck in and consumed the one value in the buffer that had been produced.
-
 ==显然，我们应该以某种方式阻止 Tc1 尝试消费，因为 Tc2 潜入并消耗了缓冲区中已生成的唯一值。==
 
   
 
 Figure 30.9 shows the action each thread takes, as well as its scheduler state (Ready, Running, or Sleeping) over time.
-
 ==图 30.9 显示了每个线程采取的操作，以及随时间推移的调度程序状态（就绪、运行或休眠）。==
 
   
 
 [Figure 30.9 Table omitted for brevity, but describes the race condition sequence]
-
 ==[图 30.9 表格省略，描述了竞态条件序列]==
 
   
 
 Figure 30.9: Thread Trace: Broken Solution (v1)
-
 ==图 30.9：线程跟踪：有问题的解决方案 (v1)==
 
   
 
 The problem arises for a simple reason: after the producer woke Tc1, but before Tc1 ever ran, the state of the bounded buffer changed (thanks to Tc2).
-
 ==问题的出现原因很简单：在生产者唤醒 Tc1 之后，但在 Tc1 运行之前，有界缓冲区的状态发生了变化（多亏了 Tc2）。==
 
   
 
 Signaling a thread only wakes them up; it is thus a hint that the state of the world has changed (in this case, that a value has been placed in the buffer), but there is no guarantee that when the woken thread runs, the state will still be as desired.
-
 ==向线程发送信号只是唤醒它们；因此这只是一个暗示，表明世界的状态发生了变化（在这种情况下，是值已被放入缓冲区），但不保证当被唤醒的线程运行时，状态仍然符合预期。==
 
   
 
 This interpretation of what a signal means is often referred to as Mesa semantics, after the first research that built a condition variable in such a manner [LR80];
-
 ==这种对信号含义的解释通常被称为 Mesa 语义，源自第一个以这种方式构建条件变量的研究 [LR80]；==
 
   
 
 the contrast, referred to as Hoare semantics, is harder to build but provides a stronger guarantee that the woken thread will run immediately upon being woken [H74].
-
 ==相反的概念称为 Hoare 语义，它更难构建，但提供了更强的保证，即被唤醒的线程将在被唤醒后立即运行 [H74]。==
 
   
 
 Virtually every system ever built employs Mesa semantics.
-
 ==实际上，所有构建过的系统都采用 Mesa 语义。==
 
   
 
 Better, But Still Broken: While, Not If
-
 ==好一点，但仍然有问题：While，而不是 If==
 
   
 
 Fortunately, this fix is easy (Figure 30.10): change the if to a while.
-
 ==幸运的是，这个修复很简单（图 30.10）：将 `if` 更改为 `while`。==
 
   
 
 Think about why this works;
-
 ==想一想为什么这行得通；==
 
   
 
 now consumer Tc1 wakes up and (with the lock held) immediately re-checks the state of the shared variable (c2).
-
 ==现在消费者 Tc1 醒来并（持有锁）立即重新检查共享变量的状态（c2）。==
 
   
 
 If the buffer is empty at that point, the consumer simply goes back to sleep (c3).
-
 ==如果此时缓冲区为空，消费者只需回去继续休眠（c3）。==
 
   
 
 The corollary if is also changed to a while in the producer (p2).
-
 ==同理，生产者中的 `if` 也更改为 `while`（p2）。==
 
   
 
 Thanks to Mesa semantics, a simple rule to remember with condition variables is to always use while loops.
-
 ==由于 Mesa 语义，使用条件变量时要记住的一个简单规则是始终使用 `while` 循环。==
 
   
 
 Sometimes you don't have to re-check the condition, but it is always safe to do so;
-
 ==有时你不必重新检查条件，但这样做总是安全的；==
 
   
 
 just do it and be happy.
-
 ==照做并保持快乐就好。==
 
   
@@ -26753,197 +23443,162 @@ void *consumer(void *arg) {
   
 
 ```
-
-  
-
 ==（代码图示 30.10）==
-
 ==（代码图示 30.10）==
 
   
 
 Figure 30.10: Producer/Consumer: Single CV And While
-
 ==图 30.10：生产者/消费者：单个条件变量和 While==
 
   
 
 However, this code still has a bug, the second of two problems mentioned above.
-
 ==然而，这段代码仍然有一个错误，即上面提到的两个问题中的第二个。==
 
   
 
 Can you see it?
-
 ==你能看出来吗？==
 
   
 
 It has something to do with the fact that there is only one condition variable.
-
 ==这与只有一个条件变量有关。==
 
   
 
 Try to figure out what the problem is, before reading ahead. DO IT!
-
 ==在继续阅读之前，试着找出问题所在。动手吧！==
 
   
 
 (pause for you to think, or close your eyes...)
-
 ==（停下来让你思考，或者闭上眼睛……）==
 
   
 
 Let's confirm you figured it out correctly, or perhaps let's confirm that you are now awake and reading this part of the book.
-
 ==让我们确认你是否正确指出了问题，或者确认你现在是清醒的并在阅读本书的这一部分。==
 
   
 
 The problem occurs when two consumers run first (Tc1 and Tc2) and both go to sleep (c3).
-
 ==当两个消费者先运行（Tc1 和 Tc2）并且都进入休眠状态（c3）时，就会出现问题。==
 
   
 
 Then, the producer runs, puts a value in the buffer, and wakes one of the consumers (say Tc1).
-
 ==然后，生产者运行，将一个值放入缓冲区，并唤醒其中一个消费者（比如 Tc1）。==
 
   
 
 The producer then loops back (releasing and reacquiring the lock along the way) and tries to put more data in the buffer;
-
 ==然后生产者循环回来（沿途释放并重新获取锁），并尝试将更多数据放入缓冲区；==
 
   
 
 because the buffer is full, the producer instead waits on the condition (thus sleeping).
-
 ==因为缓冲区已满，生产者转而在条件上等待（从而休眠）。==
 
   
 
 Now, one consumer is ready to run (Tc1), and two threads are sleeping on a condition (Tc2 and Tp).
-
 ==现在，一个消费者准备好运行（Tc1），两个线程在条件上休眠（Tc2 和 Tp）。==
 
   
 
 We are about to cause a problem: things are getting exciting!
-
 ==我们即将引发一个问题：事情变得刺激起来了！==
 
   
 
 The consumer Tc1 then wakes by returning from wait() (c3), re-checks the condition (c2), and finding the buffer full, consumes the value (c4).
-
 ==消费者 Tc1 随后通过从 `wait()` 返回而醒来（c3），重新检查条件（c2），发现缓冲区已满，便消耗该值（c4）。==
 
   
 
 This consumer then, critically, signals on the condition (c5), waking only one thread that is sleeping.
-
 ==然后，这个消费者关键性地在条件上发送信号（c5），仅唤醒一个正在休眠的线程。==
 
   
 
 However, which thread should it wake?
-
 ==但是，它应该唤醒哪个线程呢？==
 
   
 
 Because the consumer has emptied the buffer, it clearly should wake the producer.
-
 ==因为消费者已经清空了缓冲区，显然它应该唤醒生产者。==
 
   
 
 However, if it wakes the consumer Tc2 (which is definitely possible, depending on how the wait queue is managed), we have a problem.
-
 ==然而，如果它唤醒了消费者 Tc2（这绝对是可能的，取决于等待队列的管理方式），我们就有了问题。==
 
   
 
 Specifically, the consumer Tc2 will wake up and find the buffer empty (c2), and go back to sleep (c3).
-
 ==具体来说，消费者 Tc2 将醒来并发现缓冲区为空（c2），然后回去继续休眠（c3）。==
 
   
 
 The producer Tp, which has a value to put into the buffer, is left sleeping.
-
 ==有值要放入缓冲区的生产者 Tp 被留下来继续休眠。==
 
   
 
 The other consumer thread, Tc1 also goes back to sleep.
-
 ==另一个消费者线程 Tc1 也回去继续休眠。==
 
   
 
 All three threads are left sleeping, a clear bug; see Figure 30.11 for the brutal step-by-step of this terrible calamity.
-
 ==所有三个线程都处于休眠状态，这是一个明显的错误；请参见图 30.11，了解这场可怕灾难的残酷步骤。==
 
   
 
 Figure 30.11: Thread Trace: Broken Solution (v2)
-
 ==图 30.11：线程跟踪：有问题的解决方案 (v2)==
 
   
 
 Signaling is clearly needed, but must be more directed.
-
 ==显然需要发送信号，但必须更有针对性。==
 
   
 
 A consumer should not wake other consumers, only producers, and vice-versa.
-
 ==消费者不应该唤醒其他消费者，只应该唤醒生产者，反之亦然。==
 
   
 
 The Single Buffer Producer/Consumer Solution
-
 ==单缓冲区生产者/消费者解决方案==
 
   
 
 The solution here is once again a small one: use two condition variables, instead of one, in order to properly signal which type of thread should wake up when the state of the system changes.
-
 ==这里的解决方案再一次很简单：使用两个条件变量而不是一个，以便在系统状态发生变化时正确地向应该唤醒的线程类型发送信号。==
 
   
 
 Figure 30.12 shows the resulting code.
-
 ==图 30.12 显示了生成的代码。==
 
   
 
 In the code, producer threads wait on the condition empty, and signals fill.
-
 ==在代码中，生产者线程在条件 `empty` 上等待，并发送 `fill` 信号。==
 
   
 
 Conversely, consumer threads wait on fill and signal empty.
-
 ==相反，消费者线程在 `fill` 上等待，并发送 `empty` 信号。==
 
   
 
 By doing so, the second problem above is avoided by design: a consumer can never accidentally wake a consumer, and a producer can never accidentally wake a producer.
-
 ==通过这样做，设计上避免了上面的第二个问题：消费者永远不会意外唤醒消费者，生产者也永远不会意外唤醒生产者。==
 
   
@@ -27007,143 +23662,117 @@ void *consumer(void *arg) {
   
 
 ```
-
-  
-
 ==（代码图示 30.12）==
-
 ==（代码图示 30.12）==
 
   
 
 Figure 30.12: Producer/Consumer: Two CVs And While
-
 ==图 30.12：生产者/消费者：两个条件变量和 While==
 
   
 
 TIP: USE WHILE (NOT IF) FOR CONDITIONS
-
 ==提示：对条件使用 WHILE（而非 IF）==
 
   
 
 When checking for a condition in a multi-threaded program, using a while loop is always correct;
-
 ==在多线程程序中检查条件时，使用 `while` 循环总是正确的；==
 
   
 
 using an if statement only might be, depending on the semantics of signaling.
-
 ==仅使用 `if` 语句是否正确，取决于信号的语义。==
 
   
 
 Thus, always use while and your code will behave as expected.
-
 ==因此，始终使用 `while`，你的代码就会按预期运行。==
 
   
 
 Using while loops around conditional checks also handles the case where spurious wakeups occur.
-
 ==在条件检查周围使用 `while` 循环还可以处理发生虚假唤醒的情况。==
 
   
 
 In some thread packages, due to details of the implementation, it is possible that two threads get woken up though just a single signal has taken place [L11].
-
 ==在某些线程包中，由于实现的细节，可能发生仅发送了一个信号却唤醒了两个线程的情况 [L11]。==
 
   
 
 Spurious wakeups are further reason to re-check the condition a thread is waiting on.
-
 ==虚假唤醒是重新检查线程正在等待的条件的另一个理由。==
 
   
 
 The Correct Producer/Consumer Solution
-
 ==正确的生产者/消费者解决方案==
 
   
 
 We now have a working producer/consumer solution, albeit not a fully general one.
-
 ==我们现在有了一个可行的生产者/消费者解决方案，尽管还不是完全通用的。==
 
   
 
 The last change we make is to enable more concurrency and efficiency;
-
 ==我们要做的最后一个改变是启用更高的并发性和效率；==
 
   
 
 specifically, we add more buffer slots, so that multiple values can be produced before sleeping, and similarly multiple values can be consumed before sleeping.
-
 ==具体来说，我们添加更多的缓冲区槽位，以便在休眠前可以生成多个值，同样在休眠前可以消费多个值。==
 
   
 
 With just a single producer and consumer, this approach is more efficient as it reduces context switches;
-
 ==仅对于单个生产者和消费者，这种方法更有效，因为它减少了上下文切换；==
 
   
 
 with multiple producers or consumers (or both), it even allows concurrent producing or consuming to take place, thus increasing concurrency.
-
 ==对于多个生产者或消费者（或两者兼有），它甚至允许并发生产或消费发生，从而提高并发性。==
 
   
 
 Fortunately, it is a small change from our current solution.
-
 ==幸运的是，这只需对我们当前的解决方案稍作修改。==
 
   
 
 The first change for this correct solution is within the buffer structure itself and the corresponding put() and get() (Figure 30.13).
-
 ==这个正确解决方案的第一个变化在于缓冲区结构本身以及相应的 `put()` 和 `get()`（图 30.13）。==
 
   
 
 We also slightly change the conditions that producers and consumers check in order to determine whether to sleep or not.
-
 ==我们还略微改变了生产者和消费者为了确定是否休眠而检查的条件。==
 
   
 
 We also show the correct waiting and signaling logic (Figure 30.14).
-
 ==我们还展示了正确的等待和信号逻辑（图 30.14）。==
 
   
 
 A producer only sleeps if all buffers are currently filled (p2);
-
 ==生产者仅在所有缓冲区当前都已满时才休眠（p2）；==
 
   
 
 similarly, a consumer only sleeps if all buffers are currently empty (c2).
-
 ==同样，消费者仅在所有缓冲区当前都为空时才休眠（c2）。==
 
   
 
 And thus we solve the producer/consumer problem;
-
 ==至此我们解决了生产者/消费者问题；==
 
   
 
 time to sit back and drink a cold one.
-
 ==是时候坐下来喝杯冷饮了。==
 
   
@@ -27187,17 +23816,12 @@ int get() {
   
 
 ```
-
-  
-
 ==（代码图示 30.13）==
-
 ==（代码图示 30.13）==
 
   
 
 Figure 30.13: The Correct Put And Get Routines
-
 ==图 30.13：正确的 Put 和 Get 例程==
 
   
@@ -27261,65 +23885,52 @@ void *consumer(void *arg) {
   
 
 ```
-
-  
-
 ==（代码图示 30.14）==
-
 ==（代码图示 30.14）==
 
   
 
 Figure 30.14: The Correct Producer/Consumer Synchronization
-
 ==图 30.14：正确的生产者/消费者同步==
 
   
 
 30.3 Covering Conditions
-
 ==30.3 覆盖条件==
 
   
 
 We'll now look at one more example of how condition variables can be used.
-
 ==我们现在来看另一个如何使用条件变量的例子。==
 
   
 
 This code study is drawn from Lampson and Redell's paper on Pilot [LR80], the same group who first implemented the Mesa semantics described above (the language they used was Mesa, hence the name).
-
 ==这个代码研究取自 Lampson 和 Redell 关于 Pilot 的论文 [LR80]，正是该小组首先实现了上述 Mesa 语义（他们使用的语言是 Mesa，因此得名）。==
 
   
 
 The problem they ran into is best shown via simple example, in this case in a simple multi-threaded memory allocation library.
-
 ==他们遇到的问题最好通过一个简单的例子来展示，在这个例子中是一个简单的多线程内存分配库。==
 
   
 
 Figure 30.15 shows a code snippet which demonstrates the issue.
-
 ==图 30.15 显示了演示该问题的代码片段。==
 
   
 
 As you might see in the code, when a thread calls into the memory allocation code, it might have to wait in order for more memory to become free.
-
 ==正如你在代码中看到的，当线程调用内存分配代码时，它可能必须等待以便有更多内存可用。==
 
   
 
 Conversely, when a thread frees memory, it signals that more memory is free.
-
 ==相反，当线程释放内存时，它会发出信号表示有更多内存可用。==
 
   
 
 However, our code above has a problem: which waiting thread (there can be more than one) should be woken up?
-
 ==然而，我们上面的代码有一个问题：应该唤醒哪个正在等待的线程（可能不止一个）？==
 
   
@@ -27369,419 +23980,347 @@ void free(void *ptr, int size) {
   
 
 ```
-
-  
-
 ==（代码图示 30.15）==
-
 ==（代码图示 30.15）==
 
   
 
 Figure 30.15: Covering Conditions: An Example
-
 ==图 30.15：覆盖条件：一个例子==
 
   
 
 Consider the following scenario. Assume there are zero bytes free;
-
 ==考虑以下场景。假设有零字节可用；==
 
   
 
 thread Ta calls allocate(100), followed by thread Tb which asks for less memory by calling allocate(10).
-
 ==线程 Ta 调用 `allocate(100)`，随后线程 Tb 通过调用 `allocate(10)` 请求较少的内存。==
 
   
 
 Both Ta and Tb thus wait on the condition and go to sleep;
-
 ==Ta 和 Tb 因此都在条件上等待并进入休眠状态；==
 
   
 
 there aren't enough free bytes to satisfy either of these requests.
-
 ==没有足够的可用字节来满足其中任何一个请求。==
 
   
 
 At that point, assume a third thread, Tc calls free(50).
-
 ==此时，假设第三个线程 Tc 调用 `free(50)`。==
 
   
 
 Unfortunately, when it calls signal to wake a waiting thread, it might not wake the correct waiting thread, Tb, which is waiting for only 10 bytes to be freed;
-
 ==不幸的是，当它调用信号唤醒一个等待线程时，它可能不会唤醒正确的等待线程 Tb，Tb 仅等待 10 个字节被释放；==
 
   
 
 Ta should remain waiting, as not enough memory is yet free.
-
 ==Ta 应该继续等待，因为还没有足够的内存可用。==
 
   
 
 Thus, the code in the figure does not work, as the thread waking other threads does not know which thread (or threads) to wake up.
-
 ==因此，图中的代码不起作用，因为唤醒其他线程的线程不知道该唤醒哪个（或哪些）线程。==
 
   
 
 The solution suggested by Lampson and Redell is straightforward: replace the pthread_cond_signal() call in the code above with a call to pthread_cond_broadcast(), which wakes up all waiting threads.
-
 ==Lampson 和 Redell 建议的解决方案很简单：将上述代码中的 `pthread_cond_signal()` 调用替换为 `pthread_cond_broadcast()` 调用，后者会唤醒所有等待的线程。==
 
   
 
 By doing so, we guarantee that any threads that should be woken are.
-
 ==通过这样做，我们保证了任何应该被唤醒的线程都会被唤醒。==
 
   
 
 The downside, of course, can be a negative performance impact, as we might needlessly wake up many other waiting threads that shouldn't (yet) be awake.
-
 ==当然，缺点可能是负面的性能影响，因为我们可能会不必要地唤醒许多其他不应该（尚未）被唤醒的等待线程。==
 
   
 
 Those threads will simply wake up, re-check the condition, and then go immediately back to sleep.
-
 ==这些线程只会醒来，重新检查条件，然后立即回去继续休眠。==
 
   
 
 Lampson and Redell call such a condition a covering condition, as it covers all the cases where a thread needs to wake up (conservatively);
-
 ==Lampson 和 Redell 将这种情况称为覆盖条件（covering condition），因为它覆盖了线程需要唤醒的所有情况（保守地）；==
 
   
 
 the cost, as we've discussed, is that too many threads might be woken.
-
 ==正如我们所讨论的，代价是可能会唤醒过多的线程。==
 
   
 
 The astute reader might also have noticed we could have used this approach earlier (see the producer/consumer problem with only a single condition variable).
-
 ==敏锐的读者可能也注意到了，我们早些时候可以使用这种方法（参见仅使用单个条件变量的生产者/消费者问题）。==
 
   
 
 However, in that case, a better solution was available to us, and thus we used it.
-
 ==然而，在那种情况下，我们有一个更好的解决方案，因此我们使用了它。==
 
   
 
 In general, if you find that your program only works when you change your signals to broadcasts (but you don't think it should need to), you probably have a bug;
-
 ==一般来说，如果你发现你的程序只有在你将信号更改为广播时才能工作（但你认为本不需要这样），那么你可能有一个 bug；==
 
   
 
 fix it!
-
 ==修复它！==
 
   
 
 But in cases like the memory allocator above, broadcast may be the most straightforward solution available.
-
 ==但在像上面的内存分配器这样的情况下，广播可能是最直接的解决方案。==
 
   
 
 30.4 Summary
-
 ==30.4 总结==
 
   
 
 We have seen the introduction of another important synchronization primitive beyond locks: condition variables.
-
 ==我们已经看到了除锁之外的另一个重要同步原语的引入：条件变量。==
 
   
 
 By allowing threads to sleep when some program state is not as desired, CVs enable us to neatly solve a number of important synchronization problems, including the famous (and still important) producer/consumer problem, as well as covering conditions.
-
 ==通过允许线程在某些程序状态不符合预期时休眠，条件变量使我们能够巧妙地解决许多重要的同步问题，包括著名的（且仍然重要的）生产者/消费者问题，以及覆盖条件。==
 
   
 
 A more dramatic concluding sentence would go here, such as "He loved Big Brother" [O49].
-
 ==这里应该有一个更具戏剧性的结束语，比如“他热爱老大哥” [O49]。==
 
   
 
 References
-
 ==参考文献==
 
   
 
 [D68] "Cooperating sequential processes" by Edsger W. Dijkstra.
-
 ==[D68] 《协作顺序进程》，作者 Edsger W. Dijkstra。==
 
   
 
 1968.
-
 ==1968 年。==
 
   
 
 Another classic from Dijkstra;
-
 ==Dijkstra 的另一部经典著作；==
 
   
 
 reading his early works on concurrency will teach you much of what you need to know.
-
 ==阅读他关于并发的早期著作将教会你许多你需要知道的知识。==
 
   
 
 [D72] "Information Streams Sharing a Finite Buffer" by E.W. Dijkstra.
-
 ==[D72] 《共享有限缓冲区的信息流》，作者 E.W. Dijkstra。==
 
   
 
 Information Processing Letters 1: 179-180, 1972.
-
 ==《信息处理快报》1: 179-180，1972 年。==
 
   
 
 The famous paper that introduced the producer/consumer problem.
-
 ==这就是引入生产者/消费者问题的著名论文。==
 
   
 
 [D01] "My recollections of operating system design" by E.W. Dijkstra.
-
 ==[D01] 《我对操作系统设计的回忆》，作者 E.W. Dijkstra。==
 
   
 
 April, 2001.
-
 ==2001 年 4 月。==
 
   
 
 A fascinating read for those of you interested in how the pioneers of our field came up with some very basic and fundamental concepts, including ideas like "interrupts" and even "a stack"!
-
 ==对于那些有兴趣了解我们领域的先驱如何提出一些非常基本和基础概念（包括“中断”甚至“栈”等想法）的人来说，这是一本引人入胜的读物！==
 
   
 
 [H74] "Monitors: An Operating System Structuring Concept" by C.A.R. Hoare.
-
 ==[H74] 《管程：一种操作系统结构概念》，作者 C.A.R. Hoare。==
 
   
 
 Communications of the ACM, 17:10, pages 549-557, October 1974.
-
 ==《ACM 通讯》，17:10，第 549-557 页，1974 年 10 月。==
 
   
 
 Hoare did a fair amount of theoretical work in concurrency.
-
 ==Hoare 在并发领域做了大量的理论工作。==
 
   
 
 However, he is still probably most known for his work on Quicksort, the coolest sorting algorithm in the world, at least according to these authors.
-
 ==然而，他最著名的可能还是他在快速排序方面的工作，这是世界上最酷的排序算法，至少根据这些作者的说法是这样。==
 
   
 
 [L11] "Pthread_cond_signal Man Page" by Mysterious author.
-
 ==[L11] 《Pthread_cond_signal 手册页》，作者 神秘作者。==
 
   
 
 March, 2011.
-
 ==2011 年 3 月。==
 
   
 
 The Linux man page shows a nice simple example of why a thread might get a spurious wakeup, due to race conditions within the signal/wakeup code.
-
 ==Linux 手册页展示了一个很好的简单例子，说明了由于信号/唤醒代码中的竞态条件，线程为什么可能会收到虚假唤醒。==
 
   
 
 [LR80] "Experience with Processes and Monitors in Mesa" by B.W. Lampson, D.R. Redell.
-
 ==[LR80] 《Mesa 中进程与管程的经验》，作者 B.W. Lampson, D.R. Redell。==
 
   
 
 Communications of the ACM. 23:2, pages 105-117, February 1980.
-
 ==《ACM 通讯》，23:2，第 105-117 页，1980 年 2 月。==
 
   
 
 A classic paper about how to actually implement signaling and condition variables in a real system, leading to the term "Mesa" semantics for what it means to be woken up;
-
 ==这是一篇关于如何在真实系统中实际实现信号和条件变量的经典论文，从而产生了“Mesa”语义这一术语，用来描述被唤醒的含义；==
 
   
 
 the older semantics, developed by Tony Hoare [H74], then became known as "Hoare" semantics, which is a bit unfortunate of a name.
-
 ==由 Tony Hoare [H74] 开发的旧语义随后被称为“Hoare”语义，这个名字有点不幸。==
 
   
 
 [O49] "1984" by George Orwell.
-
 ==[O49] 《1984》，作者 George Orwell。==
 
   
 
 Secker and Warburg, 1949.
-
 ==Secker and Warburg 出版社，1949 年。==
 
   
 
 A little heavy-handed, but of course a must read.
-
 ==有点笨拙，但当然是必读之作。==
 
   
 
 That said, we kind of gave away the ending by quoting the last sentence. Sorry!
-
 ==话虽如此，我们引用了最后一句话，有点剧透了结局。抱歉！==
 
   
 
 And if the government is reading this, let us just say that we think that the government is "double plus good".
-
 ==如果政府正在读这句话，我们只想说，我们认为政府是“加倍好”（double plus good）。==
 
   
 
 Hear that, our pals at the NSA?
-
 ==听到了吗，我们在 NSA 的朋友们？==
 
   
 
 Homework (Code)
-
 ==作业（代码）==
 
   
 
 This homework lets you explore some real code that uses locks and condition variables to implement various forms of the producer/consumer queue discussed in the chapter.
-
 ==这份作业让你探索一些真实的代码，这些代码使用锁和条件变量来实现本章讨论的各种形式的生产者/消费者队列。==
 
   
 
 You'll look at the real code, run it in various configurations, and use it to learn about what works and what doesn't, as well as other intricacies.
-
 ==你将查看真实的代码，在各种配置下运行它，并利用它来学习什么是有效的，什么是无效的，以及其他复杂细节。==
 
   
 
 Read the README for details.
-
 ==阅读 README 了解详情。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. Our first question focuses on main-two-cvs-while.c (the working solution).
-
 ==2. 我们的第一个问题关注 `main-two-cvs-while.c`（可行的解决方案）。==
 
   
 
 First, study the code.
-
 ==首先，研究代码。==
 
   
 
 Do you think you have an understanding of what should happen when you run the program?
-
 ==你认为你已经理解运行程序时应该发生什么了吗？==
 
   
 
 2. Run with one producer and one consumer, and have the producer produce a few values.
-
 ==3. 运行一个生产者和一个消费者，并让生产者生成一些值。==
 
   
 
 Start with a buffer (size 1), and then increase it.
-
 ==从缓冲区（大小为 1）开始，然后增加它。==
 
   
 
 How does the behavior of the code change with larger buffers?
-
 ==随着缓冲区变大，代码的行为会发生怎样的变化？==
 
   
 
 (or does it?) What would you predict num_full to be with different buffer sizes (e.g., -m 10) and different numbers of produced items (e.g., -l 100), when you change the consumer sleep string from default (no sleep) to -C 0,0,0,0,0,0,1?
-
 ==（或者它会变吗？）当你将消费者休眠字符串从默认值（无休眠）更改为 `-C 0,0,0,0,0,0,1` 时，对于不同的缓冲区大小（例如 `-m 10`）和不同的生成项目数量（例如 `-l 100`），你预测 `num_full` 会是多少？==
 
   
 
 3. If possible, run the code on different systems (e.g., a Mac and Linux).
-
 ==4. 如果可能，请在不同的系统上运行代码（例如 Mac 和 Linux）。==
 
   
 
 Do you see different behavior across these systems?
-
 ==你在这些系统之间看到不同的行为了吗？==
 
   
 
 4. Let's look at some timings.
-
 ==5. 让我们看一些计时。==
 
   
 
 How long do you think the following execution, with one producer, three consumers, a single-entry shared buffer, and each consumer pausing at point c3 for a second, will take?
-
 ==你认为以下执行需要多长时间：一个生产者，三个消费者，单条目共享缓冲区，并且每个消费者在 c3 点暂停一秒？==
 
   
@@ -27793,25 +24332,21 @@ How long do you think the following execution, with one producer, three consumer
   
 
 5. Now change the size of the shared buffer to 3 (-m 3).
-
 ==6. 现在将共享缓冲区的大小更改为 3 (`-m 3`)。==
 
   
 
 Will this make any difference in the total time?
-
 ==这会对总时间产生影响吗？==
 
   
 
 6. Now change the location of the sleep to c6 (this models a consumer taking something off the queue and then doing something with it), again using a single-entry buffer.
-
 ==7. 现在将休眠的位置更改为 c6（这模拟了消费者从队列中取出一个东西然后用它做一些事情），同样使用单条目缓冲区。==
 
   
 
 What time do you predict in this case?
-
 ==在这种情况下，你预测的时间是多少？==
 
   
@@ -27823,25 +24358,21 @@ What time do you predict in this case?
   
 
 7. Finally, change the buffer size to 3 again (-m 3).
-
 ==8. 最后，再次将缓冲区大小更改为 3 (`-m 3`)。==
 
   
 
 What time do you predict now?
-
 ==你现在预测的时间是多少？==
 
   
 
 8. Now let's look at main-one-cv-while.c.
-
 ==9. 现在让我们看看 `main-one-cv-while.c`。==
 
   
 
 Can you configure a sleep string, assuming a single producer, one consumer, and a buffer of size 1, to cause a problem with this code?
-
 ==假设只有一个生产者、一个消费者和一个大小为 1 的缓冲区，你能配置一个休眠字符串来导致此代码出现问题吗？==
 
 
@@ -28817,865 +25348,721 @@ going beyond what you learn in this class is undoubtedly the key to mastering su
 
 
 SEMAPHORES
-
 ==信号量==
 
   
 
 Homework (Code)
-
 ==作业（代码）==
 
   
 
 In this homework, we'll use semaphores to solve some well-known concurrency problems.
-
 ==在本次作业中，我们将使用信号量来解决一些著名的并发问题。==
 
   
 
 Many of these are taken from Downey's excellent "Little Book of Semaphores", which does a good job of pulling together a number of classic problems as well as introducing a few new variants.
-
 ==其中许多问题取自 Downey 优秀的《信号量小书》（Little Book of Semaphores），该书很好地汇集了许多经典问题，并介绍了一些新的变体。==
 
   
 
 Interested readers should check out the Little Book for more fun.
-
 ==感兴趣的读者应该去看看这本小书以获取更多乐趣。==
 
   
 
 Each of the following questions provides a code skeleton; your job is to fill in the code to make it work given semaphores.
-
 ==以下每个问题都提供了一个代码框架；你的任务是填充代码，使其在给定信号量的情况下正常工作。==
 
   
 
 On Linux, you will be using native semaphores; on a Mac (where there is no semaphore support), you'll have to first build an implementation (using locks and condition variables, as described in the chapter).
-
 ==在 Linux 上，你将使用原生信号量；在 Mac 上（不支持信号量），你必须先构建一个实现（如本章所述，使用锁和条件变量）。==
 
   
 
 Good luck!
-
 ==祝你好运！==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. The first problem is just to implement and test a solution to the fork/join problem, as described in the text.
-
 ==2. 第一个问题只是实现并测试 fork/join 问题的解决方案，如文中所述。==
 
   
 
 Even though this solution is described in the text, the act of typing it in on your own is worthwhile.
-
 ==尽管文中描述了这个解决方案，但亲自输入代码是值得的。==
 
   
 
 Even Bach would rewrite Vivaldi, allowing one soon-to-be master to learn from an existing one.
-
 ==即使是巴赫也会重写维瓦尔第的曲谱，这让一位未来的大师能够向现有的像大师学习。==
 
   
 
 See fork-join.c for details.
-
 ==详见 fork-join.c。==
 
   
 
 Add the call sleep (1) to the child to ensure it is working.
-
 ==在子进程中添加调用 sleep (1) 以确保其正常工作。==
 
   
 
 2. Let's now generalize this a bit by investigating the rendezvous problem.
-
 ==3. 现在让我们通过研究会合（rendezvous）问题来对此进行一点推广。==
 
   
 
 The problem is as follows: you have two threads, each of which are about to enter the rendezvous point in the code.
-
 ==问题如下：你有两个线程，每个线程都准备进入代码中的会合点。==
 
   
 
 Neither should exit this part of the code before the other enters it.
-
 ==在另一个线程进入该部分代码之前，任何一个线程都不应退出。==
 
   
 
 Consider using two semaphores for this task, and see rendezvous.c for details.
-
 ==考虑使用两个信号量来完成此任务，详见 rendezvous.c。==
 
   
 
 3. Now go one step further by implementing a general solution to barrier synchronization.
-
 ==4. 现在更进一步，实现屏障（barrier）同步的通用解决方案。==
 
   
 
 Assume there are two points in a sequential piece of code, called  and .
-
 ==假设在一段顺序代码中有两个点，分别称为  和 。==
 
   
 
 Putting a barrier between  and  guarantees that all threads will execute  before any one thread executes .
-
 ==在  和  之间放置一个屏障，可以保证所有线程在任何一个线程执行  之前都已执行完 。==
 
   
 
 Your task: write the code to implement a barrier() function that can be used in this manner.
-
 ==你的任务：编写代码来实现一个可以这种方式使用的 barrier() 函数。==
 
   
 
 It is safe to assume you know N (the total number of threads in the running program) and that all N threads will try to enter the barrier.
-
 ==可以安全地假设你知道 N（运行程序中的线程总数），并且所有 N 个线程都会尝试进入屏障。==
 
   
 
 Again, you should likely use two semaphores to achieve the solution, and some other integers to count things.
-
 ==同样，你可能应该使用两个信号量来实现解决方案，并使用其他一些整数来进行计数。==
 
   
 
 See barrier.c for details.
-
 ==详见 barrier.c。==
 
   
 
 4. Now let's solve the reader-writer problem, also as described in the text.
-
 ==5. 现在让我们解决读者-写者问题，正如文中所述。==
 
   
 
 In this first take, don't worry about starvation.
-
 ==在第一次尝试中，不必担心饥饿问题。==
 
   
 
 See the code in reader-writer.c for details.
-
 ==详见 reader-writer.c 中的代码。==
 
   
 
 Add sleep() calls to your code to demonstrate it works as you expect.
-
 ==在你的代码中添加 sleep() 调用，以证明它按你的预期工作。==
 
   
 
 Can you show the existence of the starvation problem?
-
 ==你能展示饥饿问题的存在吗？==
 
   
 
 5. Let's look at the reader-writer problem again, but this time, worry about starvation.
-
 ==6. 让我们再次审视读者-写者问题，但这次要考虑饥饿问题。==
 
   
 
 How can you ensure that all readers and writers eventually make progress?
-
 ==如何确保所有读者和写者最终都能取得进展？==
 
   
 
 See reader-writer-nostarve.c for details.
-
 ==详见 reader-writer-nostarve.c。==
 
   
 
 6. Use semaphores to build a no-starve mutex, in which any thread that tries to acquire the mutex will eventually obtain it.
-
 ==7. 使用信号量构建一个无饥饿互斥锁，任何尝试获取该互斥锁的线程最终都会获得它。==
 
   
 
 See the code in mutex-nostarve.c for more information.
-
 ==更多信息请参见 mutex-nostarve.c 中的代码。==
 
   
 
 7. Liked these problems?
-
 ==8. 喜欢这些问题吗？==
 
   
 
 See Downey's free text for more just like them.
-
 ==参阅 Downey 的免费教材，了解更多类似问题。==
 
   
 
 And don't forget, have fun!
-
 ==别忘了，玩得开心！==
 
   
 
 But, you always do when you write code, no?
-
 ==不过，你在写代码的时候总是很开心的，不是吗？==
 
   
 
 Common Concurrency Problems
-
 ==常见并发问题==
 
   
 
 Researchers have spent a great deal of time and effort looking into concurrency bugs over many years.
-
 ==多年来，研究人员花费了大量的时间和精力来研究并发 bug。==
 
   
 
 Much of the early work focused on deadlock, a topic which we've touched on in the past chapters but will now dive into deeply [C+71].
-
 ==早期的许多工作集中在死锁上，我们在前面的章节中已经涉及过这个话题，但现在将深入探讨 [C+71]。==
 
   
 
 More recent work focuses on studying other types of common concurrency bugs (i.e., non-deadlock bugs).
-
 ==最近的工作集中在研究其他类型的常见并发 bug（即非死锁 bug）。==
 
   
 
 In this chapter, we take a brief look at some example concurrency problems found in real code bases, to better understand what problems to look out for.
-
 ==在本章中，我们将简要介绍一些在真实代码库中发现的并发问题示例，以便更好地理解需要注意哪些问题。==
 
   
 
 And thus our central issue for this chapter:
-
 ==因此，我们本章的核心问题是：==
 
   
 
 CRUX: HOW TO HANDLE COMMON CONCURRENCY BUGS
-
 ==关键问题：如何处理常见的并发 BUG==
 
   
 
 Concurrency bugs tend to come in a variety of common patterns.
-
 ==并发 bug 往往以各种常见的模式出现。==
 
   
 
 Knowing which ones to look out for is the first step to writing more robust, correct concurrent code.
-
 ==了解需要注意哪些模式是编写更健壮、正确的并发代码的第一步。==
 
   
 
 32.1 What Types Of Bugs Exist?
-
 ==32.1 存在哪些类型的 Bug？==
 
   
 
 The first, and most obvious, question is this: what types of concurrency bugs manifest in complex, concurrent programs?
-
 ==第一个也是最明显的问题是：在复杂的并发程序中会显现出哪些类型的并发 bug？==
 
   
 
 This question is difficult to answer in general, but fortunately, some others have done the work for us.
-
 ==这个问题通常很难回答，但幸运的是，其他人已经为我们完成了这项工作。==
 
   
 
 Specifically, we rely upon a study by Lu et al. , which analyzes a number of popular concurrent applications in great detail to understand what types of bugs arise in practice.
-
 ==具体来说，我们依赖于 Lu 等人  的一项研究，该研究非常详细地分析了许多流行的并发应用程序，以了解实践中会出现哪些类型的 bug。==
 
   
 
 The study focuses on four major and important open-source applications: MySQL (a popular database management system), Apache (a well-known web server), Mozilla (the famous web browser), and OpenOffice (a free version of the MS Office suite, which some people actually use).
-
 ==该研究侧重于四个主要且重要的开源应用程序：MySQL（流行的数据库管理系统）、Apache（著名的 Web 服务器）、Mozilla（著名的 Web 浏览器）和 OpenOffice（MS Office 套件的免费版本，实际上有些人即使是现在也在使用）。==
 
   
 
 In the study, the authors examine concurrency bugs that have been found and fixed in each of these code bases, turning the developers' work into a quantitative bug analysis.
-
 ==在这项研究中，作者检查了在每个代码库中发现并修复的并发 bug，将开发人员的工作转化为定量的 bug 分析。==
 
   
 
 Understanding these results can help you understand what types of problems actually occur in mature code bases.
-
 ==理解这些结果可以帮助你了解在成熟的代码库中实际会发生什么类型的问题。==
 
   
 
 Figure 32.1 shows a summary of the bugs Lu and colleagues studied.
-
 ==图 32.1 显示了 Lu 及其同事研究的 bug 摘要。==
 
   
 
 From the figure, you can see that there were 105 total bugs, most of which were not deadlock (74); the remaining 31 were deadlock bugs.
-
 ==从图中可以看出，总共有 105 个 bug，其中大多数不是死锁（74 个）；其余 31 个是死锁 bug。==
 
   
 
 Figure 32.1: Bugs In Modern Applications
-
 ==图 32.1：现代应用程序中的 Bug==
 
   
 
 Further, you can see the number of bugs studied from each application.
-
 ==此外，你可以看到每个应用程序中被研究的 bug 数量。==
 
   
 
 While OpenOffice only had 8 total concurrency bugs, Mozilla had nearly 60.
-
 ==虽然 OpenOffice 总共只有 8 个并发 bug，但 Mozilla 有近 60 个。==
 
   
 
 We now dive into these different classes of bugs (non-deadlock, deadlock) a bit more deeply.
-
 ==我们现在将更深入地探讨这些不同类别的 bug（非死锁，死锁）。==
 
   
 
 For the first class of non-deadlock bugs, we use examples from the study to drive our discussion.
-
 ==对于第一类非死锁 bug，我们使用研究中的例子来推动我们的讨论。==
 
   
 
 For the second class of deadlock bugs, we discuss the long line of work that has been done in either preventing, avoiding, or handling deadlock.
-
 ==对于第二类死锁 bug，我们讨论在预防、避免或处理死锁方面所做的一系列长期工作。==
 
   
 
 32.2 Non-Deadlock Bugs
-
 ==32.2 非死锁 Bug==
 
   
 
 Non-deadlock bugs make up a majority of concurrency bugs, according to Lu's study.
-
 ==根据 Lu 的研究，非死锁 bug 构成了并发 bug 的大多数。==
 
   
 
 But what types of bugs are these?
-
 ==但这些是什么类型的 bug？==
 
   
 
 How do they arise?
-
 ==它们是如何产生的？==
 
   
 
 How can we fix them?
-
 ==我们要如何修复它们？==
 
   
 
 We now discuss the two major types of non-deadlock bugs found by Lu et al.: atomicity violation bugs and order violation bugs.
-
 ==我们现在讨论 Lu 等人发现的两类主要的非死锁 bug：原子性违反 bug 和顺序违反 bug。==
 
   
 
 Atomicity-Violation Bugs
-
 ==原子性违反 Bug==
 
   
 
 The first type of problem encountered is referred to as an atomicity violation.
-
 ==遇到的第一类问题被称为原子性违反。==
 
   
 
 Here is a simple example, found in MySQL.
-
 ==这是在 MySQL 中发现的一个简单示例。==
 
   
 
 Before reading the explanation, try figuring out what the bug is.
-
 ==在阅读解释之前，试着找出 bug 是什么。==
 
   
 
 Do it!
-
 ==动手吧！==
 
   
 
 Figure 32.2: Atomicity Violation (atomicity.c)
-
 ==图 32.2：原子性违反 (atomicity.c)==
 
   
 
 In the example, two different threads access the field proc_info in the structure thd.
-
 ==在这个例子中，两个不同的线程访问结构体 thd 中的字段 proc_info。==
 
   
 
 The first thread checks if the value is non-NULL and then prints its value.
-
 ==第一个线程检查该值是否为非 NULL，然后打印其值。==
 
   
 
 The second thread sets it to NULL.
-
 ==第二个线程将其设置为 NULL。==
 
   
 
 Clearly, if the first thread performs the check but then is interrupted before the call to fputs, the second thread could run in-between, thus setting the pointer to NULL.
-
 ==显然，如果第一个线程执行了检查但在调用 fputs 之前被打断，第二个线程可能会在中间运行，从而将指针设置为 NULL。==
 
   
 
 When the first thread resumes, it will crash, as a NULL pointer will be dereferenced by fputs.
-
 ==当第一个线程恢复时，它将崩溃，因为 fputs 将解引用一个 NULL 指针。==
 
   
 
 The more formal definition of an atomicity violation, according to Lu et al, is this: "The desired serializability among multiple memory accesses is violated (i.e. a code region is intended to be atomic, but the atomicity is not enforced during execution)."
-
 ==根据 Lu 等人的说法，原子性违反的更正式定义是：“多次内存访问之间预期的可串行性被破坏（即，某个代码区域本应是原子的，但在执行过程中未强制执行原子性）。”==
 
   
 
 In our example above, the code has an atomicity assumption (in Lu's words) about the check for non-NULL of proc_info and the usage of proc_info in the fputs() call.
-
 ==在上面的例子中，代码对 proc_info 的非 NULL 检查和 fputs() 调用中对 proc_info 的使用有一个原子性假设（用 Lu 的话说）。==
 
   
 
 When the assumption is incorrect, the code will not work as desired.
-
 ==当这个假设不正确时，代码将无法按预期工作。==
 
   
 
 Finding a fix for this type of problem is often (but not always) straightforward.
-
 ==找到这类问题的修复方法通常（但并非总是）很简单。==
 
   
 
 Can you think of how to fix the code above?
-
 ==你能想到如何修复上面的代码吗？==
 
   
 
 In this solution (Figure 32.3), we simply add locks around the shared-variable references, ensuring that when either thread accesses the proc_info field, it has a lock held (proc_info_lock).
-
 ==在这个解决方案（图 32.3）中，我们只是简单地在共享变量引用周围添加锁，确保当任一线程访问 proc_info 字段时，它都持有一个锁（proc_info_lock）。==
 
   
 
 Of course, any other code that accesses the structure should also acquire this lock before doing so.
-
 ==当然，任何其他访问该结构的代码在访问之前也应该获取这个锁。==
 
   
 
 Figure 32.3: Atomicity Violation Fixed (atomicity_fixed.c)
-
 ==图 32.3：原子性违反已修复 (atomicity_fixed.c)==
 
   
 
 Order-Violation Bugs
-
 ==顺序违反 Bug==
 
   
 
 Another common type of non-deadlock bug found by Lu et al. is known as an order violation.
-
 ==Lu 等人发现的另一种常见的非死锁 bug 称为顺序违反。==
 
   
 
 Here is another simple example; once again, see if you can figure out why the code below has a bug in it.
-
 ==这是另一个简单的例子；再一次，看看你能不能找出为什么下面的代码中有 bug。==
 
   
 
 Figure 32.4: Ordering Bug (ordering.c)
-
 ==图 32.4：顺序 Bug (ordering.c)==
 
   
 
 As you probably figured out, the code in Thread 2 seems to assume that the variable mThread has already been initialized (and is not NULL).
-
 ==正如你可能已经发现的那样，线程 2 中的代码似乎假设变量 mThread 已经被初始化（并且不是 NULL）。==
 
   
 
 However, if Thread 2 runs immediately once created, the value of mThread will not be set when it is accessed within mMain() in Thread 2, and will likely crash with a NULL-pointer dereference.
-
 ==然而，如果线程 2 在创建后立即运行，那么在线程 2 的 mMain() 中访问 mThread 时，它的值将不会被设置，并且可能会因 NULL 指针解引用而崩溃。==
 
   
 
 Note that we assume the value of mThread is initially NULL.
-
 ==请注意，我们假设 mThread 的值最初为 NULL。==
 
   
 
 If not, even stranger things could happen as arbitrary memory locations are accessed through the dereference in Thread 2.
-
 ==如果不是，甚至可能会发生更奇怪的事情，因为线程 2 中的解引用会访问任意内存位置。==
 
   
 
 The more formal definition of an order violation is the following: "The desired order between two (groups of) memory accesses is flipped (i.e., A should always be executed before B, but the order is not enforced during execution)" [L+08].
-
 ==顺序违反的更正式定义如下：“两个（组）内存访问之间的预期顺序被颠倒（即，A 本应始终在 B 之前执行，但在执行过程中未强制执行该顺序）” [L+08]。==
 
   
 
 The fix to this type of bug is generally to enforce ordering.
-
 ==这类 bug 的修复方法通常是强制执行顺序。==
 
   
 
 As discussed previously, using condition variables is an easy and robust way to add this style of synchronization into modern code bases.
-
 ==正如前面所讨论的，使用条件变量是将这种同步风格添加到现代代码库中的一种简单而健壮的方法。==
 
   
 
 In the example above, we could thus rewrite the code as seen in Figure 32.5.
-
 ==因此，在上面的例子中，我们可以像图 32.5 那样重写代码。==
 
   
 
 Figure 32.5: Fixing The Ordering Violation (ordering_fixed.c)
-
 ==图 32.5：修复顺序违反 (ordering_fixed.c)==
 
   
 
 In this fixed-up code sequence, we have added a condition variable (mtCond) and corresponding lock (mtLock), as well as a state variable (mtInit).
-
 ==在这个修正后的代码序列中，我们添加了一个条件变量 (mtCond) 和相应的锁 (mtLock)，以及一个状态变量 (mtInit)。==
 
   
 
 When the initialization code runs, it sets the state of mtInit to 1 and signals that it has done so.
-
 ==当初始化代码运行时，它将 mtInit 的状态设置为 1，并发出已完成的信号。==
 
   
 
 If Thread 2 had run before this point, it will be waiting for this signal and corresponding state change.
-
 ==如果线程 2 在此之前已经运行，它将等待此信号和相应的状态更改。==
 
   
 
 If it runs later, it will check the state and see that the initialization has already occurred (i.e., mtInit is set to 1), and thus continue as is proper.
-
 ==如果它在之后运行，它将检查状态并看到初始化已经发生（即 mtInit 设置为 1），从而按正常流程继续。==
 
   
 
 Note that we could likely use mThread as the state variable itself, but do not do so for the sake of simplicity here.
-
 ==请注意，我们可能直接使用 mThread 本身作为状态变量，但为了简单起见，这里没有这样做。==
 
   
 
 When ordering matters between threads, condition variables (or semaphores) can come to the rescue.
-
 ==当线程之间的顺序很重要时，条件变量（或信号量）可以派上用场。==
 
   
 
 Non-Deadlock Bugs: Summary
-
 ==非死锁 Bug：小结==
 
   
 
 A large fraction (97%) of non-deadlock bugs studied by Lu et al. are either atomicity or order violations.
-
 ==Lu 等人研究的非死锁 bug 中，很大一部分（97%）要么是原子性违反，要么是顺序违反。==
 
   
 
 Thus, by carefully thinking about these types of bug patterns, programmers can likely do a better job of avoiding them.
-
 ==因此，通过仔细思考这些类型的 bug 模式，程序员可能会更好地避免它们。==
 
   
 
 Moreover, as more automated code-checking tools develop, they should likely focus on these two types of bugs as they constitute such a large fraction of non-deadlock bugs found in deployment.
-
 ==此外，随着更多自动化代码检查工具的开发，它们可能应该专注于这两类 bug，因为它们构成了部署中发现的非死锁 bug 的很大一部分。==
 
   
 
 Unfortunately, not all bugs are as easily fixed as the examples we looked at above.
-
 ==不幸的是，并不是所有的 bug 都像我们在上面看到的例子那样容易修复。==
 
   
 
 Some require a deeper understanding of what the program is doing, or a larger amount of code or data structure reorganization to fix.
-
 ==有些需要对程序正在做什么有更深入的理解，或者需要对代码或数据结构进行大量的重组才能修复。==
 
   
 
 Read Lu et al.'s excellent (and readable) paper for more details.
-
 ==阅读 Lu 等人优秀（且通俗易懂）的论文以了解更多细节。==
 
   
 
 32.3 Deadlock Bugs
-
 ==32.3 死锁 Bug==
 
   
 
 Beyond the concurrency bugs mentioned above, a classic problem that arises in many concurrent systems with complex locking protocols is known as deadlock.
-
 ==除了上面提到的并发 bug 之外，许多具有复杂锁定协议的并发系统中出现的一个经典问题被称为死锁。==
 
   
 
 Deadlock occurs, for example, when a thread (say Thread 1) is holding a lock (L1) and waiting for another one (L2).
-
 ==例如，当一个线程（比如线程 1）持有一个锁（L1）并等待另一个锁（L2）时，就会发生死锁。==
 
   
 
 Unfortunately, the thread (Thread 2) that holds lock L2 is waiting for L1 to be released.
-
 ==不幸的是，持有锁 L2 的线程（线程 2）正在等待 L1 被释放。==
 
   
 
 Here is a code snippet that demonstrates such a potential deadlock:
-
 ==这是一个演示这种潜在死锁的代码片段：==
 
   
 
 Figure 32.6: Simple Deadlock (deadlock.c)
-
 ==图 32.6：简单死锁 (deadlock.c)==
 
   
 
 Note that if this code runs, deadlock does not necessarily occur.
-
 ==请注意，如果运行此代码，死锁并不一定会发生。==
 
   
 
 Rather, it may occur, if, for example, Thread 1 grabs lock L1 and then a context switch occurs to Thread 2.
-
 ==确切地说，它可能会发生，例如，如果线程 1 获取了锁 L1，然后上下文切换到线程 2。==
 
   
 
 At that point, Thread 2 grabs L2, and tries to acquire L1.
-
 ==此时，线程 2 获取 L2，并尝试获取 L1。==
 
   
 
 Thus we have a deadlock, as each thread is waiting for the other and neither can run.
-
 ==因此我们陷入了死锁，因为每个线程都在等待对方，谁也无法运行。==
 
   
 
 See Figure 32.7 for a graphical depiction; the presence of a cycle in the graph is indicative of the deadlock.
-
 ==图解见图 32.7；图中循环的存在表明了死锁。==
 
   
 
 Figure 32.7: The Deadlock Dependency Graph
-
 ==图 32.7：死锁依赖图==
 
   
 
 CRUX: HOW TO DEAL WITH DEADLOCK
-
 ==关键问题：如何处理死锁==
 
   
 
 How should we build systems to prevent, avoid, or at least detect and recover from deadlock?
-
 ==我们应该如何构建系统来预防、避免，或者至少检测并从死锁中恢复？==
 
   
 
 Is this a real problem in systems today?
-
 ==这在今天的系统中是一个真正的问题吗？==
 
   
 
 Why Do Deadlocks Occur?
-
 ==为什么会发生死锁？==
 
   
 
 As you may be thinking, simple deadlocks such as the one above seem readily avoidable.
-
 ==正如你可能在想的那样，像上面那样简单的死锁似乎很容易避免。==
 
   
 
 For example, if Thread 1 and 2 both made sure to grab locks in the same order, the deadlock would never arise.
-
 ==例如，如果线程 1 和 2 都确保按相同的顺序获取锁，死锁就永远不会出现。==
 
   
 
 So why do deadlocks happen?
-
 ==那么为什么会发生死锁呢？==
 
   
 
 One reason is that in large code bases, complex dependencies arise between components.
-
 ==原因之一是，在大型代码库中，组件之间会出现复杂的依赖关系。==
 
   
 
 Take the operating system, for example.
-
 ==以操作系统为例。==
 
   
 
 The virtual memory system might need to access the file system in order to page in a block from disk.
-
 ==虚拟内存系统可能需要访问文件系统，以便从磁盘调入一个块。==
 
   
 
 The file system might subsequently require a page of memory to read the block into and thus contact the virtual memory system.
-
 ==文件系统随后可能需要一页内存来读入该块，从而联系虚拟内存系统。==
 
   
 
 Thus, the design of locking strategies in large systems must be carefully done to avoid deadlock in the case of circular dependencies that may occur naturally in the code.
-
 ==因此，在大型系统中，锁定策略的设计必须小心谨慎，以避免在代码中自然发生的循环依赖情况下出现死锁。==
 
   
 
 Another reason is due to the nature of encapsulation.
-
 ==另一个原因是由于封装的性质。==
 
   
 
 As software developers, we are taught to hide details of implementations and thus make software easier to build in a modular way.
-
 ==作为软件开发人员，我们被教导要隐藏实现细节，从而使软件更容易以模块化的方式构建。==
 
   
 
 Unfortunately, such modularity does not mesh well with locking.
-
 ==不幸的是，这种模块化与锁定配合得不好。==
 
   
 
 As Jula et al. point out , some seemingly innocuous interfaces almost invite you to deadlock.
-
 ==正如 Jula 等人指出的 ，一些看似无害的接口几乎是在邀请你去死锁。==
 
   
 
 For example, take the Java Vector class and the method AddAll().
-
 ==例如，以 Java Vector 类和方法 AddAll() 为例。==
 
   
 
 This routine would be called as follows:
-
 ==该例程将如下调用：==
 
   
@@ -29687,175 +26074,146 @@ This routine would be called as follows:
   
 
 Internally, because the method needs to be multi-thread safe, locks for both the vector being added to (v1) and the parameter (v2) need to be acquired.
-
 ==在内部，因为该方法需要是多线程安全的，所以需要获取被添加到的向量 (v1) 和参数 (v2) 的锁。==
 
   
 
 The routine acquires said locks in some arbitrary order (say v1 then v2) in order to add the contents of v2 to v1.
-
 ==为了将 v2 的内容添加到 v1，该例程以某种任意顺序（比如先 v1 后 v2）获取上述锁。==
 
   
 
 If some other thread calls v2.AddAll(v1) at nearly the same time, we have the potential for deadlock, all in a way that is quite hidden from the calling application.
-
 ==如果其他线程几乎同时调用 v2.AddAll(v1)，我们就有了发生死锁的可能性，这一切对于调用应用程序来说都是相当隐蔽的。==
 
   
 
 Conditions for Deadlock
-
 ==死锁的条件==
 
   
 
 Four conditions need to hold for a deadlock to occur [C+71]:
-
 ==发生死锁需要满足四个条件 [C+71]：==
 
   
 
 • Mutual exclusion: Threads claim exclusive control of resources that they require (e.g., a thread grabs a lock).
-
 ==• 互斥：线程对其所需的资源要求独占控制（例如，线程获取锁）。==
 
   
 
 • Hold-and-wait: Threads hold resources allocated to them (e.g., locks that they have already acquired) while waiting for additional resources (e.g., locks that they wish to acquire).
-
 ==• 占有并等待：线程持有分配给它们的资源（例如，它们已经获取的锁），同时等待额外的资源（例如，它们希望获取的锁）。==
 
   
 
 • No preemption: Resources (e.g., locks) cannot be forcibly removed from threads that are holding them.
-
 ==• 不可抢占：资源（例如，锁）不能从持有它们的线程中强行移除。==
 
   
 
 • Circular wait: There exists a circular chain of threads such that each thread holds one or more resources (e.g., locks) that are being requested by the next thread in the chain.
-
 ==• 循环等待：存在一个线程的循环链，使得每个线程都持有一个或多个链中下一个线程正在请求的资源（例如，锁）。==
 
   
 
 If any of these four conditions are not met, deadlock cannot occur.
-
 ==如果这四个条件中的任何一个不满足，死锁就不会发生。==
 
   
 
 Thus, we first explore techniques to prevent deadlock; each of these strategies seeks to prevent one of the above conditions from arising and thus is one approach to handling the deadlock problem.
-
 ==因此，我们首先探讨预防死锁的技术；这些策略中的每一个都旨在防止上述条件之一的出现，因此是处理死锁问题的一种方法。==
 
   
 
 Prevention
-
 ==预防==
 
   
 
 Circular Wait
-
 ==循环等待==
 
   
 
 Probably the most practical prevention technique (and certainly one that is frequently employed) is to write your locking code such that you never induce a circular wait.
-
 ==也许最实用的预防技术（也是经常使用的技术）是编写锁定代码，使其永远不会导致循环等待。==
 
   
 
 The most straightforward way to do that is to provide a total ordering on lock acquisition.
-
 ==做到这一点最直接的方法是对锁的获取提供全序（total ordering）。==
 
   
 
 For example, if there are only two locks in the system (L1 and L2), you can prevent deadlock by always acquiring L1 before L2.
-
 ==例如，如果系统中只有两个锁（L1 和 L2），你可以通过总是先获取 L1 再获取 L2 来防止死锁。==
 
   
 
 Such strict ordering ensures that no cyclical wait arises; hence, no deadlock.
-
 ==这种严格的顺序确保不会出现循环等待；因此，不会有死锁。==
 
   
 
 Of course, in more complex systems, more than two locks will exist, and thus total lock ordering may be difficult to achieve (and perhaps is unnecessary anyhow).
-
 ==当然，在更复杂的系统中，会存在两个以上的锁，因此全序锁排序可能很难实现（而且也许无论如何都是不必要的）。==
 
   
 
 Thus, a partial ordering can be a useful way to structure lock acquisition so as to avoid deadlock.
-
 ==因此，偏序（partial ordering）可能是构建锁获取以避免死锁的有用方法。==
 
   
 
 An excellent real example of partial lock ordering can be seen in the memory mapping code in Linux [T+94] (v5.2).
-
 ==Linux 内存映射代码 [T+94] (v5.2) 中可以看到偏序锁排序的一个极好的真实示例。==
 
   
 
 The comment at the top of the source code reveals ten different groups of lock acquisition orders, including simple ones such as "i_mutex before i_mmap_rwsem" and more complex orders such as "i_mmap_rwsem before private_lock before swap_lock before i_pages_lock".
-
 ==源代码顶部的注释揭示了十组不同的锁获取顺序，包括简单的如“i_mutex 在 i_mmap_rwsem 之前”，以及更复杂的顺序如“i_mmap_rwsem 在 private_lock 之前，private_lock 在 swap_lock 之前，swap_lock 在 i_pages_lock 之前”。==
 
   
 
 TIP: ENFORCE LOCK ORDERING BY LOCK ADDRESS
-
 ==提示：通过锁地址强制执行锁顺序==
 
   
 
 In some cases, a function must grab two (or more) locks.
-
 ==在某些情况下，一个函数必须获取两个（或更多）锁。==
 
   
 
 Thus, we know we must be careful or deadlock could arise.
-
 ==因此，我们知道必须小心，否则可能会出现死锁。==
 
   
 
 Imagine a function that is called as follows: do_something(mutex_t *m1, mutex_t *m2).
-
 ==想象一个如下调用的函数：do_something(mutex_t *m1, mutex_t *m2)。==
 
   
 
 If the code always grabs m1 before m2 (or always m2 before m1), it could deadlock, because one thread could call do_something(L1, L2) while another thread could call do_something(L2, L1).
-
 ==如果代码总是先获取 m1 再获取 m2（或总是先 m2 后 m1），它可能会死锁，因为一个线程可能调用 do_something(L1, L2)，而另一个线程可能调用 do_something(L2, L1)。==
 
   
 
 To avoid this particular issue, the clever programmer can use the address of each lock as a way of ordering lock acquisition.
-
 ==为了避免这个特定问题，聪明的程序员可以使用每个锁的地址作为排序锁获取的一种方式。==
 
   
 
 By acquiring locks in either high-to-low or low-to-high address order, do_something() can guarantee that it always acquires locks in the same order, regardless of which order they are passed in.
-
 ==通过按地址从高到低或从低到高的顺序获取锁，do_something() 可以保证它总是以相同的顺序获取锁，而不管它们是以什么顺序传入的。==
 
   
 
 The code would look something like this:
-
 ==代码看起来像这样：==
 
   
@@ -29883,7 +26241,6 @@ if (m1 > m2) { // grab in high-to-low address order
   
 
 ```c
-
 ==if (m1 > m2) { // 按地址从高到低的顺序获取==
 
     pthread_mutex_lock(m1);
@@ -29905,49 +26262,41 @@ if (m1 > m2) { // grab in high-to-low address order
   
 
 By using this simple technique, a programmer can ensure a simple and efficient deadlock-free implementation of multi-lock acquisition.
-
 ==通过使用这种简单的技术，程序员可以确保多锁获取的简单且高效的无死锁实现。==
 
   
 
 As you can imagine, both total and partial ordering require careful design of locking strategies and must be constructed with great care.
-
 ==可以想象，全序和偏序都需要仔细设计锁定策略，并且必须非常小心地构建。==
 
   
 
 Further, ordering is just a convention, and a sloppy programmer can easily ignore the locking protocol and potentially cause deadlock.
-
 ==此外，排序只是一种约定，粗心的程序员很容易忽略锁定协议，从而可能导致死锁。==
 
   
 
 Finally, lock ordering requires a deep understanding of the code base, and how various routines are called.
-
 ==最后，锁排序需要对代码库以及如何调用各种例程有深入的理解。==
 
   
 
 Just one mistake could result in the "D" word¹.
-
 ==只要犯一个错误就可能导致“D”字头的问题¹。（¹注：“D”代表“Deadlock”，即死锁）==
 
   
 
 Hold-and-wait
-
 ==占有并等待==
 
   
 
 The hold-and-wait requirement for deadlock can be avoided by acquiring all locks at once, atomically.
-
 ==通过原子地一次性获取所有锁，可以避免死锁的“占有并等待”要求。==
 
   
 
 In practice, this could be achieved as follows:
-
 ==在实践中，这可以通过以下方式实现：==
 
   
@@ -29969,13 +26318,11 @@ pthread_mutex_unlock(prevention); // end
   
 
 ```c
-
 ==pthread_mutex_lock(prevention); // 开始获取==
 
 pthread_mutex_lock(L1);
 
 pthread_mutex_lock(L2);
-
 ==pthread_mutex_unlock(prevention); // 结束==
 
   
@@ -29985,73 +26332,61 @@ pthread_mutex_lock(L2);
   
 
 By first grabbing the lock prevention, this code guarantees that no untimely thread switch can occur in the midst of lock acquisition and thus deadlock can once again be avoided.
-
 ==通过首先获取 prevention 锁，此代码保证在锁获取过程中不会发生不合时宜的线程切换，从而再次避免死锁。==
 
   
 
 Of course, it requires that any time any thread grabs a lock, it first acquires the global prevention lock.
-
 ==当然，它要求任何线程在获取锁时，都必须首先获取全局 prevention 锁。==
 
   
 
 For example, if another thread was trying to grab locks L1 and L2 in a different order, it would be OK, because it would be holding the prevention lock while doing so.
-
 ==例如，如果另一个线程试图以不同的顺序获取锁 L1 和 L2，也没关系，因为它在这样做时会持有 prevention 锁。==
 
   
 
 Note that the solution is problematic for a number of reasons.
-
 ==请注意，该解决方案存在许多问题。==
 
   
 
 As before, encapsulation works against us: when calling a routine, this approach requires us to know exactly which locks must be held and to acquire them ahead of time.
-
 ==如前所述，封装对我们不利：在调用例程时，这种方法要求我们确切地知道必须持有包含哪些锁，并提前获取它们。==
 
   
 
 This technique also is likely to decrease concurrency as all locks must be acquired early on (at once) instead of when they are truly needed.
-
 ==这种技术也可能会降低并发性，因为所有锁必须在早期（一次性）获取，而不是在真正需要时获取。==
 
   
 
 No Preemption
-
 ==不可抢占==
 
   
 
 Because we generally view locks as held until unlock is called, multiple lock acquisition often gets us into trouble because when waiting for one lock we are holding another.
-
 ==因为我们通常认为锁在调用解锁之前一直被持有，所以多重锁获取经常会给我们带来麻烦，因为在等待一个锁时，我们正持有另一个锁。==
 
   
 
 Many thread libraries provide a more flexible set of interfaces to help avoid this situation.
-
 ==许多线程库提供了一组更灵活的接口来帮助避免这种情况。==
 
   
 
 Specifically, the routine pthread_mutex_trylock() either grabs the lock (if it is available) and returns success or returns an error code indicating the lock is held.
-
 ==具体来说，例程 pthread_mutex_trylock() 要么获取锁（如果可用）并返回成功，要么返回指示锁已被持有的错误代码。==
 
   
 
 In the latter case, you can try again later if you want to grab that lock.
-
 ==在后一种情况下，如果你想获取那个锁，你可以稍后再试。==
 
   
 
 Such an interface could be used as follows to build a deadlock-free, ordering-robust lock acquisition protocol:
-
 ==这样的接口可以如下使用，以构建一个无死锁、顺序健壮的锁获取协议：==
 
   
@@ -30097,115 +26432,96 @@ if (pthread_mutex_trylock(L2) != 0) {
   
 
 Note that another thread could follow the same protocol but grab the locks in the other order (L2 then L1) and the program would still be deadlock free.
-
 ==请注意，另一个线程可以遵循相同的协议，但以相反的顺序获取锁（先 L2 后 L1），程序仍然是无死锁的。==
 
   
 
 One new problem does arise, however: livelock.
-
 ==然而，确实出现了一个新问题：活锁（livelock）。==
 
   
 
 It is possible (though perhaps unlikely) that two threads could both be repeatedly attempting this sequence and repeatedly failing to acquire both locks.
-
 ==两个线程有可能（虽然不太可能）都重复尝试此序列，并重复未能获取这两个锁。==
 
   
 
 In this case, both systems are running through this code sequence over and over again (and thus it is not a deadlock), but progress is not being made, hence the name livelock.
-
 ==在这种情况下，两个系统都在一遍又一遍地运行此代码序列（因此它不是死锁），但没有取得进展，因此得名活锁。==
 
   
 
 There are solutions to the livelock problem, too: for example, one could add a random delay before looping back and trying the entire thing over again, thus decreasing the odds of repeated interference among competing threads.
-
 ==活锁问题也有解决方案：例如，可以在循环返回并重试整个操作之前添加一个随机延迟，从而降低竞争线程之间重复干扰的几率。==
 
   
 
 One point about this solution: it skirts around the hard parts of using a trylock approach.
-
 ==关于这个解决方案的一点：它避开了使用 trylock 方法的困难部分。==
 
   
 
 The first problem that would likely exist again arises due to encapsulation: if one of these locks is buried in some routine that is getting called, the jump back to the beginning becomes more complex to implement.
-
 ==可能存在的第一个问题再次归因于封装：如果这些锁中的一个被埋在某个正在被调用的例程中，那么跳回开头的实现就会变得更加复杂。==
 
   
 
 If the code had acquired some resources (other than L1) along the way, it must make sure to carefully release them as well.
-
 ==如果代码在途中获取了一些资源（除了 L1），它必须确保也仔细地释放它们。==
 
   
 
 For example, if after acquiring L1, the code had allocated some memory, it would have to release that memory upon failure to acquire L2, before jumping back to the top to try the entire sequence again.
-
 ==例如，如果在获取 L1 后，代码分配了一些内存，那么在获取 L2 失败时，它必须在跳回顶部再次尝试整个序列之前释放该内存。==
 
   
 
 However, in limited circumstances (e.g., the Java vector method mentioned earlier), this type of approach could work well.
-
 ==然而，在有限的情况下（例如前面提到的 Java vector 方法），这种方法可以很好地工作。==
 
   
 
 You might also notice that this approach doesn't really add preemption (the forcible action of taking a lock away from a thread that owns it), but rather uses the trylock approach to allow a developer to back out of lock ownership (i.e., preempt their own ownership) in a graceful way.
-
 ==你可能还会注意到，这种方法并没有真正增加抢占（从拥有锁的线程中强行夺走锁的强制行为），而是使用 trylock 方法允许开发人员以一种优雅的方式退出锁的所有权（即，抢占他们自己的所有权）。==
 
   
 
 However, it is a practical approach, and thus we include it here, despite its imperfection in this regard.
-
 ==然而，这是一个实用的方法，因此我们将其包括在这里，尽管它在这方面并不完美。==
 
   
 
 Mutual Exclusion
-
 ==互斥==
 
   
 
 The final prevention technique would be to avoid the need for mutual exclusion at all.
-
 ==最后的预防技术是完全避免对互斥的需求。==
 
   
 
 In general, we know this is difficult, because the code we wish to run does indeed have critical sections.
-
 ==一般来说，我们知道这很难，因为我们希望运行的代码确实有临界区。==
 
   
 
 So what can we do?
-
 ==那么我们能做什么呢？==
 
   
 
 Herlihy had the idea that one could design various data structures without locks at all [H91, H93].
-
 ==Herlihy 有一个想法，即可以设计完全不需要锁的各种数据结构 [H91, H93]。==
 
   
 
 The idea behind these lock-free (and related wait-free) approaches here is simple: using powerful hardware instructions, you can build data structures in a manner that does not require explicit locking.
-
 ==这些无锁（以及相关的无等待）方法背后的想法很简单：使用强大的硬件指令，你可以以一种不需要显式锁定的方式构建数据结构。==
 
   
 
 As a simple example, let us assume we have a compare-and-swap instruction, which as you may recall is an atomic instruction provided by the hardware that does the following:
-
 ==作为一个简单的例子，让我们假设我们有一个比较并交换（compare-and-swap）指令，你可能还记得，这是硬件提供的一条原子指令，它执行以下操作：==
 
   
@@ -30239,11 +26555,9 @@ int CompareAndSwap(int *address, int expected, int new) {
     if (*address == expected) {
 
         *address = new;
-
 ==        return 1; // 成功==
 
     }
-
 ==    return 0; // 失败==
 
 }
@@ -30255,13 +26569,11 @@ int CompareAndSwap(int *address, int expected, int new) {
   
 
 Imagine we now wanted to atomically increment a value by a certain amount, using compare-and-swap.
-
 ==想象一下，我们现在想使用比较并交换来原子地将一个值增加一定的量。==
 
   
 
 We could do so with the following simple function:
-
 ==我们可以用下面这个简单的函数来做到这一点：==
 
   
@@ -30303,25 +26615,21 @@ void AtomicIncrement(int *value, int amount) {
   
 
 Instead of acquiring a lock, doing the update, and then releasing it, we have instead built an approach that repeatedly tries to update the value to the new amount and uses the compare-and-swap to do so.
-
 ==我们没有获取锁、执行更新然后释放锁，而是构建了一种方法，该方法反复尝试将值更新为新数量，并使用比较并交换来做到这一点。==
 
   
 
 In this manner, no lock is acquired, and no deadlock can arise (though livelock is still a possibility, and thus a robust solution will be more complex than the simple code snippet above).
-
 ==通过这种方式，没有获取锁，也不会出现死锁（尽管活锁仍然是一种可能性，因此一个健壮的解决方案将比上面的简单代码片段更复杂）。==
 
   
 
 Let us consider a slightly more complex example: list insertion.
-
 ==让我们考虑一个稍微复杂的例子：列表插入。==
 
   
 
 Here is code that inserts at the head of a list:
-
 ==这是在列表头部插入的代码：==
 
   
@@ -30371,19 +26679,16 @@ void insert(int value) {
   
 
 This code performs a simple insertion, but if called by multiple threads at the "same time", has a race condition.
-
 ==这段代码执行简单的插入，但如果被多个线程在“同一时间”调用，则存在竞态条件。==
 
   
 
 Can you figure out why? (draw a picture of what could happen to a list if two concurrent insertions take place, assuming, as always, a malicious scheduling interleaving).
-
 ==你能找出原因吗？（画一张图，说明如果发生两次并发插入，列表会发生什么，像往常一样假设存在恶意的调度交错）。==
 
   
 
 Of course, we could solve this by surrounding this code with a lock acquire and release:
-
 ==当然，我们可以通过用锁获取和释放包围这段代码来解决这个问题：==
 
   
@@ -30423,13 +26728,11 @@ void insert(int value) {
     assert(n != NULL);
 
     n->value = value;
-
 ==    pthread_mutex_lock(listlock); // 开始临界区==
 
     n->next = head;
 
     head = n;
-
 ==    pthread_mutex_unlock(listlock); // 结束临界区==
 
 }
@@ -30441,19 +26744,16 @@ void insert(int value) {
   
 
 In this solution, we are using locks in the traditional manner.
-
 ==在这个解决方案中，我们以传统方式使用锁。==
 
   
 
 Instead, let us try to perform this insertion in a lock-free manner simply using the compare-and-swap instruction.
-
 ==取而代之的是，让我们尝试仅使用比较并交换指令以无锁方式执行此插入。==
 
   
 
 Here is one possible approach:
-
 ==这是一种可能的方法：==
 
   
@@ -30507,103 +26807,86 @@ void insert(int value) {
   
 
 The astute reader might be asking why we grabbed the lock so late, instead of right when entering insert().
-
 ==敏锐的读者可能会问，为什么我们这么晚才获取锁，而不是在进入 insert() 时立即获取。==
 
   
 
 Can you, astute reader, figure out why that is likely correct?
-
 ==敏锐的读者，你能找出为什么这可能是正确的吗？==
 
   
 
 What assumptions does the code make, for example, about the call to malloc()?
-
 ==例如，代码对 malloc() 的调用做了什么假设？==
 
   
 
 The code here updates the next pointer to point to the current head, and then tries to swap the newly-created node into position as the new head of the list.
-
 ==这里的代码更新 next 指针以指向当前的 head，然后尝试将新创建的节点交换到位，作为列表的新 head。==
 
   
 
 However, this will fail if some other thread successfully swapped in a new head in the meanwhile, causing this thread to retry again with the new head.
-
 ==但是，如果其他线程同时成功换入了新的 head，这将失败，导致该线程使用新的 head 重试。==
 
   
 
 Of course, building a useful list requires more than just a list insert, and not surprisingly building a list that you can insert into, delete from, and perform lookups on in a lock-free manner is non-trivial.
-
 ==当然，构建一个有用的列表不仅仅需要列表插入，毫不奇怪，构建一个可以无锁地插入、删除和执行查找的列表并非易事。==
 
   
 
 Read the rich literature on lock-free and wait-free synchronization to learn more [H01, H91, H93].
-
 ==阅读关于无锁和无等待同步的丰富文献以了解更多信息 [H01, H91, H93]。==
 
   
 
 Deadlock Avoidance via Scheduling
-
 ==通过调度避免死锁==
 
   
 
 Instead of deadlock prevention, in some scenarios deadlock avoidance is preferable.
-
 ==在某些场景下，死锁避免比死锁预防更可取。==
 
   
 
 Avoidance requires some global knowledge of which locks various threads might grab during their execution, and subsequently schedules said threads in a way as to guarantee no deadlock can occur.
-
 ==避免需要一些关于各种线程在执行期间可能获取哪些锁的全局知识，随后以保证不会发生死锁的方式调度这些线程。==
 
   
 
 For example, assume we have two processors and four threads which must be scheduled upon them.
-
 ==例如，假设我们有两个处理器和四个必须在它们之上调度的线程。==
 
   
 
 Assume further we know that Thread 1 (T1) grabs locks L1 and L2 (in some order, at some point during its execution), T2 grabs L1 and L2 as well, T3 grabs just L2, and T4 grabs no locks at all.
-
 ==进一步假设我们知道线程 1 (T1) 获取锁 L1 和 L2（以某种顺序，在其执行期间的某一点），T2 也获取 L1 和 L2，T3 只获取 L2，而 T4 根本不获取锁。==
 
   
 
 We can show these lock acquisition demands of the threads in tabular form:
-
 ==我们可以用表格形式显示线程的这些锁获取需求：==
 
   
 
 L1: T1(yes), T2(yes), T3(no), T4(no)
-
 ==L1: T1(是), T2(是), T3(否), T4(否)==
 
   
 
 L2: T1(yes), T2(yes), T3(yes), T4(no)
-
 ==L2: T1(是), T2(是), T3(是), T4(否)==
 
   
 
 A smart scheduler could thus compute that as long as T1 and T2 are not run at the same time, no deadlock could ever arise.
-
 ==因此，智能调度程序可以计算出，只要 T1 和 T2 不同时运行，死锁就永远不会出现。==
 
   
 
 Here is one such schedule:
-
 ==这是一个这样的时间表：==
 
   
@@ -30621,97 +26904,81 @@ CPU 2: T1, T2
   
 
 Note that it is OK for (T3 and T1) or (T3 and T2) to overlap.
-
 ==请注意，(T3 和 T1) 或 (T3 和 T2) 重叠是可以的。==
 
   
 
 Even though T3 grabs lock L2, it can never cause a deadlock by running concurrently with other threads because it only grabs one lock.
-
 ==即使 T3 获取了锁 L2，它与其他线程并发运行也永远不会导致死锁，因为它只获取一个锁。==
 
   
 
 Let's look at one more example.
-
 ==让我们再看一个例子。==
 
   
 
 In this one, there is more contention for the same resources (again, locks L1 and L2), as indicated by the following contention table:
-
 ==在这个例子中，对相同资源（还是锁 L1 和 L2）的争用更多，如下面的争用表所示：==
 
   
 
 L1: T1(yes), T2(yes), T3(yes), T4(no)
-
 ==L1: T1(是), T2(是), T3(是), T4(否)==
 
   
 
 L2: T1(yes), T2(yes), T3(yes), T4(no)
-
 ==L2: T1(是), T2(是), T3(是), T4(否)==
 
   
 
 TIP: DON'T ALWAYS DO IT PERFECTLY (TOM WEST'S LAW)
-
 ==提示：不要总是追求完美（汤姆·韦斯特定律）==
 
   
 
 Tom West, famous as the subject of the classic computer-industry book Soul of a New Machine [K81], says famously: "Not everything worth doing is worth doing well", which is a terrific engineering maxim.
-
 ==汤姆·韦斯特，作为计算机行业经典书籍《新机器的灵魂》[K81] 的主角而闻名，他有一句名言：“不是每一件值得做的事情都值得做好”，这是一句极好的工程格言。==
 
   
 
 If a bad thing happens rarely, certainly one should not spend a great deal of effort to prevent it, particularly if the cost of the bad thing occurring is small.
-
 ==如果一件坏事很少发生，那么当然不应该花费大量精力去预防它，特别是如果坏事发生的代价很小。==
 
   
 
 If, on the other hand, you are building a space shuttle, and the cost of something going wrong is the space shuttle blowing up, well, perhaps you should ignore this piece of advice.
-
 ==另一方面，如果你正在建造航天飞机，而出错的代价是航天飞机爆炸，好吧，也许你应该忽略这条建议。==
 
   
 
 Some readers object: "This sounds like you are suggesting mediocrity as a solution!"
-
 ==有些读者反对：“这听起来像是你在建议用平庸作为解决方案！”==
 
   
 
 Perhaps they are right, that we should be careful with advice such as this.
-
 ==也许他们是对的，我们在对待此类建议时应该小心。==
 
   
 
 However, our experience tells us that in the world of engineering, with pressing deadlines and other real-world concerns, one will always have to decide which aspects of a system to build well and which to put aside for another day.
-
 ==然而，我们的经验告诉我们，在工程世界中，面对紧迫的截止日期和其他现实世界的担忧，人们总是必须决定系统的哪些方面要建好，哪些要留待以后解决。==
 
   
 
 The hard part is knowing which to do when, a bit of insight only gained through experience and dedication to the task at hand.
-
 ==困难的部分在于知道何时做什么，这是一种只能通过经验和对当前任务的专注才能获得的洞察力。==
 
   
 
 In particular, threads T1, T2, and T3 all need to grab both locks L1 and L2 at some point during their execution.
-
 ==特别是，线程 T1、T2 和 T3 都需要在执行期间的某个时刻同时获取锁 L1 和 L2。==
 
   
 
 Here is a possible schedule that guarantees that no deadlock could ever occur:
-
 ==这是一个可能的时间表，保证永远不会发生死锁：==
 
   
@@ -30729,709 +26996,591 @@ CPU 2: T1, T2, T3
   
 
 As you can see, static scheduling leads to a conservative approach where T1, T2, and T3 are all run on the same processor, and thus the total time to complete the jobs is lengthened considerably.
-
 ==如你所见，静态调度导致了一种保守的方法，即 T1、T2 和 T3 都在同一个处理器上运行，从而大大延长了完成任务的总时间。==
 
   
 
 Though it may have been possible to run these tasks concurrently, the fear of deadlock prevents us from doing so, and the cost is performance.
-
 ==虽然本来可能并发运行这些任务，但对死锁的恐惧阻止了我们这样做，代价就是性能。==
 
   
 
 One famous example of an approach like this is Dijkstra's Banker's Algorithm [D64], and many similar approaches have been described in the literature.
-
 ==这种方法的一个著名例子是 Dijkstra 的银行家算法 [D64]，文献中也描述了许多类似的方法。==
 
   
 
 Unfortunately, they are only useful in very limited environments, for example, in an embedded system where one has full knowledge of the entire set of tasks that must be run and the locks that they need.
-
 ==不幸的是，它们仅在非常有限的环境中有用，例如，在嵌入式系统中，人们完全了解必须运行的整套任务以及它们所需的锁。==
 
   
 
 Further, such approaches can limit concurrency, as we saw in the second example above.
-
 ==此外，正如我们在上面的第二个示例中所看到的，此类方法会限制并发性。==
 
   
 
 Thus, avoidance of deadlock via scheduling is not a widely-used general-purpose solution.
-
 ==因此，通过调度避免死锁并不是一种广泛使用的通用解决方案。==
 
   
 
 Detect and Recover
-
 ==检测并恢复==
 
   
 
 One final general strategy is to allow deadlocks to occasionally occur, and then take some action once such a deadlock has been detected.
-
 ==最后一个通用策略是允许死锁偶尔发生，然后一旦检测到此类死锁就采取一些措施。==
 
   
 
 For example, if an OS froze once a year, you would just reboot it and get happily (or grumpily) on with your work.
-
 ==例如，如果操作系统一年死机一次，你只需重新启动它，然后愉快地（或脾气暴躁地）继续工作。==
 
   
 
 If deadlocks are rare, such a non-solution is indeed quite pragmatic.
-
 ==如果死锁很少见，那么这种非解决方案确实非常实用。==
 
   
 
 Many database systems employ deadlock detection and recovery techniques.
-
 ==许多数据库系统采用死锁检测和恢复技术。==
 
   
 
 A deadlock detector runs periodically, building a resource graph and checking it for cycles.
-
 ==死锁检测器定期运行，构建资源图并检查其是否存在循环。==
 
   
 
 In the event of a cycle (deadlock), the system needs to be restarted.
-
 ==如果出现循环（死锁），系统需要重新启动。==
 
   
 
 If more intricate repair of data structures is first required, a human being may be involved to ease the process.
-
 ==如果首先需要对数据结构进行更复杂的修复，可能需要人工干预来简化过程。==
 
   
 
 More detail on database concurrency, deadlock, and related issues can be found elsewhere [B+87, K87].
-
 ==关于数据库并发、死锁和相关问题的更多详细信息，可以在其他地方找到 [B+87, K87]。==
 
   
 
 Read these works, or better yet, take a course on databases to learn more about this rich and interesting topic.
-
 ==阅读这些作品，或者更好的是，选修一门数据库课程，以了解更多关于这个丰富而有趣的主题的信息。==
 
   
 
 32.4 Summary
-
 ==32.4 小结==
 
   
 
 In this chapter, we have studied the types of bugs that occur in concurrent programs.
-
 ==在本章中，我们研究了并发程序中出现的 bug 类型。==
 
   
 
 The first type, non-deadlock bugs, are surprisingly common, but often are easier to fix.
-
 ==第一种类型，即非死锁 bug，出奇地常见，但通常更容易修复。==
 
   
 
 They include atomicity violations, in which a sequence of instructions that should have been executed together was not, and order violations, in which the needed order between two threads was not enforced.
-
 ==它们包括原子性违反（本应一起执行的指令序列未一起执行）和顺序违反（未强制执行两个线程之间所需的顺序）。==
 
   
 
 We have also briefly discussed deadlock: why it occurs, and what can be done about it.
-
 ==我们还简要讨论了死锁：它为什么会发生，以及可以为此做些什么。==
 
   
 
 The problem is as old as concurrency itself, and many hundreds of papers have been written about the topic.
-
 ==这个问题与并发本身一样古老，关于该主题的论文已有数百篇。==
 
   
 
 The best solution in practice is to be careful, develop a lock acquisition order, and thus prevent deadlock from occurring in the first place.
-
 ==实践中最好的解决方案是小心谨慎，制定锁获取顺序，从而首先防止死锁的发生。==
 
   
 
 Wait-free approaches also have promise, as some wait-free data structures are now finding their way into commonly-used libraries and critical systems, including Linux.
-
 ==无等待方法也有希望，因为一些无等待数据结构现在正在进入常用库和关键系统，包括 Linux。==
 
   
 
 However, their lack of generality and the complexity to develop a new wait-free data structure will likely limit the overall utility of this approach.
-
 ==然而，它们缺乏通用性以及开发新的无等待数据结构的复杂性，可能会限制这种方法的整体效用。==
 
   
 
 Perhaps the best solution is to develop new concurrent programming models: in systems such as MapReduce (from Google) [GD02], programmers can describe certain types of parallel computations without any locks whatsoever.
-
 ==也许最好的解决方案是开发新的并发编程模型：在 MapReduce（来自 Google）[GD02] 等系统中，程序员可以在没有任何锁的情况下描述某些类型的并行计算。==
 
   
 
 Locks are problematic by their very nature; perhaps we should seek to avoid using them unless we truly must.
-
 ==锁在本质上是有问题的；也许我们应该寻求避免使用它们，除非我们真的必须这样做。==
 
   
 
 References
-
 ==参考文献==
 
   
 
 [B+87] "Concurrency Control and Recovery in Database Systems" by Philip A. Bernstein, Vassos Hadzilacos, Nathan Goodman.
-
 ==[B+87] 《数据库系统中的并发控制与恢复》，作者 Philip A. Bernstein, Vassos Hadzilacos, Nathan Goodman。==
 
   
 
 Addison-Wesley, 1987. The classic text on concurrency in database management systems.
-
 ==Addison-Wesley, 1987。关于数据库管理系统中并发的经典教材。==
 
   
 
 As you can tell, understanding concurrency, deadlock, and other topics in the world of databases is a world unto itself.
-
 ==你可以看出，理解数据库世界中的并发、死锁和其他主题本身就是一个世界。==
 
   
 
 Study it and find out for yourself.
-
 ==研究它并亲自找出答案。==
 
   
 
 [C+71] "System Deadlocks" by E.G. Coffman, M.J. Elphick, A. Shoshani.
-
 ==[C+71] 《系统死锁》，作者 E.G. Coffman, M.J. Elphick, A. Shoshani。==
 
   
 
 ACM Computing Surveys, 3:2, June 1971. The classic paper outlining the conditions for deadlock and how you might go about dealing with it.
-
 ==ACM Computing Surveys, 3:2, 1971年6月。概述死锁条件以及如何处理死锁的经典论文。==
 
   
 
 There are certainly some earlier papers on this topic; see the references within this paper for details.
-
 ==当然，关于这个主题还有一些更早的论文；详见本文中的参考文献。==
 
   
 
 [D64] "Een algorithme ter voorkoming van de dodelijke omarming" by Edsger Dijkstra. 1964.
-
 ==[D64] 《避免死锁的算法》（荷兰语标题），作者 Edsger Dijkstra，1964年。==
 
   
 
 Indeed, not only did Dijkstra come up with a number of solutions to the deadlock problem, he was the first to note its existence, at least in written form.
-
 ==确实，Dijkstra 不仅提出了死锁问题的许多解决方案，而且他是第一个注意到其存在的人，至少在书面形式上是这样。==
 
   
 
 However, he called it the "deadly embrace", which (thankfully) did not catch on.
-
 ==然而，他称之为“致命拥抱”（deadly embrace），幸好这个叫法没有流行起来。==
 
   
 
 [GD02] "MapReduce: Simplified Data Processing on Large Clusters" by Sanjay Ghemawhat, Jeff Dean.
-
 ==[GD02] 《MapReduce：大型集群上的简化数据处理》，作者 Sanjay Ghemawhat, Jeff Dean。==
 
   
 
 OSDI '04, San Francisco, CA, October 2004. The MapReduce paper ushered in the era of large-scale data processing, and proposes a framework for performing such computations on clusters of generally unreliable machines.
-
 ==OSDI '04，加州旧金山，2004年10月。MapReduce 论文开启了大规模数据处理的时代，并提出了一个框架，用于在通常不可靠的机器集群上执行此类计算。==
 
   
 
 [H01] "A Pragmatic Implementation of Non-blocking Linked-lists" by Tim Harris.
-
 ==[H01] 《非阻塞链表的实用实现》，作者 Tim Harris。==
 
   
 
 International Conference on Distributed Computing (DISC), 2001. A relatively modern example of the difficulties of building something as simple as a concurrent linked list without locks.
-
 ==国际分布式计算会议 (DISC)，2001年。一个相对现代的例子，说明了在没有锁的情况下构建像并发链表这样简单的东西是多么困难。==
 
   
 
 [H91] "Wait-free Synchronization" by Maurice Herlihy. ACM TOPLAS, 13:1, January 1991.
-
 ==[H91] 《无等待同步》，作者 Maurice Herlihy。ACM TOPLAS, 13:1，1991年1月。==
 
   
 
 Herlihy's work pioneers the ideas behind wait-free approaches to writing concurrent programs.
-
 ==Herlihy 的工作开创了编写并发程序的无等待方法背后的思想。==
 
   
 
 These approaches tend to be complex and hard, often more difficult than using locks correctly, probably limiting their success in the real world.
-
 ==这些方法往往复杂且困难，通常比正确使用锁更难，这可能会限制它们在现实世界中的成功。==
 
   
 
 [H93] "A Methodology for Implementing Highly Concurrent Data Objects" by Maurice Herlihy.
-
 ==[H93] 《实现高并发数据对象的方法论》，作者 Maurice Herlihy。==
 
   
 
 ACM TOPLAS, 15:5, November 1993. A nice overview of lock-free and wait-free structures.
-
 ==ACM TOPLAS, 15:5，1993年11月。对无锁和无等待结构的精彩概述。==
 
   
 
 Both approaches eschew locks, but wait-free approaches are harder to realize, as they try to ensure that any operation on a concurrent structure will terminate in a finite number of steps (e.g., no unbounded looping).
-
 ==这两种方法都避开了锁，但无等待方法更难实现，因为它们试图确保对并发结构的任何操作都将在有限的步骤内终止（例如，没有无限循环）。==
 
   
 
 [J+08] "Deadlock Immunity: Enabling Systems To Defend Against Deadlocks" by Horatiu Jula, Daniel Tralamazza, Cristian Zamfir, George Candea.
-
 ==[J+08] 《死锁免疫：使系统能够抵御死锁》，作者 Horatiu Jula, Daniel Tralamazza, Cristian Zamfir, George Candea。==
 
   
 
 OSDI '08, San Diego, CA, December 2008. An excellent recent paper on deadlocks and how to avoid getting caught in the same ones over and over again in a particular system.
-
 ==OSDI '08，加州圣地亚哥，2008年12月。一篇关于死锁以及如何避免在特定系统中一遍又一遍地陷入同一死锁的优秀近期论文。==
 
   
 
 [K81] "Soul of a New Machine" by Tracy Kidder. Backbay Books, 2000 (reprint of 1980 version).
-
 ==[K81] 《新机器的灵魂》，作者 Tracy Kidder。Backbay Books，2000年（1980年版重印）。==
 
   
 
 A must-read for any systems builder or engineer, detailing the early days of how a team inside Data General (DG), led by Tom West, worked to produce a "new machine."
-
 ==任何系统构建者或工程师的必读书籍，详细介绍了 Data General (DG) 内部由 Tom West 领导的团队如何致力于生产“新机器”的早期日子。==
 
   
 
 Kidder's other books are also excellent, including "Mountains beyond Mountains."
-
 ==Kidder 的其他书也很棒，包括《Mountains beyond Mountains》。==
 
   
 
 Or maybe you don't agree with us, comma?
-
 ==或者也许你不同意我们的观点，逗号？==
 
   
 
 [K87] "Deadlock Detection in Distributed Databases" by Edgar Knapp. ACM Computing Surveys, 19:4, December 1987.
-
 ==[K87] 《分布式数据库中的死锁检测》，作者 Edgar Knapp。ACM Computing Surveys, 19:4，1987年12月。==
 
   
 
 An excellent overview of deadlock detection in distributed database systems.
-
 ==分布式数据库系统中死锁检测的精彩概述。==
 
   
 
 Also points to a number of other related works, and thus is a good place to start your reading.
-
 ==也指向了许多其他相关作品，因此是开始阅读的好地方。==
 
   
 
 [L+08] "Learning from Mistakes A Comprehensive Study on Real World Concurrency Bug Characteristics" by Shan Lu, Soyeon Park, Eunsoo Seo, Yuanyuan Zhou.
-
 ==[L+08] 《从错误中学习：关于现实世界并发 Bug 特征的综合研究》，作者 Shan Lu, Soyeon Park, Eunsoo Seo, Yuanyuan Zhou。==
 
   
 
 ASPLOS '08, March 2008, Seattle, Washington. The first in-depth study of concurrency bugs in real software, and the basis for this chapter.
-
 ==ASPLOS '08，2008年3月，华盛顿州西雅图。对真实软件中并发 bug 的首次深入研究，也是本章的基础。==
 
   
 
 Look at Y.Y. Zhou's or Shan Lu's web pages for many more interesting papers on bugs.
-
 ==查看 Y.Y. Zhou 或 Shan Lu 的网页，了解更多关于 bug 的有趣论文。==
 
   
 
 [T+94] "Linux File Memory Map Code" by Linus Torvalds and many others.
-
 ==[T+94] 《Linux 文件内存映射代码》，作者 Linus Torvalds 等人。==
 
   
 
 Thanks to Michael Walfish (NYU) for pointing out this precious example.
-
 ==感谢 Michael Walfish (NYU) 指出了这个珍贵的例子。==
 
   
 
 The real world, as you can see in this file, can be a bit more complex than the simple clarity found in textbooks...
-
 ==正如你在这个文件中看到的那样，现实世界可能比教科书中简单的清晰度要复杂一些……==
 
   
 
 Homework (Code)
-
 ==作业（代码）==
 
   
 
 This homework lets you explore some real code that deadlocks (or avoids deadlock).
-
 ==这份作业让你探索一些会死锁（或避免死锁）的真实代码。==
 
   
 
 The different versions of code correspond to different approaches to avoiding deadlock in a simplified vector_add() routine.
-
 ==不同版本的代码对应于在简化的 vector_add() 例程中避免死锁的不同方法。==
 
   
 
 See the README for details on these programs and their common substrate.
-
 ==有关这些程序及其通用基础的详细信息，请参阅 README。==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. First let's make sure you understand how the programs generally work, and some of the key options.
-
 ==2. 首先，确保你了解程序的一般工作原理，以及一些关键选项。==
 
   
 
 Study the code in vector-deadlock.c, as well as in main-common.c and related files.
-
 ==研究 vector-deadlock.c 以及 main-common.c 和相关文件中的代码。==
 
   
 
 Now, run `./vector-deadlock -n 2 -l 1 -v`, which instantiates two threads (-n 2), each of which does one vector add (-l 1), and does so in verbose mode (-v).
-
 ==现在，运行 `./vector-deadlock -n 2 -l 1 -v`，它实例化两个线程 (-n 2)，每个线程执行一次向量加法 (-l 1)，并以详细模式 (-v) 运行。==
 
   
 
 Make sure you understand the output.
-
 ==确保你理解输出。==
 
   
 
 How does the output change from run to run?
-
 ==每次运行的输出有何变化？==
 
   
 
 2. Now add the -d flag, and change the number of loops (-l) from 1 to higher numbers.
-
 ==3. 现在添加 -d 标志，并将循环次数 (-l) 从 1 更改为更大的数字。==
 
   
 
 What happens?
-
 ==会发生什么？==
 
   
 
 Does the code (always) deadlock?
-
 ==代码（总是）会死锁吗？==
 
   
 
 3. How does changing the number of threads (-n) change the outcome of the program?
-
 ==4. 更改线程数 (-n) 如何改变程序的结果？==
 
   
 
 Are there any values of -n that ensure no deadlock occurs?
-
 ==是否有任何 -n 的值可以确保不发生死锁？==
 
   
 
 4. Now examine the code in vector-global-order.c.
-
 ==5. 现在检查 vector-global-order.c 中的代码。==
 
   
 
 First, make sure you understand what the code is trying to do; do you understand why the code avoids deadlock?
-
 ==首先，确保你理解代码试图做什么；你明白为什么代码避免了死锁吗？==
 
   
 
 Also, why is there a special case in this vector_add() routine when the source and destination vectors are the same?
-
 ==另外，当源向量和目标向量相同时，为什么这个 vector_add() 例程中有一个特殊情况？==
 
   
 
 5. Now run the code with the following flags: `-t -n 2 -l 100000 -d`.
-
 ==6. 现在使用以下标志运行代码：`-t -n 2 -l 100000 -d`。==
 
   
 
 How long does the code take to complete?
-
 ==代码需要多长时间才能完成？==
 
   
 
 How does the total time change when you increase the number of loops, or the number of threads?
-
 ==当你增加循环次数或线程数时，总时间如何变化？==
 
   
 
 6. What happens if you turn on the parallelism flag (-p)?
-
 ==7. 如果打开并行标志 (-p) 会发生什么？==
 
   
 
 How much would you expect performance to change when each thread is working on adding different vectors (which is what -p enables) versus working on the same ones?
-
 ==当每个线程致力于添加不同的向量（这就是 -p 启用的功能）与致力于相同的向量时，你预期性能会有多大变化？==
 
   
 
 7. Now let's study vector-try-wait.c. First make sure you understand the code.
-
 ==8. 现在让我们研究 vector-try-wait.c。首先确保你理解代码。==
 
   
 
 Is the first call to pthread_mutex_trylock() really needed?
-
 ==第一次调用 pthread_mutex_trylock() 真的有必要吗？==
 
   
 
 Now run the code.
-
 ==现在运行代码。==
 
   
 
 How fast does it run compared to the global order approach?
-
 ==与全局排序方法相比，它的运行速度如何？==
 
   
 
 How does the number of retries, as counted by the code, change as the number of threads increases?
-
 ==随着线程数的增加，代码计数的重试次数如何变化？==
 
   
 
 8. Now let's look at vector-avoid-hold-and-wait.c.
-
 ==9. 现在让我们看看 vector-avoid-hold-and-wait.c。==
 
   
 
 What is the main problem with this approach?
-
 ==这种方法的主要问题是什么？==
 
   
 
 How does its performance compare to the other versions, when running both with -p and without it?
-
 ==在使用 -p 和不使用 -p 运行时，它的性能与其他版本相比如何？==
 
   
 
 9. Finally, let's look at vector-nolock.c.
-
 ==10. 最后，让我们看看 vector-nolock.c。==
 
   
 
 This version doesn't use locks at all; does it provide the exact same semantics as the other versions?
-
 ==这个版本完全不使用锁；它是否提供了与其他版本完全相同的语义？==
 
   
 
 Why or why not?
-
 ==为什么是或为什么不是？==
 
   
 
 10. Now compare its performance to the other versions, both when threads are working on the same two vectors (no -p) and when each thread is working on separate vectors (-p).
-
 ==11. 现在将其性能与其他版本进行比较，包括线程处理相同的两个向量（无 -p）时以及每个线程处理单独的向量（-p）时。==
 
   
 
 How does this no-lock version perform?
-
 ==这个无锁版本的性能如何？==
 
   
 
 Event-based Concurrency (Advanced)
-
 ==基于事件的并发（进阶）==
 
   
 
 Thus far, we've written about concurrency as if the only way to build concurrent applications is to use threads.
-
 ==到目前为止，我们在撰写关于并发的内容时，似乎构建并发应用程序的唯一方法是使用线程。==
 
   
 
 Like many things in life, this is not completely true.
-
 ==就像生活中的许多事情一样，这并不完全正确。==
 
   
 
 Specifically, a different style of concurrent programming is often used in both GUI-based applications [O96] as well as some types of internet servers [PDZ99].
-
 ==具体来说，基于 GUI 的应用程序 [O96] 以及某些类型的 Internet 服务器 [PDZ99] 通常使用一种不同风格的并发编程。==
 
   
 
 This style, known as event-based concurrency, has become popular in some modern systems, including server-side frameworks such as node.js [N13], but its roots are found in C/UNIX systems that we'll discuss below.
-
 ==这种被称为基于事件的并发的风格在一些现代系统中已经变得流行，包括像 node.js [N13] 这样的服务器端框架，但它的根源在于我们将在下面讨论的 C/UNIX 系统。==
 
   
 
 The problem that event-based concurrency addresses is two-fold.
-
 ==基于事件的并发解决的问题是双重的。==
 
   
 
 The first is that managing concurrency correctly in multi-threaded applications can be challenging; as we've discussed, missing locks, deadlock, and other nasty problems can arise.
-
 ==首先是，在多线程应用程序中正确管理并发可能具有挑战性；正如我们所讨论的，可能会出现缺少锁、死锁和其他令人讨厌的问题。==
 
   
 
 The second is that in a multi-threaded application, the developer has little or no control over what is scheduled at a given moment in time; rather, the programmer simply creates threads and then hopes that the underlying OS schedules them in a reasonable manner across available CPUs.
-
 ==其次是，在多线程应用程序中，开发人员对给定时刻调度什么几乎没有控制权；相反，程序员只是创建线程，然后希望底层操作系统以合理的方式在可用 CPU 上调度它们。==
 
   
 
 Given the difficulty of building a general-purpose scheduler that works well in all cases for all workloads, sometimes the OS will schedule work in a manner that is less than optimal.
-
 ==鉴于构建一个在所有情况下都能很好地处理所有工作负载的通用调度程序的难度，有时操作系统会以不太理想的方式调度工作。==
 
   
 
 And thus, we have ...
-
 ==因此，我们有……==
 
   
 
 THE CRUX: HOW TO BUILD CONCURRENT SERVERS WITHOUT THREADS
-
 ==关键问题：如何在不使用线程的情况下构建并发服务器==
 
   
 
 How can we build a concurrent server without using threads, and thus retain control over concurrency as well as avoid some of the problems that seem to plague multi-threaded applications?
-
 ==我们如何才能在不使用线程的情况下构建并发服务器，从而保持对并发的控制，并避免一些困扰多线程应用程序的问题？==
 
   
 
 33.1 The Basic Idea: An Event Loop
-
 ==33.1 基本理念：事件循环==
 
   
 
 The basic approach we'll use, as stated above, is called event-based concurrency.
-
 ==如上所述，我们将使用的基本方法称为基于事件的并发。==
 
   
 
 The approach is quite simple: you simply wait for something (i.e., an "event") to occur; when it does, you check what type of event it is and do the small amount of work it requires (which may include issuing I/O requests, or scheduling other events for future handling, etc.).
-
 ==这种方法非常简单：你只是等待某事（即“事件”）发生；当它发生时，你检查它是什么类型的事件，并做它需要的少量工作（其中可能包括发出 I/O 请求，或调度其他事件以供将来处理等）。==
 
   
 
 That's it!
-
 ==就是这样！==
 
   
 
 Before getting into the details, let's first examine what a canonical event-based server looks like.
-
 ==在深入细节之前，让我们首先检查一下典型的基于事件的服务器是什么样子的。==
 
   
 
 Such applications are based around a simple construct known as the event loop.
-
 ==此类应用程序基于一种简单的结构，称为事件循环。==
 
   
 
 Pseudocode for an event loop looks like this:
-
 ==事件循环的伪代码如下所示：==
 
   
@@ -31473,85 +27622,71 @@ while (1) {
   
 
 It's really that simple.
-
 ==真的就这么简单。==
 
   
 
 The main loop simply waits for something to do (by calling getEvents() in the code above) and then, for each event returned, processes them, one at a time; the code that processes each event is known as an event handler.
-
 ==主循环只是等待做某事（通过调用上面的代码中的 getEvents()），然后，对于返回的每个事件，一次一个地处理它们；处理每个事件的代码称为事件处理程序。==
 
   
 
 Importantly, when a handler processes an event, it is the only activity taking place in the system; thus, deciding which event to handle next is equivalent to scheduling.
-
 ==重要的是，当处理程序处理事件时，它是系统中唯一发生的活动；因此，决定接下来处理哪个事件等同于调度。==
 
   
 
 This explicit control over scheduling is one of the fundamental advantages of the event-based approach.
-
 ==这种对调度的显式控制是基于事件的方法的基本优势之一。==
 
   
 
 But this discussion leaves us with a bigger question: how exactly does an event-based server determine which events are taking place, in particular with regards to network and disk I/O?
-
 ==但是这个讨论给我们留下了一个更大的问题：基于事件的服务器究竟如何确定正在发生哪些事件，特别是关于网络和磁盘 I/O？==
 
   
 
 Specifically, how can an event server tell if a message has arrived for it?
-
 ==具体来说，事件服务器如何知道是否有消息到达？==
 
   
 
 33.2 An Important API: select() (or poll())
-
 ==33.2 一个重要的 API：select()（或 poll()）==
 
   
 
 With that basic event loop in mind, we next must address the question of how to receive events.
-
 ==考虑到那个基本的事件循环，我们接下来必须解决如何接收事件的问题。==
 
   
 
 In most systems, a basic API is available, via either the select() or poll() system calls.
-
 ==在大多数系统中，通过 select() 或 poll() 系统调用可以使用一个基本的 API。==
 
   
 
 What these interfaces enable a program to do is simple: check whether there is any incoming I/O that should be attended to.
-
 ==这些接口使程序能够做的事情很简单：检查是否有任何需要处理的传入 I/O。==
 
   
 
 For example, imagine that a network application (such as a web server) wishes to check whether any network packets have arrived, in order to service them.
-
 ==例如，假设一个网络应用程序（如 Web 服务器）希望检查是否有任何网络数据包到达，以便为它们提供服务。==
 
   
 
 These system calls let you do exactly that.
-
 ==这些系统调用让你正是做这件事。==
 
   
 
 Take select() for example.
-
 ==以 select() 为例。==
 
   
 
 The manual page (on a Mac) describes the API in this manner:
-
 ==手册页（在 Mac 上）以这种方式描述了 API：==
 
   
@@ -31593,359 +27728,299 @@ int select(int nfds,
   
 
 The actual description from the man page: select() examines the I/O descriptor sets whose addresses are passed in readfds, writefds, and errorfds to see if some of their descriptors are ready for reading, are ready for writing, or have an exceptional condition pending, respectively.
-
 ==手册页中的实际描述：select() 检查其地址传入 readfds、writefds 和 errorfds 的 I/O 描述符集，以分别查看其中是否有描述符已准备好读取、准备好写入或有待处理的异常情况。==
 
   
 
 The first nfds descriptors are checked in each set, i.e., the descriptors from 0 through nfds-1 in the descriptor sets are examined.
-
 ==每个集合中的前 nfds 个描述符会被检查，即检查描述符集中从 0 到 nfds-1 的描述符。==
 
   
 
 On return, select() replaces the given descriptor sets with subsets consisting of those descriptors that are ready for the requested operation.
-
 ==返回时，select() 用由那些已准备好进行请求操作的描述符组成的子集替换给定的描述符集。==
 
   
 
 select() returns the total number of ready descriptors in all the sets.
-
 ==select() 返回所有集合中就绪描述符的总数。==
 
   
 
 ASIDE: BLOCKING VS. NON-BLOCKING INTERFACES
-
 ==旁白：阻塞与非阻塞接口==
 
   
 
 Blocking (or synchronous) interfaces do all of their work before returning to the caller; non-blocking (or asynchronous) interfaces begin some work but return immediately, thus letting whatever work that needs to be done get done in the background.
-
 ==阻塞（或同步）接口在返回给调用者之前完成所有工作；非阻塞（或异步）接口开始一些工作但立即返回，从而让需要做的任何工作在后台完成。==
 
   
 
 The usual culprit in blocking calls is I/O of some kind.
-
 ==阻塞调用的通常罪魁祸首是某种 I/O。==
 
   
 
 For example, if a call must read from disk in order to complete, it might block, waiting for the I/O request that has been sent to the disk to return.
-
 ==例如，如果一个调用必须从磁盘读取才能完成，它可能会阻塞，等待已发送到磁盘的 I/O 请求返回。==
 
   
 
 Non-blocking interfaces can be used in any style of programming (e.g., with threads), but are essential in the event-based approach, as a call that blocks will halt all progress.
-
 ==非阻塞接口可用于任何风格的编程（例如，使用线程），但在基于事件的方法中是必不可少的，因为阻塞的调用将停止所有进度。==
 
   
 
 A couple of points about select().
-
 ==关于 select() 的几点。==
 
   
 
 First, note that it lets you check whether descriptors can be read from as well as written to; the former lets a server determine that a new packet has arrived and is in need of processing, whereas the latter lets the service know when it is OK to reply (i.e., the outbound queue is not full).
-
 ==首先，请注意它允许你检查描述符是否可读以及可写；前者让服务器确定新数据包已到达并需要处理，而后者让服务知道何时可以回复（即出站队列未满）。==
 
   
 
 Second, note the timeout argument.
-
 ==其次，注意 timeout 参数。==
 
   
 
 One common usage here is to set the timeout to NULL, which causes select() to block indefinitely, until some descriptor is ready.
-
 ==这里的一个常见用法是将 timeout 设置为 NULL，这将导致 select() 无限期阻塞，直到某个描述符就绪。==
 
   
 
 However, more robust servers will usually specify some kind of timeout; one common technique is to set the timeout to zero, and thus use the call to select() to return immediately.
-
 ==然而，更健壮的服务器通常会指定某种超时；一种常见的技术是将超时设置为零，从而使用对 select() 的调用立即返回。==
 
   
 
 The poll() system call is quite similar.
-
 ==poll() 系统调用非常相似。==
 
   
 
 See its manual page, or Stevens and Rago [SR05], for details.
-
 ==详见其手册页，或 Stevens 和 Rago [SR05]。==
 
   
 
 Either way, these basic primitives give us a way to build a non-blocking event loop, which simply checks for incoming packets, reads from sockets with messages upon them, and replies as needed.
-
 ==无论哪种方式，这些基本原语都为我们提供了一种构建非阻塞事件循环的方法，该循环只需检查传入的数据包，从有消息的套接字中读取，并根据需要进行回复。==
 
   
 
 33.3 Using select()
-
 ==33.3 使用 select()==
 
   
 
 To make this more concrete, let's examine how to use select() to see which network descriptors have incoming messages upon them.
-
 ==为了使其更具体，让我们检查如何使用 select() 来查看哪些网络描述符上有传入消息。==
 
   
 
 Figure 33.1 shows a simple example.
-
 ==图 33.1 显示了一个简单的例子。==
 
   
 
 This code is actually fairly simple to understand.
-
 ==这段代码实际上相当容易理解。==
 
   
 
 After some initialization, the server enters an infinite loop.
-
 ==在一些初始化之后，服务器进入无限循环。==
 
   
 
 Inside the loop, it uses the FD_ZERO() macro to first clear the set of file descriptors, and then uses FD_SET() to include all of the file descriptors from minFD to maxFD in the set.
-
 ==在循环内部，它首先使用 FD_ZERO() 宏清除文件描述符集，然后使用 FD_SET() 将从 minFD 到 maxFD 的所有文件描述符包含在集合中。==
 
 Figure 33.1: Simple Code Using select ()
-
 ==图 33.1：使用 select() 的简单代码==
 
   
 
 This set of descriptors might represent, for example, all of the network sockets to which the server is paying attention.
-
 ==这组描述符可能代表（例如）服务器正在关注的所有网络套接字。==
 
   
 
 Finally, the server calls select () to see which of the connections have data available upon them.
-
 ==最后，服务器调用 select() 来查看哪些连接上有可用数据。==
 
   
 
 By then using FD_ISSET() in a loop, the event server can see which of the descriptors have data ready and process the incoming data.
-
 ==通过随后在一个循环中使用 FD_ISSET()，事件服务器可以看到哪些描述符有数据准备好，并处理传入的数据。==
 
   
 
 Of course, a real server would be more complicated than this, and require logic to use when sending messages, issuing disk I/O, and many other details.
-
 ==当然，一个真正的服务器会比这更复杂，并且需要包含发送消息、发出磁盘 I/O 以及许多其他细节时的逻辑。==
 
   
 
 For further information, see Stevens and Rago [SR05] for API information, or Pai et. al or Welsh et al. for a good overview of the general flow of event-based servers [PDZ99, WCB01].
-
 ==欲了解更多信息，请参阅 Stevens 和 Rago [SR05] 获取 API 信息，或参阅 Pai 等人或 Welsh 等人的文章，以很好地了解基于事件的服务器的一般流程 [PDZ99, WCB01]。==
 
   
 
 TIP: DON'T BLOCK IN EVENT-BASED SERVERS
-
 ==提示：不要在基于事件的服务器中阻塞==
 
   
 
 Event-based servers enable fine-grained control over scheduling of tasks.
-
 ==基于事件的服务器允许对任务调度进行细粒度的控制。==
 
   
 
 However, to maintain such control, no call that blocks the execution of the caller can ever be made.
-
 ==然而，为了维持这种控制，绝对不能进行任何会阻塞调用者执行的调用。==
 
   
 
 Failing to obey this design tip will result in a blocked event-based server, frustrated clients, and serious questions as to whether you ever read this part of the book.
-
 ==如果不遵守这个设计提示，将导致基于事件的服务器被阻塞，客户端感到沮丧，并且人们会严重怀疑你是否读过本书的这一部分。==
 
   
 
 33.4 Why Simpler? No Locks Needed
-
 ==33.4 为什么更简单？无需锁==
 
   
 
 With a single CPU and an event-based application, the problems found in concurrent programs are no longer present.
-
 ==在单 CPU 和基于事件的应用程序中，并发程序中常见的问题不再存在。==
 
   
 
 Specifically, because only one event is being handled at a time, there is no need to acquire or release locks.
-
 ==具体来说，因为一次只处理一个事件，所以不需要获取或释放锁。==
 
   
 
 The event-based server cannot be interrupted by another thread because it is decidedly single threaded.
-
 ==基于事件的服务器不会被另一个线程中断，因为它显然是单线程的。==
 
   
 
 Thus, concurrency bugs common in threaded programs do not manifest in the basic event-based approach.
-
 ==因此，线程程序中常见的并发 bug 不会在基本的基于事件的方法中出现。==
 
   
 
 33.5 A Problem: Blocking System Calls
-
 ==33.5 一个问题：阻塞系统调用==
 
   
 
 Thus far, event-based programming sounds great, right?
-
 ==到目前为止，基于事件的编程听起来很棒，对吧？==
 
   
 
 You program a simple loop, and handle events as they arise.
-
 ==你编写一个简单的循环，并在事件发生时处理它们。==
 
   
 
 You don't even need to think about locking!
-
 ==你甚至不需要考虑锁的问题！==
 
   
 
 But there is an issue: what if an event requires that you issue a system call that might block?
-
 ==但是有一个问题：如果一个事件需要你发出一个可能会阻塞的系统调用怎么办？==
 
   
 
 For example, imagine a request comes from a client into a server to read a file from disk and return its contents to the requesting client (much like a simple HTTP request).
-
 ==例如，设想一个请求从客户端进入服务器，要求从磁盘读取文件并将其内容返回给请求的客户端（很像一个简单的 HTTP 请求）。==
 
   
 
 To service such a request, some event handler will eventually have to issue an open () system call to open the file, followed by a series of read () calls to read the file.
-
 ==为了服务这样的请求，某个事件处理程序最终将不得不发出 open() 系统调用来打开文件，随后是一系列 read() 调用来读取文件。==
 
   
 
 When the file is read into memory, the server will likely start sending the results to the client.
-
 ==当文件被读入内存后，服务器可能会开始将结果发送给客户端。==
 
   
 
 Both the open () and read () calls may issue I/O requests to the storage system (when the needed metadata or data is not in memory already), and thus may take a long time to service.
-
 ==open() 和 read() 调用都可能向存储系统发出 I/O 请求（当所需的元数据或数据尚未在内存中时），因此可能需要很长时间才能完成服务。==
 
   
 
 With a thread-based server, this is no issue: while the thread issuing the I/O request suspends (waiting for the I/O to complete), other threads can run, thus enabling the server to make progress.
-
 ==对于基于线程的服务器，这不是问题：当发出 I/O 请求的线程挂起（等待 I/O 完成）时，其他线程可以运行，从而使服务器能够继续处理。==
 
   
 
 Indeed, this natural overlap of I/O and other computation is what makes thread-based programming quite natural and straightforward.
-
 ==事实上，这种 I/O 和其他计算的自然重叠正是基于线程的编程非常自然和直观的原因。==
 
   
 
 With an event-based approach, however, there are no other threads to run: just the main event loop.
-
 ==然而，在基于事件的方法中，没有其他线程可以运行：只有一个主事件循环。==
 
   
 
 And this implies that if an event handler issues a call that blocks, the entire server will do just that: block until the call completes.
-
 ==这意味着如果事件处理程序发出了一个阻塞调用，整个服务器就会这样做：阻塞直到调用完成。==
 
   
 
 When the event loop blocks, the system sits idle, and thus is a huge potential waste of resources.
-
 ==当事件循环阻塞时，系统处于空闲状态，因此这是对资源的巨大潜在浪费。==
 
   
 
 We thus have a rule that must be obeyed in event-based systems: no blocking calls are allowed.
-
 ==因此，我们在基于事件的系统中必须遵守一条规则：不允许阻塞调用。==
 
   
 
 33.6 A Solution: Asynchronous I/O
-
 ==33.6 解决方案：异步 I/O==
 
   
 
 To overcome this limit, many modern operating systems have introduced new ways to issue I/O requests to the disk system, referred to generically as asynchronous I/O.
-
 ==为了克服这一限制，许多现代操作系统引入了向磁盘系统发出 I/O 请求的新方法，统称为异步 I/O。==
 
   
 
 These interfaces enable an application to issue an I/O request and return control immediately to the caller, before the I/O has completed.
-
 ==这些接口允许应用程序发出 I/O 请求并在 I/O 完成之前立即将控制权返回给调用者。==
 
   
 
 Additional interfaces enable an application to determine whether various I/Os have completed.
-
 ==额外的接口允许应用程序确定各种 I/O 是否已完成。==
 
   
 
 For example, let us examine the interface provided on a Mac (other systems have similar APIs).
-
 ==例如，让我们检查一下 Mac 上提供的接口（其他系统有类似的 API）。==
 
   
 
 The APIs revolve around a basic structure, the struct aiocb or AIO control block in common terminology.
-
 ==这些 API 围绕一个基本结构展开，即 struct aiocb，通俗术语称为 AIO 控制块。==
 
   
 
 A simplified version of the structure looks like this (see the manual pages for more information):
-
 ==该结构的简化版本如下所示（更多信息请参阅手册页）：==
 
   
@@ -31973,13 +28048,9 @@ struct aiocb {
 ```c
 
 struct aiocb {
-
 ==    int aio_fildes; // 文件描述符==
-
 ==    off_t aio_offset; // 文件偏移量==
-
 ==    volatile void *aio_buf; // 缓冲区位置==
-
 ==    size_t aio_nbytes; // 传输长度==
 
 };
@@ -31991,19 +28062,16 @@ struct aiocb {
   
 
 To issue an asynchronous read to a file, an application should first fill in this structure with the relevant information: the file descriptor of the file to be read (aio_fildes), the offset within the file (aio_offset) as well as the length of the request (aio_nbytes), and finally the target memory location into which the results of the read should be copied (aio_buf).
-
 ==要向文件发出异步读取，应用程序应首先用相关信息填充此结构：要读取的文件的文件描述符 (aio_fildes)、文件内的偏移量 (aio_offset) 以及请求的长度 (aio_nbytes)，最后是读取结果应复制到的目标内存位置 (aio_buf)。==
 
   
 
 After this structure is filled in, the application must issue the asynchronous call to read the file.
-
 ==填充完此结构后，应用程序必须发出异步调用来读取文件。==
 
   
 
 On a Mac, this API is simply the asynchronous read API:
-
 ==在 Mac 上，此 API 仅仅是异步读取 API：==
 
   
@@ -32015,31 +28083,26 @@ On a Mac, this API is simply the asynchronous read API:
   
 
 This call tries to issue the I/O; if successful, it simply returns right away and the application (i.e., the event-based server) can continue with its work.
-
 ==此调用尝试发出 I/O；如果成功，它只是立即返回，应用程序（即基于事件的服务器）可以继续其工作。==
 
   
 
 There is one last piece of the puzzle we must solve, however.
-
 ==然而，我们必须解决拼图的最后一块。==
 
   
 
 How can we tell when an I/O is complete, and thus that the buffer (pointed to by aio_buf) now has the requested data within it?
-
 ==我们如何知道 I/O 何时完成，从而知道缓冲区（由 aio_buf 指向）现在包含请求的数据？==
 
   
 
 One last API is needed. On a Mac, it is referred to (somewhat confusingly) as aio_error().
-
 ==需要最后一个 API。在 Mac 上，它（有点令人困惑地）被称为 aio_error()。==
 
   
 
 The API looks like this:
-
 ==API 如下所示：==
 
   
@@ -32051,115 +28114,96 @@ The API looks like this:
   
 
 This system call checks whether the request referred to by aiocbp has completed.
-
 ==此系统调用检查由 aiocbp 引用的请求是否已完成。==
 
   
 
 If it has, the routine returns success (indicated by a zero); if not, EINPROGRESS is returned.
-
 ==如果已完成，该例程返回成功（由零表示）；如果未完成，则返回 EINPROGRESS。==
 
   
 
 Thus, for every outstanding asynchronous I/O, an application can periodically poll the system via a call to aio_error() to determine whether said I/O has yet completed.
-
 ==因此，对于每一个未完成的异步 I/O，应用程序可以通过调用 aio_error() 定期轮询系统，以确定该 I/O 是否已完成。==
 
   
 
 One thing you might have noticed is that it is painful to check whether an I/O has completed.
-
 ==你可能已经注意到的一件事是，检查 I/O 是否完成是很痛苦的。==
 
   
 
 If a program has tens or hundreds of I/Os issued at a given point in time, should it simply keep checking each of them repeatedly, or wait a little while first, or ... ?
-
 ==如果一个程序在给定的时间点发出了数十或数百个 I/O，它是应该简单地重复检查每一个，还是先等一会儿，或者……？==
 
   
 
 To remedy this issue, some systems provide an approach based on the interrupt.
-
 ==为了解决这个问题，一些系统提供了一种基于中断的方法。==
 
   
 
 This method uses UNIX signals to inform applications when an asynchronous I/O completes, thus removing the need to repeatedly ask the system.
-
 ==这种方法使用 UNIX 信号在异步 I/O 完成时通知应用程序，从而消除了重复询问系统的需要。==
 
   
 
 This polling vs. interrupts issue is seen in devices too, as you will see (or already have seen) in the chapter on I/O devices.
-
 ==这种轮询与中断的问题在设备中也存在，正如你将在（或已经）在 I/O 设备章节中看到的那样。==
 
   
 
 In systems without asynchronous I/O, the pure event-based approach cannot be implemented.
-
 ==在没有异步 I/O 的系统中，无法实现纯粹的基于事件的方法。==
 
   
 
 However, clever researchers have derived methods that work fairly well in their place.
-
 ==然而，聪明的、研究人员已经衍生出了在这些地方工作得相当好的方法。==
 
   
 
 For example, Pai et al. [PDZ99] describe a hybrid approach in which events are used to process network packets, and a thread pool is used to manage outstanding I/Os.
-
 ==例如，Pai 等人 [PDZ99] 描述了一种混合方法，其中事件用于处理网络数据包，而线程池用于管理未完成的 I/O。==
 
   
 
 Read their paper for details.
-
 ==阅读他们的论文以获取详细信息。==
 
   
 
 33.7 Another Problem: State Management
-
 ==33.7 另一个问题：状态管理==
 
   
 
 Another issue with the event-based approach is that such code is generally more complicated to write than traditional thread-based code.
-
 ==基于事件的方法的另一个问题是，此类代码通常比传统的基于线程的代码编写起来更复杂。==
 
   
 
 The reason is as follows: when an event handler issues an asynchronous I/O, it must package up some program state for the next event handler to use when the I/O finally completes.
-
 ==原因如下：当事件处理程序发出异步 I/O 时，它必须打包一些程序状态，以便下一个事件处理程序在 I/O 最终完成时使用。==
 
   
 
 This additional work is not needed in thread-based programs, as the state the program needs is on the stack of the thread.
-
 ==这种额外的工作在基于线程的程序中是不需要的，因为程序所需的状态位于线程的栈上。==
 
   
 
 Adya et al. call this work manual stack management, and it is fundamental to event-based programming [A+02].
-
 ==Adya 等人称这项工作为手动栈管理，它是基于事件编程的基础 [A+02]。==
 
   
 
 To make this point more concrete, let's look at a simple example in which a thread-based server needs to read from a file descriptor (fd) and, once complete, write the data that it read from the file to a network socket descriptor (sd).
-
 ==为了使这一点更具体，让我们看一个简单的例子，其中基于线程的服务器需要从文件描述符 (fd) 读取，并且一旦完成，将从文件读取的数据写入网络套接字描述符 (sd)。==
 
   
 
 The code (ignoring error checking) looks like this:
-
 ==代码（忽略错误检查）如下所示：==
 
   
@@ -32189,133 +28233,111 @@ rc = write (sd, buffer, size);
   
 
 As you can see, in a multi-threaded program, doing this kind of work is trivial.
-
 ==如你所见，在多线程程序中，做这种工作是微不足道的。==
 
   
 
 When the read () finally returns, the code immediately knows which socket to write to because that information is on the stack of the thread (in the variable sd).
-
 ==当 read() 最终返回时，代码立即知道要写入哪个套接字，因为该信息位于线程的栈上（在变量 sd 中）。==
 
   
 
 In an event-based system, life is not so easy.
-
 ==在基于事件的系统中，生活并非如此轻松。==
 
   
 
 To perform the same task, we'd first issue the read asynchronously, using the AIO calls described above.
-
 ==要执行相同的任务，我们首先要使用上述 AIO 调用异步发出读取。==
 
   
 
 Let's say we then periodically check for completion of the read using the aio_error() call.
-
 ==假设我们随后使用 aio_error() 调用定期检查读取的完成情况。==
 
   
 
 When that call informs us that the read is complete, how does the event-based server know what to do?
-
 ==当该调用通知我们读取已完成时，基于事件的服务器如何知道该做什么？==
 
   
 
 ASIDE: UNIX SIGNALS
-
 ==旁白：UNIX 信号==
 
   
 
 A huge and fascinating infrastructure known as signals is present in all modern UNIX variants.
-
 ==在所有现代 UNIX 变体中，都存在一个巨大而迷人的基础设施，称为信号。==
 
   
 
 At its simplest, signals provide a way to communicate with a process.
-
 ==简而言之，信号提供了一种与进程通信的方式。==
 
   
 
 Specifically, a signal can be delivered to an application.
-
 ==具体来说，信号可以被传递给应用程序。==
 
   
 
 Doing so stops the application from whatever it is doing to run a signal handler, i.e., some code in the application to handle that signal.
-
 ==这样做会停止应用程序当前正在做的任何事情，转而运行信号处理程序，即应用程序中用于处理该信号的某些代码。==
 
   
 
 When finished, the process just resumes its previous behavior.
-
 ==完成后，进程将恢复其先前的行为。==
 
   
 
 Each signal has a name, such as HUP (hang up), INT (interrupt), SEGV (segmentation violation), etc.; see the man page for details.
-
 ==每个信号都有一个名称，例如 HUP（挂起）、INT（中断）、SEGV（段错误）等；详情请参阅手册页。==
 
   
 
 Interestingly, sometimes it is the kernel itself that does the signaling.
-
 ==有趣的是，有时是内核本身在发出信号。==
 
   
 
 For example, when your program encounters a segmentation violation, the OS sends it a SIGSEGV (prepending SIG to signal names is common).
-
 ==例如，当你的程序遇到段错误时，操作系统会向其发送 SIGSEGV（在信号名称前加上 SIG 是很常见的）。==
 
   
 
 If your program is configured to catch that signal, you can actually run some code in response to this erroneous program behavior (which is helpful for debugging).
-
 ==如果你的程序配置为捕获该信号，实际上你可以运行一些代码来响应这种错误的程序行为（这有助于调试）。==
 
   
 
 When a signal is sent to a process not configured to handle a signal, the default behavior is enacted.
-
 ==当信号发送到未配置为处理该信号的进程时，将执行默认行为。==
 
   
 
 For SEGV, the process is killed.
-
 ==对于 SEGV，进程会被终止。==
 
   
 
 Here is a simple program that goes into an infinite loop, but has first set up a signal handler to catch SIGHUP:
-
 ==这是一个简单的程序，它进入无限循环，但首先设置了一个信号处理程序来捕获 SIGHUP：==
 
   
 
 [Code Snippet Omitted for Brevity - Standard Signal Handler C Code]
-
 ==[代码片段]==
 
   
 
 You can send signals to it with the kill command line tool (yes, this is an odd and aggressive name).
-
 ==你可以使用 kill 命令行工具向它发送信号（是的，这是一个奇怪且具有攻击性的名字）。==
 
   
 
 Doing so will interrupt the main while loop in the program and run the handler code handle():
-
 ==这样做将中断程序中的主 while 循环并运行处理程序代码 handle()：==
 
   
@@ -32333,967 +28355,806 @@ prompt> kill -HUP 36705
   
 
 stop wakin' me up...
-
 ==别再吵醒我了……==
 
   
 
 There is a lot more to learn about signals, so much that a single chapter, much less a single page, does not nearly suffice.
-
 ==关于信号还有很多东西要学，一章的内容，更不用说一页了，完全不够。==
 
   
 
 As always, there is one great source: Stevens and Rago [SR05]. Read more if interested.
-
 ==一如既往，有一个很好的来源：Stevens 和 Rago [SR05]。如果有兴趣，请阅读更多内容。==
 
   
 
 The solution, as described by Adya et al. [A+02], is to use an old programming language construct known as a continuation [FHK84].
-
 ==正如 Adya 等人 [A+02] 所描述的，解决方案是使用一种称为延续（continuation）的古老编程语言结构 [FHK84]。==
 
   
 
 Though it sounds complicated, the idea is rather simple: basically, record the needed information to finish processing this event in some data structure.
-
 ==虽然听起来很复杂，但这个想法相当简单：基本上，将完成处理此事件所需的信息记录在某个数据结构中。==
 
   
 
 When the event happens (i.e., when the disk I/O completes), look up the needed information and process the event.
-
 ==当事件发生时（即，当磁盘 I/O 完成时），查找所需的信息并处理该事件。==
 
   
 
 In this specific case, the solution would be to record the socket descriptor (sd) in some kind of data structure (e.g., a hash table), indexed by the file descriptor (fd).
-
 ==在这个特定案例中，解决方案是将套接字描述符 (sd) 记录在某种数据结构（例如哈希表）中，以文件描述符 (fd) 为索引。==
 
   
 
 When the disk I/O completes, the event handler would use the file descriptor to look up the continuation, which will return the value of the socket descriptor to the caller.
-
 ==当磁盘 I/O 完成时，事件处理程序将使用文件描述符来查找延续，这将把套接字描述符的值返回给调用者。==
 
   
 
 At this point (finally), the server can then do the last bit of work to write the data to the socket.
-
 ==此时（终于），服务器可以进行最后一点工作，将数据写入套接字。==
 
   
 
 33.8 What Is Still Difficult With Events
-
 ==33.8 事件还有哪些困难==
 
   
 
 There are a few other difficulties with the event-based approach that we should mention.
-
 ==基于事件的方法还有一些其他困难，我们应该提一下。==
 
   
 
 For example, when systems moved from a single CPU to multiple CPUs, some of the simplicity of the event-based approach disappeared.
-
 ==例如，当系统从单 CPU 转移到多 CPU 时，基于事件的方法的一些简单性消失了。==
 
   
 
 Specifically, in order to utilize more than one CPU, the event server has to run multiple event handlers in parallel.
-
 ==具体来说，为了利用多个 CPU，事件服务器必须并行运行多个事件处理程序。==
 
   
 
 When doing so, the usual synchronization problems (e.g., critical sections) arise, and the usual solutions (e.g., locks) must be employed.
-
 ==这样做时，通常的同步问题（例如临界区）就会出现，并且必须采用通常的解决方案（例如锁）。==
 
   
 
 Thus, on modern multicore systems, simple event handling without locks is no longer possible.
-
 ==因此，在现代多核系统上，没有锁的简单事件处理已不再可能。==
 
   
 
 Another problem with the event-based approach is that it does not integrate well with certain kinds of systems activity, such as paging.
-
 ==基于事件的方法的另一个问题是，它不能很好地与某些类型的系统活动（如分页）集成。==
 
   
 
 For example, if an event-handler page faults, it will block, and thus the server will not make progress until the page fault completes.
-
 ==例如，如果事件处理程序发生页面错误，它将被阻塞，因此服务器在页面错误完成之前不会有任何进展。==
 
   
 
 Even though the server has been structured to avoid explicit blocking, this type of implicit blocking due to page faults is hard to avoid and thus can lead to large performance problems when prevalent.
-
 ==即使服务器已被构建为避免显式阻塞，这种由于页面错误引起的隐式阻塞也很难避免，因此在普遍存在时会导致严重的性能问题。==
 
   
 
 A third issue is that event-based code can be hard to manage over time, as the exact semantics of various routines changes [A+02].
-
 ==第三个问题是，随着时间的推移，基于事件的代码可能难以管理，因为各种例程的确切语义会发生变化 [A+02]。==
 
   
 
 For example, if a routine changes from non-blocking to blocking, the event handler that calls that routine must also change to accommodate its new nature, by ripping itself into two pieces.
-
 ==例如，如果一个例程从非阻塞变为阻塞，调用该例程的事件处理程序也必须改变以适应其新性质，将其自身拆分为两部分。==
 
   
 
 Because blocking is so disastrous for event-based servers, a programmer must always be on the lookout for such changes in the semantics of the APIs each event uses.
-
 ==因为阻塞对基于事件的服务器来说是灾难性的，程序员必须时刻警惕每个事件使用的 API 语义中的这种变化。==
 
   
 
 Finally, though asynchronous disk I/O is now possible on most platforms, it has taken a long time to get there [PDZ99], and it never quite integrates with asynchronous network I/O in as simple and uniform a manner as you might think.
-
 ==最后，虽然异步磁盘 I/O 现在在大多数平台上都是可能的，但实现这一目标花了很长时间 [PDZ99]，而且它从未像你想象的那样简单统一地与异步网络 I/O 集成。==
 
   
 
 For example, while one would simply like to use the select () interface to manage all outstanding I/Os, usually some combination of select () for networking and the AIO calls for disk I/O are required.
-
 ==例如，虽然人们只想使用 select() 接口来管理所有未完成的 I/O，但通常需要结合用于网络的 select() 和用于磁盘 I/O 的 AIO 调用。==
 
   
 
 33.9 Summary
-
 ==33.9 总结==
 
   
 
 We've presented a bare bones introduction to a different style of concurrency based on events.
-
 ==我们简要介绍了一种基于事件的不同并发风格。==
 
   
 
 Event-based servers give control of scheduling to the application itself, but do so at some cost in complexity and difficulty of integration with other aspects of modern systems (e.g., paging).
-
 ==基于事件的服务器将调度控制权交给应用程序本身，但这样做在复杂性和与现代系统其他方面（例如分页）集成的难度方面付出了一些代价。==
 
   
 
 Because of these challenges, no single approach has emerged as best.
-
 ==由于这些挑战，没有一种单一的方法成为最佳方法。==
 
   
 
 Thus, both threads and events are likely to persist as two different approaches to the same concurrency problem for many years to come.
-
 ==因此，线程和事件可能会作为解决同一并发问题的两种不同方法持续存在很多年。==
 
   
 
 Read some research papers (e.g., [A+02, PDZ99, vB+03, WCB01]) or better yet, write some event-based code, to learn more.
-
 ==阅读一些研究论文（例如 [A+02, PDZ99, vB+03, WCB01]），或者更好的是，编写一些基于事件的代码，以了解更多信息。==
 
   
 
 Homework (Code)
-
 ==作业（代码）==
 
   
 
 In this (short) homework, you'll gain some experience with event-based code and some of its key concepts. Good luck!
-
 ==在这个（简短的）作业中，你将获得一些基于事件的代码及其关键概念的经验。祝好运！==
 
   
 
 Questions
-
 ==问题==
 
   
 
 1. First, write a simple server that can accept and serve TCP connections.
-
 ==2. 首先，编写一个可以接受并服务 TCP 连接的简单服务器。==
 
   
 
 You'll have to poke around the Internet a bit if you don't already know how to do this.
-
 ==如果你还不知道怎么做，你必须在互联网上搜索一下。==
 
   
 
 Build this to serve exactly one request at a time; have each request be very simple, e.g., to get the current time of day.
-
 ==构建它以一次仅服务一个请求；让每个请求都非常简单，例如，获取当前时间。==
 
   
 
 2. Now, add the select () interface.
-
 ==3. 现在，添加 select() 接口。==
 
   
 
 Build a main program that can accept multiple connections, and an event loop that checks which file descriptors have data on them, and then read and process those requests.
-
 ==构建一个可以接受多个连接的主程序，以及一个检查哪些文件描述符上有数据的事件循环，然后读取并处理这些请求。==
 
   
 
 Make sure to carefully test that you are using select () correctly.
-
 ==确保仔细测试你是否正确使用了 select()。==
 
   
 
 3. Next, let's make the requests a little more interesting, to mimic a simple web or file server.
-
 ==4. 接下来，让我们让请求更有趣一点，模仿一个简单的 Web 或文件服务器。==
 
   
 
 Each request should be to read the contents of a file (named in the request), and the server should respond by reading the file into a buffer, and then returning the contents to the client.
-
 ==每个请求都应该是读取文件（在请求中命名）的内容，服务器应通过将文件读入缓冲区然后将内容返回给客户端来响应。==
 
   
 
 Use the standard open (), read(), close() system calls to implement this feature.
-
 ==使用标准的 open()、read()、close() 系统调用来实现此功能。==
 
   
 
 Be a little careful here: if you leave this running for a long time, someone may figure out how to use it to read all the files on your computer!
-
 ==这里要小心一点：如果你让它长时间运行，有人可能会弄清楚如何使用它来读取你计算机上的所有文件！==
 
   
 
 4. Now, instead of using standard I/O system calls, use the asynchronous I/O interfaces as described in the chapter.
-
 ==5. 现在，不要使用标准的 I/O 系统调用，而是使用本章中描述的异步 I/O 接口。==
 
   
 
 How hard was it to incorporate asynchronous interfaces into your program?
-
 ==将异步接口合并到你的程序中有多难？==
 
   
 
 5. For fun, add some signal handling to your code.
-
 ==6. 为了好玩，在你的代码中添加一些信号处理。==
 
   
 
 One common use of signals is to poke a server to reload some kind of configuration file, or take some other kind of administrative action.
-
 ==信号的一种常见用途是提示服务器重新加载某种配置文件，或采取某种其他管理操作。==
 
   
 
 Perhaps one natural way to play around with this is to add a user-level file cache to your server, which stores recently accessed files.
-
 ==也许玩这个的一种自然方式是在你的服务器中添加一个用户级文件缓存，用于存储最近访问的文件。==
 
   
 
 Implement a signal handler that clears the cache when the signal is sent to the server process.
-
 ==实现一个信号处理程序，当信号发送到服务器进程时清除缓存。==
 
   
 
 6. Finally, we have the hard part: how can you tell if the effort to build an asynchronous, event-based approach are worth it?
-
 ==7. 最后，我们遇到了困难的部分：你怎么知道构建异步、基于事件的方法的努力是否值得？==
 
   
 
 Can you create an experiment to show the benefits?
-
 ==你能创建一个实验来展示其好处吗？==
 
   
 
 How much implementation complexity did your approach add?
-
 ==你的方法增加了多少实现复杂性？==
 
   
 
 Summary Dialogue on Concurrency
-
 ==关于并发的总结对话==
 
   
 
 Professor: So, does your head hurt now?
-
 ==教授：那么，你的头现在疼吗？==
 
   
 
 Student: (taking two Motrin tablets) Well, some. It's hard to think about all the ways threads can interleave.
-
 ==学生：（服用了两片布洛芬）嗯，有点。很难思考线程交错的所有方式。==
 
   
 
 Professor: Indeed it is. I am always amazed that when concurrent execution is involved, just a few lines of code can become nearly impossible to understand.
-
 ==教授：确实如此。我总是惊讶于当涉及并发执行时，只有几行代码也会变得几乎无法理解。==
 
   
 
 Student: Me too! It's kind of embarrassing, as a Computer Scientist, not to be able to make sense of five lines of code.
-
 ==学生：我也是！作为一名计算机科学家，搞不懂五行代码有点尴尬。==
 
   
 
 Professor: Oh, don't feel too badly. If you look through the first papers on concurrent algorithms, they are sometimes wrong!
-
 ==教授：哦，别太难过。如果你查看关于并发算法的最早的论文，它们有时也是错的！==
 
   
 
 And the authors often professors!
-
 ==而且作者通常是教授！==
 
   
 
 Student: (gasps) Professors can be umm... wrong?
-
 ==学生：（倒吸一口气）教授也可能……呃……犯错？==
 
   
 
 Professor: Yes, it is true. Though don't tell anybody it's one of our trade secrets.
-
 ==教授：是的，这是真的。不过别告诉任何人，这是我们的商业秘密之一。==
 
   
 
 Student: I am sworn to secrecy. But if concurrent code is so hard to think about, and so hard to get right, how are we supposed to write correct concurrent code?
-
 ==学生：我发誓保密。但是，如果并发代码如此难以思考，并且如此难以正确编写，我们应该如何编写正确的并发代码呢？==
 
   
 
 Professor: Well that is the real question, isn't it? I think it starts with a few simple things.
-
 ==教授：这才是真正的问题，不是吗？我认为这始于几件简单的事情。==
 
   
 
 First, keep it simple! Avoid complex interactions between threads, and use well-known and tried-and-true ways to manage thread interactions.
-
 ==首先，保持简单！避免线程之间的复杂交互，并使用众所周知的、经过验证的方法来管理线程交互。==
 
   
 
 Student: Like simple locking, and maybe a producer-consumer queue?
-
 ==学生：比如简单的锁，或者生产者-消费者队列？==
 
   
 
 Professor: Exactly! Those are common paradigms, and you should be able to produce the working solutions given what you've learned.
-
 ==教授：没错！这些是常见的范例，根据你所学的知识，你应该能够生成有效的解决方案。==
 
   
 
 Second, only use concurrency when absolutely needed; avoid it if at all possible.
-
 ==其次，仅在绝对需要时才使用并发；如果可能的话，尽量避免使用它。==
 
   
 
 There is nothing worse than premature optimization of a program.
-
 ==没有什么比程序的过早优化更糟糕的了。==
 
   
 
 Student: I see why add threads if you don't need them?
-
 ==学生：我明白了，如果你不需要线程，为什么要添加它们？==
 
   
 
 Professor: Exactly. Third, if you really need parallelism, seek it in other simplified forms.
-
 ==教授：没错。第三，如果你真的需要并行性，请以其他简化形式寻求它。==
 
   
 
 For example, the Map-Reduce method for writing parallel data analysis code is an excellent example of achieving parallelism without having to handle any of the horrific complexities of locks, condition variables, and the other nasty things we've talked about.
-
 ==例如，编写并行数据分析代码的 Map-Reduce 方法就是实现并行性的绝佳示例，而无需处理锁、条件变量和我们讨论过的其他讨厌事物的可怕复杂性。==
 
   
 
 Student: Map-Reduce, huh? Sounds interesting - I'll have to read more about it on my own.
-
 ==学生：Map-Reduce，嗯？听起来很有趣——我得自己去多读读。==
 
   
 
 Professor: Good! You should. In the end, you'll have to do a lot of that, as what we learn together can only serve as the barest introduction to the wealth of knowledge that is out there.
-
 ==教授：很好！你应该这样做。最后，你将不得不做很多这样的事情，因为我们一起学到的东西只能作为对现有丰富知识的最基本的介绍。==
 
   
 
 Read, read, and read some more! And then try things out, write some code, and then write some more too.
-
 ==阅读，阅读，再阅读！然后尝试一下，写一些代码，然后再写更多代码。==
 
   
 
 And practice more, too; beyond what's in this book, there are plenty of other resources out there.
-
 ==还要多练习；除了这本书里的内容，外面还有很多其他资源。==
 
   
 
 As Gladwell talks about in his book "Outliers", you need to put roughly 10,000 hours into something in order to become a real expert.
-
 ==正如 Gladwell 在他的书《异类》中所说，你需要投入大约 10,000 小时做某事才能成为真正的专家。==
 
   
 
 You can't do that all inside of class time!
-
 ==你不可能在课堂时间内完成所有这些！==
 
   
 
 Student: Wow, I'm not sure if that is depressing, or uplifting. But I'll assume the latter, and get to work!
-
 ==学生：哇，我不确定这是令人沮丧还是令人振奋。但我假设是后者，然后开始工作！==
 
   
 
 Time to write some more concurrent code...
-
 ==是时候多写点并发代码了……==
 
   
 
 Here is a link to one, in gamified form: [https://deadlockempire.github.io/](https://deadlockempire.github.io/)
-
 ==这里有一个链接，是游戏化形式的：[https://deadlockempire.github.io/](https://deadlockempire.github.io/)==
 
   
 
 Part III Persistence
-
 ==第三部分 持久性==
 
   
 
 A Dialogue on Persistence
-
 ==关于持久性的对话==
 
   
 
 Professor: And thus we reach the third of our four... err... three pillars of operating systems: persistence.
-
 ==教授：因此，我们到达了操作系统的四个……呃……三个支柱中的第三个：持久性。==
 
   
 
 Student: Did you say there were three pillars, or four? What is the fourth?
-
 ==学生：你是说有三个支柱，还是四个？第四个是什么？==
 
   
 
 Professor: No. Just three, young student, just three. Trying to keep it simple here.
-
 ==教授：不。只有三个，年轻的学生，只有三个。这里尽量保持简单。==
 
   
 
 Student: OK, fine. But what is persistence, oh fine and noble professor?
-
 ==学生：好吧，行。但是什么是持久性，哦，优秀而高贵的教授？==
 
   
 
 Professor: Actually, you probably know what it means in the traditional sense, right?
-
 ==教授：实际上，你可能知道它在传统意义上意味着什么，对吧？==
 
   
 
 As the dictionary would say: "a firm or obstinate continuance in a course of action in spite of difficulty or opposition."
-
 ==正如字典所说：“在困难或反对面前坚定或顽固地继续行动。”==
 
   
 
 Student: It's kind of like taking your class: some obstinance required.
-
 ==学生：这有点像上你的课：需要一些固执。==
 
   
 
 Professor: Ha! Yes. But persistence here means something else. Let me explain.
-
 ==教授：哈！是的。但这里的持久性意味着别的东西。让我解释一下。==
 
   
 
 Imagine you are outside, in a field, and you pick a
-
 ==教授：想象你在外面，在田野里，你摘了一个==
 
   
 
 Student: (interrupting) I know! A peach! From a peach tree!
-
 ==学生：（打断）我知道！一个桃子！从桃树上摘的！==
 
   
 
 Professor: I was going to say apple, from an apple tree. Oh well; we'll do it your way, I guess.
-
 ==教授：我本来想说苹果，从苹果树上摘的。哦，好吧；我想我们就按你说的来吧。==
 
   
 
 Student: (stares blankly)
-
 ==学生：（茫然地注视着）==
 
   
 
 Professor: Anyhow, you pick a peach; in fact, you pick many many peaches, but you want to make them last for a long time.
-
 ==教授：不管怎样，你摘了一个桃子；事实上，你摘了很多很多桃子，但你想让它们保存很长时间。==
 
   
 
 Winter is hard and cruel in Wisconsin, after all. What do you do?
-
 ==毕竟，威斯康星州的冬天艰难而残酷。你做什么？==
 
   
 
 Student: Well, I think there are some different things you can do. You can pickle it! Or bake a pie.
-
 ==学生：嗯，我想你可以做一些不同的事情。你可以把它腌起来！或者烤个派。==
 
   
 
 Or make a jam of some kind. Lots of fun!
-
 ==或者做某种果酱。很有趣！==
 
   
 
 Professor: Fun? Well, maybe. Certainly, you have to do a lot more work to make the peach persist.
-
 ==教授：有趣？嗯，也许吧。当然，你必须做更多的工作才能让桃子持久保存。==
 
   
 
 And so it is with information as well; making information persist, despite computer crashes, disk failures, or power outages is a tough and interesting challenge.
-
 ==信息也是如此；即使在计算机崩溃、磁盘故障或停电的情况下，使信息持久化也是一项艰巨而有趣的挑战。==
 
   
 
 Student: Nice segue; you're getting quite good at that.
-
 ==学生：很好的过渡；你很擅长这个。==
 
   
 
 Professor: Thanks! A professor can always use a few kind words, you know.
-
 ==教授：谢谢！教授总是需要一些好听的话，你知道的。==
 
   
 
 Student: I'll try to remember that. I guess it's time to stop talking peaches, and start talking computers?
-
 ==学生：我会尽量记住这一点。我想是时候停止谈论桃子，开始谈论计算机了？==
 
   
 
 Professor: Yes, it is that time...
-
 ==教授：是的，是时候了……==
 
   
 
 I/O Devices
-
 ==I/O 设备==
 
   
 
 Before delving into the main content of this part of the book (on persistence), we first introduce the concept of an input/output (I/O) device and show how the operating system might interact with such an entity.
-
 ==在深入探讨本书这一部分的主要内容（关于持久性）之前，我们首先介绍输入/输出 (I/O) 设备的概念，并展示操作系统如何与此类实体交互。==
 
   
 
 I/O is quite critical to computer systems, of course; imagine a program without any input (it produces the same result each time);
-
 ==I/O 对计算机系统当然至关重要；想象一个没有任何输入的程序（它每次都产生相同的结果）；==
 
   
 
 Now imagine a program with no output (what was the purpose of it running?).
-
 ==现在想象一个没有输出的程序（运行它的目的是什么？）。==
 
   
 
 Clearly, for computer systems to be interesting, both input and output are required.
-
 ==显然，要让计算机系统变得有趣，输入和输出都是必需的。==
 
   
 
 And thus, our general problem:
-
 ==因此，我们的一般性问题是：==
 
   
 
 CRUX: HOW TO INTEGRATE I/O INTO SYSTEMS
-
 ==关键：如何将 I/O 集成到系统中==
 
   
 
 How should I/O be integrated into systems?
-
 ==I/O 应该如何集成到系统中？==
 
   
 
 What are the general mechanisms?
-
 ==一般机制是什么？==
 
   
 
 How can we make them efficient?
-
 ==我们要如何使它们高效？==
 
   
 
 36.1 System Architecture
-
 ==36.1 系统架构==
 
   
 
 To begin our discussion, let's look at a "classical" diagram of a typical system (Figure 36.1, page 2).
-
 ==为了开始我们的讨论，让我们看一个典型系统的“经典”图（图 36.1，第 2 页）。==
 
   
 
 The picture shows a single CPU attached to the main memory of the system via some kind of memory bus or interconnect.
-
 ==该图显示了单个 CPU 通过某种内存总线或互连连接到系统的主内存。==
 
   
 
 Some devices are connected to the system via a general I/O bus, which in many modern systems would be PCI (or one of its many derivatives);
-
 ==一些设备通过通用 I/O 总线连接到系统，在许多现代系统中，这将是 PCI（或其众多衍生产品之一）；==
 
   
 
 Graphics and some other higher-performance I/O devices might be found here.
-
 ==图形和其他一些高性能 I/O 设备可能会在这里找到。==
 
   
 
 Finally, even lower down are one or more of what we call a peripheral bus, such as SCSI, SATA, or USB.
-
 ==最后，再往下是一个或多个我们称为外围总线的东西，例如 SCSI、SATA 或 USB。==
 
   
 
 These connect slow devices to the system, including disks, mice, and keyboards.
-
 ==这些总线将慢速设备连接到系统，包括磁盘、鼠标和键盘。==
 
   
 
 One question you might ask is: why do we need a hierarchical structure like this?
-
 ==你可能会问的一个问题是：为什么我们需要这种分层结构？==
 
   
 
 Put simply: physics, and cost.
-
 ==简而言之：物理学和成本。==
 
   
 
 The faster a bus is, the shorter it must be;
-
 ==总线越快，它就必须越短；==
 
   
 
 Thus, a high-performance memory bus does not have much room to plug devices and such into it.
-
 ==因此，高性能内存总线没有太多空间来插入设备等。==
 
   
 
 In addition, engineering a bus for high performance is quite costly.
-
 ==此外，设计高性能总线的成本相当高。==
 
   
 
 Thus, system designers have adopted this hierarchical approach, where components that demand high performance (such as the graphics card) are nearer the CPU.
-
 ==因此，系统设计人员采用了这种分层方法，其中要求高性能的组件（例如显卡）更靠近 CPU。==
 
   
 
 Lower performance components are further away.
-
 ==性能较低的组件则更远。==
 
   
 
 The benefits of placing disks and other slow devices on a peripheral bus are manifold;
-
 ==将磁盘和其他慢速设备放在外围总线上的好处是多方面的；==
 
   
 
 In particular, you can place a large number of devices on it.
-
 ==特别是，你可以在上面放置大量设备。==
 
   
 
 Figure 36.1: Prototypical System Architecture
-
 ==图 36.1：原型系统架构==
 
   
 
 Of course, modern systems increasingly use specialized chipsets and faster point-to-point interconnects to improve performance.
-
 ==当然，现代系统越来越多地使用专用芯片组和更快的点对点互连来提高性能。==
 
   
 
 Figure 36.2 (page 3) shows an approximate diagram of Intel's Z270 Chipset [H17].
-
 ==图 36.2（第 3 页）显示了英特尔 Z270 芯片组的近似图 [H17]。==
 
   
 
 Along the top, the CPU connects most closely to the memory system, but also has a high-performance connection to the graphics card (and thus, the display) to enable gaming (oh, the horror!) and other graphics-intensive applications.
-
 ==在顶部，CPU 与内存系统的连接最紧密，但也与显卡（以及显示器）有高性能连接，以支持游戏（哦，太可怕了！）和其他图形密集型应用程序。==
 
   
 
 The CPU connects to an I/O chip via Intel's proprietary DMI (Direct Media Interface), and the rest of the devices connect to this chip via a number of different interconnects.
-
 ==CPU 通过英特尔专有的 DMI（直接媒体接口）连接到 I/O 芯片，其余设备通过许多不同的互连连接到该芯片。==
 
   
 
 On the right, one or more hard drives connect to the system via the eSATA interface;
-
 ==在右侧，一个或多个硬盘驱动器通过 eSATA 接口连接到系统；==
 
   
 
 ATA (the AT Attachment, in reference to providing connection to the IBM PC AT), then SATA (for Serial ATA), and now eSATA (for external SATA) represent an evolution of storage interfaces over the past decades, with each step forward increasing performance to keep pace with modern storage devices.
-
 ==ATA（AT 附件，指提供与 IBM PC AT 的连接），然后是 SATA（串行 ATA），现在是 eSATA（外部 SATA），代表了过去几十年存储接口的演变，每一步都提高了性能以跟上现代存储设备的步伐。==
 
   
 
 Below the I/O chip are a number of USB (Universal Serial Bus) connections, which in this depiction enable a keyboard and mouse to be attached to the computer.
-
 ==在 I/O 芯片下方有许多 USB（通用串行总线）连接，在此描述中，这些连接允许键盘和鼠标连接到计算机。==
 
   
 
 On many modern systems, USB is used for low performance devices such as these.
-
 ==在许多现代系统上，USB 用于此类低性能设备。==
 
   
 
 Finally, on the left, other higher performance devices can be connected to the system via PCIe (Peripheral Component Interconnect Express).
-
 ==最后，在左侧，其他高性能设备可以通过 PCIe（外围组件互连高速）连接到系统。==
 
   
 
 In this diagram, a network interface is attached to the system here;
-
 ==在该图中，网络接口连接在此处；==
 
   
 
 Higher performance storage devices (such as NVMe persistent storage devices) are often connected here.
-
 ==更高性能的存储设备（例如 NVMe 持久存储设备）通常连接在这里。==
 
   
 
 Figure 36.2: Modern System Architecture
-
 ==图 36.2：现代系统架构==
 
   
 
 36.2 A Canonical Device
-
 ==36.2 典型设备==
 
   
 
 Let us now look at a canonical device (not a real one), and use this device to drive our understanding of some of the machinery required to make device interaction efficient.
-
 ==现在让我们看一个典型设备（不是真实的），并使用该设备来加深我们对使设备交互高效所需的某些机制的理解。==
 
   
 
 From Figure 36.3 (page 4), we can see that a device has two important components.
-
 ==从图 36.3（第 4 页）可以看出，一个设备有两个重要组件。==
 
   
 
 The first is the hardware interface it presents to the rest of the system.
-
 ==第一个是它呈现给系统其余部分的硬件接口。==
 
   
 
 Just like a piece of software, hardware must also present some kind of interface that allows the system software to control its operation.
-
 ==就像软件一样，硬件也必须呈现某种允许系统软件控制其操作的接口。==
 
   
 
 Thus, all devices have some specified interface and protocol for typical interaction.
-
 ==因此，所有设备都有一些指定的接口和协议来进行典型交互。==
 
   
 
 The second part of any device is its internal structure.
-
 ==任何设备的第二部分都是其内部结构。==
 
   
 
 This part of the device is implementation specific and is responsible for implementing the abstraction the device presents to the system.
-
 ==设备的这部分是特定于实现的，负责实现设备向系统呈现的抽象。==
 
   
 
 Very simple devices will have one or a few hardware chips to implement their functionality;
-
 ==非常简单的设备将拥有一个或几个硬件芯片来实现其功能；==
 
   
 
 More complex devices will include a simple CPU, some general purpose memory, and other device-specific chips to get their job done.
-
 ==更复杂的设备将包括一个简单的 CPU、一些通用内存和其他特定于设备的芯片来完成其工作。==
 
   
 
 For example, modern RAID controllers might consist of hundreds of thousands of lines of firmware (i.e., software within a hardware device) to implement its functionality.
-
 ==例如，现代 RAID 控制器可能包含数十万行固件（即硬件设备中的软件）来实现其功能。==
 
   
 
 Figure 36.3: A Canonical Device
-
 ==图 36.3：典型设备==
 
   
 
 36.3 The Canonical Protocol
-
 ==36.3 典型协议==
 
   
 
 In the picture above, the (simplified) device interface is comprised of three registers: a status register, which can be read to see the current status of the device;
-
 ==在上图中，（简化的）设备接口由三个寄存器组成：一个状态寄存器，可以读取它来查看设备的当前状态；==
 
   
 
 A command register, to tell the device to perform a certain task;
-
 ==一个命令寄存器，告诉设备执行特定任务；==
 
   
 
 And a data register to pass data to the device, or get data from the device.
-
 ==以及一个数据寄存器，用于向设备传递数据，或从设备获取数据。==
 
   
 
 By reading and writing these registers, the operating system can control device behavior.
-
 ==通过读写这些寄存器，操作系统可以控制设备行为。==
 
   
 
 Let us now describe a typical interaction that the OS might have with the device in order to get the device to do something on its behalf.
-
 ==现在让我们描述操作系统可能与设备进行的典型交互，以便让设备为其执行某些操作。==
 
   
 
 The protocol is as follows:
-
 ==协议如下：==
 
   
@@ -33323,17 +29184,14 @@ While (STATUS == BUSY)
 ```c
 
 While (STATUS == BUSY)
-
 ==    ; // 等待直到设备不忙==
 
 Write data to DATA register
 
 Write command to COMMAND register
-
 ==(启动设备并执行命令)==
 
 While (STATUS == BUSY)
-
 ==    ; // 等待直到设备完成你的请求==
 
   
@@ -33343,193 +29201,161 @@ While (STATUS == BUSY)
   
 
 The protocol has four steps.
-
 ==该协议有四个步骤。==
 
   
 
 In the first, the OS waits until the device is ready to receive a command by repeatedly reading the status register;
-
 ==第一步，OS 通过重复读取状态寄存器来等待设备准备好接收命令；==
 
   
 
 We call this polling the device (basically, just asking it what is going on).
-
 ==我们要称之为轮询设备（基本上就是问它发生了什么）。==
 
   
 
 Second, the OS sends some data down to the data register;
-
 ==第二，OS 将一些数据发送到数据寄存器；==
 
   
 
 One can imagine that if this were a disk, for example, that multiple writes would need to take place to transfer a disk block (say 4KB) to the device.
-
 ==可以想象，例如，如果这是一个磁盘，则需要进行多次写入才能将一个磁盘块（比如 4KB）传输到设备。==
 
   
 
 When the main CPU is involved with the data movement (as in this example protocol), we refer to it as programmed I/O (PIO).
-
 ==当主 CPU 参与数据移动时（如本示例协议中所示），我们将其称为程序控制 I/O (PIO)。==
 
   
 
 Third, the OS writes a command to the command register;
-
 ==第三，OS 将命令写入命令寄存器；==
 
   
 
 Doing so implicitly lets the device know that both the data is present and that it should begin working on the command.
-
 ==这样做隐含地让设备知道数据已存在，并且它应该开始处理命令。==
 
   
 
 Finally, the OS waits for the device to finish by again polling it in a loop, waiting to see if it is finished (it may then get an error code to indicate success or failure).
-
 ==最后，OS 通过再次在循环中轮询设备来等待设备完成，等待查看它是否已完成（它可能会获得一个错误代码来指示成功或失败）。==
 
   
 
 This basic protocol has the positive aspect of being simple and working.
-
 ==这个基本协议的积极方面是简单且有效。==
 
   
 
 However, there are some inefficiencies and inconveniences involved.
-
 ==但是，这涉及一些低效和不便之处。==
 
   
 
 The first problem you might notice in the protocol is that polling seems inefficient;
-
 ==你可能在协议中注意到的第一个问题是轮询似乎效率低下；==
 
   
 
 Specifically, it wastes a great deal of CPU time just waiting for the (potentially slow) device to complete its activity, instead of switching to another ready process and thus better utilizing the CPU.
-
 ==具体来说，它浪费了大量的 CPU 时间来等待（可能很慢的）设备完成其活动，而不是切换到另一个就绪进程，从而更好地利用 CPU。==
 
   
 
 THE CRUX: How To AVOID THE COSTS OF POLLING
-
 ==关键：如何避免轮询的成本==
 
   
 
 How can the OS check device status without frequent polling, and thus lower the CPU overhead required to manage the device?
-
 ==OS 如何在不频繁轮询的情况下检查设备状态，从而降低管理设备所需的 CPU 开销？==
 
   
 
 36.4 Lowering CPU Overhead With Interrupts
-
 ==36.4 使用中断降低 CPU 开销==
 
   
 
 The invention that many engineers came upon years ago to improve this interaction is something we've seen already: the interrupt.
-
 ==许多工程师多年前发明来改善这种交互的东西是我们已经见过的：中断。==
 
   
 
 Instead of polling the device repeatedly, the OS can issue a request, put the calling process to sleep, and context switch to another task.
-
 ==OS 可以发出请求，让调用进程进入睡眠状态，并上下文切换到另一个任务，而不是重复轮询设备。==
 
   
 
 When the device is finally finished with the operation, it will raise a hardware interrupt, causing the CPU to jump into the OS at a predetermined interrupt service routine (ISR) or more simply an interrupt handler.
-
 ==当设备最终完成操作时，它将引发硬件中断，导致 CPU 跳转到 OS 中预定的中断服务程序 (ISR) 或更简单地说中断处理程序。==
 
   
 
 The handler is just a piece of operating system code that will finish the request (for example, by reading data and perhaps an error code from the device) and wake the process waiting for the I/O, which can then proceed as desired.
-
 ==处理程序只是一段操作系统代码，它将完成请求（例如，通过从设备读取数据和可能的错误代码）并唤醒等待 I/O 的进程，该进程随后可以按预期继续。==
 
   
 
 Interrupts thus allow for overlap of computation and I/O which is key for improved utilization.
-
 ==因此，中断允许计算和 I/O 重叠，这是提高利用率的关键。==
 
   
 
 In the diagram, Process 1 runs on the CPU for some time (indicated by a repeated 1 on the CPU line), and then issues an I/O request to the disk to read some data.
-
 ==在该图中，进程 1 在 CPU 上运行一段时间（由 CPU 行上重复的 1 表示），然后向磁盘发出 I/O 请求以读取一些数据。==
 
   
 
 Without interrupts, the system simply spins, polling the status of the device repeatedly until the I/O is complete (indicated by a p).
-
 ==如果没有中断，系统只会空转，重复轮询设备的状态，直到 I/O 完成（由 p 表示）。==
 
   
 
 The disk services the request and finally Process 1 can run again.
-
 ==磁盘服务请求，最后进程 1 可以再次运行。==
 
   
 
 If instead we utilize interrupts and allow for overlap, the OS can do something else while waiting for the disk.
-
 ==相反，如果我们利用中断并允许重叠，OS 可以在等待磁盘时做其他事情。==
 
   
 
 In this example, the OS runs Process 2 on the CPU while the disk services Process 1's request.
-
 ==在此示例中，OS 在磁盘服务进程 1 的请求时在 CPU 上运行进程 2。==
 
   
 
 When the disk request is finished, an interrupt occurs, and the OS wakes up Process 1 and runs it again.
-
 ==当磁盘请求完成时，会发生中断，OS 唤醒进程 1 并再次运行它。==
 
   
 
 Thus, both the CPU and the disk are properly utilized during the middle stretch of time.
-
 ==因此，CPU 和磁盘在中间段时间内都得到了适当的利用。==
 
   
 
 Note that using interrupts is not always the best solution.
-
 ==请注意，使用中断并不总是最佳解决方案。==
 
   
 
 For example, imagine a device that performs its tasks very quickly: the first poll usually finds the device to be done with task.
-
 ==例如，设想一个执行任务非常快的设备：第一次轮询通常会发现设备已完成任务。==
 
   
 
 Using an interrupt in this case will actually slow down the system: switching to another process, handling the interrupt, and switching back to the issuing process is expensive.
-
 ==在这种情况下使用中断实际上会降低系统速度：切换到另一个进程、处理中断以及切换回发出请求的进程是昂贵的。==
 
   
 
 Thus, if a device is fast, it may be best to poll; if it is slow, interrupts, which allow overlap, are best.
-
 ==因此，如果设备很快，最好进行轮询；如果它很慢，允许重叠的中断是最好的。==
 
 I/O DEVICES
@@ -38732,10 +34558,6 @@ issue | issue
 
 complete | complete
 ==完成 | 完成==
-
-
-
-
 ==### 第 42 章：崩溃一致性（续）==
 
 Figure 42.2: Metadata Journaling Timeline
@@ -38818,7 +34640,6 @@ For some workloads, these optimistic techniques can improve performance by an or
 
 However, to truly function well, a slightly different disk interface is required [C+13].
 ==然而，为了真正发挥作用，需要一种略有不同的磁盘接口 [C+13]。==
-
 ==### 第 43 章：日志结构文件系统 (Log-structured File Systems)==
 
 In the early 90’s, a group at Berkeley led by Professor John Ousterhout and graduate student Mendel Rosenblum developed a new file system known as the **log-structured file system** [RO91].
@@ -39816,10 +35637,6 @@ Dive in and learn more about this “iceberg” of research on your own.
 
 Be careful though; icebergs can sink even the mightiest of ships.
 ==不过要小心；冰山甚至能撞沉最强大的舰船。==
-
-
-
-
 ==### 第一步：数据清洗 | 第二步：句子切分 | 第三步：输出格式==
 
 ASIDE: KEY SSD TERMS
@@ -42649,10 +38466,6 @@ At a high level, these two options may not sound very different, but when you st
 
 Let’s walk through each in turn.
 ==让我们依次介绍每一个。==
-
-
-
-
 ==### 第一步：数据清洗 & 第二步：句子切分 & 第三步：输出格式==
 
 **ASIDE: THE ANDROID ACCESS CONTROL MODEL**
@@ -45368,21 +41181,16 @@ TARG = hw
 CC = gcc
 OPTS = -Wall -O
 LIBS = -lm
-
 ==# 这将源列表中的 .c 文件转换为 .o 文件==
 OBJS = $(SRCS:.c=.o)
-
 ==# all 并不是真正需要的，但用于生成目标==
 all: $(TARG)
-
 ==# 这将生成目标可执行文件==
 $(TARG): $(OBJS)
     $(CC) -o $(TARG) $(OBJS) $(LIBS)
-
 ==# 这是一个用于 .o 文件的通用规则==
 %.o: %.c
     $(CC) $(OPTS) -c $< -o $@
-
 ==# 最后是一个 clean 行==
 clean:
     rm -f $(OBJS) $(TARG)
@@ -45514,7 +41322,6 @@ Program received signal SIGSEGV, Segmentation fault.
 ```text
 (gdb) run
 Starting program: buggy
-
 ==程序接收到信号 SIGSEGV，段错误。==
 0x8048433 in main (argc=1, argv=0xbffff844) at buggy.c:19
 19 printf("%d\n", p->x);
@@ -45574,13 +41381,11 @@ Program received signal SIGSEGV, Segmentation fault.
 ==断点 1 位于 0x8048426：文件 buggy.c，第 17 行。==
 (gdb) run
 ==正在启动程序：/homes/hacker/buggy==
-
 ==断点 1，main (argc=1, argv=0xbffff844) 位于 buggy.c:17==
 17 struct Data *p = NULL;
 (gdb) next
 19 printf("%d\n", p->x);
 (gdb) next
-
 ==程序接收到信号 SIGSEGV，段错误。==
 0x8048433 in main (argc=1, argv=0xbffff844) at buggy.c:19
 19 printf("%d\n", p->x);
