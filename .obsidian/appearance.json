@@ -2,5 +2,6 @@
   "enabledCssSnippets": [
     "my_style",
     "spoiler"
-  ]
+  ],
+  "cssTheme": "Minimal"
 }

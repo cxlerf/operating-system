@@ -4536,167 +4536,126 @@ Special instructions to trap into the kernel and return-from-trap back to user-m
 ==此外，还提供了陷入（trap）内核和从陷阱返回（return-from-trap）到用户模式程序的特殊指令。==
 
 Instructions that allow the OS to tell the hardware where the trap table resides in memory are also provided.
-
 ==还提供了允许操作系统告诉硬件陷阱表（trap table）在内存中驻留位置的指令。==
 
 To execute a system call, a program must execute a special trap instruction.
-
 ==要执行系统调用，程序必须执行一条特殊的陷阱指令。==
 
 This instruction simultaneously jumps into the kernel and raises the privilege level to kernel mode.
-
 ==该指令同时跳入内核并将特权级别提升为内核模式。==
 
 Once in the kernel, the system can now perform whatever privileged operations are needed (if allowed), and thus do the required work for the calling process.
-
 ==一旦进入内核，系统就可以执行所需的任何特权操作（如果允许），从而为调用进程完成所需的工作。==
 
 When finished, the OS calls a special return-from-trap instruction, which returns into the calling user program while simultaneously reducing the privilege level back to user mode.
-
 ==完成后，操作系统调用一条特殊的从陷阱返回指令，该指令返回到调用的用户程序，同时将特权级别降低回用户模式。==
 
 The hardware needs to be a bit careful when executing a trap, in that it must make sure to save enough of the caller's registers in order to be able to return correctly.
-
 ==硬件在执行陷阱时需要小心一点，因为它必须确保保存足够多的调用者寄存器，以便能够正确返回。==
 
 On x86, for example, the processor will push the program counter, flags, and a few other registers onto a per-process kernel stack.
-
 ==例如，在 x86 上，处理器会将程序计数器、标志寄存器和其他几个寄存器压入每个进程的内核栈中。==
 
 The return-from-trap will pop these values off the stack and resume execution of the user-mode program.
-
 ==从陷阱返回指令将从栈中弹出这些值，并恢复用户模式程序的执行。==
 
 There is one important detail left out of this discussion: how does the trap know which code to run inside the OS?
-
 ==讨论中遗漏了一个重要细节：陷阱如何知道在操作系统内部运行哪段代码？==
 
 Clearly, the calling process can't specify an address to jump to.
-
 ==显然，调用进程不能指定要跳转到的地址。==
 
 Doing so would allow programs to jump anywhere into the kernel which clearly is a Very Bad Idea.
-
 ==这样做将允许程序跳转到内核中的任何位置，这显然是一个非常糟糕的主意。==
 
 Thus the kernel must carefully control what code executes upon a trap.
-
 ==因此，内核必须仔细控制在发生陷阱时执行的代码。==
 
 The kernel does so by setting up a trap table at boot time.
-
 ==内核通过在引导时设置陷阱表来实现这一点。==
 
 When the machine boots up, it does so in privileged (kernel) mode, and thus is free to configure machine hardware as need be.
-
 ==当机器启动时，它处于特权（内核）模式，因此可以根据需要自由配置机器硬件。==
 
 One of the first things the OS thus does is to tell the hardware what code to run when certain exceptional events occur.
-
 ==因此，操作系统做的第一件事就是告诉硬件当某些异常事件发生时运行什么代码。==
 
 For example, what code should run when a hard-disk interrupt takes place, when a keyboard interrupt occurs, or when a program makes a system call?
-
 ==例如，当发生硬盘中断、键盘中断或程序进行系统调用时，应该运行什么代码？==
 
 The OS informs the hardware of the locations of these trap handlers, usually with some kind of special instruction.
-
 ==操作系统通常使用某种特殊指令将这些陷阱处理程序的位置告知硬件。==
 
 Once the hardware is informed, it remembers the location of these handlers until the machine is next rebooted.
-
 ==一旦硬件被告知，它就会记住这些处理程序的位置，直到机器下次重新启动。==
 
 TIP: BE WARY OF USER INPUTS IN SECURE SYSTEMS
-
 ==提示：在安全系统中要警惕用户输入==
 
 In general, a secure system must treat user inputs with great suspicion.
-
 ==总的来说，安全系统必须以极大的怀疑态度对待用户输入。==
 
 To specify the exact system call, a system-call number is usually assigned to each system call.
-
 ==为了指定确切的系统调用，通常会为每个系统调用分配一个系统调用号。==
 
 The user code is thus responsible for placing the desired system-call number in a register or at a specified location on the stack.
-
 ==因此，用户代码负责将所需的系统调用号放入寄存器或栈上的指定位置。==
 
 The OS, when handling the system call inside the trap handler, examines this number, ensures it is valid, and, if it is, executes the corresponding code.
-
 ==操作系统在陷阱处理程序内处理系统调用时，会检查该号码，确保其有效，如果有效，则执行相应的代码。==
 
 This level of indirection serves as a form of protection.
-
 ==这种间接层作为一种保护形式。==
 
 User code cannot specify an exact address to jump to, but rather must request a particular service via number.
-
 ==用户代码不能指定要跳转的确切地址，而必须通过号码请求特定的服务。==
 
 Point to ponder: what horrible things could you do to a system if you could install your own trap table?
-
 ==值得思考的一点：如果你能安装自己的陷阱表，你会对系统做什么可怕的事情？==
 
 6.3 Problem #2: Switching Between Processes
-
 ==6.3 问题 #2：在进程之间切换==
 
 The next problem with direct execution is achieving a switch between processes.
-
 ==直接执行的下一个问题是实现进程之间的切换。==
 
 Switching between processes should be simple, right?
-
 ==进程之间的切换应该很简单，对吧？==
 
 But it actually is a little bit tricky: specifically, if a process is running on the CPU, this by definition means the OS is not running.
-
 ==但这实际上有点棘手：具体来说，如果一个进程正在 CPU 上运行，根据定义，这意味着操作系统没有在运行。==
 
 If the OS is not running, how can it do anything at all?
-
 ==如果操作系统没有运行，它怎么能做任何事情呢？==
 
 THE CRUX: HOW TO REGAIN CONTROL OF THE CPU
-
 ==关键问题：如何重新获得 CPU 的控制权==
 
 How can the operating system regain control of the CPU so that it can switch between processes?
-
 ==操作系统如何重新获得 CPU 的控制权，以便在进程之间进行切换？==
 
 A Cooperative Approach: Wait For System Calls
-
 ==协作方式：等待系统调用==
 
 In this style, the OS trusts the processes of the system to behave reasonably.
-
 ==在这种风格下，操作系统信任系统的进程会表现得合情合理。==
 
 Processes that run for too long are assumed to periodically give up the CPU so that the OS can decide to run some other task.
-
 ==运行时间过长的进程被假定会周期性地放弃 CPU，以便操作系统可以决定运行其他任务。==
 
 Most processes transfer control of the CPU to the OS quite frequently by making system calls.
-
 ==大多数进程通过进行系统调用相当频繁地将 CPU 的控制权转移给操作系统。==
 
 Systems like this often include an explicit yield system call, which does nothing except to transfer control to the OS so it can run other processes.
-
 ==像这样的系统通常包含一个显式的 yield 系统调用，它除了将控制权转移给操作系统以便其运行其他进程外，什么也不做。==
 
 Applications also transfer control to the OS when they do something illegal.
-
 ==当应用程序执行非法操作时，也会将控制权转移给操作系统。==
 
 For example, if an application divides by zero, or tries to access memory that it shouldn't be able to access, it will generate a trap to the OS.
-
 ==例如，如果应用程序除以零，或试图访问它不应该访问的内存，它将向操作系统生成一个陷阱。==
 
 A Non-Cooperative Approach: The OS Takes Control
-
 ==非协作方式：操作系统获取控制权==
 
 What happens, for example, if a process ends up in an infinite loop, and never makes a system call?
@@ -45978,4 +45937,3 @@ Students build a simple file system checker for the `xv6` file system.
 
 Students learn about what makes a file system consistent and how exactly to check for it.
 ==学生们学习什么使文件系统保持一致，以及究竟如何对其进行检查。==
-
